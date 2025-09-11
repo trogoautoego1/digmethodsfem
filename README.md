@@ -8,7 +8,8 @@ Digital Methods in Humanistic Research - Pitt Fall 2025
 
 **Outside Falculty:** TBD
 
-**Meeting Time:** Thursday 12-1
+**Meeting Time:** Thursdays 12-1
 
 **Core Research Questions:** How has feminism and the depiction of it in media devolped over the course of the 19th to 21st century?
-Corpus: Simone de Beauvoir and Betty Friedan: The Politics of Omission, Simone de Beauvoir: An Interview
+
+**Corpus:** Simone de Beauvoir and Betty Friedan: The Politics of Omission, Simone de Beauvoir: An Interview
