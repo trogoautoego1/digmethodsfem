@@ -1,4 +1,14 @@
 # Digmethodsfem
 Digital Methods in Humanistic Research - Pitt Fall 2025  
-temporary text
-EDEN
+**Title:** The Development of Feminist Depictions
+
+**Team Members:** Megan Barron, Maya Burns, Eden Mann, Polly Naneva
+
+**Project Mentor:** TBD
+
+**Outside Falculty:** TBD
+
+**Meeting Time:** Thursday 12-1
+
+**Core Research Questions:** How has feminism and the depiction of it in media devolped over the course of the 19th to 21st century?
+Corpus: Simone de Beauvoir and Betty Friedan: The Politics of Omission, Simone de Beauvoir: An Interview
