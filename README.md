@@ -4,7 +4,7 @@ Digital Methods in Humanistic Research - Pitt Fall 2025
 
 **Team Members:** Megan Barron, Maya Burns, Eden Mann, Polly Naneva
 
-**Project Mentor:** TBD
+**Project Mentor:** Joelle Blankenship
 
 **Outside Falculty:** TBD
 
