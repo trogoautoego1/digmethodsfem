@@ -1,0 +1,3 @@
+start = document
+
+document = element document {text}
