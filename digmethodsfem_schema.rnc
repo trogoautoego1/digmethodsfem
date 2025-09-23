@@ -1,9 +1,5 @@
 start = document
 
-<<<<<<< HEAD
 document = element document {meta}
     meta = element meta {text}
 
-=======
-document = element document {text}
->>>>>>> 617f01e30d2c678cea53429812fa9876aab88c88
