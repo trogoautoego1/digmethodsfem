@@ -1,0 +1,5 @@
+start = document
+
+document = element document {meta}
+    meta = element meta {text}
+
