@@ -8,12 +8,15 @@ Digital Methods in Humanistic Research - Pitt Fall 2025
 
 **Outside Faculty Mentor:** TBD
 
-**Meeting Time:** Thursdays 12-1
-
+**Meeting Time:** Tuesdays 12-1 in C4C
 **Core Research Questions:** How has feminism and the depiction of it in media devolped over the course of the 19th to 21st century?
 
 **Corpus:** 
-Simone de Beauvoir and Betty Friedan: The Politics of Omission, Simone de Beauvoir: An Interview
+Woman Hating by Andrea Dworkin (1974), Excerpt from Chapter 3
+
+The Second Sex by Simone de Beauvoir (1949), Excerpt from Chapter 1
+
+The Feminine Mystique by Betty Friedan (1963), Excerpt from Chapter 5
 
 Sarah Stickney Ellis, The Women of England, Their Social Duties, and Domestic Habits
 (1839)
