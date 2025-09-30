@@ -1,7 +1,7 @@
 start=element document {meta, main}
 #briefly explain document in context of project
 
-meta=element meta {mixed {(author | speaker | source | title | publication_date)*}}
+meta=element meta {mixed {(author | title)+ (speaker | source  | publication_date)*}
     author=element author {text}
     speaker=element speaker {text}
         description=attribute description {text} #describe identity (religion, race, etc.) in here. Just text, not comparable element. 
@@ -10,19 +10,23 @@ meta=element meta {mixed {(author | speaker | source | title | publication_date)
     publication_date=element publication_date {text}
     
 main=element main {mixed {(power_system | intersection | speaker_identity | religion | class | setting | theory | identity)*}}
-    power_system=element {patriarchy, religion, class, race, political, social} #these attribute names may be repeated under other elements or as seperate elements themselves
-    #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's 
+    #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's intent, and the attributes
+    #designate their focuses under said topic.
+    power_system=element {p_patriarchy, p_religion, p_class, p_race, p_political, p_social} #these attribute names are similar to topics named as elements. 
+     #the "p_" designation before the attribute name designes these topics as an attribute of the power_system element, diffferentiating them from elements with similar names.
         patriarchy=attribute patriarchy {text}
-        reliigon=attribute religion {text}
+        religion=attribute religion {text}
         class=attribute class {text}
-        race=attribute race {text}
+        race=attribute race {text} 
         political=attribute
     religion=element religion
     class=element class
     intersection=element
-    speaker_identity=element
+        
+    identity=element
     setting=element
     theory=element
     
     
    #add structure element with stanza, footnote, page, section, etc attributes
+   #if doing more than one element, ie race, gender, intersextionality, stack correctly. Ex: tag "intersectionality" on outside, then either race/gender, whichever pops up first.
