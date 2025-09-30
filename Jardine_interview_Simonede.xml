@@ -1,5 +1,7 @@
+<?xml-model href="../../../Downloads/digmethodsfem_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <document>
-    <meta>Interview with Simone de Beauvoir
-    Alice Jardine
+    <meta>
+        Interview with Simone de Beauvoir
+        Alice Jardine
     </meta>
 </document>
