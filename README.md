@@ -9,6 +9,7 @@ Digital Methods in Humanistic Research - Pitt Fall 2025
 **Outside Faculty Mentor:** TBD
 
 **Meeting Time:** Tuesdays 12-1 in C4C
+
 **Core Research Questions:** How has feminism and the depiction of it in media devolped over the course of the 19th to 21st century?
 
 **Corpus:** 
