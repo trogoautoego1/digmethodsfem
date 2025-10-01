@@ -9,23 +9,32 @@ meta=element meta {mixed {(author | title)+ (speaker | source  | publication_dat
         copyright=attribute copyight {text} #copyright under source
     publication_date=element publication_date {text}
     
-main=element main {mixed {(power_system | intersection | speaker_identity | religion | class | setting | theory | identity)*}}
+main=element main {mixed {(power_system | intersection | speaker_identity | religion | class | setting | theory | structure)*}}
     #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's intent, and the attributes
     #designate their focuses under said topic.
     power_system=element {p_patriarchy, p_religion, p_class, p_race, p_political, p_social} #these attribute names are similar to topics named as elements. 
-     #the "p_" designation before the attribute name designes these topics as an attribute of the power_system element, diffferentiating them from elements with similar names.
-        patriarchy=attribute patriarchy {text}
-        religion=attribute religion {text}
-        class=attribute class {text}
-        race=attribute race {text} 
-        political=attribute
-    religion=element religion
+     #the "p_" designation before the attribute name designates these topics as an attribute of the power_system element, differentiating them from elements with similar names.
+        p_patriarchy=attribute patriarchy {text}
+        p_religion=attribute religion {text}
+        p_class=attribute class {text}
+        p_race=attribute race {text} 
+        p_political=attribute political {text}
+    religion=element religion {mixed {(nonwestern | islam | protestentism | catholicism | judaism | indigenous)}}
+        nonwestern=attribute nonwestern {text}
+        islam=attribute islam {text}
+        protestentism=attribute protestentism {text}
+        catholicism=attribute catholicism {text}
+        judaism=attribute judaism{text}
+        indigenous=attribute indigenous {text}
+        christianity=attribute christianity {text}
     class=element class
+        
     intersection=element
         
     identity=element
     setting=element
-    theory=element
+    theory=element {marxist | rad_fem | enlightenment_individualism | terf | liberal | praxis | 
+        
     
     
    #add structure element with stanza, footnote, page, section, etc attributes
