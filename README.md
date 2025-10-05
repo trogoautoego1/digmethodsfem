@@ -23,3 +23,13 @@ Sarah Stickney Ellis, The Women of England, Their Social Duties, and Domestic Ha
 (1839)
 
 LETTERS ON THE EQUALITY OF THE SEXES, AND THE CONDITION OF WOMAN, Sarah Moore Grimké (1837)
+
+"Drag" by Jan Beatty (2024) 
+
+ORIGINAL INTERVIEW WITH JAN BEATTY (Will be conducted and transcribed mid-to-late Oct. 2025)
+
+Excerpt from PUNK PLANET 29 (1999 FEB)
+
+Excerpt from PUNK PLANET 52 (2002 NOV-DEC)
+
+Excerpt from PUNK PLANET 62 (2004 JULY-AUGUST)
