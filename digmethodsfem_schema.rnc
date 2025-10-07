@@ -1,7 +1,7 @@
 start=element document {meta, main} # document is the root element!!
 #briefly explain document in context of project
 
-meta=element meta {mixed {(author | title)+ | (speaker | source | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. speaker, source, pub date are not required. All attributes 
+meta=element meta {mixed {(author | title)+ , (speaker | source | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. speaker, source, pub date are not required. All attributes 
     author=element author {text}
     title=element title {text}
     speaker=element speaker {text}
