@@ -52,7 +52,7 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         praxis=attribute praxis {text}
         antifeminist=attribute antifeminist {text}
         
-    structure=element structure {q, r, p, c, l, s, page, po, le} #q=question r=response p=paragraph c=chapter l=line s=stanza page=page #po=poem #le=letter
+    structure=element structure {q, r, p, c, l, s, page, po, le, date} #q=question r=response p=paragraph c=chapter l=line s=stanza page=page #po=poem #le=letter
         q=attribute q {text}
         r=attribute r {text}
         p=attribute p {text}
@@ -62,6 +62,7 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         page=attribute page {text}
         po=attribute po {text}
         le=attribute le {text}
+        date=attribute date {text}
     
    #add structure element with stanza, footnote, page, section, etc attributes
    #if doing more than one element, ie race, gender, intersextionality, stack correctly. 
