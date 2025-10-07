@@ -1,8 +1,12 @@
 <?xml-model href="../digmethodsfem_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <!--The Feminine Mystique Ch 5 Exerpt, Megan Barron-->
 <document>
-    source=https://www.marxists.org/reference/subject/philosophy/works/us/friedan.htm
-    
+    <meta>
+        <author>Betty Friedan</author>
+        <title>The Feminine Mystique</title>
+        <source>source=https://www.marxists.org/reference/subject/philosophy/works/us/friedan.htm</source>
+        <publication_date>1963</publication_date>
+    </meta>
     IT would be half-wrong to say it started with Sigmund Freud. It did not really start, in America, 
     until the 1940s. And then again, it was less a start than the prevention of an end. The old 
     prejudices – women are animals, less than human, unable to think like men, born merely to 

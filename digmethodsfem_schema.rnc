@@ -1,7 +1,7 @@
 start=element document {meta, main} # document is the root element!!
 #briefly explain document in context of project
 
-meta=element meta {mixed {(author | title)+ | (speaker | source  | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. speaker, source, pub date are not required. All attributes 
+meta=element meta {mixed {(author | title)+ | (speaker | source | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. speaker, source, pub date are not required. All attributes 
     author=element author {text}
     title=element title {text}
     speaker=element speaker {text}
@@ -38,25 +38,12 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         middle=attribute middle {text}
         lower=attribute lower {text}
     intersection=element intersection {text} #no attributes, used in tandem with at least two other elements when the author/speaker is speaking about intersectionality/multiple topics.
-    identity=element identity {mixed {race*, sexuality*, gender*, nationality*}
+    identity=element identity {mixed {race*, sexuality*, gender*, nationality*}}
     #multiple attributes used as needed. Element used to qualify speaker/author or subject's identity, to compare who is highlighted and platformed between texts
-        white=attribute white {text}
-        black=attribute black {text}
-        asian=attribute asian {text}
-        indigenous=attribute indigenous {text}
-        north_american=attribute north_american {text}
-        south_american=attribute south_american {text}
-        european=attribute european {text}
-        australian=attribute australian {text}
-        man=attribute man {text}
-        woman=attribute woman {text}
-        nonbinary=attribute nonbinary {text}
-        queer=attribute queer {text}
-        gay=attribute gay {text}
-        straight=attribute straight {text}
-        lesbian=attribute lesbian {text}
-        bisexual=attribute bisexual {text}
-        trans=attribute trans {text}
+        race=attribute race {text}
+        sexuality=attribute sexuality {text}
+        gender=attribute gender {text}
+        nationality=attribute nationality {text}
         
     setting=element setting {text} #no attributes, tagged
     theory=element theory {mixed {(marxist | rad_fem | enlightenment_individualism | terf | liberal | praxis | antifeminist)*}}
