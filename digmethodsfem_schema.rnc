@@ -38,7 +38,7 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         middle=attribute middle {text}
         lower=attribute lower {text}
     intersection=element intersection {text} #no attributes, used in tandem with at least two other elements when the author/speaker is speaking about intersectionality/multiple topics.
-    identity=element identity {mixed {white*, black*, asian, indigenous*, north_american*, south_american*, european*, australian*, man*, woman*, nonbinary*, queer*, gay*, straight*, lesbian*, bisexual*, trans*}}
+    identity=element identity {mixed {race*, sexuality*, gender*, nationality*}
     #multiple attributes used as needed. Element used to qualify speaker/author or subject's identity, to compare who is highlighted and platformed between texts
         white=attribute white {text}
         black=attribute black {text}
