@@ -1,33 +1,35 @@
 start=element document {meta, main}
 #briefly explain document in context of project
 
-meta=element meta {mixed {(author | title)+ (speaker | source  | publication_date)*}}
+meta=element meta {mixed {(author | title)+ | (speaker | source  | publication_date)*}}
     author=element author {text}
+    title=element title {text}
     speaker=element speaker {text}
         description=attribute description {text} #describe identity (religion, race, etc.) in here. Just text, not comparable element. 
     source=element source {copyright, text}
         copyright=attribute copyight {text} #copyright under source
     publication_date=element publication_date {text}
     
-main=element main {mixed {(power_system | intersection | speaker_identity | religion | class | setting | theory | structure)*}}
+main=element main {mixed {(power_system | intersection | identity | religion | class | setting | theory | structure)*}}
     #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's intent, and the attributes
     #designate their focuses under said topic.
-    power_system=element {p_patriarchy, p_religion, p_class, p_race, p_political, p_social} #these attribute names are similar to topics named as elements. 
+    power_system=element power_system {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*} #these attribute names are similar to topics named as elements. 
      #the "p_" designation before the attribute name designates these topics as an attribute of the power_system element, differentiating them from elements with similar names.
-        p_patriarchy=attribute patriarchy {text}
-        p_religion=attribute religion {text}
-        p_class=attribute class {text}
-        p_race=attribute race {text} 
-        p_political=attribute political {text}
-    religion=element religion {mixed {(nonwestern | islam | protestentism | catholicism | judaism | indigenous)*}}
-        nonwestern=attribute nonwestern {text}
-        islam=attribute islam {text}
-        protestentism=attribute protestentism {text}
-        catholicism=attribute catholicism {text}
-        judaism=attribute judaism{text}
-        indigenous=attribute indigenous {text}
-        christianity=attribute christianity {text}
-    class=element class {mixed {(social, political, economic, working_class, wealthy, middle, lower)*}}
+        p_patriarchy=attribute p_patriarchy {text}
+        p_religion=attribute p_religion {text}
+        p_class=attribute p_class {text}
+        p_race=attribute p_race {text} 
+        p_political=attribute p_political {text}
+        p_social=attribute p_social {text}
+    religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous)*}}
+        r_non_western=attribute r_non_western {text}
+        r_islam=attribute r_islam {text}
+        r_protestentism=attribute r_protestentism {text}
+        r_catholicism=attribute r_catholicism {text}
+        r_judaism=attribute r_judaism{text}
+        r_indigenous=attribute r_indigenous {text}
+        r_christianity=attribute r_christianity {text}
+    class=element class {mixed {social*, political*, economic*, working_class*, wealthy*, middle*, lower*}}
         social=attribute social {text}
         political=attribute political {text}
         economic=attribute economic {text}
@@ -35,8 +37,8 @@ main=element main {mixed {(power_system | intersection | speaker_identity | reli
         wealthy=attribute wealthy {text}
         middle=attribute middle {text}
         lower=attribute lower {text}
-    intersection=element {text} #no attributes, used in tandem with at least two other elements when the author/speaker is speaking about intersectionality/multiple topics.
-    identity=element {mixed {(white, black, asian, indigenous, north_american, south_american, european, australian, man, woman, nonbinary, queer, gay, straight, lesbian, bisexual, trans)*}}
+    intersection=element intersection {text} #no attributes, used in tandem with at least two other elements when the author/speaker is speaking about intersectionality/multiple topics.
+    identity=element identity {mixed {white*, black*, asian, indigenous*, north_american*, south_american*, european*, australian*, man*, woman*, nonbinary*, queer*, gay*, straight*, lesbian*, bisexual*, trans*}}
     #multiple attributes used as needed. Element used to qualify speaker/author or subject's identity, to compare who is highlighted and platformed between texts
         white=attribute white {text}
         black=attribute black {text}
@@ -55,12 +57,28 @@ main=element main {mixed {(power_system | intersection | speaker_identity | reli
         lesbian=attribute lesbian {text}
         bisexual=attribute bisexual {text}
         trans=attribute trans {text}
-        =attribute  {text}
         
-    setting=element {text} #no attributes, tagged
-    theory=element {mixed {(marxist | rad_fem | enlightenment_individualism | terf | liberal | praxis | antifeminist}
+    setting=element setting {text} #no attributes, tagged
+    theory=element theory {mixed {(marxist | rad_fem | enlightenment_individualism | terf | liberal | praxis | antifeminist)*}}
+        marxist=attribute marxist {text}
+        rad_fem=attribute rad_fem {text}
+        enlightenment_individualism=attribute enlightenment_individualism {text}
+        terf=attribute terf {text}
+        liberal=attribute liberal {text}
+        praxis=attribute praxis {text}
+        antifeminist=attribute antifeminist {text}
         
-    
+    structure=element structure {q, r, p, c, l, s, page, po, le} #q=question r=response p=paragraph c=chapter l=line s=stanza page=page #po=poem #le=letter
+        q=attribute q {text}
+        r=attribute r {text}
+        p=attribute p {text}
+        c=attribute c {text}
+        l=attribute l {text}
+        s=attribute s {text}
+        page=attribute page {text}
+        po=attribute po {text}
+        le=attribute le {text}
     
    #add structure element with stanza, footnote, page, section, etc attributes
-   #if doing more than one element, ie race, gender, intersextionality, stack correctly. Ex: tag "intersectionality" on outside, then either race/gender, whichever pops up first.
+   #if doing more than one element, ie race, gender, intersextionality, stack correctly. 
+   #Ex: tag 'intersectionality' on outside, then either race/gender, whichever pops up first.
