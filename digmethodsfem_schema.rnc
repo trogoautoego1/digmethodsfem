@@ -1,7 +1,7 @@
-start=element document {meta, main}
+start=element document {meta, main} # document is the root element!!
 #briefly explain document in context of project
 
-meta=element meta {mixed {(author | title)+ | (speaker | source  | publication_date)*}}
+meta=element meta {mixed {(author | title)+ | (speaker | source  | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. speaker, source, pub date are not required. All attributes 
     author=element author {text}
     title=element title {text}
     speaker=element speaker {text}
@@ -13,7 +13,7 @@ meta=element meta {mixed {(author | title)+ | (speaker | source  | publication_d
 main=element main {mixed {(power_system | intersection | identity | religion | class | setting | theory | structure)*}}
     #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's intent, and the attributes
     #designate their focuses under said topic.
-    power_system=element power_system {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*} #these attribute names are similar to topics named as elements. 
+    power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*}} #these attribute names are similar to topics named as elements. 
      #the "p_" designation before the attribute name designates these topics as an attribute of the power_system element, differentiating them from elements with similar names.
         p_patriarchy=attribute p_patriarchy {text}
         p_religion=attribute p_religion {text}
@@ -38,7 +38,7 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         middle=attribute middle {text}
         lower=attribute lower {text}
     intersection=element intersection {text} #no attributes, used in tandem with at least two other elements when the author/speaker is speaking about intersectionality/multiple topics.
-    identity=element identity {mixed {white*, black*, asian, indigenous*, north_american*, south_american*, european*, australian*, man*, woman*, nonbinary*, queer*, gay*, straight*, lesbian*, bisexual*, trans*}}
+    identity=element identity {mixed {race*, sexuality*, gender*, nationality*}
     #multiple attributes used as needed. Element used to qualify speaker/author or subject's identity, to compare who is highlighted and platformed between texts
         white=attribute white {text}
         black=attribute black {text}
