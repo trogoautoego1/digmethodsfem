@@ -1,13 +1,10 @@
 start=element document {meta, main} # document is the root element!!
 #briefly explain document in context of project
 
-meta=element meta {mixed {(author | title)+ , (speaker | source | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. speaker, source, pub date are not required. All attributes 
+meta=element meta {mixed {(author | title)+ | (source | publication_date)*}} #meta is an element that contains all meta information. author, title are required elements. 
     author=element author {text}
     title=element title {text}
-    speaker=element speaker {text}
-        description=attribute description {text} #describe identity (religion, race, etc.) in here. Just text, not comparable element. 
-    source=element source {copyright, text}
-        copyright=attribute copyight {text} #copyright under source
+    source=element source {text}
     publication_date=element publication_date {text}
     
 main=element main {mixed {(power_system | intersection | identity | religion | class | setting | theory | structure)*}}

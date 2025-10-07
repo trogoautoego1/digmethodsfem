@@ -1,7 +1,9 @@
+<?xml-model href="../digmethodsfem_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <document>
-Title: Letters on the equality of the sexes, and the condition of woman
+<meta>
+Title: <title>Letters on the equality of the sexes, and the condition of woman
 
-Author: Sarah Grimké
+</title>Author: <author>Sarah Grimké</author>
 
 Release date: December 6, 2022 [eBook #69485]
 Most recently updated: October 19, 2024
@@ -16,8 +18,8 @@ LETTERS
 ON THE
 EQUALITY OF THE SEXES,
 AND THE
-CONDITION OF WOMAN.
-
+CONDITION OF WOMAN.</meta>
+<main>
 ADDRESSED TO
 MARY S. PARKER,
 PRESIDENT OF THE
@@ -742,6 +744,6 @@ I was traveling lately in a stage coach. A gentleman, who was also a passenger, 
 
 Thine in the bonds of womanhood,
 
-Sarah M. Grimke.
+Sarah M. Grimke</main>.
 
 </document>
