@@ -2,12 +2,13 @@ start=element document {meta, main} # document is the root element!!
 #briefly explain document in context of project
 
 meta=element meta {mixed {(title+, author+, source* , publication_date*)}} #meta is an element that contains all meta information. author, title are required elements. 
+#Title must come before author. If your document has them the other way, please swap.
     author=element author {text}
     title=element title {text}
     source=element source {text}
     publication_date=element publication_date {text}
     
-main=element main {mixed {(power_system | intersection | identity | religion | class | setting | theory | structure)*}}
+main=element main {mixed {(power_system | intersection | identity | religion | class | setting | f_theory | s_theory | structure)*}}
     #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's intent, and the attributes
     #designate their focuses under said topic.
     power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*}} #these attribute names are similar to topics named as elements. 
@@ -18,6 +19,7 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         p_race=attribute p_race {text} 
         p_political=attribute p_political {text}
         p_social=attribute p_social {text}
+        
     religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous)*}}
         r_non_western=attribute r_non_western {text}
         r_islam=attribute r_islam {text}
@@ -43,16 +45,21 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         nationality=attribute nationality {text}
         
     setting=element setting {text} #no attributes, tagged
-    theory=element theory {mixed {(marxist | rad_fem | enlightenment_individualism | terf | liberal | praxis | antifeminist)*}}
-        marxist=attribute marxist {text}
-        rad_fem=attribute rad_fem {text}
-        enlightenment_individualism=attribute enlightenment_individualism {text}
-        terf=attribute terf {text}
-        liberal=attribute liberal {text}
-        praxis=attribute praxis {text}
-        antifeminist=attribute antifeminist {text}
+    f_theory=element theory {mixed {(f_marxist | f_rad_fem | f_enlightenment_individualism | f_terf | f_liberal | f_praxis | f_antifeminist)*}} #feminist theory
+        f_marxist=attribute f_marxist {text}
+        f_rad_fem=attribute f_rad_fem {text}
+        f_enlightenment_individualism=attribute f_enlightenment_individualism {text}
+        f_terf=attribute f_terf {text}
+        f_liberal=attribute f_liberal {text}
+        f_praxis=attribute f_praxis {text}
+        f_antifeminist=attribute f_antifeminist {text}
         
-    structure=element structure {mixed {(q*, r*, p*, c*, l*, s*, page*, po*, le*, date*)}} #q=question r=response p=paragraph c=chapter l=line s=stanza page=page #po=poem #le=letter
+    s_theory=element s_theory {mixed {s_freud* | s_rights_of_man*}} #social theory
+    s_freud=attribute s_freud {text}
+    s_rights_of_man=attribute s_rights_of_man {text}
+        
+    structure=element structure {mixed {(q*, r*, p*, c*, l*, s*, page*, po*, le*, date*)}} 
+    #q=question r=response p=paragraph c=chapter l=line s=stanza page=page #po=poem #le=letter
         q=attribute q {text}
         r=attribute r {text}
         p=attribute p {text}
