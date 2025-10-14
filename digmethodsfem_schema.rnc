@@ -8,7 +8,7 @@ meta=element meta {mixed {(title+, author+, source* , publication_date*)}} #meta
     source=element source {text}
     publication_date=element publication_date {text}
     
-main=element main {mixed {(power_system | intersection | identity | religion | class | setting | f_theory* | s_theory* | structure*)*}}
+main=element main {mixed {(power_system* | intersection* | identity* | religion* | class* | setting* | f_theory* | s_theory* | structure*)}}
     #these are key topics we are looking at that hold different meanings under different contexts. Thus elements hold a broad description of the author/subject's intent, and the attributes
     #designate their focuses under said topic.
     power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*}} #these attribute names are similar to topics named as elements. 
