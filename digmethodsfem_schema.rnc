@@ -45,7 +45,7 @@ main=element main {mixed {(power_system | intersection | identity | religion | c
         nationality=attribute nationality {text}
         
     setting=element setting {text} #no attributes, tagged
-    f_theory=element theory {mixed {(f_marxist | f_rad_fem | f_enlightenment_individualism | f_terf | f_liberal | f_praxis | f_antifeminist)*}} #feminist theory
+    f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_enlightenment_individualism | f_terf | f_liberal | f_praxis | f_antifeminist)*}} #feminist theory
         f_marxist=attribute f_marxist {text}
         f_rad_fem=attribute f_rad_fem {text}
         f_enlightenment_individualism=attribute f_enlightenment_individualism {text}
