@@ -58,7 +58,7 @@ main=element main {mixed {(power_system* | intersection* | identity* | religion*
     s_freud=attribute s_freud {text}
     s_rights_of_man=attribute s_rights_of_man {text}
         
-    structure=element structure {mixed {(q*, r*, p*, c*, l*, s*, page*, po*, le*, date*, structure*, fnote*)}} 
+    structure=element structure {mixed {(q* | r*| p* | c*| l* | s* | page* | po* | le* | date* | structure* | fnote* | setting*)}} 
     #add these after "type" q=question r=response p=paragraph c=chapter l=line s=stanza page=page #po=poem #le=letter
         q=attribute q {text}
         r=attribute r {text}
