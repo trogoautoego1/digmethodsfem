@@ -70,6 +70,7 @@ main=element main {mixed {(power_system* | intersection* | identity* | religion*
         po=attribute po {text}
         le=attribute le {text}
         date=attribute date {text}
+        fnote=attribute fnote {text}
     
    #add structure element with stanza, footnote, page, section, etc attributes
    #if doing more than one element, ie race, gender, intersextionality, stack correctly. 
