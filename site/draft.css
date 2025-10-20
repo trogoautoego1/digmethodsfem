@@ -4,3 +4,9 @@ body {
     background-color: #cccccc;
 }
 
+h1 {
+    background-image: url("splashpagebg.png");
+}
+p {
+    background-image: url("splashpagebg.png");
+}
