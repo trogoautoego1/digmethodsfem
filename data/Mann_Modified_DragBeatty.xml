@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--EDEN MANN A vignette on attachment, family, and the dragstripped heart.!-->
 <!--Power system elements will be further enhanced, likely enough, once I have the interview segment with Beatty conducted !--> 
+<?xml-model href="../digmethodsfem_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <poem>
 <title> Drag </title>
 <author>Jan Beatty</author>
