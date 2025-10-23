@@ -10,3 +10,18 @@ h1 {
 p {
     background-image: url("splashpagebg.png");
 }
+.navbar {
+  display: flex; /* Makes the navbar a flex container */
+  justify-content: center; /* Centers items horizontally within the navbar */
+  align-items: center; /* Centers items vertically within the navbar (if the navbar has a defined height) */
+  background-color: #333; /* Example background color */
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  gap: 15px;
+}
