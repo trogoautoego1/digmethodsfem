@@ -1,0 +1,75 @@
+body { 
+    font-family: serif; 
+    background-image: url("splashpagebg.png");
+    background-color: #e6dff0;
+}
+
+body {
+    background-image: url("digmethodsfem/docs/images/splashpagebg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex; /* Makes the navbar a flex container */
+  justify-content: center; /* Centers items horizontally within the navbar */
+  align-items: center; /* Centers items vertically within the navbar (if the navbar has a defined height) */
+  background-color: #333; /* Example background color */
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  gap: 15px;
+}
+    body {
+      margin: 10px;
+      padding: 0;
+      font-family: Garamond, serif;
+    }
+
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #e4e0d3;
+      overflow: hidden; 
+    }
+
+    nav ul li {
+      float: left;
+    }
+
+    nav ul li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    nav {
+  background-color: #e4e0d3;
+  padding: 0;
+  margin-bottom: 30px; 
+  border-bottom: 2px solid #cdc7b4; 
+  }
+
+
+    nav ul li a:hover {
+      background-color: #cdc7b4;
+    }
+
+  
+    header {
+      clear: both;
+      padding-top: 20px;
+    }
+
+    h2, p {
+      margin: 10px;
+    }
