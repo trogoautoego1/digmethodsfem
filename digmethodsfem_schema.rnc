@@ -16,7 +16,7 @@ power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, 
     p_political=attribute p_political {text}
     p_social=attribute p_social {text}
     
-religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous)*}}
+religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_christianity)*}}
     r_non_western=attribute r_non_western {text}
     r_islam=attribute r_islam {text}
     r_protestentism=attribute r_protestentism {text}
