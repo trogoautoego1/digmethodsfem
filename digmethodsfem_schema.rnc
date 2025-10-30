@@ -16,7 +16,11 @@ power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, 
     p_political=attribute p_political {text}
     p_social=attribute p_social {text}
     
+<<<<<<< HEAD
 religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_christianity | r_greekmyth)*}}
+=======
+religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_quaker | r_anglican)*}}
+>>>>>>> 863ca68 (add)
     r_non_western=attribute r_non_western {text}
     r_islam=attribute r_islam {text}
     r_protestentism=attribute r_protestentism {text}
@@ -24,7 +28,12 @@ religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r
     r_judaism=attribute r_judaism{text}
     r_indigenous=attribute r_indigenous {text}
     r_christianity=attribute r_christianity {text}
+<<<<<<< HEAD
     r_greekmyth=attribute r_greekmyth {text}
+=======
+    r_quaker=attribute r_quaker {text}
+    r_anglican=attribute r_anglican {text}
+>>>>>>> 863ca68 (add)
 
 class=element class {mixed {social*, political*, economic*, working_class*, wealthy*, middle*, lower*}}
     social=attribute social {text}
