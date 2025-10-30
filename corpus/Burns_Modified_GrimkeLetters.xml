@@ -6,10 +6,10 @@
                 Female Anti-Slavery Society. BOSTON: <source>PUBLISHED BY ISAAC KNAPP, 25,
                         CORNHILL.</source>
                 <publication_date>1838</publication_date>. </meta>
-        <main> LETTERS. <structure le="1"> LETTER I. THE ORIGINAL EQUALITY OF WOMAN. <structure
-                                date="1837">
-                                <setting>Amesbury</setting>, 7th Mo. 11th, 1837. </structure> My
-                        Dear Friend,—In attempting to comply with thy request to give my views on
+        <main> LETTERS. 
+                        <structure le="1"> LETTER I. THE ORIGINAL EQUALITY OF WOMAN. 
+                        <structure date="1837"> <setting>Amesbury</setting>, 7th Mo. 11th, 1837. </structure> 
+                        My Dear Friend,—In attempting to comply with thy request to give my views on
                         the Province of Woman, I feel that I am venturing on nearly untrodden
                         ground, and that I shall advance arguments in opposition to a corrupt public
                         opinion, and to the perverted interpretation of Holy Writ, which has so
@@ -19,17 +19,17 @@
                         designs of Jehovah in the creation of woman. It is impossible that we can
                         answer the purpose of our being, unless we understand that purpose. It is
                         impossible that we should fulfil our duties, unless we comprehend them; or
-                        live up to our privileges, unless we know what they are. <structure>[Pg 4]
-                        </structure>In examining this important subject, <religion
-                                r_quaker="Grimke's religion">I shall depend solely on the Bible to
-                                designate the sphere of woman</religion>, <religion
-                                r_anglican="On the Church of England and KJB">because I believe
-                                almost every thing that has been written on this subject, has been
-                                the result of a misconception of the simple truths revealed in the
-                                Scriptures, in consequence of the false translation of many passages
-                                of Holy Writ. My mind is entirely delivered from the superstitious
-                                reverence which is attached to the English version of the Bible.
-                                King James’s translators certainly were not inspired.</religion> I
+                        live up to our privileges, unless we know what they are. 
+                        In examining this important subject, 
+                        <religion r_quaker="Grimke's religion">I shall depend solely on the Bible to
+                        designate the sphere of woman</religion>, <religion
+                        r_anglican="On the Church of England and KJB">because I believe
+                        almost every thing that has been written on this subject, has been
+                        the result of a misconception of the simple truths revealed in the
+                        Scriptures, in consequence of the false translation of many passages
+                        of Holy Writ. My mind is entirely delivered from the superstitious
+                        reverence which is attached to the English version of the Bible.
+                        King James’s translators certainly were not inspired.</religion> I
                         therefore claim the original as my standard, believing that to have been
                         inspired, and I also claim to judge for myself what is the meaning of the
                         inspired writers, because <s_theory
@@ -128,7 +128,9 @@
                         woman bound to be in subjection, and to him alone is she accountable for the
                         use of those talents with which her Heavenly Father has entrusted her. One
                         is her Master even Christ. Thine for the oppressed in the bonds of
-                        womanhood, Sarah M. Grimke.</structure> [Pg 9] LETTER II. WOMAN SUBJECT ONLY
+                        womanhood, Sarah M. Grimke.</structure> 
+                
+                LETTER II. WOMAN SUBJECT ONLY
                 TO GOD. Newburyport, 7th mo. 17, 1837. My dear Sister,—In my last, I traced the
                 creation and the fall of man and woman from that state of purity and happiness which
                 their beneficent Creator designed them to enjoy. As they were one in transgression,
