@@ -8,15 +8,15 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Women Hating</title>
-               <!-- <link rel="stylesheet" type="text/css" href="../style.css"/> -->
+                <title>Letters on the Equality of the Sexes and the Condition of Women</title>
+                <!-- <link rel="stylesheet" type="text/css" href="../style.css"/> -->
             </head>
             <body>
-                <h1>Women Hating</h1>
+                <h1>Letters on the Equality of the Sexes and the Condition of Women</h1>
                 <xsl:apply-templates select="//main"/>
             </body>
         </html>
-        </xsl:template>
+    </xsl:template>
     <xsl:template match="structure[@p]">
         <p><xsl:apply-templates/></p>
     </xsl:template>

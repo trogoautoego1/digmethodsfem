@@ -9,7 +9,7 @@
         <html>
             <head>
                 <title>Women Hating</title>
-               <!-- <link rel="stylesheet" type="text/css" href="../style.css"/> -->
+               <link rel="stylesheet" type="text/css" href="../style.css"/>
             </head>
             <body>
                 <h1>Women Hating</h1>
