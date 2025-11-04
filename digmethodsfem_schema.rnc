@@ -8,13 +8,14 @@ meta=element meta {mixed {(title+, author+, source* , publication_date*)}}
     
 main=element main {mixed {(power_system* | intersection* | identity* | religion* | class* | structure* | f_theory* | s_theory* | setting*)*}}
 
-power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*}}
+power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, p_race*, p_political*, p_social*, p_matriarchy*}}
     p_patriarchy=attribute p_patriarchy {text}
     p_religion=attribute p_religion {text}
     p_class=attribute p_class {text}
     p_race=attribute p_race {text} 
     p_political=attribute p_political {text}
     p_social=attribute p_social {text}
+    p_matriarchy=attribute p_matriarchy {text}
     
 
 religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_quaker | r_anglican |r_christianity | r_greekmyth)*}}
@@ -62,7 +63,7 @@ s_theory=element s_theory {mixed {(s_freud? | s_rights_of_man? | s_enlightenment
     s_rights_of_man=attribute s_rights_of_man {text}
     s_enlightenment_individualism=attribute s_enlightenment_individualism {text}
     
-structure=element structure {(q? | r? | p? | c? | l? | s? | page? | po? | le? | date? | fnote?), (text | structure | setting | power_system | intersection | identity | religion | class | f_theory | s_theory)*}
+structure=element structure {(q? | r? | p? | c? | l? | s? | page? | po? | le? | date? | fnote? | header?), (text | structure | setting | power_system | intersection | identity | religion | class | f_theory | s_theory)*}
     q=attribute q {text} #q=quote, r=???? p=paragraph, l=line, s=stanza, page=page, po=poem, le=letter, date=date, fnote=footnote
     r=attribute r {text}
     p=attribute p {text}
@@ -74,3 +75,5 @@ structure=element structure {(q? | r? | p? | c? | l? | s? | page? | po? | le? | 
     le=attribute le {text}
     date=attribute date {text}
     fnote=attribute fnote {text}
+    header=attribute header {text}
+    
