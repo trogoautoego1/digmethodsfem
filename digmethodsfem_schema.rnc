@@ -63,9 +63,9 @@ s_theory=element s_theory {mixed {(s_freud? | s_rights_of_man? | s_enlightenment
     s_rights_of_man=attribute s_rights_of_man {text}
     s_enlightenment_individualism=attribute s_enlightenment_individualism {text}
     
-structure=element structure {(q? | cap? | p? | c? | l? | s? | page? | po? | le? | date? | fnote? | header?), (text | structure | setting | power_system | intersection | identity | religion | class | f_theory | s_theory)*}
-    q=attribute q {text} #q=quote, cap=caption p=paragraph, l=line, s=stanza, page=page, po=poem, le=letter, date=date, fnote=footnote
-    cap=attribute cap {text}
+structure=element structure {(q? | r? | p? | c? | l? | s? | page? | po? | le? | date? | fnote? | header?), (text | structure | setting | power_system | intersection | identity | religion | class | f_theory | s_theory)*}
+    q=attribute q {text} #q=quote, r=???? p=paragraph, l=line, s=stanza, page=page, po=poem, le=letter, date=date, fnote=footnote
+    r=attribute r {text}
     p=attribute p {text}
     c=attribute c {text}
     l=attribute l {text}
