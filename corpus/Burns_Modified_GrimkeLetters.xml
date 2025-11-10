@@ -6,9 +6,23 @@
 Female Anti-Slavery Society. BOSTON: <source>PUBLISHED BY ISAAC KNAPP, 25,
 CORNHILL.</source>
 <publication_date>1838</publication_date>. </meta>
-<main><structure page="1"> LETTERS.</structure> <structure le="1"> <structure page="2">LETTER I. THE ORIGINAL EQUALITY OF WOMAN. <structure date="1837"> 
-<setting>Amesbury</setting>, 7th Mo. 11th, 1837. </structure> My
-Dear Friend,—In attempting to comply with thy request to give my views on
+    
+<main>
+
+<structure header="main"> LETTERS.</structure> 
+
+<structure le="1"> 
+<structure header="1" > LETTER I. </structure> 
+<structure subhead="1">THE ORIGINAL EQUALITY OF WOMAN. </structure>
+<structure date="Nov. 7th, 1837"> 
+    <setting>Amesbury</setting>, 7th Mo. 11th, 1837. 
+</structure> 
+<!-- le wraps each full header
+header formatting applies to the heading of each letter eg "LETTER X"
+subhead formatting applies to subheading of each letter eg "THE ORIGINAL EQUALITY OF WOMAN"
+    -->>
+<structure p="1">
+My Dear Friend,— In attempting to comply with thy request to give my views on
 the Province of Woman, I feel that I am venturing on nearly untrodden
 ground, and that <religion r_quaker="anti-anglican">I shall advance
 arguments in opposition to a corrupt public opinion, and to the
@@ -20,9 +34,11 @@ world will be materially advanced by every new discovery we make of the
 creation of woman</religion>. It is impossible that we can answer
 the purpose of our being, unless we understand that purpose. It is
 impossible that we should fulfil our duties, unless we comprehend them; or
-live up to our privileges, unless we know what they are.</structure> 
-<structure page="3">In examining this
-important subject, <religion r_quaker="Grimke's religion">I shall depend
+live up to our privileges, unless we know what they are. 
+</structure>
+        
+<structure p="2">
+In examining this important subject, <religion r_quaker="Grimke's religion">I shall depend
 solely on the Bible to designate the sphere of woman</religion>,
 because I believe almost every thing that has been written on this subject,
 has been the result of a misconception of the simple truths revealed in the
@@ -37,8 +53,11 @@ writers, because <s_theory
 s_enlightenment_individualism="Potentially Protestant "> I believe
 it to be the solemn duty of every individual to search the
 Scriptures for themselves, with the aid of the Holy Spirit, and not
-be governed by the views of any man, or set of men.</s_theory> We
-must first view woman at the period of her creation. ‘And God said, Let us
+be governed by the views of any man, or set of men.</s_theory> 
+</structure>
+        
+<structure p="3">
+We must first view woman at the period of her creation. ‘And God said, Let us
 make man in our own image, after our likeness; and let them have dominion
 over the fish of the sea, and over the fowl of the air, and over the cattle,
 and over all the earth, and over every creeping thing that creepeth upon the
@@ -51,7 +70,11 @@ existing between them. They were both made in the image of God;
 dominion was given to both over every other creature, but not over
 each other. Created in perfect equality, they were expected to
 exercise the vicegerence intrusted to them by their Maker, in
-harmony and love. </s_theory> Let us pass on now to the
+harmony and love. </s_theory> 
+</structure>
+        
+<structure p="4">
+Let us pass on now to the
 recapitulation of the creation of man:—‘The Lord God formed man of the dust
 of the ground, and breathed into his nostrils the breath of life; and man
 became a living soul. And the Lord God said, it is not good that man should
@@ -70,9 +93,13 @@ woman to be an help meet for man in every good and perfect work. She was a
 part of himself, as if Jehovah designed to make the oneness and identity of
 man and woman perfect and complete; and when the glorious work of their
 creation was finished, ‘the morning stars sang together, and all the sons of
-God shouted for joy.’ This blissful condition was not long enjoyed by our
+God shouted for joy.’
+</structure>
+
+<structure p="5">
+This blissful condition was not long enjoyed by our
 first parents. Eve, it would seem from the history, was wandering alone amid
-the bowers of Paradise, when the serpent[Pg 6] met with her. From her reply
+the bowers of Paradise, when the serpent met with her. From her reply
 to Satan, it is evident that the command not to eat ‘of the tree that is in
 the midst of the garden,’ was given to both, although the term man was used
 when the prohibition was issued by God. ‘And the woman said unto the
@@ -85,7 +112,11 @@ communion with God and with angels; but of satanic intelligence, she was in
 all probability entirely ignorant. Through the subtlety of the serpent, she
 was beguiled. And ‘when she saw that the tree was good for food, and that it
 was pleasant to the eyes, and a tree to be desired to make one wise, she
-took of the fruit thereof and did eat.’ We next find Adam involved in the
+took of the fruit thereof and did eat.’
+</structure> 
+
+<structure p="6">
+We next find Adam involved in the
 same sin, not through the instrumentality of a supernatural agent, but
 through that of his equal, a being whom he must have known was liable to
 transgress the divine command, because he must have felt that he was himself
@@ -95,8 +126,12 @@ his wife, and endeavored to lead her to repentance instead of sharing in her
 guilt, I should be much more ready to accord to man that superiority which
 he claims; but as the facts stand disclosed by the sacred historian, it
 appears to me that to say the least, there was as much weakness exhibited by
-Adam as by Eve.[Pg 7] They both fell from innocence, and consequently from
-happiness, but not from equality. Let us next examine the conduct of this
+Adam as by Eve. They both fell from innocence, and consequently from
+happiness, but not from equality. 
+</structure> 
+
+<structure p="7">
+Let us next examine the conduct of this
 fallen pair, when Jehovah interrogated them respecting their fault. They
 both frankly confessed their guilt. ‘The man said, the woman whom thou
 gavest to be with me, she gave me of the tree and I did eat. And the woman
@@ -117,20 +152,42 @@ the ascendency; but as he created them in his image, as that image
 manifestly was not lost by the fall, because it is urged in Gen. 9: 6, as an
 argument why the life of man should not be taken by his fellow man, there is
 no reason to suppose that sin produced any distinction between them as
-moral, intellectual and responsible beings. Man might[Pg 8] just as well
+moral, intellectual and responsible beings. 
+Man might just as well
 have endeavored by hard labor to fulfil the prophecy, thorns and thistles
 will the earth bring forth to thee, as to pretend to accomplish the other,
-‘he will rule over thee,’ by asserting dominion over his wife. ‘Authority
-usurped from God, not given. He gave him only over beast, flesh, fowl,
-Dominion absolute: that right he holds By God’s donation: but man o’er woman
-He made not Lord, such title to himself Reserving, human left from human
-free.’ Here then I plant myself. God created us equal;—he created us free
+‘he will rule over thee,’ by asserting dominion over his wife.
+</structure> 
+    
+<structure p="8">
+    <structure po="1">
+        <structure l="1">‘Authority usurped from God, not given.</structure> 
+        <structure l="2">He gave him only over beast, flesh, fowl, </structure>
+        <structure l="3">Dominion absolute: that right he holds</structure> 
+        <structure l="4">By God’s donation: but man o’er woman</structure>
+        <structure l="5">He made not Lord, such title to himself </structure>
+        <structure l="6">Reserving, human left from human free.</structure>’ 
+    </structure>
+</structure>
+
+<structure p="9">
+Here then I plant myself. God created us equal;—he created us free
 agents;—he is our Lawgiver, our King and our Judge, and to him alone is
 woman bound to be in subjection, and to him alone is she accountable for the
 use of those talents with which her Heavenly Father has entrusted her. One
-is her Master even Christ. Thine for the oppressed in the bonds of
-womanhood, Sarah M. Grimke.</structure> <structure le="2">"LETTER II.</structure> WOMAN SUBJECT ONLY TO
-GOD. Newburyport, 7th mo. 17, 1837. My dear Sister,—In my last, I traced the
+is her Master even Christ. 
+</structure>
+
+Thine for the oppressed in the bonds of
+womanhood,  
+<structure sig="Grimke"> Sarah M. Grimke </structure>.
+
+</structure>
+    
+<structure le="2">"LETTER II.</structure> WOMAN SUBJECT ONLY TO
+GOD. Newburyport, 7th mo. 17, 1837. 
+
+<structure p="10">My dear Sister,—In my last, I traced the
 creation and the fall of man and woman from that state of purity and happiness which
 their beneficent Creator designed them to enjoy. As they were one in transgression,
 their chastisement was the same. ‘So God drove out the man, and he placed at the
@@ -143,7 +200,7 @@ were shorn of their innocence, but they stood on the same platform side by side,
 acknowledging no superior but their God. Notwithstanding what has been urged, woman
 I am aware stands charged to the present day with having brought sin into the world.
 I shall not repel the charge by any counter assertions, although, as was before
-hinted, Adam’s ready acquiescence with his wife’s proposal,[Pg 10] does not savor
+hinted, Adam’s ready acquiescence with his wife’s proposal, does not savor
 much of that superiority in strength of mind, which is arrogated by man. Even
 admitting that Eve was the greater sinner, it seems to me man might be satisfied
 with the dominion he has claimed and exercised for nearly six thousand years, and
@@ -154,7 +211,9 @@ will take their feet from off our necks, and permit us to stand upright on that
 ground which God designed us to occupy. If he has not given us the rights which
 have, as I conceive, been wrested from us, we shall soon give evidence of our
 inferiority, and shrink back into that obscurity, which the high souled magnanimity
-of man has assigned us as our appropriate sphere. As I am unable to learn from
+of man has assigned us as our appropriate sphere.</structure> 
+    
+<structure p="11">As I am unable to learn from
 sacred writ when woman was deprived by God of her equality with man, I shall touch
 upon a few points in the Scriptures, which demonstrate that no supremacy was granted
 to man. When God had destroyed the world, except Noah and his family, by the deluge,
@@ -172,7 +231,9 @@ prerogative. But so far from it, we find the commands of God invariably the same
 man and woman; and not the slightest intimation is given in a single passage of the
 Bible, that God designed to point woman to man as her instructor. The tenor of his
 language always is, ‘Look unto ME, and be ye saved, all the ends of the earth, for I
-am God, and there is none else.’ The lust of dominion was probably the first effect
+am God, and there is none else.’ </structure>
+    
+<structure p="12">The lust of dominion was probably the first effect
 of the fall; and as there was no other intelligent being over whom to exercise it,
 woman was the first victim of this unhallowed passion. We afterwards see it
 exhibited by Cain in the murder of his brother, by Nimrod in his becoming a mighty
@@ -184,13 +245,17 @@ selfish gratification, to minister to his sensual pleasures, to be instrumental 
 promoting his comfort; but never has he desired to elevate her to that rank she was
 created to fill. He has done all he could to debase and enslave her mind; and now he
 looks triumphantly on the ruin he has wrought, and says, the being he has thus
-deeply injured is his inferior. [Pg 12] Woman has been placed by John Quincy Adams,
+deeply injured is his inferior.</structure> 
+
+<structure p="13">Woman has been placed by John Quincy Adams,
 side by side with the slave, whilst he was contending for the right side of
 petition. I thank him for ranking us with the oppressed; for I shall not find it
 difficult to show, that in all ages and countries, not even excepting enlightened
 republican America, woman has more or less been made a means to promote the welfare
 of man, without due regard to her own happiness, and the glory of God as the end of
-her creation. During the patriarchal ages, we find men and women engaged in the same
+her creation. </structure>
+
+<structure p="14">During the patriarchal ages, we find men and women engaged in the same
 employments. Abraham and Sarah both assisted in preparing the food which was to be
 set before the three men, who visited them in the plains of Mamre; but although
 their occupations were similar, Sarah was not permitted to enjoy the society of the
@@ -204,7 +269,9 @@ Does he approach her as a dignified creature, whom he was about to invite to fil
 important station in his master’s family, as the wife of his only son? No. He
 offered incense to her vanity, and ‘he took a golden ear-ring of half a shekel
 weight, and two bracelets for her hands of ten shekels weight of gold,’ and gave
-them to Rebecca. [Pg 13] The cupidity of man soon led him to regard woman as
+them to Rebecca.</structure> 
+
+<structure p="15">The cupidity of man soon led him to regard woman as
 property, and hence we find them sold to those, who wished to marry them, as far as
 appears, without any regard to those sacred rights which belong to woman, as well as
 to man in the choice of a companion. That women were a profitable kind of property,
@@ -220,9 +287,15 @@ so there was a corresponding proportion of wise women; and among the Jews, as we
 as other nations, we find a strong tendency to believe that women were in more
 immediate connection with heaven than men.’—L. M. Child’s Con. of Woman. If there be
 any truth in this tradition, I am at a loss to imagine in what the superiority of
-man consists. Thine in the bonds of womanhood, Sarah M. Grimke. [Pg 14] <structure le="3">LETTER III.</structure>
-THE PASTORAL LETTER OF THE GENERAL ASSOCIATION OF CONGREGATIONAL MINISTERS OF
-MASSACHUSETTS. Haverhill, 7th Mo. 1837. Dear Friend,—When I last addressed thee, I
+man consists.</structure> 
+<structure p="16">Thine in the bonds of womanhood,</structure> 
+<structure sig="Grimke"> Sarah M. Grimke </structure>.
+    
+    
+<structure le="3">
+<structure header="3">LETTER III.
+</structure><structure subhead="3">THE PASTORAL LETTER OF THE GENERAL ASSOCIATION OF CONGREGATIONAL MINISTERS OF
+MASSACHUSETTS.</structure> Haverhill, 7th Mo. 1837. Dear Friend,—When I last addressed thee, I
 had not seen the Pastoral Letter of the General Association. It has since fallen
 into my hands, and I must digress from my intention of exhibiting the condition of
 women in different parts of the world, in order to make some remarks on this
@@ -369,8 +442,14 @@ with the dignity of a Christian body, to endeavor to draw such an anti-scriptura
 distinction between men and women. Ah! how many of my sex feel in the dominion, thus
 unrighteously exercised over them, under the gentle appellation of protection, that
 what they have leaned upon has proved a broken reed at best, and oft a spear. Thine
-in the bonds of womanhood, Sarah M. Grimke. [Pg 22] <structure le=4>LETTER IV.</structure> SOCIAL INTERCOURSE OF
-THE SEXES. Andover, 7th Mo. 27th, 1837. My Dear Friend,—Before I proceed with the
+in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg 22]
+</structure>
+    
+    <structure le="4">
+<structure header="5">LETTER IV.</structure> 
+<structure subhead="4">SOCIAL INTERCOURSE OF THE SEXES. 
+</structure>Andover, 7th Mo. 27th, 1837. 
+My Dear Friend,—Before I proceed with the
 account of that oppression which woman has suffered in every age and country from
 her protector, man, permit me to offer for your consideration, some views relative
 to the social intercourse of the sexes. Nearly the whole of this intercourse is, in
@@ -460,7 +539,10 @@ her own mind or theirs. She views herself, and teaches her children to regard
 themselves as moral beings; and in all their intercourse with their fellow men, to
 lose the animal nature of man and woman, in the recognition of that immortal mind
 wherewith Jehovah has blessed and enriched them. Thine in the bonds of womanhood,
-Sarah M. Grimke. [Pg 27] <structure le="5">LETTER V.</structure> CONDITION IN ASIA AND AFRICA. Groton, 8th Mo.
+<structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg 27] <structure le="5">
+</structure>
+    
+    LETTER V.</structure> CONDITION IN ASIA AND AFRICA. Groton, 8th Mo.
 4th, 1837. My Dear Sister,—I design to devote this letter to a brief examination of
 the condition of women in Asia and Africa. I believe it will be found that men, in
 the exercise of their usurped dominion over woman, have almost invariably done one
@@ -666,7 +748,7 @@ generally engage their attention? I cannot close this, without acknowledging the
 assistance and information I have derived, and shall continue to derive on this part
 of my subject, from a valuable work entitled ‘Condition of Women, by Lydia M.
 Child.’ It is worth the perusal of every one who is interested in the subject. Thine
-in the bonds of womanhood, Sarah M. Grimke. [Pg 38] <structure le="7">LETTER VII.</structure> CONDITION IN SOME
+in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg 38] <structure le="7">LETTER VII.</structure> CONDITION IN SOME
 PARTS OF EUROPE AND AMERICA. Brookline, 8th Mo., 22d, 1837. Dear Sister,—I now come
 to the consideration of the condition of woman in Europe.—In this portion of the
 world, she does not appear to have been as uniformly or as deeply debased, as in
@@ -812,7 +894,7 @@ her Creator placed her, I entreat my sisters to arise in all the majesty of mora
 power, in all the dignity of immortal beings, and plant themselves, side by side, on
 the platform of human rights, with man, to whom they were designed to be companions,
 equals and helpers in every good word and work. Thine in the bonds of womanhood
-Sarah M. Grimke. FOOTNOTES: [1] Since the preceding letters were in type, I have met
+<structure sig="Grimke"> Sarah M. Grimke </structure>. FOOTNOTES: [1] Since the preceding letters were in type, I have met
 with the following account in a French work entitled ‘De l’education des meres de
 famille ou de la civilization du Genre Humain par les femmes,’ printed at Brussels
 in 1837. ‘The periodicals have lately published the following circumstance from the
@@ -1024,7 +1106,7 @@ words. Our brethren may reject my doctrine, because it runs counter to common
 opinions, and because it wounds their pride; but I believe they would be ‘partakers
 of the benefit’ resulting from the Equality of the Sexes, and would find that woman,
 as their equal, was unspeakably more valuable than woman as their inferior, both as
-a moral and an intellectual being. Thine in the bonds of womanhood, Sarah M. Grimke.
+a moral and an intellectual being. Thine in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>.
 FOOTNOTES: [2] Thomas S. Grimke. [Pg 56] <structure le="9">LETTER IX.</structure> HEROISM OF WOMEN—WOMEN IN
 AUTHORITY. Brookline, 8th Mo. 25th, 1837. My Dear Sister,—It seems necessary to
 glance at the conduct of women under circumstances which place them in juxtaposition
@@ -1110,7 +1192,7 @@ according to circumstances; that a father and a mother, a husband and a wife, ha
 sacred obligations resting on them, which cannot possibly belong to those who do not
 sustain these relations. But these duties and responsibilities do not attach to them
 as men and as women, but as parents, husbands, and wives. Thine in the bonds of
-womanhood, Sarah M. Grimke. [Pg 61] <structure le="10">LETTER X.</structure> INTELLECT OF WOMAN. Brookline, 8th Mo.
+womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg 61] <structure le="10">LETTER X.</structure> INTELLECT OF WOMAN. Brookline, 8th Mo.
 1837. My Dear Sister,—It will scarcely be denied, I presume, that, as a general
 rule, men do not desire the improvement of women. There are few instances of men who
 are magnanimous enough to be entirely willing that women should know more than
@@ -1197,7 +1279,7 @@ intellectual advantages of men, although there is a perceptible improvement with
 the last ten or twenty years; and I trust there is a desire awakened in my sisters
 for solid acquirements, which will elevate them to their ‘appropriate sphere,’ and
 enable them to ‘adorn the doctrine of God our Saviour in all things.’ Thine in the
-bonds of womanhood, Sarah M. Grimke. [Pg 66] <structure le="11">LETTER XI.</structure> DRESS OF WOMEN. Brookline,
+bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg 66] <structure le="11">LETTER XI.</structure> DRESS OF WOMEN. Brookline,
 9th Mo., 1837. My Dear Sister,—When I view woman as an immortal being, travelling
 through this world to that city whose builder and maker is God,—when I contemplate
 her in all the sublimity of her spiritual existence, bearing the image and
@@ -1542,7 +1624,7 @@ same severity as man, when she is guilty of moral offences. Her condition resemb
 in some measure, that of the slave, who, while he is denied the advantages of his
 more enlightened master, is treated with even greater rigor of the law. Hoping that
 in the various reformations of the day, women may be relieved from some of their
-legal disabilities, I remain, Thine in the bonds of womanhood, Sarah M. Grimke. [Pg
+legal disabilities, I remain, Thine in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg
 84] <structure le="13">LETTER XIII.</structure> RELATION OF HUSBAND AND WIFE. Brookline, 9th Mo., 1837. My Dear
 Sister,—Perhaps some persons may wonder that I should attempt to throw out my views
 on the important subject of marriage, and may conclude that I am altogether
@@ -1814,7 +1896,7 @@ what becomes of the solemn affirmation of Jehovah? ‘Hear this, all ye people, 
 ear all ye inhabitants of the world, both low and high, rich and poor.’ ‘None can by
 any means redeem his brother, or give to God a ransom for him, for the redemption of
 the soul is precious, and man cannot accomplish it.’—French Bible. Thine in the
-bonds of womanhood, Sarah M. Grimke. [Pg 98] <structure le="14">LETTER XIV.</structure> MINISTRY OF WOMEN.
+bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>. [Pg 98] <structure le="14">LETTER XIV.</structure> MINISTRY OF WOMEN.
 Brookline, 9th Mo. 1837. My Dear Sister,—According to the principle which I have
 laid down, that man and woman were created equal, and endowed by their beneficent
 Creator with the same intellectual powers and the same moral responsibilities, and
@@ -2161,7 +2243,7 @@ peculiar customs, which were then common in religious assemblies, and which the
 apostle thought inconsistent with the purpose for which they were met together. No
 one, I suppose, will hesitate which of these two conclusions to adopt. The subject
 is one of vital importance. That it may claim the calm and prayerful attention of
-Christians, is the desire of Thine in the bonds of womanhood, Sarah M. Grimke.
+Christians, is the desire of Thine in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>.
 <structure fnote="lexiv">FOOTNOTES: [3] I cannot enter fully into this part
 of my subject. It is, however, one of great importance, and I recommend
 those who wish to examine it, to read ‘The Book of the Priesthood,’ by an
@@ -2428,5 +2510,7 @@ claim from them,[Pg 128] in their intercourse as Christians. I am persuaded woma
 can do much in this way to elevate her own character. And that we may become duly
 sensible of the dignity of our nature, only a little lower than the angels, and
 bring forth fruit to the glory and honor of Emanuel’s name, is the fervent prayer of
-Thine in the bonds of womanhood, Sarah M. Grimke</main>
+Thine in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>
+
+</main>
 </document>
