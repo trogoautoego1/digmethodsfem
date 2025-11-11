@@ -8,11 +8,12 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Women Hating</title>
+                <!-- first title element -->
+                <xsl:value-of select="(//title)[1]"/>
                <!-- <link rel="stylesheet" type="text/css" href="../style.css"/> -->
             </head>
             <body>
-                <h1>Women Hating</h1>
+                <xsl:value-of select="(//title)[1]"/>
                 <xsl:apply-templates select="//main"/>
             </body>
         </html>
