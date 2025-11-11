@@ -32,7 +32,6 @@ body {
   justify-content: center;
 }
 
-/* mark the nav you want to restyle */
 nav.link-column {
   width: 240px;           /* adjust or use max-width */
   padding: 0.5rem;
@@ -107,6 +106,10 @@ nav.link-column a:focus {
       padding-top: 20px;
     }
 
-    h2, p {
+    p {
       margin: 10px;
+    }
+    
+    h2, h3 {
+      margin: 5px;
     }
