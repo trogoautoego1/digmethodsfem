@@ -8,12 +8,16 @@
     <xsl:template match="/">
         <html>
             <head>
+                <link rel="stylesheet" type="text/css" href="../style.css"/>
                 <!-- first title element -->
-                <xsl:value-of select="(//title)[1]"/>
-               <!-- <link rel="stylesheet" type="text/css" href="../style.css"/> -->
+                <title>
+                    <xsl:value-of select="(//title)[1]"/>
+                </title>    
             </head>
             <body>
-                <xsl:value-of select="(//title)[1]"/>
+                <h1>
+                    <xsl:value-of select="(//title)[1]"/>
+                </h1>
                 <xsl:apply-templates select="//main"/>
             </body>
         </html>
