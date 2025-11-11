@@ -25,8 +25,8 @@
                 p_political="police">police vigilance</power_system>, hecklers and Pageant
             organizers. Placards read "Miss America is alive and angry in Harlem," "Welcome to the
                 <power_system p_patriarchy="patriarchy">Miss America Cattle Auction</power_system>,"
-            and "Everyone is beautiful," while demonstrators chanted, "Atlantic City is a town with
-            class, they raise your morals and judge your ass." </structure>
+            and "Everyone is beautiful," while demonstrators chanted, <power_system p_patriarchy="patriarchy">"Atlantic City is a town with
+            class, they raise your morals and judge your ass."</power_system> </structure>
         <structure p="paragraph">Hecklers on the other side of the police barricades retorted with
             "Do you play around with monkeys or men?" and "You wouldn't even make it in a woman's
             world." Although the majority of the spectators were hostile, one middle-aged man
@@ -100,6 +100,6 @@
             conversation for the new suffragettes on the way home, "<power_system
                 p_political="politics">"Well, it won't help the Democratic
                 convention."</power_system>"</structure>
-        <structure cap= "photo caption">One of the juicier bits of rump on  Women's Liberation posters protesting the Miss America 1968 "cattle auction." Free Press photo by Gretchen Berg.</structure>
+        <!--<structure cap= "photo caption">One of the juicier bits of rump on  Women's Liberation posters protesting the Miss America 1968 "cattle auction." Free Press photo by Gretchen Berg.</structure>  -->
     </main>
 </document>
