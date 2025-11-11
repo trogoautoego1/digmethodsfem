@@ -184,12 +184,12 @@ womanhood,</structure>
 <structure sig="Grimke"> Sarah M. Grimke </structure>.
 </structure>
     <!-- End letter 1-->
-    
+
 <structure le="2">
 <structure header="2">LETTER II. </structure>
 <structure subhead="2">WOMAN SUBJECT ONLY TO GOD. </structure>
 <structure date="July 17th, 1837"><setting>Newburyport</setting>, 7th mo. 17, 1837. </structure>
-    
+
 <structure p="10">
 My dear Sister,—In my last, I traced the
 creation and the fall of man and woman from that state of purity and happiness which
@@ -216,7 +216,7 @@ ground which God designed us to occupy. If he has not given us the rights which
 have, as I conceive, been wrested from us, we shall soon give evidence of our
 inferiority, and shrink back into that obscurity, which the high souled magnanimity
 of man has assigned us as our appropriate sphere.</structure> 
-    
+
 <structure p="11">As I am unable to learn from
 sacred writ when woman was deprived by God of her equality with man, I shall touch
 upon a few points in the Scriptures, which demonstrate that no supremacy was granted
@@ -236,7 +236,7 @@ man and woman; and not the slightest intimation is given in a single passage of 
 Bible, that God designed to point woman to man as her instructor. The tenor of his
 language always is, ‘Look unto ME, and be ye saved, all the ends of the earth, for I
 am God, and there is none else.’ </structure>
-    
+
 <structure p="12">The lust of dominion was probably the first effect
 of the fall; and as there was no other intelligent being over whom to exercise it,
 woman was the first victim of this unhallowed passion. We afterwards see it
@@ -470,8 +470,8 @@ what they have leaned upon has proved a broken reed at best, and oft a spear. </
 <structure p="sig3">Thine in the bonds of womanhood,</structure>
 <structure sig="Grimke"> Sarah M. Grimke </structure>. 
 </structure>
-    
-    <structure le="4">
+
+<structure le="4">
 <!--End letter 3
 -->
 <structure header="4">LETTER IV.</structure> 
@@ -598,42 +598,43 @@ recreation. </structure>
 <structure p="31">I shall commence by stating the degrading practice of SELLING WOMEN,
 which we find prevalent in almost all the Eastern nations.</structure> 
 <structure p="32">Among the Jews,— </structure>
+
+<structure q="uncredited">
 <structure p="33">
-    <structure q="uncredited">‘Whoever
-wished for a wife must pay the parents for her, or perform a stipulated period of
+‘Whoever wished for a wife must pay the parents for her, or perform a stipulated period of
 service; sometimes the parties were solemnly betrothed in childhood, and the price
-of the bride stipulated.’</structure>
-</structure> 
+of the bride stipulated.’
+</structure> </structure>
 
 <structure p="34">In Babylon, they had a yearly custom of a peculiar kind.
 </structure>
-<structure p="35">
-<structure q="uncredited">‘In every district, three men, respectable for their virtue, were chosen to conduct
+
+<structure q="uncredited"> <structure p="35">‘In every district, three men, respectable for their virtue, were chosen to conduct
 all the marriageable girls to the public assembly. Here they were put up at auction
 by the public crier, while the magistrate presided over the sales. The most
 beautiful were sold first, and the rich contended eagerly for a choice. The most
 ugly, or deformed girl was sold next in succession to the handsomest, and assigned
 to any person who would take her with the least sum of money. The price given for
-the beautiful was divided into dowries for the homely.’</structure>
-</structure> 
+the beautiful was divided into dowries for the homely.’</structure> </structure>
 
 <structure p="36">Two things may here be
 noticed; first, the value set upon personal charms, just as a handsome horse
 commands a high price; and second, the utter disregard which is manifested towards
 the feelings of woman.</structure> 
 
-<structure p="37">
-<structure q="uncredited">‘In no part of the world does the condition of women appear
+
+<structure q="uncredited">
+<structure p="37">‘In no part of the world does the condition of women appear
 more dreary than in Hindostan. The arbitrary power of a father disposes of them in
 childhood. When they are married, their husbands have despotic control over them; if
 unable to support them, they can lend or sell them to a neighbor, and in the Hindoo
 rage for gambling, wives and children are frequently staked and lost. If they
 survive their husbands, they must pay implicit obedience to the oldest son; if they
 have no sons, the nearest male relation holds them in subjection; and if there
-happen to be no kinsmen, they must be dependent on the chief of the tribe.’</structure>
-</structure> 
+happen to be no kinsmen, they must be dependent on the chief of the tribe.’</structure> </structure>
 <structure p="38">Even the English, who are numerous in Hindostan, have traded in women. 
 </structure>
+    
 <structure q="uncredited"><structure p="39">‘India has been a
 great marriage market, on account of the emigration of young enterprising
 Englishmen, without a corresponding number of women. Some persons actually imported
@@ -643,7 +644,9 @@ thus to dispose of them is not mentioned; it is probable that the women themselv
 from extreme poverty, or some other cause, consented to become articles of
 speculation, upon consideration of receiving a certain remuneration. In September,
 1818, the following advertisement appeared in the Calcutta Advertiser:</structure> 
-<structure p="40"><structure q="Calcutta Advertiser">FEMALES RAFFLED FOR</structure>.</structure> 
+    
+<structure q="Calcutta Advertiser"> <structure p="40">FEMALES RAFFLED FOR</structure>. </structure>
+
 <structure p="41">Be it known, that six fair pretty young ladies, with two sweet engaging
 children, lately imported from Europe, having the roses of health blooming on their
 cheeks, and joy sparkling in their eyes, possessing amiable tempers and highly
@@ -655,31 +658,29 @@ her into a saleable commodity; and hence we find that wherever this custom preva
 woman is regarded as a mere machine to answer the purposes of domestic combat or
 sensual indulgence, or to gratify the taste of her oppressor by a display of
 personal attractions.</structure> 
-<structure p="43"><structure q="James Beattie's 'The Minstrel'">
+<structure q="James Beattie's 'The Minstrel'"> <structure p="43">
         ‘Weighed in the balance with a tyrant’s gold, Though nature
-         cast her in a heavenly mould.’</structure>
-</structure> 
+         cast her in a heavenly mould.’</structure> </structure>
 <structure p="44">I shall now take a brief survey of the EMPLOYMENTS of
 women in Asia and Africa. In doing this, I have two objects in view; first to show,
 that women are capable of acquiring as great physical power as men, and secondly to
 show, that they have been more or less the victims of oppression and contempt.</structure> 
 
-<structure p="45">
-    <structure q="uncredited">‘The occupations of the ancient Jewish women were laborious. They spent their time in
+
+<structure q="uncredited"> <structure p="45">‘The occupations of the ancient Jewish women were laborious. They spent their time in
 spinning and weaving cloth for garments, and for the covering of the tents, in
 cooking the food, tending the flocks, grinding the corn, and drawing water from the
-wells.’</structure>
-</structure>
+wells.’</structure> </structure>
     
 <structure p="46">Of Trojan women we know little, but we find that—</structure>
-<structure p="47">
-    <structure q="uncredited">‘Andromache, though a princess and well beloved by her husband, fed and took care of the horses of
-Hector.’</structure>
-</structure> 
+
+    <structure q="uncredited"> <structure p="47">‘Andromache, though a princess and well beloved by her husband, fed and took care of the horses of
+Hector.’</structure> </structure>
 <structure p="48">So in Persia, women of the middling class see that proper care is taken of
     the horses. They likewise do all the laborious part of the house work.</structure> 
+
 <structure q="uncredited">
-    <structure p="49">
+<structure p="49">
 ‘The Hindoo women are engaged in every variety of occupation, according to the caste of their
 husbands. They cultivate the land, make baskets and mats, bring water in jars, carry
 manure and various other articles to market in baskets on their heads, cook
@@ -966,7 +967,7 @@ for every such blessing, God demands a grateful heart; and woman must be recrean
 her duty, if she can quietly sit down in the enjoyments of her own domestic circle,
 and not exert herself to procure the same happiness for others.</structure>
     
-But it is said woman
+<structure p="84">But it is said woman
 has a mighty weapon in secret prayer. She has, I acknowledge, in common with man;
 but the woman who prays in sincerity for the regeneration of this guilty world, will
 accompany her prayers by her labors. A friend of mine remarked—‘I was sitting in my
@@ -974,9 +975,13 @@ chamber, weeping over the miseries of the slave, and putting up my petitions for
 deliverance from bondage; when in the midst of my meditations, it occurred to me
 that my tears, unaided by effort, could never melt the chain of the slave. I must be
 up and doing.’ She is now an active abolitionist—her prayers and her works go hand
-in hand. I am here reminded of what a slave once said to his master, a Methodist
+in hand</structure>.
+
+<structure p="85">I am here reminded of what a slave once said to his master, a Methodist
 minister. The slaveholder inquired, ‘How did you like my sermon to-day?’
-‘Very good, master, but it did not preach me free.’ Oh, my sisters, suffer me to
+‘Very good, master, but it did not preach me free.</structure>’
+
+<structure p="86">Oh, my sisters, suffer me to
 entreat you to assert your privileges, and to perform your duties as moral beings.
 Be not dismayed at the ridicule of man; it is a weapon worthy only of little minds,
 and is employed by those who feel that they cannot convince our judgment. Be not
@@ -984,36 +989,58 @@ alarmed at contumely, or scorn; we must expect this. I pray that we may meet it 
 forbearance and love; and that nothing may drive us from the performance of our high
 and holy duties. Let us ‘cease from man, whose breath is in his nostrils, for
 wherein is he to be accounted of?’ and press forward in all the great moral
-enterprises of the age, leaning only on the arm of our Beloved. But I must return to
-the subject I commenced with, viz. the condition of woman in Europe. ‘The northern
-nations bore a general resemblance to each other. War and hunting were considered
+enterprises of the age, leaning only on the arm of our Beloved. </structure>
+<structure p="87">But I must return to
+the subject I commenced with, viz. the condition of woman in Europe.</structure> 
+
+<structure q="uncredited"> <structure p="88">‘The northern nations bore a general resemblance to each other. War and hunting were considered
 the only honorable occupations for men, and all other employments were left to women
 and slaves. Even the Visigoths, on the coasts of Spain, left their fields and flocks
 to the care of women. The people who inhabit the vast extent of country between the
 Black sea and the North sea, are divided into various distinct races. The women are
 generally very industrious; even in their walks, they carry a portable distaff, and
 spin every step of the way. Both Croatian and Walachian women perform all the
-agricultural operations in addition to their own domestic concerns.’ Speaking of the
+agricultural operations in addition to their own domestic concerns.’</structure> </structure>
+    
+<structure p="89">Speaking of the
 Morlachian women, M. Fortis says, ‘Being treated like beasts of burden, and expected
 to endure submissively every species of hardship, they naturally become very dirty
-and careless in their habits.’ The Cossack women afford a contrast to this
+and careless in their habits.’</structure> 
+    
+<structure p="90">The Cossack women afford a contrast to this
 disgusting picture. They are very cleanly and industrious, and in the absence
 of their husbands, supply their places by taking charge of all their usual
 occupations, in addition to their own. It is rare for a Cossack woman not to know
-some trade, such as dyeing cloth, tanning leather, &amp;c. The condition of Polish
+some trade, such as dyeing cloth, tanning leather, &amp;c. 
+</structure>
+
+<structure p="91">The condition of Polish
 and Russian serfs in modern times is about the same. The Polish women have scarcely
 clothing enough for decency, and they are subjected to great hardships and
 privations. ‘In Russia, women have been seen paving the streets, and performing
 other similar drudgery. In Finland, they work like beasts of burden, and may be seen
-for hours in snow water, up to the middle, tugging at boats and sledges.’ In
-Flanders and in France, women are engaged in performing laborious tasks; and even in
+for hours in snow water, up to the middle, tugging at boats and sledges.’
+</structure>
+    
+<structure p="82">In Flanders and in France, women are engaged in performing laborious tasks; and even in
 England, it is not unusual to see them scraping up manure from the streets with
-their hands, and gathering it into baskets. In Greece, even now the women plough and
+their hands, and gathering it into baskets. 
+</structure>
+    
+<structure p="83">In Greece, even now the women plough and
 carry heavy burdens, while the lordly master of the family may be seen walking
-before them without any incumbrance.[1]  Generally speaking, however, there
+before them without any incumbrance.[1]
+</structure>
+
+<structure p="84">Generally speaking, however, there
 is much more comparative equality of labor between the sexes in Europe than among
-the Orientals. I shall close this letter with a brief survey of the condition of
-women among the Aborigines of America. ‘Before America was settled by Europeans, it
+the Orientals. 
+</structure>
+
+<structure p="85">I shall close this letter with a brief survey of the condition of
+women among the Aborigines of America.</structure>
+
+<structure>‘Before America was settled by Europeans, it
 was inhabited by Indian tribes, which greatly resembled each other in the treatment
 of their women. Every thing, except war and hunting, was considered beneath the
 dignity of man.—During long and wearisome marches, women were obliged to carry
@@ -1022,33 +1049,41 @@ horses and dogs, cut wood, pitched the tents, raised the corn, and made the
 clothing. When the husband killed game, he left it by a tree in the forest, returned
 home, and sent his wife several miles in search of it. In most of the tribes, women
 were not allowed to eat and drink with men, but stood and served them, and then ate
-what they left.’ The following affecting anecdote may give some idea of the
-sufferings of these women: ‘Father Joseph reproved a female savage for destroying
+what they left.’ </structure>
+
+<structure p="86">The following affecting anecdote may give some idea of the
+sufferings of these women:</structure> 
+
+<structure q="uncredited"><structure p="87">‘Father Joseph reproved a female savage for destroying
 her infant daughter. She replied, “I wish my mother had thus prevented the manifold
 sufferings I have endured. Consider, father, our deplorable situation. Our husbands
 go out to hunt; we are dragged along with one infant at our breast, and another in a
 basket. Though tired with long walking, we are not allowed to sleep when we return,
 but must labor all night in grinding maize and making chica for them.—They get drunk
 and beat us, draw us by the hair of the head, and tread us under foot. Would to God
-my mother had put me under ground the moment I was born.”’  In Greenland, the
-situation of woman is equally deplorable. The men hunt bears and catch seals; but
+my mother had put me under ground the moment I was born.”’ </structure></structure>
+
+<structure p="88">In Greenland, the situation of woman is equally deplorable. The men hunt bears and catch seals; but
 when they have towed their booty to land, they would consider it a disgrace to help
 the women drag it home, or skin and dress it. They often stand and look idly on,
 while their wives are staggering beneath the load that almost bends them to the
 earth. The women are cooks, butchers, masons, curriers, shoemakers and tailors. They
 will manage a boat in the roughest seas, and will often push off from the shore in
-the midst of a storm, that would make the hardiest European sailor tremble. The page
-of history teems with woman’s wrongs, and it is wet with woman’s tears.—For the sake
+the midst of a storm, that would make the hardiest European sailor tremble. </structure>
+
+<structure p="89">The page of history teems with woman’s wrongs, and it is wet with woman’s tears.—For the sake
 of my degraded sex every where, and for the sake of my brethren, who suffer just in
 proportion as they place woman lower in the scale of creation than man, lower than
 her Creator placed her, I entreat my sisters to arise in all the majesty of moral
 power, in all the dignity of immortal beings, and plant themselves, side by side, on
 the platform of human rights, with man, to whom they were designed to be companions,
-equals and helpers in every good word and work. 
+equals and helpers in every good word and work.</structure> 
+
 <structure p="sig7">Thine in the bonds of womanhood
-</structure><structure sig="Grimke"> Sarah M. Grimke </structure>. 
-    
-FOOTNOTES: [1] Since the preceding letters were in type, I have met
+</structure>
+<structure sig="Grimke"> Sarah M. Grimke </structure>. 
+
+<structure fnote="1">FOOTNOTES: [1] Since the preceding letters were in type, I have met
 with the following account in a French work entitled ‘De l’education des meres de
 famille ou de la civilization du Genre Humain par les femmes,’ printed at Brussels
 in 1837. ‘The periodicals have lately published the following circumstance from the
@@ -1065,14 +1100,16 @@ unfortunate creature, half fainting in the arms of her mother, implored help in 
 most touching accents, but it availed nothing.—This infernal scene passed in Europe
 in 1829, only 600 leagues from Paris and London, the two capitals of the human
 species, and at the time in which I write, it is the living history of two thirds of
-the inhabitants of the earth.’ 
+the inhabitants of the earth.’</structure> 
 </structure>
 <!--End letter 7 -->
 
-<structure le="8">LETTER VIII. 
-ON THE CONDITION OF WOMEN IN THE UNITED STATES. 
-Brookline, 1837. 
-My dear Sister,—I have now taken a brief survey of
+<structure le="8">
+<structure header="8">LETTER VIII.</structure> 
+<structure subhead="8">ON THE CONDITION OF WOMEN IN THE UNITED STATES</structure>. 
+<structure date="1837"><setting>Brookline</setting>, 1837.</structure> 
+
+<structure p="90">My dear Sister,—I have now taken a brief survey of
 the condition of woman in various parts of the world. I regret that my time has been
 so much occupied by other things, that I have been unable to bestow that attention
 upon the subject which it merits, and that my constant change of place has prevented
@@ -1080,7 +1117,9 @@ me from having access to books, which might probably have assisted me in this pa
 of my work. I hope that the principles I have asserted will claim the attention of
 some of my sex, who may be able to bring into view, more thoroughly than I have
 done, the situation and degradation of woman. I shall now proceed to make a few
-remarks on the condition of women in my own country. During the early part of my
+remarks on the condition of women in my own country.</structure> 
+
+<structure p="91">During the early part of my
 life, my lot was cast among the butterflies of the fashionable world; and of this
 class of women, I am constrained to say, both from experience and observation, that
 their education is miserably deficient; that they are taught to regard marriage as
@@ -1101,7 +1140,9 @@ voice of the Lord Jesus, inviting their weary and heavy laden souls to come unto
 and learn of Him, that they may find something worthy of their immortal spirit, and
 their intellectual powers; that they may learn the high and holy purposes of their
 creation, and consecrate themselves unto the service of God; and not, as is now the
-case, to the pleasure of man. There is another and much more numerous class in this
+case, to the pleasure of man.</structure> 
+
+<structure p="92">There is another and much more numerous class in this
 country, who are withdrawn by education or circumstances from the circle of
 fashionable amusements, but who are brought up with the dangerous and absurd idea,
 that marriage is a kind of preferment; and that to be able to keep their husband’s
@@ -1121,7 +1162,9 @@ than to interrupt her whilst engaged in her studies. This mode of training
 necessarily exalts, in their view, the animal above the intellectual and spiritual
 nature, and teaches women to regard themselves as a kind of machinery, necessary to
 keep the domestic engine in order, but of little value as the intelligent companions
-of men. Let no one think, from these remarks, that I regard a knowledge of
+of men.</structure> 
+
+<structure p="93">Let no one think, from these remarks, that I regard a knowledge of
 housewifery as beneath the acquisition of women. Far from it: I believe that a
 complete knowledge of household affairs is an indispensable requisite in a woman’s
 education,—that by the mistress of a family, whether married or single, doing her
@@ -1133,8 +1176,12 @@ necessary for women to expend so many precious hours in furnishing ‘a well spr
 table,’ but that their husbands will forego some of their accustomed indulgences in
 this way, and encourage their wives to devote some portion of their time to mental
 cultivation, even at the expense of having to dine sometimes on baked potatoes, or
-bread and butter. I believe the sentiment expressed by the author of ‘Live and let
-Live,’ is true: ‘Other things being equal, a woman of the highest mental endowments
+bread and butter.</structure>
+
+<structure p="94">I believe the sentiment expressed by the author of ‘Live and let
+Live,’ is true:</structure> 
+
+<structure q="uncredited"><structure p="95">‘Other things being equal, a woman of the highest mental endowments
 will always be the best housekeeper, for domestic economy, is a science that brings
 into action the qualities of the mind, as well as the graces of the heart. A quick
 perception, judgment, discrimination, decision and order are high attributes of
@@ -1143,12 +1190,16 @@ woman, an intellectual woman, a woman of genius, is not a good housewife, it is 
 because she is either, or all of those, but because there is some deficiency in her
 character, or some omission of duty which should make her very humble, instead of
 her indulging in any secret self-complacency on account of a certain superiority,
-which only aggravates her fault.’ The influence of women over the minds and
+which only aggravates her fault.’</structure></structure> 
+
+<structure p="96">The influence of women over the minds and
 character of children of both sexes, is allowed to be far greater than that of men.
 This being the case by the very ordering of nature, women should be prepared by
 education for the performance of their sacred duties as mothers and as sisters. A
 late American writer,[2] speaking on this subject, says in reference to an article
-in the Westminster Review:  ‘I agree entirely with the writer in the high
+in the Westminster Review:</structure> 
+
+<structure q="uncredited"><structure p="97">‘I agree entirely with the writer in the high
 estimate which he places on female education, and have long since been satisfied,
 that the subject not only merits, but imperiously demands a thorough
 reconsideration. The whole scheme must, in my opinion, be reconstructed. The great
@@ -1160,7 +1211,9 @@ revolutionize a country, in moral and religious taste, in manners and in social
 virtues and intellectual cultivation, than I can possibly do in double or treble the
 time, with a similar host of educated men. I cannot but think that the miserable
 condition of the great body of the people in all ancient communities, is to be
-ascribed in a very great degree to the degradation of women.’ There is another way
+ascribed in a very great degree to the degradation of women.’</structure></structure>
+
+<structure p="98">There is another way
 in which the general opinion, that women are inferior to men, is manifested, that
 bears with tremendous effect on the laboring class, and indeed on almost all who are
 obliged to earn a subsistence, whether it be by mental or physical exertion—I allude
@@ -1187,7 +1240,9 @@ this unscriptural notion—women being educated, from earliest childhood, to reg
 themselves as inferior creatures, have not that self-respect which conscious
 equality would engender, and hence when their virtue is assailed, they yield to
 temptation with facility, under the idea that it rather exalts than debases them, to
-be connected with a superior being. There is another class of women in this country,
+be connected with a superior being.</structure> 
+
+<structure p="99">There is another class of women in this country,
 to whom I cannot refer, without feelings of the deepest shame and sorrow. I allude
 to our female slaves. Our southern cities are whelmed beneath a tide of pollution;
 the virtue of female slaves is wholly at the mercy of irresponsible tyrants, and
@@ -1210,7 +1265,9 @@ our Courts of Justice in the slave States. ‘In Athens, if a female slave had c
 to complain of any want of respect to the laws of modesty, she could seek the
 protection of the temple, and demand a change of owners; and such appeals were never
 discountenanced, or neglected by the magistrate.’ In Christian America, the slave
-has no refuge from unbridled cruelty and lust. S. A. Forrall, speaking of the state
+has no refuge from unbridled cruelty and lust.</structure> 
+
+<structure p="100">S. A. Forrall, speaking of the state
 of morals at the South, says, ‘Negresses when young and likely, are often employed
 by the planter, or his friends, to administer to their sensual desires. This
 frequently is a matter of speculation, for if the offspring, a mulatto, be a
@@ -1246,11 +1303,19 @@ distracted the family of Abraham. In addition to all this, the female slaves suf
 every species of degradation and cruelty, which the most wanton barbarity can
 inflict; they are indecently divested of their clothing, sometimes tied up and
 severely whipped, sometimes prostrated on the earth, while their naked bodies are
-torn by the scorpion lash. ‘The whip on WOMAN’S shrinking flesh! Our soil yet
-reddening with the stains Caught from her scourging warm and fresh.’ Can any
-American woman look at these scenes of shocking licentiousness and cruelty, and fold
+torn by the scorpion lash.</structure> 
+
+<structure po="2">
+<structure l="1">‘The whip on WOMAN’S shrinking flesh!</structure>
+<structure l="2">Our soil yet reddening with the stains</structure> 
+<structure l="3">Caught from her scourging warm and fresh.’</structure>
+</structure>
+
+<structure p="101">Can any American woman look at these scenes of shocking licentiousness and cruelty, and fold
 her hands in apathy, and say, ‘I have nothing to do with slavery’? She cannot and be
-guiltless. I cannot close this letter, without saying a few words on the benefits to
+guiltless.</structure>
+
+<structure p="102">I cannot close this letter, without saying a few words on the benefits to
 be derived by men, as well as women, from the opinions I advocate relative to the
 equality of the sexes. Many women are now supported, in idleness and extravagance,
 by the industry of their husbands, fathers, or brothers, who are compelled to toil
@@ -1266,7 +1331,8 @@ words. Our brethren may reject my doctrine, because it runs counter to common
 opinions, and because it wounds their pride; but I believe they would be ‘partakers
 of the benefit’ resulting from the Equality of the Sexes, and would find that woman,
 as their equal, was unspeakably more valuable than woman as their inferior, both as
-a moral and an intellectual being. 
+a moral and an intellectual being.</structure> 
+
 <structure p="sig8">Thine in the bonds of womanhood, 
 </structure><structure sig="Grimke"> Sarah M. Grimke </structure>.
 FOOTNOTES: [2] Thomas S. Grimke. 
@@ -1274,15 +1340,19 @@ FOOTNOTES: [2] Thomas S. Grimke.
 <!-- End letter 8-->
 
 
-<structure le="9">LETTER IX.
-HEROISM OF WOMEN—WOMEN IN
-AUTHORITY. Brookline, 8th Mo. 25th, 1837. 
-My Dear Sister,—It seems necessary to
+<structure le="9">
+<structure header="9">LETTER IX.</structure>
+<structure subhead="9">HEROISM OF WOMEN—WOMEN IN AUTHORITY.</structure> 
+<structure date="August 25th, 1837">Brookline, 8th Mo. 25th, 1837.</structure>
+
+<structure p="103">My Dear Sister,—It seems necessary to
 glance at the conduct of women under circumstances which place them in juxtaposition
 with men, although I regard it as entirely unimportant in proving the moral equality
 of the sexes; because I condemn, in both, the exercise of that brute force which is
 as contrary to the law of God in men as in women; still, as a part of our history, I
-shall notice some instances of courage exhibited by females. ‘Philippa, wife of
+shall notice some instances of courage exhibited by females.</structure> 
+
+<structure q="uncredited"><structure p="104">‘Philippa, wife of
 Edward III., was the principal cause of the victory gained over the Scots at Neville
 Cross. In the absence of her husband, she rode among the troops, and exhorted them
 to “be of good courage.”’ Jane, Countess of Mountfort, and a contemporary of
@@ -1295,8 +1365,9 @@ King. Instances might be multiplied, but it is unnecessary. I shall therefore cl
 these proofs of female courage with one more fact. ‘During the revolutionary war,
 the women shared in the patriotism and bravery of the men. Several individuals
 carried their enthusiasm so far as to enter the army, where they faced all the
-perils and fatigues of the camp, until the close of the war.’ When I view my
-countrywomen in the character of soldiers, or even behold them loading fire arms and
+perils and fatigues of the camp, until the close of the war.’</structure> 
+
+<structure p="105">When I view my countrywomen in the character of soldiers, or even behold them loading fire arms and
 moulding bullets for their brethren to destroy men’s lives, I cannot refrain a sigh.
 I cannot but contrast their conduct at that solemn crisis with the conduct of those
 women who followed their Lord and Master with unresisting submission, to Calvary’s
@@ -1305,8 +1376,10 @@ precept, ‘Resist not evil,’ has interdicted to his disciples all war and all
 violence, and taught us that the spirit of retaliation for injuries, whether in the
 camp, or at the fire-side, is wholly at variance with the peaceful religion he came
 to promulgate. How little do we comprehend that simple truth, ‘By this shall all men
-know that ye are my disciples, if ye have love one to another.’ Women have sometimes
-distinguished themselves in a way more consistent with their duties as moral beings.
+know that ye are my disciples, if ye have love one to another.’</structure>
+</structure>
+
+<structure p="106">Women have sometimes distinguished themselves in a way more consistent with their duties as moral beings.
 During the war between the Romans and the Sabines, the Sabine women who had been
 carried off by the Romans, repaired to the Sabine camp, dressed in deep mourning,
 with their little ones in their arms, to soften, if possible, the feelings of their
@@ -1325,16 +1398,21 @@ market-place to expostulate with the magistrates. The triumvirs wished to drive 
 away, but they were compelled to yield to the wishes of the people, and give the
 women a hearing. Hortensia pleaded so well the cause of her sisters, who resolved
 that they would not voluntarily aid in a civil war, that the number of women taxed
-was reduced from 1400 to 400. In the wars of the Guelphs and the Ghibbelines, the
+was reduced from 1400 to 400.</structure> 
+
+<structure p="107">In the wars of the Guelphs and the Ghibbelines, the
 emperor Conrad refused all terms of capitulation to the garrison of Winnisberg, but
 he granted the request of the women to pass out in safety with such of their effects
 as they could carry themselves. Accordingly, they issued from the besieged city,
 each bearing on her shoulders a husband, son, father, or brother. They passed
-unmolested through the enemy’s camp, which rung with acclamations of applause.
-During our struggle for independence, the women were as exemplary as the men in
+unmolested through the enemy’s camp, which rung with acclamations of applause.</structure>
+
+<structure p="108">During our struggle for independence, the women were as exemplary as the men in
 various instances of self-denial: they refused every article of decoration for their
 persons; foreign elegances were laid aside, and they cheerfully abstained from
-luxuries for their tables. English history presents many instances of women
+luxuries for their tables.</structure> 
+
+<structure p="109">English history presents many instances of women
 exercising prerogatives now denied them. In an action at law, it has been determined
 that an unmarried woman, having a freehold, might vote for members of Parliament;
 and it is recorded that lady Packington returned two. Lady Broughton was keeper of
@@ -1344,39 +1422,48 @@ II. the minister of Clerkenwell was chosen by a majority of women. The office of
 grand chamberlain in 1822 was filled by two women; and that of clerk of the crown,
 in the court of king’s bench, has been granted to a female. The celebrated Anne,
 countess of Pembroke, held the hereditary office of sheriff of Westmoreland, and
-exercised it in person, sitting on the bench with the judges. I need hardly advert
+exercised it in person, sitting on the bench with the judges.</structure> 
+
+<structure p="110">I need hardly advert
 to the names of Elizabeth of England, Maria Theresa of Germany, Catharine of Russia,
 and Isabella of Spain, to prove that women are capable of swaying the sceptre of
 royalty. The page of history proves incontestibly, not only that they are as well
 qualified to do so as men, but that there has been a comparatively greater
 proportion of good queens, than of good kings; women who have purchased their
-celebrity by individual strength of character.  I mention these women only to
+celebrity by individual strength of character.</structure>  
+
+<structure p="111">I mention these women only to
 prove that intellect is not sexed; that strength of mind is not sexed; and that our
 views about the duties of men and the duties of women, the sphere of man and the
 sphere of woman, are mere arbitrary opinions, differing in different ages and
-countries, and dependant solely on the will and judgment of erring mortals. As moral
-and responsible beings, men and women have the same sphere of action, and the same
+countries, and dependant solely on the will and judgment of erring mortals.</structure> 
+
+<structure p="112">As moral and responsible beings, men and women have the same sphere of action, and the same
 duties devolve upon both; but no one can doubt that the duties of each vary
 according to circumstances; that a father and a mother, a husband and a wife, have
 sacred obligations resting on them, which cannot possibly belong to those who do not
 sustain these relations. But these duties and responsibilities do not attach to them
-as men and as women, but as parents, husbands, and wives. 
+as men and as women, but as parents, husbands, and wives.</structure> 
+    
 <structure p="sig9"> Thine in the bonds of womanhood</structure>, 
 <structure sig="Grimke"> Sarah M. Grimke </structure>. 
 </structure>
 <!-- End letter 9-->
  
-<structure le="10">LETTER X. 
-INTELLECT OF WOMAN. 
-Brookline, 8th Mo.1837.
-My Dear Sister,—It will scarcely be denied, I presume, that, as a general
+<structure le="10">
+<structure header="10">LETTER X.</structure> 
+<structure subhead="10">INTELLECT OF WOMAN.</structure> 
+<structure date="August 1837"><setting>Brookline</setting>, 8th Mo.1837</structure>.
+<structure p="113">My Dear Sister,—It will scarcely be denied, I presume, that, as a general
 rule, men do not desire the improvement of women. There are few instances of men who
 are magnanimous enough to be entirely willing that women should know more than
 themselves, on any subjects except dress and cookery; and, indeed, this necessarily
 flows from their assumption of superiority. As they have determined that Jehovah has
 placed woman on a lower platform than man, they of course wish to keep her there;
 and hence the noble faculties of our minds are crushed, and our reasoning powers are
-almost wholly uncultivated. A writer in the time of Charles I. says—‘She that
+almost wholly uncultivated.</structure> 
+
+<structure p="114">A writer in the time of Charles I. says—‘She that
 knoweth how to compound a pudding, is more desirable than she who skilfully
 compounded a poem. A female poet I mislike at all times.’ Within the last century,
 it has been gravely asserted that, ‘chemistry enough to keep the pot boiling, and
@@ -1386,16 +1473,22 @@ pure and perfect companionship between the sexes, would limit a woman’s librar
 Bible and cookery book. I have myself heard men, who knew for themselves the value
 of intellectual culture, say they cared very little for a wife who could not make a
 pudding, and smile with contempt at the ardent thirst for knowledge exhibited by
-some women. But all this is miserable wit and worse philosophy. It exhibits that
+some women.</structure> 
+
+<structure p="115">But all this is miserable wit and worse philosophy. It exhibits that
 passion for the gratification of a pampered appetite, which is beneath those who
 claim to be so far above us, and may justly be placed on a par with the policy of
 the slaveholder, who says that men will be better slaves, if they are not permitted
-to learn to read. In spite, however, of the obstacles which impede the progress of
+to learn to read.</structure> 
+
+<structure p="116">In spite, however, of the obstacles which impede the progress of
 women towards that state of high mental cultivation for which her Creator prepared
 her, the tendency towards the universal dissemination of knowledge has had its
 influence on their destinies; and in all ages, a few have surmounted every
 hindrance, and proved, beyond dispute, that they have talents equal to their
-brethren. Cornelia, the daughter of Scipio Africanus, was distinguished for virtue,
+brethren.</structure> 
+
+<structure p="117">Cornelia, the daughter of Scipio Africanus, was distinguished for virtue,
 learning and good sense. She wrote and spoke with uncommon elegance and purity.
 Cicero and Quinctilian bestow high praise upon her letters, and the eloquence of her
 children was attributed to her careful superintendence. This reminds me of a remark
@@ -1404,7 +1497,9 @@ well educated, that ‘educated men would never make educated women, but educate
 women would make educated men.’ I believe the sentiment is correct, because
 if the wealth of latent intellect among women was fully evolved and improved, they
 would rejoice to communicate to their sons all their own knowledge, and inspire them
-with desires to drink from the fountain of literature. I pass over many interesting
+with desires to drink from the fountain of literature.</structure> 
+
+<structure p="118">I pass over many interesting
 proofs of the intellectual powers of women; but I must not omit glancing at the age
 of chivalry, which has been compared to a golden thread running through the dark
 ages. During this remarkable era, women who, before this period, had been subject to
@@ -1454,16 +1549,17 @@ highest order. But women, even in this free republic, do not enjoy all the
 intellectual advantages of men, although there is a perceptible improvement within
 the last ten or twenty years; and I trust there is a desire awakened in my sisters
 for solid acquirements, which will elevate them to their ‘appropriate sphere,’ and
-enable them to ‘adorn the doctrine of God our Saviour in all things.’ 
+enable them to ‘adorn the doctrine of God our Saviour in all things.’</structure> 
+
 <structure p="sig10">Thine in the bonds of womanhood</structure>, <structure sig="Grimke"> Sarah M. Grimke </structure>.
 
 </structure> 
 <!-- End letter 10-->
 
-<structure le="11">LETTER XI. 
-DRESS OF WOMEN. 
-Brookline, 9th Mo., 1837. 
-My Dear Sister,—When I view woman as an immortal being, travelling
+<structure le="11"><structure header="11">LETTER XI.</structure> 
+<structure subhead="11">DRESS OF WOMEN.</structure> 
+<structure date="September 1837"><setting>Brookline</setting>, 9th Mo., 1837.</structure> 
+<structure p="119">My Dear Sister,—When I view woman as an immortal being, travelling
 through this world to that city whose builder and maker is God,—when I contemplate
 her in all the sublimity of her spiritual existence, bearing the image and
 superscription of Jehovah, emanating from Him and partaking of his nature, and
@@ -1471,14 +1567,18 @@ destined, if she fulfils her duty, to dwell with him through the endless ages of
 eternity,—I mourn that she has lived so far below her privileges and her
 obligations, as a rational and accountable creature; and I ardently long to behold
 her occupying that sphere in which I believe her Creator designed her to move.
-Woman, in all ages and countries, has been the scoff and the jest of her lordly
+</structure>
+
+<structure p="120">Woman, in all ages and countries, has been the scoff and the jest of her lordly
 master. If she attempted, like him, to improve her mind, she was ridiculed as
 pedantic, and driven from the temple of science and literature by coarse attacks and
 vulgar sarcasms. If she yielded to the pressure of circumstances, and sought relief
 from the monotony of existence by resorting to the theatre and the ball-room, by
 ornamenting her person with flowers and with jewels, while her mind was empty
 and her heart desolate; she was still the mark at which wit and satire and cruelty
-levelled their arrows. ‘Woman,’ says Adam Clarke, ‘has been invidiously defined, an
+levelled their arrows.</structure> 
+
+<structure p="121">‘Woman,’ says Adam Clarke, ‘has been invidiously defined, an
 animal of dress. How long will they permit themselves to be thus degraded?’ I have
 been an attentive observer of my sex, and I am constrained to believe that the
 passion for dress, which so generally characterizes them, is one cause why there so
@@ -1501,7 +1601,9 @@ the foolish vanity of ornamental apparel? No! Christianity struck at the root
 of all sin, and consequently we find the early Christians could not fight, or swear,
 or wear costly clothing. Cave, in his work entitled ‘Primitive Christianity,’ has
 some interesting remarks on this subject, showing that simplicity of dress was not
-then esteemed an unimportant part of Christianity. Very soon, however, when the fire
+then esteemed an unimportant part of Christianity.</structure> 
+
+<structure p="122">Very soon, however, when the fire
 of persecution was no longer blazing, pagan customs became interwoven with
 Christianity. The professors of the religion of a self-denying Lord, whose kingdom
 was not of this world, began to use the sword, to return railing for railing, to
@@ -1515,7 +1617,9 @@ Bethlehem was born, full of outside observances, which they substitute for mercy
 love, for self-denial and good works, rigid in the performance of religious duties,
 but ready, if the Lord Jesus came amongst them and judged them by their fruits, as
 he did the Pharisees formerly, to crucify him as a slanderer. Indeed, I believe the
-remark of a late author is perfectly correct: ‘Strange as it may seem, yet I do not
+remark of a late author is perfectly correct:</structure> 
+
+<structure q="uncredited"><structure p="123">‘Strange as it may seem, yet I do not
 hesitate to declare my belief that it is easier to make Pagan nations Christians,
 than to reform Christian communities and fashion them anew, after the pure
 and simple standard of the gospel. Cast your eye over Christian countries, and see
@@ -1526,16 +1630,21 @@ honor. Behold the wide spread ignorance and degrading superstition; the power of
 prejudice and the authority of custom; the unchristian character of our systems of
 education; and the dread of the frowns and ridicule of the world, and we discover at
 once a host of more formidable enemies to the progress of true religion in
-Christian, than in heathen lands.’ But I must proceed to examine what is the state
+Christian, than in heathen lands.’</structure></structure>
+
+<structure p="124">But I must proceed to examine what is the state
 of professing Christendom, as regards the subject of this letter. A few words will
 suffice. The habits and employments of fashionable circles are nearly the same
 throughout Christian communities. The fashion of dress, which varies more rapidly
 than the changing seasons, is still, as it has been from time immemorial, an
 all-absorbing object of interest. The simple cobbler of Agawam, who wrote in
-Massachusetts as early as 1647, speaking of women, says, “It is no marvel they wear
+Massachusetts as early as 1647, speaking of women, says,</structure> 
+
+<structure q="cobbler of Agawam"><structure p="125">“It is no marvel they wear
 drailes on the hinder part of their heads, having nothing, as it seems, in the fore
-part, but a few squirrels’ brains to help them frisk from one fashion to another.’
-It must, however, be conceded, that although there are too many women who merit this
+part, but a few squirrels’ brains to help them frisk from one fashion to another.’</structure></structure>
+
+<structure p="126">It must, however, be conceded, that although there are too many women who merit this
 severe reprehension, there is a numerous class whose improvement of mind and
 devotion to the cause of humanity justly entitle them to our respect and admiration.
 One of the most striking characteristics of modern times, is the tendency toward a
@@ -1553,13 +1662,16 @@ industry, to obtain money to forward a favorite benevolent scheme, while at the 
 time she will expend on useless articles of dress, more than treble the sum which
 she procures by the employment of her needle, and which she might throw into the
 Lord’s treasury, and leave herself leisure to cultivate her mind, and to mingle
-among the poor and the afflicted more than she can possibly do now. I feel
-exceedingly solicitous to draw the attention of my sisters to this subject. I know
+among the poor and the afflicted more than she can possibly do now.</structure>
+
+<structure p="127">I feel exceedingly solicitous to draw the attention of my sisters to this subject. I know
 that it is called trifling, and much is said about dressing fashionably, and
 elegantly, and becomingly, without thinking about it. This I do not believe can be
 done. If we indulge our fancy in the chameleon caprices of fashion, or in wearing
 ornamental and extravagant apparel, the mind must be in no small degree engaged in
-the gratification of personal vanity. Lest any one may suppose from my being a
+the gratification of personal vanity.</structure> 
+
+<structure p="128">Lest any one may suppose from my being a
 Quaker, that I should like to see a uniform dress adopted, I will say, that I have
 no partiality for their peculiar costume, except so far as I find it simple
 and convenient; and I have not the remotest desire to see it worn, where one more
@@ -1575,7 +1687,9 @@ nevertheless, ever ready to encourage it in women. They know that so long as we
 submit to be dressed like dolls, we never can rise to the stations of duty and
 usefulness from which they desire to exclude us; and they are willing to grant us
 paltry indulgences, which forward their own design of keeping us out of our
-appropriate sphere, while they deprive us of essential rights. To me it appears
+appropriate sphere, while they deprive us of essential rights.</structure> 
+
+<structure p="129">To me it appears
 beneath the dignity of woman to bedeck herself in gewgaws and trinkets, in ribbons
 and laces, to gratify the eye of man. I believe, furthermore, that we owe a solemn
 duty to the poor. Many a woman, in what is called humble life, spends nearly all her
@@ -1607,14 +1721,17 @@ If it would be wrong for a minister, it is wrong for every professing Christian.
 makes no distinction between the moral and religious duties of ministers and people.
 We are bound to be ‘a chosen generation, a royal priesthood, a peculiar people, a
 holy nation; that we should show forth the praises of him who hath called us out of
-darkness into his marvellous light.’ Thine in the bonds of womanhood, Sarah M.
-Grimke.
+darkness into his marvellous light.’</structure> 
+<structure p="sig11">Thine in the bonds of womanhood,</structure> 
+<structure sig="Grimke">Sarah M. Grimke.</structure>
 </structure> 
 <!--End letter 11 -->
     
-<structure le="12">LETTER XII. 
-LEGAL DISABILITIES OF WOMEN. 
-Concord, 9th Mo., 6th, 1837. 
+<structure le="12"><structure header="12">LETTER XII.</structure> 
+<structure subhead="12">LEGAL DISABILITIES OF WOMEN.</structure> 
+<structure date="September 6th, 1837"><setting>Concord</setting>, 9th Mo., 6th, 1837.</structure> 
+
+<structure p="130">
 My Dear Sister,—There are few things which present greater obstacles to the
 improvement and elevation of woman to her appropriate sphere of usefulness and duty,
 than the laws which have been enacted to destroy her independence, and crush her
@@ -1631,8 +1748,9 @@ in our Country,’ says, ‘Woman, though fully possessed of that rational and
 moral nature which is the foundation of all rights, enjoys amongst us fewer legal
 rights than under the civil law of continental Europe.’ I shall confine myself to
 the laws of our country. These laws bear with peculiar rigor on married women.
-Blackstone, in the chapter entitled ‘Of husband and wife,’ says:— ‘By marriage, the
-husband and wife are one person in law; that is, the very being, or legal existence
+Blackstone, in the chapter entitled ‘Of husband and wife,’ says:— </structure>
+
+<structure q="Professor Charles Follen"><structure p="131">‘By marriage, the husband and wife are one person in law; that is, the very being, or legal existence
 of the woman is suspended during the marriage, or at least is incorporated and
 consolidated into that of the husband under whose wing, protection and cover she
 performs everything.’ ‘For this reason, a man cannot grant anything to his wife, or
@@ -1641,7 +1759,9 @@ existence, and to covenant with her would be to covenant with himself; and there
 it is also generally true, that all compacts made between husband and wife when
 single, are voided by the intermarriage. A woman indeed may be attorney for her
 husband; but that implies no separation from, but is rather a representation of, her
-love.’ Here now, the very being of a woman, like that of a slave, is absorbed in her
+love.’ </structure></structure>
+
+<structure p="132">Here now, the very being of a woman, like that of a slave, is absorbed in her
 master. All contracts made with her, like those made with slaves by their owners,
 are a mere nullity. Our kind defenders have legislated away almost all our legal
 rights, and in the true spirit of such injustice and oppression, have kept us in
@@ -1649,38 +1769,58 @@ ignorance of those very laws by which we are governed. They have persuaded us, t
 we have no right to investigate the laws, and that, if we did, we could not
 comprehend them; they alone are capable of understanding the mysteries of
 Blackstone, &amp;c. But they are not backward to make us feel the practical
-operation of their power over our actions. ‘The husband is bound to provide his wife
+operation of their power over our actions. </structure>
+
+<structure q="uncredited"><structure p="133">‘The husband is bound to provide his wife
 with necessaries by law, as much as himself; and if she contracts debts for them, he
 is obliged to pay for them; but for anything besides necessaries, he is not
-chargeable.’  Yet a man may spend the property he has acquired by marriage at
+chargeable.’ </structure></structure>
+
+<structure p="134">Yet a man may spend the property he has acquired by marriage at
 the ale-house, the gambling table, or in any other way that he pleases. Many
 instances of this kind have come to my knowledge; and women, who have brought their
 husbands handsome fortunes, have been left, in consequence of the wasteful and
 dissolute habits of their husbands, in straitened circumstances, and compelled to
-toil for the support of their families. ‘If the wife be indebted before marriage,
+toil for the support of their families.</structure>
+
+<structure q="uncredited"><structure p="135">‘If the wife be indebted before marriage,
 the husband is bound afterwards to pay the debt; for he has adopted her and her
-circumstances together.’ The wife’s property is, I believe, equally liable for her
-husband’s debts contracted before marriage. ‘If the wife be injured in her person or
+circumstances together.’ </structure></structure>
+
+<structure p="136">The wife’s property is, I believe, equally liable for her
+husband’s debts contracted before marriage. </structure>
+
+<structure q="uncredited"><structure p="137">‘If the wife be injured in her person or
 property, she can bring no action for redress without her husband’s concurrence, and
 his name as well as her own: neither can she be sued, without making her husband a
-defendant.’ This law that ‘a wife can bring no action,’ &amp;c., is similar to the
+defendant.’ </structure></structure>
+
+<structure p="138">This law that ‘a wife can bring no action,’ &amp;c., is similar to the
 law respecting slaves, ‘A slave cannot bring a suit against his master, or any other
 person, for an injury—his master, must bring it.’ So if any damages are recovered
 for an injury committed on a wife, the husband pockets it; in the case of the slave,
-the master does the same. ‘In criminal prosecutions, the wife may be indicted and
+the master does the same. </structure>
+
+<structure q="uncredited"><structure p="139">‘In criminal prosecutions, the wife may be indicted and
 punished separately, unless there be evidence of coercion from the fact that the
 offence was committed in the presence, or by the command of her husband. A wife is
 excused from punishment for theft committed in the presence, or by the command of
-her husband.’ It would be difficult to frame a law better calculated to destroy the
+her husband.’ </structure></structure>
+
+<structure p="140">It would be difficult to frame a law better calculated to destroy the
 responsibility of woman as a moral being, or a free agent. Her husband is
 supposed to possess unlimited control over her; and if she can offer the flimsy
 excuse that he bade her steal, she may break the eighth commandment with impunity,
-as far as human laws are concerned. ‘Our law, in general, considers man and wife as
+as far as human laws are concerned. </structure>
+
+<structure q="uncredited"><structure p="141">‘Our law, in general, considers man and wife as
 one person; yet there are some instances in which she is separately considered, as
 inferior to him and acting by his compulsion. Therefore, all deeds executed, and
 acts done by her during her coverture (i. e. marriage,) are void, except it be a
 fine, or like matter of record, in which case she must be solely and secretly
-examined, to learn if her act be voluntary.’ Such a law speaks volumes of the abuse
+examined, to learn if her act be voluntary.’ </structure></structure>
+
+<structure p="142">Such a law speaks volumes of the abuse
 of that power which men have vested in their own hands. Still the private
 examination of a wife, to know whether she accedes to the disposition of property
 made by her husband is, in most cases, a mere form; a wife dares not do what will be
@@ -1697,11 +1837,14 @@ and the person who had loaned the money was obliged to pay both principal and
 interest to the friend who lent it to her. Women should certainly know the laws
 by which they are governed, and from which they frequently suffer; yet they
 are kept in ignorance, nearly as profound, of their legal rights, and of the
-legislative enactments which are to regulate their actions, as slaves. ‘The husband,
-by the old law, might give his wife moderate correction, as he is to answer for her
-misbehavior. The law thought it reasonable to entrust him with this power of
+legislative enactments which are to regulate their actions, as slaves. </structure>
+
+<structure q="uncredited"><structure p="143"> ‘The husband, by the old law, might give his wife moderate correction, 
+as he is to answer for her misbehavior. The law thought it reasonable to entrust him with this power of
 restraining her by domestic chastisement. The courts of law will still permit a
-husband to restrain a wife of her liberty, in case of any gross misbehavior.’ What a
+husband to restrain a wife of her liberty, in case of any gross misbehavior.’</structure></structure>
+
+<structure p="144">What a
 mortifying proof this law affords, of the estimation in which woman is held! She is
 placed completely in the hands of a being subject like herself to the outbursts of
 passion, and therefore unworthy to be trusted with power. Perhaps I may be told
@@ -1717,8 +1860,12 @@ of some little girls at a children’s meeting held recently at Ipswich. The lec
 told them that God had created four orders of beings with which he had made us
 acquainted through the Bible. The first was angels, the second was man, the
 third beasts; and now, children, what is the fourth? After a pause, several girls
-replied, ‘WOMEN.’ ‘A woman’s personal property by marriage becomes absolutely her
-husband’s, which, at his death, he may leave entirely away from her.’ And farther,
+replied, ‘WOMEN.’ </structure>
+
+<structure q="uncredited"><structure p="145">‘A woman’s personal property by marriage becomes absolutely her
+husband’s, which, at his death, he may leave entirely away from her.’ </structure></structure>
+
+<structure p="145">And farther,
 all the avails of her labor are absolutely in the power of her husband. All that she
 acquires by her industry is his; so that she cannot, with her own honest earnings,
 become the legal purchaser of any property. If she expends her money for articles of
@@ -1746,9 +1893,13 @@ admit of secrecy about money matters, unless positive necessity demands it; and 
 can see no excuse for any woman entering into a marriage engagement with a design to
 keep her husband ignorant that she was possessed of property. If she was unwilling
 to give up her property to his disposal, she had infinitely better have remained
-single. The laws above cited are not very unlike the slave laws of Louisiana. ‘All
+single. The laws above cited are not very unlike the slave laws of Louisiana.</structure> 
+
+<structure q="uncredited"><structure p="146">‘All
 that a slave possesses belongs to his master; he possesses nothing of his own,
-except what his master chooses he should possess.’ ‘By the marriage, the husband is
+except what his master chooses he should possess.’</structure> 
+
+<structure p="147">‘By the marriage, the husband is
 absolutely master of the profits of the wife’s lands during the coverture, and if he
 has had a living child, and survives the wife, he retains the whole of those lands,
 if they are estates of inheritance, during his life; but the wife is entitled only
@@ -1761,7 +1912,9 @@ it was thought necessary to purchase exemption from it at an immense expense
 of blood and treasure, yet the daughters of New England, as well as of all the other
 States of this free Republic, are suffering a similar injustice—but for one, I had
 rather we should suffer any injustice or oppression, than that my sex should have
-any voice in the political affairs of the nation. The laws I have quoted, are, I
+any voice in the political affairs of the nation.</structure> </structure>
+
+<structure p="148">The laws I have quoted, are, I
 believe, the laws of Massachusetts, and, with few exceptions, of all the States in
 this Union. ‘In Louisiana and Missouri, and possibly, in some other southern States,
 a woman not only has half her husband’s property by right at his death, but may
@@ -1780,8 +1933,9 @@ should have secured to her as a right.’ I have known a few instances where men
 left their whole property to their wives, when they have died, leaving only minor
 children; but I have known more instances of ‘the friend and helper of many
 years, being portioned off like a salaried domestic,’ instead of having a
-comfortable independence secured to her, while the children were amply provided for.
-As these abuses do exist, and women suffer intensely from them, our brethren are
+comfortable independence secured to her, while the children were amply provided for.</structure>
+
+<structure p="149">As these abuses do exist, and women suffer intensely from them, our brethren are
 called upon in this enlightened age, by every sentiment of honor, religion and
 justice, to repeal these unjust and unequal laws, and restore to woman those rights
 which they have wrested from her. Such laws approximate too nearly to the laws
@@ -1791,7 +1945,9 @@ and depress the mind of that being, whom God created as a help meet for man, or
 such laws are annulled, woman never can occupy that exalted station for which she
 was intended by her Maker. And just in proportion as they are practically
 disregarded, which is the case to some extent, just so far is woman assuming that
-independence and nobility of character which she ought to exhibit. The various laws
+independence and nobility of character which she ought to exhibit. </structure>
+
+<structure p="150">The various laws
 which I have transcribed, leave women very little more liberty, or power, in some
 respects, than the slave. ‘A slave,’ says the civil code of Louisiana, ‘is one who
 is in the power of a master, to whom he belongs. He can possess nothing, nor acquire
@@ -1802,7 +1958,9 @@ of their rights and privileges, have a tendency to lessen them in their own
 estimation as moral and responsible beings, and that their being made by civil law
 inferior to their husbands, has a debasing and mischievous effect upon them,
 teaching them practically the fatal lesson to look unto man for protection and
-indulgence. Ecclesiastical bodies, I believe, without exception, follow the example
+indulgence. </structure>
+
+<structure p="151">Ecclesiastical bodies, I believe, without exception, follow the example
 of legislative assemblies, in excluding woman from any participation in forming the
 discipline by which she is governed. The men frame the laws, and, with few
 exceptions, claim to execute them on both sexes. In ecclesiastical, as well as civil
@@ -1813,20 +1971,26 @@ same severity as man, when she is guilty of moral offences. Her condition resemb
 in some measure, that of the slave, who, while he is denied the advantages of his
 more enlightened master, is treated with even greater rigor of the law. Hoping that
 in the various reformations of the day, women may be relieved from some of their
-legal disabilities, I remain, Thine in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>.
+legal disabilities, I remain,</structure> 
+<structure p="sig12">Thine in the bonds of womanhood,</structure> 
+<structure sig="Grimke"> Sarah M. Grimke </structure>.
 </structure> 
 <!-- End letter 12-->
     
-<structure le="13">LETTER XIII. 
-RELATION OF HUSBAND AND WIFE. 
-Brookline, 9th Mo., 1837. 
-My Dear Sister,—Perhaps some persons may wonder that I should attempt to throw out my views
+<structure le="13">
+<structure header="13">LETTER XIII</structure>. 
+<structure subhead="13">RELATION OF HUSBAND AND WIFE.</structure> 
+<structure date="September 1837"><setting>Brookline</setting>, 9th Mo., 1837.</structure> 
+
+<structure p="152">My Dear Sister,—Perhaps some persons may wonder that I should attempt to throw out my views
 on the important subject of marriage, and may conclude that I am altogether
 disqualified for the task, because I lack experience. However, I shall not undertake
 to settle the specific duties of husbands and wives, but only to exhibit opinions
 based on the word of God, and formed from a little knowledge of human nature, and
 close observation of the working of generally received notions respecting the
-dominion of man over woman. When Jehovah ushered into existence man, created in his
+dominion of man over woman.</structure> 
+
+<structure p="153">When Jehovah ushered into existence man, created in his
 own image, he instituted marriage as a part of paradisaical happiness: it was a
 divine ordination, not a civil contract. God established it, and man, except by
 special permission, has no right to annul it. There can be no doubt that the
@@ -1840,7 +2004,9 @@ guardianship of Adam, after having endowed her, as richly as him, with moral
 perceptions, intellectual faculties, and spiritual apprehensions, he would at once
 have interposed a fallible being between her and her Maker. He could not, in simple
 consistency with himself, have done this; for the Bible teems with instructions not
-to put any confidence in man. The passage on which the generally received opinion,
+to put any confidence in man.</structure> 
+
+<structure p="154">The passage on which the generally received opinion,
 that husbands are invested by divine command with authority over their wives, as I
 have remarked in a previous letter, is a prediction; and I am confirmed in this
 belief, because the same language is used to Cain respecting Abel. The text is
@@ -1848,12 +2014,16 @@ obscure; but on a comparison of it with subsequent events, it appears to me that
 was a prophecy of the dominion which Cain would usurp over his brother, and which
 issued in the murder of Abel. It could not allude to any thing but physical
 dominion, because Cain had already exhibited those evil passions which subsequently
-led him to become an assassin. I have already shown, that man has exercised the most
+led him to become an assassin.</structure> 
+
+<structure p="155">I have already shown, that man has exercised the most
 unlimited and brutal power over woman, in the peculiar character of husband,—a word
 in most countries synonymous with tyrant. I shall not, therefore, adduce any further
 proofs of the fulfilment of that prophecy, ‘He will rule over thee,’ from the
 history of heathen nations, but just glance at the condition of woman in the
-relation of wife in Christian countries. ‘Previous to the introduction of the
+relation of wife in Christian countries.</structure> 
+
+<structure p="156">‘Previous to the introduction of the
 religion of Jesus Christ, the state of society was wretchedly diseased. The relation
 of the sexes to each other had become so gross in its manifested forms, that it was
 difficult to perceive the pure conservative principle in its inward essence.’
@@ -1866,7 +2036,9 @@ another’s convenience and pleasure. Woman, instead of being elevated by her un
 with man, which might be expected from an alliance with a superior being, is in
 reality lowered. She generally loses her individuality, her independent character,
 her moral being. She becomes absorbed into him, and henceforth is looked at, and
-acts through the medium of her husband. In the wealthy classes of society, and those
+acts through the medium of her husband. </structure>
+
+<structure p="157">In the wealthy classes of society, and those
 who are in comfortable circumstances, women are exempt from great corporeal
 exertion, and are protected by public opinion, and by the genial influence of
 Christianity, from much physical ill treatment. Still, there is a vast amount of
@@ -1882,7 +2054,9 @@ and love exist, a wife will naturally converse with her husband as with her dear
 friend, on all that interests her heart, and there will be a perfectly free
 interchange of sentiment; but she is no more bound to be governed by his judgment,
 than he is by hers. They are standing on the same platform of human rights, are
-equally under the government of God, and accountable to him, and him alone. I have
+equally under the government of God, and accountable to him, and him alone.</structure> 
+
+<structure p="158">I have
 sometimes been astonished and grieved at the servitude of women, and at the little
 idea many of them seem to have of their own moral existence and responsibilities. A
 woman who is asked to sign a petition for the abolition of slavery in the District
@@ -1897,7 +2071,9 @@ who, under a mistaken view of their obligations as wives, submit conscientiously
 holy fortitude, which would enable them to fulfil their duties as moral and
 responsible beings, without reference to poor fallen man. O that woman may arise in
 her dignity as an immortal creature, and speak, think and act as unto God, and not
-unto man! There is, perhaps, less bondage of mind among the poorer classes, because
+unto man!</structure> 
+
+<structure p="159">There is, perhaps, less bondage of mind among the poorer classes, because
 their sphere of duty is more contracted, and they are deprived of the means of
 intellectual culture, and of the opportunity of exercising their judgment, on many
 moral subjects of deep interest and of vital importance. Authority is called into
@@ -1917,7 +2093,9 @@ in married life is to be found in the erroneous notion of her inferiority to man
 and never will she be rightly regarded by herself, or others, until this opinion, so
 derogatory to the wisdom and mercy of God, is exploded, and woman arises in all the
 majesty of her womanhood, to claim those rights which are inseparable from her
-existence as an immortal, intelligent and responsible being. Independent of the
+existence as an immortal, intelligent and responsible being.</structure> 
+<structure p="160">
+Independent of the
 fact, that Jehovah could not, consistently with his character as the King, the
 Lawgiver, and the Judge of his people, give the reins of government over woman into
 the hands of man, I find that all his commands, all his moral laws, are addressed to
@@ -1947,12 +2125,22 @@ holy writ.’ His Eve is embellished with every personal grace, to gratify the e
 her admiring husband; but he seems to have furnished the mother of mankind with just
 intelligence enough to comprehend her supposed inferiority to Adam, and to yield
 unresisting submission to her lord and master. Milton puts into Eve’s mouth the
-following address to Adam: ‘My author and disposer, what thou bidst, Unargued I
-obey; so God ordains— God is thy law, thou mine: to know no more, Is woman’s
-happiest knowledge and her praise.’ This much admired sentimental nonsense is
+following address to Adam:</structure> 
+
+<structure po="3">
+<structure l="1">‘My author and disposer, what thou bidst,</structure> 
+<structure l="2">Unargued I obey; so God ordains— 
+</structure>
+<structure l="3">God is thy law, thou mine: to know no more, 
+</structure>
+<structure l="4">Is woman’s happiest knowledge and her praise.’</structure></structure> 
+
+<structure p="162">This much admired sentimental nonsense is
 fraught with absurdity and wickedness. If it were true, the commandment of Jehovah
 should have run thus: Man shall have no other gods before ME, and woman shall have
-no other gods before MAN.  The principal support of the dogma of woman’s
+no other gods before MAN.</structure>  
+
+<structure p="163">The principal support of the dogma of woman’s
 inferiority, and consequent submission to her husband, is found in some passages of
 Paul’s epistles. I shall proceed to examine those passages, premising 1st, that the
 antiquity of the opinions based on the false construction of those passages, has no
@@ -1971,7 +2159,9 @@ When I see Paul shaving his head for a vow, and offering sacrifices, and
 circumcising Timothy, to accommodate himself to the prepossessions of his
 countrymen, I do not conceive that I derogate in the least from his character as an
 inspired apostle, to suppose that he may have been imbued with the prevalent
-prejudices against women. In 1st Cor. 11: 3, after praising the Corinthian converts,
+prejudices against women.</structure> 
+
+<structure p="164">In 1st Cor. 11: 3, after praising the Corinthian converts,
 because they kept the ‘ordinances,’ or ‘traditions,’ as the margin reads, the
 apostle says, ‘I would have you know, that the head of every man is Christ, and the
 head of the woman is the man; and the head of Christ is God.’ Eph. 5: 23, is a
@@ -2006,7 +2196,9 @@ superior to the other creatures here below, but in subjection to her husband, an
 deriving that honor from him, out of whom she was made. The woman was made for the
 man to be his help meet, and not the man for the woman. She was, naturally,
 therefore, made subject to him, because made for him, for HIS USE AND HELP AND
-COMFORT.’ We see in the above quotation, what degrading views even good men
+COMFORT.’</structure> 
+
+<structure p="165">We see in the above quotation, what degrading views even good men
 entertain of women. Pity the Psalmist had not thrown a little light on this subject,
 when he was paraphrasing the account of man’s creation. ‘Thou hast made him a little
 lower than the angels, and hast crowned him with glory and honor. Thou madest him to
@@ -2025,23 +2217,42 @@ manship, to every woman. The man who sinks his moral capacities and spiritual po
 in his sensual appetites, is still, as a man, simply by the conformation of his
 body, a more dignified being, than the woman whose intellectual powers are highly
 cultivated, and whose approximation to the character of Jesus Christ is exhibited in
-a blameless life and conversation. But it is strenuously urged by those, who are
+a blameless life and conversation.</structure> 
+<structure p="166">
+But it is strenuously urged by those, who are
 anxious to maintain their usurped authority, that wives are, in various passages of
 the New Testament, commanded to obey their husbands. Let us examine these texts.
-Eph. 5: 22. ‘Wives, submit yourselves unto your own husbands as unto the Lord.’ ‘As
+</structure>
+
+<structure q="uncredited"><structure p="167">Eph. 5: 22. ‘Wives, submit yourselves unto your own husbands as unto the Lord.’ ‘As
 the church is subject unto Christ, so let the wives be to their own husbands in
-every thing.’ Col. 3: 18. Wives, submit yourselves unto your own husbands, as it is
-fit in the Lord.’ 1st Pet. 3: 2. ‘Likewise ye wives, be in subjection to your own
+every thing.’</structure></structure> 
+
+    <structure q="uncredited"><structure p="168">Col. 3: 18. Wives, submit yourselves unto your own husbands, as it is
+fit in the Lord.’ 
+</structure></structure>
+
+    <structure q="uncredited"><structure p="169">1st Pet. 3: 2. ‘Likewise ye wives, be in subjection to your own
 husbands; that if any obey not the word, they may also without the word be won by
-the conversation of the wives.’ Accompanying all these directions to wives, are
+the conversation of the wives.’ </structure></structure>
+    
+    <structure q="uncredited"><structure p="170">
+Accompanying all these directions to wives, are
 commands to husbands.  Eph. 5: 25. ‘Husbands, love your wives even as Christ
 loved the Church, and gave himself for it.’ ‘So ought men to love their wives as
-their own bodies. He that loveth his wife, loveth himself.’ Col. 3: 19. ‘Husbands,
-love your wives, and be not bitter against them.’ 1st Pet. 3: 7. ‘Likewise ye
+their own bodies. He that loveth his wife, loveth himself.’</structure></structure> 
+    
+    <structure q="uncredited"><structure p="171">
+Col. 3: 19. ‘Husbands, love your wives, and be not bitter against them.’ </structure></structure>
+
+    <structure q="uncredited"><structure p="172">1st Pet. 3: 7. ‘Likewise ye
 husbands, dwell with them according to knowledge, giving honor unto the wife as unto
-the weaker vessel, and as being heirs together of the grace of life.’ I may just
-remark, in relation to the expression ‘weaker vessel,’ that the word in the original
-has no reference to intellect: it refers to physical weakness merely. The apostles
+the weaker vessel, and as being heirs together of the grace of life.’</structure></structure> 
+
+    <structure q="uncredited"><structure p="173">I may just remark, in relation to the expression ‘weaker vessel,’ that the word in the original
+has no reference to intellect: it refers to physical weakness merely.</structure></structure> 
+
+<structure p="174">The apostles
 were writing to Christian converts, and laying down rules for their conduct towards
 their unconverted consorts. It no doubt frequently happened, that a husband or a
 wife would embrace Christianity, while their companions clung to heathenism, and
@@ -2060,7 +2271,9 @@ FEAR OF GOD.’ Colossians 3, from 11 to 17, contains similar injunctions. The
 Lord Jesus.’ Peter, after drawing a most touching picture of Christ’s sufferings for
 us, and reminding the Christians, that he had left us an example that we should
 follow his steps, ‘who did no sin, neither was guile found in his mouth,’ exhorts
-wives to be in subjection, &amp;c. From an attentive consideration of these
+wives to be in subjection, &amp;c.</structure> 
+
+<structure p="175">From an attentive consideration of these
 passages, and of those in which the same words ‘submit,’ ‘subjection,’ are used, I
 cannot but believe that the apostles designed to recommend to wives, as they did to
 subjects and to servants, to carry out the holy principle laid down by Jesus Christ,
@@ -2089,20 +2302,27 @@ direction. Awful responsibility. Do husbands feel able and willing to bear it? A
 what becomes of the solemn affirmation of Jehovah? ‘Hear this, all ye people, give
 ear all ye inhabitants of the world, both low and high, rich and poor.’ ‘None can by
 any means redeem his brother, or give to God a ransom for him, for the redemption of
-the soul is precious, and man cannot accomplish it.’—French Bible. Thine in the
-bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>.
+the soul is precious, and man cannot accomplish it.’—French Bible.</structure> 
+
+<structure p="sig13">Thine in the bonds of womanhood,</structure> <structure sig="Grimke"> Sarah M. Grimke </structure>.
 </structure> 
 <!--End letter 13-->
 
-<structure le="14">LETTER XIV.
- MINISTRY OF WOMEN.
-Brookline, 9th Mo. 1837. 
-My Dear Sister,—According to the principle which I have
+<structure le="14">
+<structure header="14">LETTER XIV.
+</structure>
+
+<structure subhead="14">MINISTRY OF WOMEN.</structure>
+<structure date="September, 1837"><setting>Brookline</setting>, 9th Mo. 1837. </structure>
+
+<structure p="176">My Dear Sister,—According to the principle which I have
 laid down, that man and woman were created equal, and endowed by their beneficent
 Creator with the same intellectual powers and the same moral responsibilities, and
 that consequently whatever is morally right for a man to do, is morally right for a
 woman to do, it follows as a necessary corollary, that if it is the duty of man to
-preach the unsearchable riches of Christ, it is the duty also of woman. I am aware,
+preach the unsearchable riches of Christ, it is the duty also of woman.</structure> 
+
+<structure p="177">I am aware,
 that I have the prejudices of education and custom to combat, both in my own and the
 other sex, as well as ‘the traditions of men,’ which are taught for the commandments
 of God. I feel that I have no sectarian views to advance; for although among the
@@ -2117,7 +2337,9 @@ good cause. If I am mistaken, as truth only can prevail, my supposed errors will
 soon vanish before her beams; but I am persuaded that woman is not filling the high
 and holy station which God allotted to her, and that in consequence of her having
 been driven from her ‘appropriate sphere,’ both herself and her brethren have
-suffered an infinity of evils. Before I proceed to prove, that woman is bound to
+suffered an infinity of evils.</structure> 
+
+<structure p="178">Before I proceed to prove, that woman is bound to
 preach the gospel, I will examine the ministry under the Old Testament dispensation.
 Those who were called to this office were known under various names. Enoch, who
 prophesied, is designated as walking with God. Noah is called a preacher of
@@ -2139,7 +2361,9 @@ of the ministers of the present day; and I believe the secret of the exclusion o
 women from the ministerial office is, that that office has been converted into one
 of emolument, of honor, and of power. Any attentive observer cannot fail to
 perceive, that as far as possible, all such offices are reserved by men for
-themselves. The common error that Christian ministers are the successors of the
+themselves.</structure> 
+
+<structure p="179">The common error that Christian ministers are the successors of the
 priests, is founded in mistake. In the particular directions given to Moses to
 consecrate Aaron and his sons to the office of the priesthood, their duties are
 clearly defined: see Ex. 28th, 29th and 30th chap. There is no commission to Aaron
@@ -2148,7 +2372,9 @@ sacrifices instituted? They were types of that one great sacrifice, which in the
 fulness of time was offered up through the eternal Spirit without spot to God.
 Christ assumed the office of priest; he ‘offered himself,’ and by so doing,
 abolished forever the order of the priesthood, as well as the sacrifices which the
-priests were ordained to offer.[3]  But it may be inquired, whether the
+priests were ordained to offer.[3]</structure>  
+
+<structure p="180">But it may be inquired, whether the
 priests were not to teach the people. As far as I can discover from the Bible, they
 were simply commanded to read the law to the people. There was no other copy that we
 know of, until the time of the kings, who were to write out a copy for their own
@@ -2168,14 +2394,18 @@ Jer. 7: 25, 26. See also, 25: 4. 2 Chr. 36: 15. and parallel passages. God says,
 people cause them to err.’ The distinction between priests and prophets is evident
 from their being mentioned as two classes. ‘The prophets prophesy falsely, and the
 priests bear rule by their means,’ Jer. 5: 31. See also, Ch. 2: 8. 8: 1-10. and many
-others. That women were called to the prophetic office, I believe is
+others.</structure> 
+
+<structure p="181">That women were called to the prophetic office, I believe is
 universally admitted. Miriam, Deborah and Huldah were prophetesses. The judgments of
 the Lord are denounced by Ezekiel on false prophetesses, as well as false prophets.
 And if Christian ministers are, as I apprehend, successors of the prophets, and not
 of the priests, then of course, women are now called to that office as well as men,
 because God has no where withdrawn from them the privilege of doing what is the
 great business of preachers, viz. to point the penitent sinner to the Redeemer.
-‘Behold the Lamb of God, which taketh away the sins of the world.’ It is often
+‘Behold the Lamb of God, which taketh away the sins of the world.’</structure> 
+
+<structure p="182">It is often
 triumphantly inquired, why, if men and women are on an equality, are not women as
 conspicuous in the Bible as men? I do not intend to assign a reason, but I think one
 may readily be found in the fact, that from the days of Eve to the present time, the
@@ -2183,7 +2413,9 @@ aim of man has been to crush her. He has accomplished this work in various ways;
 sometimes by brute force, sometimes by making her subservient to his worst passions,
 sometimes by treating her as a doll, and while he excluded from her mind the light
 of knowledge, decked her person with gewgaws and frippery which he scorned for
-himself, thus endeavoring to render her like unto a painted sepulchre. It is truly
+himself, thus endeavoring to render her like unto a painted sepulchre.</structure> 
+
+<structure p="183">It is truly
 marvellous that any woman can rise above the pressure of circumstances which combine
 to crush her. Nothing can strengthen her to do this in the character of a preacher
 of righteousness, but a call from Jehovah himself. And when the voice of God
@@ -2199,20 +2431,26 @@ people for deliverance from outward bondage; and I hope our sorrows have prepare
 to fulfil our high and holy duties, whether public or private, with humility and
 meekness; and that suffering has imparted fortitude to endure trials, which
 assuredly await us in the attempt to sunder those chains with which man has bound
-us, galling to the spirit, though unseen by the eye. Surely there is nothing either
+us, galling to the spirit, though unseen by the eye.</structure> 
+
+<structure p="184">Surely there is nothing either
 astonishing or novel in the gifts of the Spirit being bestowed on woman: nothing
 astonishing, because there is no respect of persons with God; the soul of the woman
 in his sight is as the soul of the man, and both are alike capable of the influence
 of the Holy Spirit. Nothing novel, because, as has been already shown, in the sacred
 records there are found examples of women, as well as of men, exercising the gift of
-prophecy. We attach to the word prophecy, the exclusive meaning of foretelling
+prophecy. </structure>
+
+<structure p="185">We attach to the word prophecy, the exclusive meaning of foretelling
 future events, but this is certainly a mistake; for the apostle Paul defines it to
 be ‘speaking to edification, exhortation and comfort.’ And there appears no possible
 reason, why women should not do this as well as men. At the time that the Bible was
 translated into English, the meaning of the word prophecy, was delivering a
 message from God, whether it was to predict future events, or to warn the people of
 the consequences of sin. Governor Winthrop, of Massachusetts, mentions in a letter,
-that the minister being absent, he went to, —— to prophecy to the people. Before I
+that the minister being absent, he went to, —— to prophecy to the people.</structure> 
+
+<structure p="186">Before I
 proceed to prove that women, under the Christian dispensation, were anointed of the
 Holy Ghost to preach, or prophecy, I will mention Anna, the (last) prophetess under
 the Jewish dispensation. ‘She departed not from the temple, but served God with
@@ -2231,7 +2469,9 @@ Redeemer. A various reading has Israel instead of Jerusalem, which expresses tha
 religious Jews, from distant places, came thither to divine offices, and would with
 high pleasure hear the discourses of this great prophetess, so famed for her
 extraordinary piety and valuable talents, upon the most important and
-desirable subject.’ I shall now examine the testimony of the Bible on this point,
+desirable subject.’</structure> 
+
+<structure p="187">I shall now examine the testimony of the Bible on this point,
 after the ascension of our Lord, beginning with the glorious effusion of the Holy
 Spirit on the day of Pentecost. I presume it will not be denied, that women, as well
 as men, were at that time filled with the Holy Ghost, because it is expressly
@@ -2260,36 +2500,51 @@ by their own showing. John Newton has justly said, that no power but that which
 created a world, can make a minister of the gospel; and man may task his ingenuity
 to the utmost, to prove that this power is not exercised on women as well as men. He
 cannot do it until he has first disclaimed that simple, but all comprehensive truth,
-‘in Christ Jesus there is neither male nor female.’ Women then, according to the
+‘in Christ Jesus there is neither male nor female.’</structure> 
+
+<structure p="188">Women then, according to the
 Bible, were, under the New Testament dispensation, as well as the Old, the
 recipients of the gift of prophecy. That this is no sectarian view may be proved by
 the following extracts. The first I shall offer is from Stratton’s ‘Book of the
-Priesthood.’ ‘While they were assembled in the upper room to wait for the blessing,
+Priesthood.’</structure> 
+
+<structure p="189">‘While they were assembled in the upper room to wait for the blessing,
 in number about one hundred and twenty, they received the miraculous gifts of the
 Holy Spirit’s grace; they became the channels through which its more ordinary, but
 not less saving streams flowed to three thousand persons in one day. The whole
 company of the assembled disciples, male and female, young and old, were all filled
 with the Holy Ghost, and began to speak with other tongues as the Spirit gave them
 utterance. They all contributed in producing that impression upon the assembled
-multitude, which Peter was instrumental in advancing to its decisive results.’ 
-Scott, in his commentary on this passage, says— ‘At the same time, there
+multitude, which Peter was instrumental in advancing to its decisive results.’</structure>
+
+<structure p="190">Scott, in his commentary on this passage, says— 
+</structure>
+<structure p="191">‘At the same time, there
 appeared the form of tongues divided at the tip and resembling fire; one of which
 rested on each of the whole company.’ ‘They sat on every one present, as the
 original determines. At the time of these extraordinary appearances, the whole
 company were abundantly replenished with the gifts and graces of the Holy Spirit, so
-that they began to speak with other tongues.’ Henry in his notes confirms this: ‘It
-seems evident to me that not the twelve apostles only, but all the one hundred and
+that they began to speak with other tongues.’</structure> 
+
+<structure p="192">Henry in his notes confirms this: 
+</structure>
+<structure p="193">‘It seems evident to me that not the twelve apostles only, but all the one hundred and
 twenty disciples were filled with the Holy Ghost alike at this time,—all the seventy
 disciples, who were apostolical men and employed in the same work, and all the rest
 too that were to preach the gospel, for it is said expressly, Eph. 4: 8-12: ‘When
 Christ ascended up on high, (which refers to this) he gave gifts unto men.’ The all
-here must refer to the all that were together.’ I need hardly remark that man is a
-generic term, including both sexes. Let us now examine whether women actually
+here must refer to the all that were together.’ </structure>
+
+<structure p="194">I need hardly remark that man is a generic term, including both sexes. 
+</structure>
+<structure p="195">Let us now examine whether women actually
 exercised the office of minister, under the gospel dispensation. Philip had four
 daughters, who prophesied or preached. Paul calls Priscilla, as well as Aquila, his
 helpers; or, as in the Greek, his fellow laborers[4] in Christ Jesus. Divers other
 passages might be adduced to prove that women continued to be preachers, and that
-many of them filled this dignified station. We learn also from ecclesiastical
+many of them filled this dignified station.</structure> 
+
+<structure p="196">We learn also from ecclesiastical
 history, that female ministers suffered martyrdom in the early ages of the Christian
 church. In ancient councils, mention is made of deaconesses; and in an edition of
 the New Testament, printed in 1574, a woman is spoken of as minister of a
@@ -2299,22 +2554,30 @@ when applied to Tychicus. A minister, with whom I had lately the pleasure of
 conversing, remarked, ‘My rule is to expound scripture by scripture, and I cannot
 deny the ministry of women, because the apostle says, ‘help those women who labored
 with me IN THE GOSPEL.’ He certainly meant something more than pouring out tea for
-him.’ In the 11th Ch. of 1 Cor., Paul gives directions to women and men how they
+him.’</structure> 
+
+<structure p="197">In the 11th Ch. of 1 Cor., Paul gives directions to women and men how they
 should appear when they prophesy, or pray in public assemblies. It is evident that
 the design of the apostle, in this and the three succeeding chapters, is to rectify
 certain abuses which had crept into the Christian church. He therefore admonishes
 women to pray with their heads covered, because, according to the fashion of that
 day, it was considered immodest and immoral to do otherwise. He says, ‘that were all
 one as if she were shaven;’ and shaving the head was a disgraceful punishment that
-was inflicted on women of bad character. ‘These things,’ says Scott, ‘the apostle
+was inflicted on women of bad character.</structure> 
+
+<structure p="198">‘These things,’ says Scott, ‘the apostle
 stated as decent and proper, but if any of the Corinthian teachers inclined to
 excite contention about them, he would only add, v. 16, that he and his brethren
 knew of no such custom as prevailed among them, nor was there any such in the
-churches of God which had been planted by the other apostles.’ John Locke, whilst
+churches of God which had been planted by the other apostles.’</structure> 
+
+<structure p="199">John Locke, whilst
 engaged in writing his notes on the Epistles of St. Paul, was at a meeting where two
 women preached. After hearing them, he became convinced of their commission to
 publish the gospel, and thereupon altered his notes on the 11th Ch. 1 Cor.
-in favor of women’s preaching. He says,— ‘This about women seeming as difficult a
+in favor of women’s preaching. He says,—</structure> 
+
+<structure p="200">‘This about women seeming as difficult a
 passage as most in St. Paul’s Epistles, I crave leave to premise some few
 considerations. It is plain that this covering the head in women is restrained to
 some peculiar actions which they performed in the assembly, expressed by the words
@@ -2326,27 +2589,37 @@ assembly, by some one person which was for that time peculiar to that person, an
 whilst it lasted, the rest of the assembly silently assisted. As to prophesying, the
 apostle in express words tells us, Ch. 14: 3, 12, that it was speaking in the
 assembly. The same is evident as to praying, that the apostle means by it publicly
-with an audible voice, ch. 14: 19.’ In a letter to these two women, Rebecca Collier
-and Rachel Bracken, which accompanied a little testimony of his regard, he says, ‘I
-admire no converse like that of Christian freedom; and I fear no bondage like that
+with an audible voice, ch. 14: 19.’</structure> 
+
+<structure p="201">In a letter to these two women, Rebecca Collier
+and Rachel Bracken, which accompanied a little testimony of his regard, he says,</structure> 
+
+<structure p="202">‘I admire no converse like that of Christian freedom; and I fear no bondage like that
 of pride and prejudice. I now see that acquaintance by sight cannot reach the height
 of enjoyment, which acquaintance by knowledge arrives unto. Outward hearing may
 misguide us, but internal knowledge cannot err.’ ‘Women, indeed, had the honor of
 first publishing the resurrection of the God of love—why not again the resurrection
 of the spirit of love? And let all the disciples of Christ rejoice therein, as doth
-your partner, John Locke.’ See ‘The Friend,’ a periodical published in Philadelphia.
-Adam Clarke’s comment on 1 Cor. 11: 5, is similar to Locke’s: ‘Whatever be the
-meaning of praying and prophesying in respect to the man, they have precisely the
+your partner, John Locke.’</structure> 
+
+<structure p="203">See ‘The Friend,’ a periodical published in Philadelphia.
+</structure>
+<structure p="204">Adam Clarke’s comment on 1 Cor. 11: 5, is similar to Locke’s: 
+</structure>
+<structure p="205">‘Whatever be the meaning of praying and prophesying in respect to the man, they have precisely the
 same meaning in respect to the woman. So that some women at least, as well as some
 men, might speak to others to edification and exhortation and comfort. And this kind
 of prophesying, or teaching, was predicted by Joel 2: 28, and referred to by
 Peter; and had there not been such gifts bestowed on women, the prophesy could not
-have had its fulfilment.’ In the autobiography of Adam Clarke, there is an
+have had its fulfilment.’</structure> 
+
+<structure p="206">In the autobiography of Adam Clarke, there is an
 interesting account of his hearing Mary Sewall and another female minister preach,
 and he acknowledges that such was the power accompanying their ministry, that though
 he had been prejudiced against women’s preaching, he could not but confess that
-these women were anointed for the office. But there are certain passages in the
-Epistles of St. Paul, which seem to be of doubtful interpretation; at which we
+these women were anointed for the office.</structure> 
+
+<structure p="207">But there are certain passages in the Epistles of St. Paul, which seem to be of doubtful interpretation; at which we
 cannot much marvel, seeing that his brother Peter says, there are some things in
 them hard to be understood. Most commentators, having their minds preoccupied with
 the prejudices of education, afford little aid; they rather tend to darken the text
@@ -2377,15 +2650,21 @@ ask questions in the public exercise of that gift, for the purpose of gaining
 information: she is instructing others. Moreover, the apostle, in closing his
 remarks on this subject, says, ‘Wherefore, brethren, (a generic term, applying
 equally to men and women,) covet to prophesy, and forbid not to speak with tongues.
-Let all things be done decently and in order.’ Clarke, on the passage, ‘Let women
-keep silence in the churches,’ says: ‘This was a Jewish ordinance. Women were not
+Let all things be done decently and in order.’</structure> 
+
+<structure p="208">Clarke, on the passage, ‘Let women keep silence in the churches,’ says:</structure> 
+
+<structure p="209">‘This was a Jewish ordinance. Women were not
 permitted to teach in the assemblies, or even to ask questions. The rabbins taught
 that a woman should know nothing but the use of her distaff; and the saying
 of Rabbi Eliezer is worthy of remark and execration: ‘Let the words of the law be
-burned, rather than that they should be delivered by women.’ Are there not many of
-our Christian brethren, whose hostility to the ministry of women is as bitter as was
+burned, rather than that they should be delivered by women.’</structure> 
+
+<structure p="210">Are there not many of our Christian brethren, whose hostility to the ministry of women is as bitter as was
 that of Rabbi Eliezer, and who would rather let souls perish, than that the truths
-of the gospel should be delivered by women? ‘This,’ says Clarke, ‘was their
+of the gospel should be delivered by women?</structure> 
+
+<structure p="211">‘This,’ says Clarke, ‘was their
 condition till the time of the gospel, when, according to the prediction of Joel,
 the Spirit of God was to be poured out on the women as well as the men, that they
 might prophesy, that is, teach. And that they did prophesy, or teach, is evident
@@ -2396,7 +2675,9 @@ and show that the words in ch. 11, should be understood in another sense? for he
 it is expressly said, that they should keep silence in the churches, for it was not
 permitted to a woman to speak. Both places seem perfectly consistent. It is evident
 from the context, that the apostle refers here to asking questions, and what we call
-dictating in the assemblies.’ The other passage on which the opinion, that women are
+dictating in the assemblies.’</structure> 
+
+<structure p="212">The other passage on which the opinion, that women are
 not called to the ministry, is founded, is 1 Tim. 2d ch. The apostle speaks of the
 duty of prayer and supplication, mentions his own ordination as a preacher, and then
 adds, ‘I will, therefore, that men pray everywhere, lifting up holy hands, without
@@ -2406,13 +2687,17 @@ chapters and verses is no part of the original arrangement, they cannot determin
 the sense of a passage. Indeed, every attentive reader of the Bible must observe,
 that the injudicious separation of sentences often destroys their meaning
 and their beauty. Joseph John Gurney, whose skill as a biblical critic is well known
-in England, commenting on this passage, says, ‘It is worded in a manner somewhat
+in England, commenting on this passage, says,</structure> 
+
+<structure p="213">‘It is worded in a manner somewhat
 obscure; but appears to be best construed according to the opinion of various
 commentators (See Pool’s Synopsis) as conveying an injunction, that women as well as
 men should pray everywhere, lifting up holy hands without wrath and doubting. 1 Tim.
 2: 8, 9. ‘I will therefore that men pray everywhere, &amp;c.; likewise also the
 women in a modest dress.’ (Compare 1 Cor. 11: 5.) ‘I would have them adorn
-themselves with shamefacedness and sobriety.’’ I have no doubt this is the true
+themselves with shamefacedness and sobriety.’’</structure> 
+
+<structure p="214">I have no doubt this is the true
 meaning of the text, and that the translators would never have thought of altering
 it had they not been under the influence of educational prejudice. The apostle
 proceeds to exhort the women, who thus publicly made intercession to God, not to
@@ -2432,7 +2717,9 @@ properly be rendered dictate. It is highly probable that women who had long been
 bondage, when set free by Christianity from the restraints imposed upon them by
 Jewish traditions and heathen customs, run into an extreme in their public
 assemblies, and interrupted the religious services by frequent interrogations, which
-they could have had answered as satisfactorily at home. On a candid examination and
+they could have had answered as satisfactorily at home.</structure> 
+
+<structure p="215">On a candid examination and
 comparison of the passages which I have endeavored to explain, viz., 1 Cor. chaps.
 11 and 14, and 1 Tim. 2, 8-12. I think we must be compelled to adopt one of two
 conclusions; either that the apostle grossly contradicts himself on a subject of
@@ -2443,8 +2730,10 @@ peculiar customs, which were then common in religious assemblies, and which the
 apostle thought inconsistent with the purpose for which they were met together. No
 one, I suppose, will hesitate which of these two conclusions to adopt. The subject
 is one of vital importance. That it may claim the calm and prayerful attention of
-Christians, is the desire of Thine in the bonds of womanhood, 
-<structure sig="Grimke"> Sarah M. Grimke </structure>.
+Christians, is the desire of</structure> 
+
+<structure p="sig14">Thine in the bonds of womanhood, 
+</structure><structure sig="Grimke"> Sarah M. Grimke </structure>.
 </structure> 
 
     
@@ -2465,7 +2754,9 @@ lamp of righteousness,—to remind them of their obligation to rekindle it.’ I
 of those who always admit, to its fullest extent, the popular charge, that woman
 brought sin into the world. I accept it as a powerful reason, why woman is bound to
 labor with double diligence, for the regeneration of that world she has been
-instrumental in ruining. But, although I do not repel the imputation, I shall notice
+instrumental in ruining. 
+
+<structure p="216">But, although I do not repel the imputation, I shall notice
 some passages in the sacred Scriptures, where this transaction is mentioned, which
 prove, I think, the identity and equality of man and woman, and that there is no
 difference in their guilt in the view of that God who searcheth the heart and trieth
@@ -2480,7 +2771,9 @@ simplicity that is in Christ.’ Again, 1st Tim. 2: 14—‘Adam was not deceive
 woman being deceived, was in the transgression.’ Now, whether the fact, that Eve was
 beguiled and deceived, is a proof that her crime was of deeper dye than Adam’s, who
 was not deceived, but was fully aware of the consequences of sharing in her
-transgression, I shall leave the candid reader to determine. My present object is to
+transgression, I shall leave the candid reader to determine.</structure> 
+
+<structure p="217">My present object is to
 show, that, as woman is charged with all the sin that exists in the world, it is her
 solemn duty to labor for its extinction; and that this she can never do effectually
 and extensively, until her mind is disenthralled of those shackles which have been
@@ -2490,7 +2783,9 @@ fellow laborer of her brother, or she will be studying to find out the imaginary
 line which separates the sexes, and divides the duties of men and women into two
 distinct classes, a separation not even hinted at in the Bible, where we are
 expressly told, ‘there is neither male nor female, for ye are all one in Christ
-Jesus.’ My views on this subject are so much better embodied in the language
+Jesus.’</structure> 
+
+<structure p="218">My views on this subject are so much better embodied in the language
 of a living author than I can express them, that I quote the passage entire:
 ‘Woman’s rights and man’s rights are both contained in the same charter, and held by
 the same tenure. All rights spring out of the moral nature: they are both the root
@@ -2507,7 +2802,9 @@ over and administers upon the rights and responsibilities of the moral, immortal
 nature, is to my mind a doctrine kindred to blasphemy, when seen in its intrinsic
 nature. It breaks up utterly the relations of the two natures, and reverses their
 functions; exalting the animal nature into a monarch, and humbling the moral into a
-slave; making the former a proprietor, and the latter its property.’ To perform our
+slave; making the former a proprietor, and the latter its property.’</structure> 
+
+<structure p="219">To perform our
 duties, we must comprehend our rights and responsibilities; and it is because we do
 not understand, that we now fall so far short in the discharge of our obligations.
 Unaccustomed to think for ourselves, and to search the sacred volume, to see how far
@@ -2547,7 +2844,9 @@ have so ungenerously monopolized. I do not ask any one to believe my statements,
 adopt my conclusions, because they are mine; but I do earnestly entreat my sisters
 to lay aside their prejudices, and examine these subjects for themselves, regardless
 of the ‘traditions of men,’ because they are intimately connected with their duty
-and their usefulness in the present important crisis. All who know any thing of the
+and their usefulness in the present important crisis.</structure> 
+
+<structure p="220">All who know any thing of the
 present system of benevolent and religious operations, know that women are
 performing an important part in them, in subserviency to men, who guide our labors,
 and are often the recipients of those benefits of education we toil to confer, and
@@ -2560,9 +2859,13 @@ many a blessing has been lavished upon us, and many a prayer put up for us, beca
 we have labored by day and by night to clothe and feed and educate young men, whilst
 our own bodies sometimes suffer for want of comfortable garments, and our minds are
 left in almost utter destitution of that improvement which we are toiling to bestow
-upon the brethren. ‘Full many a gem of purest ray serene, The dark unfathomed caves
+upon the brethren.</structure> 
+
+<structure p="221">‘Full many a gem of purest ray serene, The dark unfathomed caves
 of ocean bear; Full many a flower is born to blush unseen And waste its sweetness on
-the desert air.’ If the sewing societies, the avails of whose industry are now
+the desert air.’</structure> 
+
+<structure p="222">If the sewing societies, the avails of whose industry are now
 expended in supporting and educating young men for the ministry, were to withdraw
 their contributions to these objects, and give them where they are more needed, to
 the advancement of their own sex in useful learning, the next generation might
@@ -2589,7 +2892,11 @@ blessing to the family by furnishing them with instructive reading. If the minds
 women were enlightened and improved, the domestic circle would be more frequently
 refreshed by intelligent conversation, a means of edification now deplorably
 neglected, for want of that cultivation which these intellectual advantages would
-confer. DUTIES OF WOMEN. One of the duties which devolve upon women in the present
+confer.</structure> 
+
+<structure subhead="16">DUTIES OF WOMEN.</structure> 
+
+<structure p="223">One of the duties which devolve upon women in the present
 interesting crisis, is to prepare themselves for more extensive usefulness, by
 making use of those religious and literary privileges and advantages that are within
 their reach, if they will only stretch out their hands and possess them. By doing
@@ -2614,8 +2921,9 @@ peculiarly appropriate to her. Now to me it is perfectly clear, that WHATSOEVER 
 IS MORALLY RIGHT FOR A MAN TO DO, IT IS MORALLY RIGHT FOR A WOMAN TO DO; and that
 confusion must exist in the moral world, until women takes her stand on the same
 platform with man, and feels that she is clothed by her Maker with the same
-rights, and, of course, that upon her devolve the same duties. It is not my
-intention, nor indeed do I think it is in my power, to point out the precise duties
+rights, and, of course, that upon her devolve the same duties.</structure> 
+
+<structure p="224">It is not my intention, nor indeed do I think it is in my power, to point out the precise duties
 of women. To him who still teacheth by his Holy Spirit as never man taught, I refer
 my beloved sisters. There is a vast field of usefulness before them. The signs of
 the times give portentous evidence, that a day of deep trial is approaching; and I
@@ -2623,10 +2931,18 @@ urge them, by every consideration of a Savior’s dying love, by the millions of
 heathen in our midst, by the sufferings of woman in almost every portion of the
 world, by the fearful ravages which slavery, intemperance, licentiousness and other
 iniquities are making of the happiness of our fellow creatures, to come to the
-rescue of a ruined world, and to be found co-workers with Jesus Christ. ‘Ho! to the
-rescue, ho! Up every one that feels— ’Tis a sad and fearful cry of woe From a guilty
-world that steals. Hark! hark! how the horror rolls, Whence can this anguish be?
-’Tis the groan of a trammel’d people’s souls, Now bursting to be free.’ And here,
+rescue of a ruined world, and to be found co-workers with Jesus Christ.</structure> 
+
+<structure po="num">‘Ho! to the rescue, ho! 
+Up every one that feels— 
+’Tis a sad and fearful cry of woe 
+From a guilty world that steals. 
+Hark! hark! how the horror rolls, 
+Whence can this anguish be?
+’Tis the groan of a trammel’d people’s souls, 
+Now bursting to be free.’ </structure>
+
+<structure p="225">And here,
 with all due deference for the office of the ministry, which I believe was
 established by Jehovah himself, and designed by Him to be the means of spreading
 light and salvation through a crucified Savior to the ends of the earth, I would
@@ -2649,7 +2965,9 @@ bribery, if their hearts are with us; if they are not, we are better without the
 It is idle to suppose that the kingdom of heaven cannot come on earth, without their
 co-operation. It is the Lord’s work, and it must go forward with or without their
 aid. As well might the converted Jews have despaired of the spread of Christianity,
-without the co-operation of Scribes and Pharisees. Let us keep in mind, that no
+without the co-operation of Scribes and Pharisees. </structure>
+
+<structure p="226">Let us keep in mind, that no
 abolitionism is of any value, which is not accompanied with deep, heartfelt
 repentance; and that, whenever a minister sincerely repents of having, either by his
 apathy or his efforts, countenanced the fearful sin of slavery, he will need no
@@ -2660,7 +2978,9 @@ the cause of human rights. I know the ministry exercise vast power; but I rejoic
 the belief, that the spell is broken which encircled them, and rendered it all but
 blasphemy to expose their errors and their sins. We are beginning to understand that
 they are but men, and that their station should not shield them from merited
-reproof. I have blushed for my sex when I have heard of their entreating ministers
+reproof.</structure> 
+
+<structure p="227">I have blushed for my sex when I have heard of their entreating ministers
 to attend their associations, and open them with prayer. The idea is inconceivable
 to me, that Christian women can be engaged in doing God’s work, and yet cannot ask
 his blessing on their efforts, except through the lips of a man. I have known a
@@ -2675,7 +2995,11 @@ there are solemn responsibilities resting upon us, and that in this day of light
 knowledge, we cannot plead ignorance of duty. The great moral reformations now on
 the wheel are only practical Christianity; and if the ministry is not prepared to
 labor with us in these righteous causes, let us press forward, and they will
-follow on to know the Lord. CONCLUSION. I have now, my dear sister, completed my
+follow on to know the Lord.</structure> 
+
+<structure subhead="17">CONCLUSION</structure>. 
+
+<structure p="228">I have now, my dear sister, completed my
 series of letters. I am aware, they contain some new views; but I believe they are
 based on the immutable truths of the Bible. All I ask for them is, the candid and
 prayerful consideration of Christians. If they strike at some of our bosom sins, our
@@ -2693,15 +3017,18 @@ Jehovah, there is an incessant struggle on the other to rise to that degree of
 dignity, which God designed women to possess in common with men, and to maintain
 those rights and exercise those privileges which every woman’s common sense, apart
 from the prejudices of education, tells her are inalienable; they are a part of her
-moral nature, and can only cease when her immortal mind is extinguished. One
-word more. I feel that I am calling upon my sex to sacrifice what has been, what is
+moral nature, and can only cease when her immortal mind is extinguished.</structure> 
+
+<structure p="229">One word more. I feel that I am calling upon my sex to sacrifice what has been, what is
 still dear to their hearts, the adulation, the flattery, the attentions of trifling
 men. I am asking them to repel these insidious enemies whenever they approach them;
 to manifest by their conduct, that, although they value highly the society of pious
 and intelligent men, they have no taste for idle conversation, and for that silly
 preference which is manifested for their personal accommodation, often at the
 expense of great inconvenience to their male companions. As an illustration of what
-I mean, I will state a fact. I was traveling lately in a stage coach. A gentleman,
+I mean, I will state a fact.</structure> 
+
+<structure p="230">I was traveling lately in a stage coach. A gentleman,
 who was also a passenger, was made sick by riding with his back to the horses. I
 offered to exchange seats, assuring him it did not affect me at all unpleasantly;
 but he was too polite to permit a lady to run the risk of being discommoded. I am
@@ -2716,8 +3043,10 @@ want my sex to claim nothing from their brethren but what their brethren may jus
 claim from them, in their intercourse as Christians. I am persuaded woman
 can do much in this way to elevate her own character. And that we may become duly
 sensible of the dignity of our nature, only a little lower than the angels, and
-bring forth fruit to the glory and honor of Emanuel’s name, is the fervent prayer of
-Thine in the bonds of womanhood, <structure sig="Grimke"> Sarah M. Grimke </structure>
+bring forth fruit to the glory and honor of Emanuel’s name, is the fervent prayer of</structure>
+
+<structure p="sig15">Thine in the bonds of womanhood,</structure> 
+<structure sig="Grimke"> Sarah M. Grimke </structure>
 </structure> 
 <!-- End letter 15 -->
 
