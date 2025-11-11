@@ -59,7 +59,7 @@ f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_enlightenment_indiv
     f_antifeminist=attribute f_antifeminist {text}
     f_political_lesbian=attribute f_politicallesbian {text}
     
-s_theory=element s_theory {mixed {(s_freud? | s_rights_of_man? | s_enlightenment_individualism? | structure*), (religion*)}}
+s_theory=element s_theory {mixed {(s_freud? | s_rights_of_man? | s_enlightenment_individualism? | s_natural_rights* | structure*), (religion*)}}
     s_freud=attribute s_freud {text}
     s_rights_of_man=attribute s_rights_of_man {text}
     s_enlightenment_individualism=attribute s_enlightenment_individualism {text}
