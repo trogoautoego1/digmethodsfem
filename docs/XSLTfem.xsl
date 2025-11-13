@@ -25,5 +25,8 @@
     <xsl:template match="structure[@p]">
         <p><xsl:apply-templates/></p>
     </xsl:template>
+    <xsl:template match="structure[@s]">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
     
 </xsl:stylesheet>
