@@ -7,7 +7,7 @@
         <publication_date>January 1972</publication_date>
     </meta>
     <main>
-        <p>
+        <structure p="paragraph">
             <religion r_greekmyth="the furies">The story of the Furies is the story of strong,
                 powerful women, the "Angry Ones", the avengers of matricide, the protectors of
                 women. Three Greek Goddesses, they were described (by men) as having snakes for
@@ -19,8 +19,8 @@
                 and Magaera (Grudger). Once extremely powerful, they represented <f_theory
                     f_rad_fem="radfem">the supremacy of women</f_theory> and the primacy of mother
                 right.</religion>
-        </p>
-        <p>
+        </structure>
+        <structure p="paragraph">
             <religion r_greekmyth="the furies">Their most famous exploit (famous because in it they
                 lost much of their power) involved Orestes in the last episode connected with the
                 cycle of the Trojan War. Orestes, acting on the orders of the Sun God Apollo, killed
@@ -31,8 +31,8 @@
                 or wash his bloodstained hands. He bit off his finger to try to appease them, but to
                 no avail. Finally, in desperation, Orestes went before the court of Athena to plead
                 his case.</religion>
-        </p>
-        <p>
+        </structure>
+        <structure p="paragraph">
             <religion r_greekmyth="the furies">The point at issue was whether matricide was
                 justifiable to avenge your father's murder, or in other words, whether men or women
                 were to dominate. Apollo defended Orestes and totally denied the importance of
@@ -45,74 +45,78 @@
                 beginning, ordering Orestes to kill his mother in order to put an end, once and for
                 all, to the religious belief that motherhood was more divine than fatherhood. In any
                 case, that was the result.</religion>
-        </p>
-        <p>
+        </structure>
+        <structure p="paragraph">
             <religion r_greekmyth="the furies">The Furies were, of course, furious, and threatened
                 to lay waste the city of Athens. But Athena had a direct line to Zeus, King of the
                 Gods; she told the Furies to accept the new male supremacist order or lose
                 everything. Some of the Furies and their followers relented, the fest pursued
                 Orestes until his death. </religion>
-        </p>
-        <p> We call our paper The FURIES because we are also angry. We are angry because we are
-            oppressed by male supremacy. <power_system p_patriarchy="patriarchy">We have been fucked
-                over all our lives by a system which is based on the domination of men over women,
-                which defines male as good and female as only as good as the man you are
-                with.</power_system>
+        </structure>
+        <structure p="paragraph"> We call our paper The FURIES because we are also angry. We are
+            angry because we are oppressed by male supremacy. <power_system
+                p_patriarchy="patriarchy">We have been fucked over all our lives by a system which
+                is based on the domination of men over women, which defines male as good and female
+                as only as good as the man you are with.</power_system>
             <identity sexuality="lesbian">It is a system in which heterosexuality is rigidly
                 enforced and Lesbianism rigidly suppressed.</identity> It is a system which has
-            further divided us by class, race, and nationality. </p>
-        <p> We are working to change this system which has kept us separate and powerless for so
-            long. We are a collective of twelve <identity sexuality="lesbian">Lesbians</identity>
-            living and working in Washington, D.C. We are rural and urban; from the Southwest,
-            Midwest, South and Northeast. Our ages range from 18 to 28. We are high school dropouts
-            and Ph.D. candidates. We are <class lower="lower">lower class,</class>
+            further divided us by class, race, and nationality. </structure>
+        <structure p="paragraph"> We are working to change this system which has kept us separate
+            and powerless for so long. We are a collective of twelve <identity sexuality="lesbian"
+                >Lesbians</identity> living and working in Washington, D.C. We are rural and urban;
+            from the Southwest, Midwest, South and Northeast. Our ages range from 18 to 28. We are
+            high school dropouts and Ph.D. candidates. We are <class lower="lower">lower
+                class,</class>
             <class middle="middle">middle</class> and <class middle="upper middle">upper-middle
                 class.</class>
             <identity race="white">We are white.</identity> Some of us have been <identity
                 sexuality="lesbian">Lesbians</identity> for twelve years, others for ten months. We
-            are committed to ending all oppressions by attacking their roots--male supremacy. </p>
+            are committed to ending all oppressions by attacking their roots--male supremacy. </structure>
         <!--<structure photo_caption = "photo"> ORESTES PURSUED BY FURIES </structure> -->
-        <p> We believe The FURIES will make important contributions to the growing movement to
-            destroy sexism. As a collective, in addition to outside projects, we are spending much
-            time building an ideology which is the basis for action. For too long, women in the
-            Movement have fallen prey to the very male propaganda they seek to refute. They have
-            rejected thought, building an ideology, and all intellectual activity as the realm of
-            men, and tried to build a politics based only on feelings--the area traditionally left
-            to women. The philosophy has been, "if it feels good, it's O.K. If not, forget it." But
-            that is like saying that strength. which is a "male" characteristic, should-be left to
-            men, and women should embrace weakness. Most straight women, to say nothing of men, feel
-            afraid or contemptuous of <identity sexuality="lesbian">Lesbians</identity>. That fear
-            and contempt is similar to the feelings <class middle="middle">middle class</class>
+        <structure p="paragraph"> We believe The FURIES will make important contributions to the
+            growing movement to destroy sexism. As a collective, in addition to outside projects, we
+            are spending much time building an ideology which is the basis for action. For too long,
+            women in the Movement have fallen prey to the very male propaganda they seek to refute.
+            They have rejected thought, building an ideology, and all intellectual activity as the
+            realm of men, and tried to build a politics based only on feelings--the area
+            traditionally left to women. The philosophy has been, "if it feels good, it's O.K. If
+            not, forget it." But that is like saying that strength. which is a "male"
+            characteristic, should-be left to men, and women should embrace weakness. Most straight
+            women, to say nothing of men, feel afraid or contemptuous of <identity
+                sexuality="lesbian">Lesbians</identity>. That fear and contempt is similar to the
+            feelings <class middle="middle">middle class</class>
             <identity race="white">whites</identity> have towards <identity race="black"
                 >Blacks</identity> or <class lower="lower">lower class people.</class> These
             feelings are the result of our socialization and are hardly worth glorifying. This is
             not to say that feelings are irrelevant, only that they are derived from our experience
             which is limited by our class, race, etc. Furthermore, feelings are too often used to
-            excuse inaction and inability to change. </p>
-        <p> A political movement cannot advance without systematic thought and practical
-            organization. The haphazard, non-strategic, zig-zag tactics of the straight women's move
-            ment, the male left, and many other so-called revolutionary groups have led only to
-            frustration and dissolution. We do not want to make those same mistakes; our ideology
-            forms the basis for developing long-range strategies and short-term tactics, projects,
-            and actions. </p>
-        <p> The base of our ideological thought is: Sexism is the root of all other oppressions, and
-            Lesbian and woman oppression will not end by smashing capitalism, racism, and
-            imperialism. Lesbianism is not a matter of sexual preference, but rather one of
-            political choice which every woman must make if she is to become woman-identified and
-            thereby end male supremacy. Lesbians, as outcasts from every culture but their own have
-            the most to gain by ending race, class, and national supremacy within their own ranks.
-            Lesbians must get out of the straight women's movement and form their own movement in
-            order to be taken seriously, to stop straight women from oppressing us, and to force
-            straight women to deal with their own Lesbianism. Lesbians cannot develop a common
-            politics with women who do not accept Lesbianism as a political issue. </p>
-        <p> In this (see page 8) and following issues of The FURIES we will share our thoughts with
-            you. We welcome your comments, letters, articles, fiction, poetry, news, graphics, and
-            support. We want to build a movement in this country and in the world which can
-            effectively stop the violent, sick, oppressive acts of male supremacy. We want to build
-            a movement which makes all people free. </p>
-        <p> For the Chinese women whose feet were bound and crippled; for the.Ibibos of Africa whose
-            clitori were mutilated; for every woman who has ever been raped, physically,
-            economically, psychologically, we take the name of the FURIES, Goddesses of Vengeance
-            and protectors of women. Ginny Berson. </p>
+            excuse inaction and inability to change. </structure>
+        <structure p="paragraph"> A political movement cannot advance without systematic thought and
+            practical organization. The haphazard, non-strategic, zig-zag tactics of the straight
+            women's move ment, the male left, and many other so-called revolutionary groups have led
+            only to frustration and dissolution. We do not want to make those same mistakes; our
+            ideology forms the basis for developing long-range strategies and short-term tactics,
+            projects, and actions. </structure>
+        <structure p="paragraph"> The base of our ideological thought is: Sexism is the root of all
+            other oppressions, and Lesbian and woman oppression will not end by smashing capitalism,
+            racism, and imperialism. Lesbianism is not a matter of sexual preference, but rather one
+            of political choice which every woman must make if she is to become woman-identified and
+            thereby end male supremacy. <identity sexuality="lesbian">Lesbians,</identity> as
+            outcasts from every culture but their own have the most to gain by ending race, class,
+            and national supremacy within their own ranks. Lesbians must get out of the straight
+            women's movement and form their own movement in order to be taken seriously, to stop
+            straight women from oppressing us, and to force straight women to deal with their own
+            Lesbianism. <identity sexuality="lesbian">Lesbians</identity> cannot develop a common
+            politics with women who do not accept <identity sexuality="lesbian"
+                >Lesbianism</identity> as a political issue. </structure>
+        <structure p="paragraph"> In this (see page 8) and following issues of The FURIES we will
+            share our thoughts with you. We welcome your comments, letters, articles, fiction,
+            poetry, news, graphics, and support. We want to build a movement in this country and in
+            the world which can effectively stop the violent, sick, oppressive acts of male
+            supremacy. We want to build a movement which makes all people free. </structure>
+        <structure p="paragraph"> For the Chinese women whose feet were bound and crippled; for
+            the.Ibibos of Africa whose clitori were mutilated; for every woman who has ever been
+            raped, physically, economically, psychologically, we take the name of the FURIES,
+            Goddesses of Vengeance and protectors of women. Ginny Berson. </structure>
     </main>
 </document>
