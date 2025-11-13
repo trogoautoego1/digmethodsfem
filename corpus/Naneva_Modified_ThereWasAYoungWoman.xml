@@ -1,139 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Polly, short poem about the struggles of women at the time -->
 <document>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN WHO SWALLOWED A LIE, 
-    We all know why she swallowed that lie, 
-    PERHAPS SHE'LL DIE!
+    <meta>
+        <title>There was a young woman who swallowed a lie</title>
+        <author>Meredith Tax</author>
+        <publication_date>1970s</publication_date>
+    </meta>
+    <main>
+    <structure page="page">
+        <structure s="stanza"> THERE WAS A YOUNG WOMAN WHO SWALLOWED A LIE, We all know why she
+            swallowed that lie, PERHAPS SHE'LL DIE! </structure>
     </structure>
+    <structure page="page">
+        <structure s="stanza"> THERE WAS A YOUNG WOMAN WHO SWALLOWED A RULE, <power_system
+                p_patriarchy="patriarchy">"Live to serve others"</power_system>, she learned it in
+            school. She swallowed the rule to go with the lie, We all know why she swallowed that
+            lie, PERHAPS SHE'LL DIE! </structure>
     </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN
-    WHO SWALLOWED A RULE, 
-    "Live to serve others", 
-    she learned it in school.
-    SHe swalloed the rule
-    to go with the lie, 
-    We all know why she
-    swallowed that lie,
-    PERHAPS SHE'LL DIE!
+    <structure page="page">
+        <structure s="stanza"> THERE WAS A YOUNG WOMAN WHO SWALLOWED SOME FLUFF; Lipstick &amp;
+            candy &amp; powder &amp; puff -- She swallowed the FLUFF to sweeten the rule, She
+            swallowed the rule to go with the lie, We all know why she swallowed that lie, PERHAPS
+            SHE'LL DIE! </structure>
     </structure>
+    <structure page="page">
+        <structure s="stanza"> THERE WAS A YOUNG WOMAN WHO SWALLOWED A LINE, <power_system
+                p_patriarchy="patriarchy"> "I like 'em dumb baby, you suit me fine." </power_system>
+            She swallowed the line to go with the FLUFF She swallowed the FLUFF to sweeten the rule,
+            She swallowed the rule to go with the lie, We all know why she swallowed that lie,
+            PERHAPS SHE'LL DIE! </structure>
     </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN
-    WHO SWALLOWED SOME FLUFF;
-    Lipstick &amp; candy &amp; powder
-    &amp; puff --
-    She swallowed the FLUFF
-    to sweeten the rule, 
-    She swallowed the rule
-    to go with the lie,
-    We all know why
-    she swallowed that lie,
-    PERHAPS SHE'LL DIE!
+    <structure page="page">
+        <structure s="stanza">
+            <power_system p_patriarchy="patriarchy"> THERE WAS A YOUNG WOMAN WHO SWALLOWED A PILL,
+                Might have said, "No," but she hadn't the will. </power_system> She swallowed the
+            pill to go with the line, She swallowed the line to go with the FLUFF She swallowed the
+            FLUFF to sweeten the rule, She swallowed the rule to go with the lie, We all know why
+            she swallowed that lie, PERHAPS SHE'LL DIE! </structure>
     </structure>
+    <structure page="page">
+        <structure s="stanza"> THERE WAS A YOUNG WOMAN WHO SWALLOWED A RING, <power_system p_patriarchy="patriarchy">Looked like a princess
+            but felt like a thing. </power_system> She swallowed the ring to make up for the pill, She swallowed the
+            pill to go with the line, She swallowed the line to go with the FLUFF She swallowed the
+            FLUFF to sweeten the rule, She swallowed the rule to go with the lie, We all know why
+            she swallowed that lie... PERHAPS SHE'LL DIE! </structure>
     </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN
-    WHO SWALLOWED A LINE, 
-    "I like 'em dumb baby,
-    you suit me fine."
-    She swallowed the line
-    to go with the FLUFF
-    She swallowed the FLUFF
-    to sweeten the rule, 
-    She swallowed the rule
-    to go with the lie,
-    We all know why
-    she swallowed that lie,
-    PERHAPS SHE'LL DIE!
+    <structure page="page">
+        <structure s="stanza"> THERE WAS A YOUNG WOMAN WHO SWALLOWED SOME SPOCK, "Stay at home,
+            Mother, take care of your flock." She swalloed the Spock to go with the ring, She
+            swallowed the ring to make up for the pill, She swallowed the pill to go with the line,
+            She swallowed the line to go with the FLUFF She swallowed the FLUFF to sweeten the rule,
+            She swallowed the rule to go with the lie, We all know why she swallowed that lie
+            PERHAPS SHE'LL DIE! </structure>
     </structure>
+    <structure page="page">
+        <structure s="stanza"> ONE DAY THIS YOUNG WOMAN WOKE UP &amp; SHE SAID, "I've swallowed so
+            much, I wish I were dead. I swallowed it all to go with the Spock, I swallowed the Spock
+            to go with the ring, I swallowed the ring to make up for the pill, I swallowed the pill
+            to go with the line, I swallowed the line to go with the FLUFF, I swallowed the FLUFF to
+            sweeten the rule, I swallowed the rule to go with the lie, Why in the world did I
+            swallow that lie!? PERHAPS I'LL DIE!" </structure>
     </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN WHO SWALLOWED A PILL,
-    Might have said, "No," but she hadn't the will.
-    She swallowed the pill to go with the line,
-    She swallowed the line
-    to go with the FLUFF
-    She swallowed the FLUFF
-    to sweeten the rule, 
-    She swallowed the rule
-    to go with the lie,
-    We all know why
-    she swallowed that lie,
-    PERHAPS SHE'LL DIE!
+    <structure page="page">
+        <structure s="stanza"> SHE RAN TO HER SISTERS, IT WASN'T TOO LATE TO BE LIBERATED,
+            REGURGITATE. She threw up the Spock &amp; threw up the ring, Looked like a princess, but
+            felt like a thing; She threw up the pill &amp; threw up the line, "I like 'em dumb,
+            baby, you suit me fine; She threw up the FLUFF and threw up the rule, "Live to serve
+            others," she learned it in school; And last but not least, she threw up that lie, - We
+            all know why she threw up that lie, SHE WILL NOT DIE!! </structure>
     </structure>
-    </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN WHO SWALLOWED A RING,
-    Looked like a princess but felt like a thing.
-    She swallowed the ring
-    to make up for the pill,
-    She swallowed the pill to go with the line,
-    She swallowed the line
-    to go with the FLUFF
-    She swallowed the FLUFF
-    to sweeten the rule, 
-    She swallowed the rule
-    to go with the lie,
-    We all know why
-    she swallowed that lie...
-    PERHAPS SHE'LL DIE!
-    </structure>
-    </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    THERE WAS A YOUNG WOMAN WHO SWALLOWED SOME SPOCK,
-    "Stay at home, Mother, take care of your flock."
-    She swalloed the Spock to go with the ring, 
-    She swallowed the ring
-    to make up for the pill,
-    She swallowed the pill to go with the line,
-    She swallowed the line
-    to go with the FLUFF
-    She swallowed the FLUFF
-    to sweeten the rule, 
-    She swallowed the rule
-    to go with the lie,
-    We all know why
-    she swallowed that lie
-    PERHAPS SHE'LL DIE!
-    </structure>
-    </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    ONE DAY THIS YOUNG WOMAN WOKE UP &amp; SHE SAID,
-    "I've swallowed so much, I wish I were dead.
-    I swallowed it all to go with the Spock,
-    I swallowed the Spock to go with the ring, 
-    I swallowed the ring to make up for the pill,
-    I swallowed the pill to go with the line,
-    I swallowed the line to go with the FLUFF,
-    I swallowed the FLUFF to sweeten the rule,
-    I swallowed the rule to go with the lie,
-    Why in the world did I swallow that lie!?
-    PERHAPS I'LL DIE!"
-    </structure>
-    </structure>
-    <structure page = "page">
-    <structure s = "stanza">
-    SHE RAN TO HER SISTERS, IT WASN'T TOO LATE
-    TO BE LIBERATED, REGURGITATE.
-    She threw up the Spock &amp; threw up the ring, 
-    Looked like a princess, but felt like a thing;
-    She threw up the pill &amp; threw up the line,
-    "I like 'em dumb, baby, you suit me fine;
-    She threw up the FLUFF and threw up the rule,
-    "Live to serve others," she learned it in school;
-    And last but not least, she threw up that lie, -
-    We all know why she threw up that lie,
-    SHE WILL NOT DIE!!
-    </structure>
-    </structure>
+    </main>
 </document>
