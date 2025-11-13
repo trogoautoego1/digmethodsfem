@@ -8,15 +8,20 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Women Hating</title>
-               <!-- <link rel="stylesheet" type="text/css" href="barron_10-28_XSLT3_CSS"/> -->
+                <link rel="stylesheet" type="text/css" href="../style.css"/>
+                <!-- first title element -->
+                <title>
+                    <xsl:value-of select="(//title)[1]"/>
+                </title>    
             </head>
             <body>
-                <h1>Women Hating</h1>
+                <h1>
+                    <xsl:value-of select="(//title)[1]"/>
+                </h1>
                 <xsl:apply-templates select="//main"/>
             </body>
         </html>
-        </xsl:template>
+    </xsl:template>
     <xsl:template match="structure[@p]">
         <p><xsl:apply-templates/></p>
     </xsl:template>
