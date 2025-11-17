@@ -12,8 +12,8 @@ CORNHILL.</source>
 <structure header="main"> LETTERS.</structure> 
 
 <structure le="1"> 
-<structure header="1" > LETTER I. </structure> 
-<structure subhead="1">THE ORIGINAL EQUALITY OF WOMAN. </structure>
+<structure p="head"><structure header="1" > LETTER I. </structure> 
+</structure><structure subhead="1">THE ORIGINAL EQUALITY OF WOMAN. </structure>
 <structure date="July 11th, 1837"> 
     <setting>Amesbury</setting>, 7th Mo. 11th, 1837. 
 </structure> 
@@ -79,7 +79,8 @@ harmony and love. </s_theory>
 recapitulation of the creation of man:</religion>—‘<structure q="bible">The Lord God formed man of the dust
 of the ground, and breathed into his nostrils the breath of life; and man
 became a living soul. And the Lord God said, it is not good that man should
-be alone, I will make him an help meet for him.’</structure> <s_theory s_natural_rights="Evolutionary creationism ">All creation swarmed with
+be alone, I will make him an help meet for him.’</structure> 
+<s_theory s_natural_rights="Evolutionary creationism ">All creation swarmed with
 animated beings capable of natural affection, as we know they still are; it
 was not, therefore, merely to give man a creature susceptible of loving,
 obeying, and looking up to him, for all that the animals could do and did
@@ -100,18 +101,18 @@ God shouted for joy.’
 <structure p="5">
 This blissful condition was not long enjoyed by our
 first parents. Eve, it would seem from the history, was wandering alone amid
-the bowers of Paradise, when the serpent met with her. From her reply
+the bowers of Paradise, when the serpent met with her. <religion r_christianity="Eve">From her reply
 to Satan, it is evident that the command not to eat ‘of the tree that is in
 the midst of the garden,’ was given to both, although the term man was used
-when the prohibition was issued by God. ‘And the woman said unto the
+when the prohibition was issued by God.</religion> ‘And the woman said unto the
 serpent, WE may eat of the fruit of the trees of the garden, but of the
-fruit of the tree which is in the midst of the garden, God hath said, YE
+fruit of the tree which is in the midst of the garden, <religion r_christianity="Eve's ignorance">God hath said, YE
 shall not eat of it, neither shall YE touch it, lest YE die.’ Here the woman
 was exposed to temptation from a being with whom she was unacquainted. She
 had been accustomed to associate with her beloved partner, and to hold
 communion with God and with angels; but of satanic intelligence, she was in
 all probability entirely ignorant. Through the subtlety of the serpent, she
-was beguiled. And ‘when she saw that the tree was good for food, and that it
+was beguiled.</religion> And ‘when she saw that the tree was good for food, and that it
 was pleasant to the eyes, and a tree to be desired to make one wise, she
 took of the fruit thereof and did eat.’
 </structure> 
@@ -122,24 +123,24 @@ same sin, not through the instrumentality of a supernatural agent, but
 through that of his equal, a being whom he must have known was liable to
 transgress the divine command, because he must have felt that he was himself
 a free agent, and that he was restrained from disobedience only by the
-exercise of faith and love towards his Creator. Had Adam tenderly reproved
+exercise of faith and love towards his Creator. <s_theory s_natural_rights="Religious justification; Adam not superior to Eve">Had Adam tenderly reproved
 his wife, and endeavored to lead her to repentance instead of sharing in her
 guilt, I should be much more ready to accord to man that superiority which
 he claims; but as the facts stand disclosed by the sacred historian, it
 appears to me that to say the least, there was as much weakness exhibited by
 Adam as by Eve. They both fell from innocence, and consequently from
-happiness, but not from equality. 
+happiness, but not from equality. </s_theory>
 </structure> 
 
 <structure p="7">
 Let us next examine the conduct of this
 fallen pair, when Jehovah interrogated them respecting their fault. They
-both frankly confessed their guilt. ‘The man said, the woman whom thou
+both frankly confessed their guilt. <structure q="Uncredited, likely Biblical">‘The man said, the woman whom thou
 gavest to be with me, she gave me of the tree and I did eat. And the woman
-said, the serpent beguiled me and I did eat.’ And the Lord God said unto the
-woman, ‘Thou wilt be subject unto thy husband, and he will rule over thee.’
-That this did not allude to the subjection of woman to man is manifest,
-because the same mode of expression is used in speaking to Cain of Abel. The
+said, the serpent beguiled me and I did eat.’ <power_system p_patriarchy="God ordained Adam to rule over Eve">And the Lord God said unto the
+woman, ‘Thou wilt be subject unto thy husband, and he will rule over thee.’</power_system></structure>
+<power_system p_social="Disagreeing with patrriarchical interpretation">That this did not allude to the subjection of woman to man is manifest,
+because the same mode of expression is used in speaking to Cain of Abel.</power_system> The
 truth is that the curse, as it is termed, which was pronounced by Jehovah
 upon woman, is a simple prophecy. The Hebrew, like the French language, uses
 the same word to express shall and will. Our translators having been
@@ -149,11 +150,11 @@ learnedly or very kindly, translated it shall instead of will, and thus
 converted a prediction to Eve into a command to Adam; for observe, it is
 addressed to the woman and not to the man. The consequence of the fall was
 an immediate struggle for dominion, and Jehovah foretold which would gain
-the ascendency; but as he created them in his image, as that image
+the ascendency; <religion r_quaker="Genesis 9:6, interpreted as sin makes no value distinction between people">but as he created them in his image, as that image
 manifestly was not lost by the fall, because it is urged in Gen. 9: 6, as an
 argument why the life of man should not be taken by his fellow man, there is
 no reason to suppose that sin produced any distinction between them as
-moral, intellectual and responsible beings. 
+moral, intellectual and responsible beings.</religion> 
 Man might just as well
 have endeavored by hard labor to fulfil the prophecy, thorns and thistles
 will the earth bring forth to thee, as to pretend to accomplish the other,
