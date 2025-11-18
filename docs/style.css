@@ -1,7 +1,6 @@
 body { 
 font-family: serif; 
-background-image: url("splashpagebg.png");
-background-color: #e6dff0;
+background-color: #dfd6d1;
 }
 
 body {
@@ -11,10 +10,10 @@ background-repeat: no-repeat;
 }
 
 .navbar {
-display: flex; /* Makes the navbar a flex container */
-justify-content: center; /* Centers items horizontally within the navbar */
-align-items: center; /* Centers items vertically within the navbar (if the navbar has a defined height) */
-background-color: #333; /* Example background color */
+display: flex; 
+justify-content: center; 
+align-items: center; 
+background-color: #b85556; 
 padding: 10px;
 }
 
@@ -115,11 +114,11 @@ margin: 5px;
 }
 
 .box {
-width: 200px; /* Sets the width of the content area */
-height: 100px; /* Sets the height of the content area */
-background-color: lightblue; /* Fills the box with a background color */
-border: 2px solid darkblue; /* Adds a border around the box */
-padding: 20px; /* Adds space between the content and the border */
-margin: 15px; /* Adds space outside the border, separating it from other elements */
-box-sizing: border-box; /* (Optional but recommended) Makes width/height include padding and border */
+width: 200px; 
+height: 100px; 
+background-color: lightblue;
+border: 2px solid darkblue; 
+padding: 20px; 
+margin: 15px; 
+box-sizing: border-box; 
 }
