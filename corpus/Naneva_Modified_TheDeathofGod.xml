@@ -4,8 +4,7 @@
             Christian consciousness</title>
         <author>Mary Daly</author>
     </meta>
-    <text>
-        <structure page="page">
+    <main>
             <structure p="paragraph">The women's liberation movement has produced a deluge of books
                 and articles. Their major task has been exposition and criticism of our
                 male-centered heritage. In order to reveal and drive home to readers the oppressive
@@ -58,8 +57,7 @@
                 for thousands of years will be questioned as never before. It is also very possibly
                 the greatest single hope for survival of religious consciousness in the West.
             </structure>
-        </structure>
-        <structure page="page">
+        
             <structure p="paragraph">At this point it is important to consider the objection that
                 the liberation of women will only mean that new characters will assume the same old
                 roles, but that nothing will change essentially in regard to structure, ideology, or
@@ -113,9 +111,8 @@
                 cruel behavior of Christians toward unbelievers and even toward dissenters among
                 themselves is shocking evidence of the function of that image in relation to values
                 and behavior. </structure>
-        </structure>
-        <structure page="page">
-            <structure p="paragraph"> Sophisticated thinkers, of course, have never intellectually
+        
+            <structure p="paragraph">Sophisticated thinkers, of course, have never intellectually
                 identified God with an elderly parent in heaven. Nevertheless it is important to
                 recognize that even when very abstract conceptualizations of God arc formulated in
                 the mind, images have a way of surviving in the imagination in such a way that a
@@ -139,8 +136,8 @@
                 technology with the accompanying sense of mastery over' the world and man's destiny.
                 However, it is the women's movement which appears destined to play the key-role in
                 the overthrow of such oppressive elements in traditional theism, precisely because
-                it strikes at the source of the imbalance reflected in traditional beliefs. </structure>
-            <structure page="page">The women's movement will present a growing threat to patriarchal
+                it strikes at the source of the imbalance reflected in traditional beliefs. 
+            The women's movement will present a growing threat to patriarchal
                 religion less by attacking it than by simply leaving it behind. Few of the leaders
                 in the movement evince an interest in institutional religion, having recognized it
                 as an instrument of their betrayal. Those who see their commitment to the movement
@@ -152,7 +149,8 @@
                 change coming from radical feminism is a more acute and widespread perception of
                 qualitative differences between those conceptualizations of God and of the human
                 relationship to God which are oppressive in their implications, and those which
-                encourage self-actualization and social commitment.</structure>
+                encourage self-actualization and social commitment.
+                </structure>
             <structure p="paragraph"> The various theologies that hypostatize transcendence
                 invariably use this "God" to legitimate oppression, particularly that of women.
                 These are irredeemably anti- feminine and therefore anti-human. In contrast to this,
@@ -200,8 +198,6 @@
                 superiority/ The transformation of society by the erosion of male dominance will
                 generate serious challenges to such assumptions of the Christological tradition.
             </structure>
-        </structure>
-        <structure p="page">
             <structure p="paragraph">It will, I think, become increasingly evident that exclusively
                 masculine symbols for the ideal of "incarnation" will not do. As a uniquely
                 masculine divinity loses credibility, so also the idea of a unique divine
@@ -286,8 +282,7 @@
                 "the other"—easily adaptable to national, racial and class differences—has basically
                 and primordially been directed against women. Even the rhetoric of racism finds its
                 model in sexism.</structure>
-        </structure>
-        <structure page="page">
+        
             <structure p="paragraph"> The consciousness-raising which is beginning among women is
                 evoking a qualitatively new understanding cf the subtle mechanisms which produce and
                 destroy "the other," and a consequent empathy with all of the oppressed. This gives
@@ -312,6 +307,5 @@
                 such other major problems as war, racism and environmental pollution. The work of
                 fostering religious consciousness which is explicitly incompatible with sexism will
                 require an extraordinary degree of creative rage, love and hope.</structure>
-        </structure>
-    </text>
+    </main>
 </document>
