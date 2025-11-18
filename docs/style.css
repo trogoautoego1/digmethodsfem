@@ -35,6 +35,7 @@ nav.link-column {
 width: 240px; /* adjust or use max-width */
 padding: 0.5rem;
 background: transparent;
+text-align: left;
 }
 
 nav.link-column a {
@@ -79,7 +80,6 @@ float: left;
 nav ul li a {
 display: block;
 color: black;
-text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 }
@@ -87,7 +87,6 @@ text-decoration: none;
 nav {
 background-color: #e4e0d3;
 padding: 0;
-text-align: center;
 margin-bottom: 30px; 
 border-bottom: 2px solid #cdc7b4; 
 }
