@@ -39,7 +39,7 @@ class=element class {mixed {social*, political*, economic*, working_class*, weal
     middle=attribute middle {text}
     lower=attribute lower {text}
 
-intersection=element intersection {text}
+xintersection=element intersection {text}
 
 identity=element identity {mixed {race*, sexuality*, gender*, nationality*}}
     race=attribute race {text}
