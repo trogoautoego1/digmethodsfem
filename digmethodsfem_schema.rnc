@@ -49,10 +49,9 @@ identity=element identity {mixed {race*, sexuality*, gender*, nationality*}}
     
 setting=element setting {text}
 
-f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_enlightenment_individualism | f_terf | f_liberal | f_praxis | f_antifeminist | f_political_lesbian* | f_abolitionist)*}}
+f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_terf | f_liberal | f_praxis | f_antifeminist | f_political_lesbian* | f_abolitionist)*}}
     f_marxist=attribute f_marxist {text}
     f_rad_fem=attribute f_rad_fem {text}
-    f_enlightenment_individualism=attribute f_enlightenment_individualism {text}
     f_terf=attribute f_terf {text}
     f_liberal=attribute f_liberal {text}
     f_praxis=attribute f_praxis {text}
