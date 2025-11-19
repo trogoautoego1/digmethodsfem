@@ -15,7 +15,6 @@
             <br> The Feminine Mystique by Betty Friedan (1963), Excerpt from Chapter 5 
             <br> Letters on the Equality of the Seces and the Condition of Woman, Sarah Moore Grimké (1837) 
             <br>"Drag" by Jan Beatty (2024) 
-            <br> ORIGINAL INTERVIEW WITH JAN BEATTY (Will be conducted and transcribed mid-to-late Oct. 2025) 
             <br> Excerpt from PUNK PLANET 29 (1999 FEB) 
             <br> Excerpt from PUNK PLANET 52 (2002 NOV-DEC)
             <br>  Excerpt from PUNK PLANET 62 (2004 JULY-AUGUST)
