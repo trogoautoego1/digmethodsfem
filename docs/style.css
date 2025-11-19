@@ -4,7 +4,7 @@ background-color: #dfd6d1;
 }
 
 body {
-background-image: url('../docs/images');
+background-image: url('/images');
 background-size: cover; 
 background-repeat: no-repeat; 
 background-position: center center; 
