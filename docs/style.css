@@ -4,9 +4,11 @@ background-color: #dfd6d1;
 }
 
 body {
-background-image: url("digmethodsfem/docs/images/splashpagebg.png");
-background-size: cover;
-background-repeat: no-repeat;
+background-image: url('../docs/images');
+background-size: cover; 
+background-repeat: no-repeat; 
+background-position: center center; 
+background-color: #967f96;
 }
 
 .navbar {
