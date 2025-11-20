@@ -42,6 +42,14 @@
                  <xsl:apply-templates select="@p_social"></xsl:apply-templates></span>
              <span class="tooltiptext" role="tooltip">
                  <xsl:apply-templates select="@p_religion"></xsl:apply-templates></span>
+             <span class="tooltiptext" role="tooltip">
+                 <xsl:apply-templates select="@p_class"></xsl:apply-templates></span>
+             <span class="tooltiptext" role="tooltip">
+                 <xsl:apply-templates select="@p_matriarchy"></xsl:apply-templates></span>
+             <span class="tooltiptext" role="tooltip">
+                 <xsl:apply-templates select="@p_political"></xsl:apply-templates></span>
+             <span class="tooltiptext" role="tooltip">
+                 <xsl:apply-templates select="@p_race"></xsl:apply-templates></span>
     </span> 
     </xsl:template>
 </xsl:stylesheet>
