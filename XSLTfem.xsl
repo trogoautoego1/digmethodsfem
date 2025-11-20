@@ -15,6 +15,14 @@
                 </title>    
             </head>
             <body>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Main</a></li>
+                        <li><a href="../methodology.html">Methodology</a></li>
+                        <li><a href="../texts.html">Texts</a></li>
+                        <li><a href="../analysis.html">Analysis</a></li>
+                    </ul>
+                </nav>
                 <h1>
                     <xsl:value-of select="(//title)[1]"/>
                 </h1>
@@ -25,5 +33,10 @@
     <xsl:template match="structure[@p]">
         <p><xsl:apply-templates/></p>
     </xsl:template>
-    
+    <xsl:template match="power_system">
+         <span class="tooltip">
+            <xsl:apply-templates/>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@p_patriarchy"></xsl:apply-templates></span>
+    </span> </xsl:template>
 </xsl:stylesheet>
