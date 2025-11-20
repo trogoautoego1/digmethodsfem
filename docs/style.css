@@ -90,21 +90,26 @@ h2, h3 {
 }
       
 
-/* Tooltip text */
 .tooltiptext {
-  visibility: hidden; /* Hidden by default */
-  width: 130px;
+  visibility: hidden;
   background-color: pink;
-  color: #fffffff;
-  text-align: center;
-  padding: 5px 0;
+  color: #ffffff;
+  text-align: left;
+  padding: 8px;
   border-radius: 6px;
   position: absolute;
-  z-index: 1; /* Ensure tooltip is displayed above content */
-  bottom: 125%; /* Position above the element */
+  z-index: 1000;
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 75; /* For fade-in effect */
+  white-space: normal; /* Allows wrapping */
+  overflow-wrap: break-word; /* Breaks long words */
+  max-width: 300px; /* Allows expansion but limits width */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
+}
+
+.tooltiptext:empty {
+  display: none;
 }
 
 /* Show the tooltip text on hover */
@@ -125,63 +130,10 @@ h2, h3 {
 
 /* Highlight effect on hover */
 .tooltip:hover .tooltiptext {
-  background-color: #pink; /\* Yellow highlight *\/
-  color: #000; /\* Dark text for contrast *\/
+  background-color: pink; /* Yellow highlight */
+  color: #000; /* Dark text for contrast */
 }
 
 .tooltip:hover .tooltiptext::after {
-  border-color: #pink transparent transparent transparent;
+  border-color: pink transparent transparent transparent;
 }
-/* Tooltip container */
-/*.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-}
-
-/\* Tooltip text *\/
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 8px;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /\* Position above the element *\/
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s, background-color 0.3s;
-}
-
-/\* Tooltip arrow *\/
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%; /\* Arrow at bottom of tooltip *\/
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
-}
-
-/\* Show tooltip on hover *\/
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-/\* Highlight effect on hover *\/
-.tooltip:hover .tooltiptext {
-  background-color: #ffeb3b; /\* Yellow highlight *\/
-  color: #000; /\* Dark text for contrast *\/
-}
-
-.tooltip:hover .tooltiptext::after {
-  border-color: #ffeb3b transparent transparent transparent;
-}*/
