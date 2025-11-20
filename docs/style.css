@@ -125,15 +125,15 @@ h2, h3 {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: pink transparent transparent transparent;
+  border-color: #ffeaed transparent transparent transparent;
 }
 
 /* Highlight effect on hover */
 .tooltip:hover .tooltiptext {
-  background-color: pink; /* Yellow highlight */
+  background-color: #ffeaed;
   color: #000; /* Dark text for contrast */
 }
 
 .tooltip:hover .tooltiptext::after {
-  border-color: pink transparent transparent transparent;
+  border-color: #ffeaed transparent transparent transparent;
 }
