@@ -8,14 +8,14 @@
         <structure page="page">
             <structure p="paragraph">The women's liberation movement has produced a deluge of books
                 and articles. Their major task has been exposition and criticism of our
-                male-centered heritage. In order to reveal and drive home to readers the oppressive
+                <power_system p_patriarchy="patriarchy">male-centered heritage</power_system>. In order to reveal and drive home to readers the oppressive
                 character of our cultural institutions, it was necessary to do careful research, to
                 trot out passages from leading philosophers, psychologists, statesmen, poets,
                 historians, saints and theologians which make the reader's hair stand on end by the
                 blatancy of their misogynism. Part of the task also has been the tracing of the
                 subtle psychological mechanisms by which society has held men up and women down.
                 This method of exposition and analysis reached its crescendo within this past year
-                when Kate Millet's Sexual Politics rocketed her into the role of American
+                when <f_theory f_rad_fem="?">Kate Millet's Sexual Politics</f_theory> rocketed her into the role of American
                 counterpart to Simone de Beauvoir. </structure>
             <structure p="paragraph">As far as the level of creative research is concerned, that
                 phase of the work is finished. The skeletons in our cultural closet have been hauled
@@ -49,11 +49,10 @@
                 independent existence and validity of its own. It resists social change which would
                 rob it of its plausibility. Nevertheless, despite the vicious circle, change does
                 occur in society, and ideologies die. though they die hard. </structure>
-            
             <structure p="paragraph">As the women's revolution begins to have its effect upon the
-                fabric of society, transforming it from patriarchy into something that never existed
+                fabric of society, transforming it from <power_system p_patriarchy = "patriarchy">patriarchy</power_system> into something that never existed
                 before—into a diarchal situation that is radically new—it will, I believe, become
-                the greatest single potential challenge to Christianity to rid itself of its
+                the greatest single potential challenge to <religion r_christianity="christianity">Christianity</religion> to rid itself of its
                 oppressive tendencies or go out of business. Beliefs and values that have held sway
                 for thousands of years will be questioned as never before. It is also very possibly
                 the greatest single hope for survival of religious consciousness in the West.
@@ -72,7 +71,7 @@
                 particular will simply mean uncritical acceptance of values formerly given priority
                 by men. Rather, I suggest that it will be a catalyst for transformation of our
                 culture. </structure>
-            <structure p="paragraph">The roles and structures of patriarchy have been developed and
+            <structure p="paragraph">The roles and structures of <power_system p_patriarchy = "patriarchy">patriarchy</power_system> have been developed and
                 sustained in accordance with an artificial polarization of human qualities into the
                 traditional sexual stereotypes. The image of the person in authority and the
                 accepted understanding of "his" role have corresponded to the eternal masculine
@@ -289,7 +288,7 @@
         </structure>
         <structure page="page">
             <structure p="paragraph"> The consciousness-raising which is beginning among women is
-                evoking a qualitatively new understanding cf the subtle mechanisms which produce and
+                evoking a qualitatively new understanding of the subtle mechanisms which produce and
                 destroy "the other," and a consequent empathy with all of the oppressed. This gives
                 grounds for the hope that their emergence can generate a counterforce to the
                 exploitative mentality which is destroying persons and the environment. Since the
