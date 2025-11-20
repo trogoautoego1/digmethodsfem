@@ -29,6 +29,8 @@
                 <xsl:apply-templates select="//main"/>
             </body>
         </html>
+
+<!-- Formatting material; paragraphs, headings, quotes, ect. -->
     </xsl:template>
     <xsl:template match="structure[@p]">
         <p><xsl:apply-templates/></p>
@@ -36,6 +38,25 @@
     <xsl:template match="structure[@page]">
         <p><xsl:apply-templates/></p>
     </xsl:template>
+    <xsl:template match="structure[@header]">
+    <span style="font-size: 1.5em; font-weight: bold; color: #4b0082;"><xsl:apply-templates/></span>
+    </xsl:template>
+    <xsl:template match="structure[@subhead]">
+        <h3><xsl:apply-templates/></h3>
+    </xsl:template>
+    <xsl:template match="structure[@date]">
+        <h3><xsl:apply-templates/></h3>
+    </xsl:template>
+    <xsl:template match="structure[@letter]">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+    <xsl:template match="structure[@page]">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+    <xsl:template match="structure[@sig]">
+        <p style="font-family: 'Edwardian Script ITC', 'Lucida Calligraphy', 'Palace Script MT', cursive; font-size: 1.6em; color: #2a1f14;"><xsl:apply-templates/></p>
+    </xsl:template>
+<!-- power system match and tag -->   
     <xsl:template match="power_system">
          <span class="tooltip">
             <xsl:apply-templates/>
