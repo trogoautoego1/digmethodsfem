@@ -18,7 +18,7 @@ power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, 
     p_matriarchy=attribute p_matriarchy {text}
     
 
-religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_quaker | r_anglican |r_christianity | r_greekmyth)*}}
+religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_quaker | r_anglican |r_christianity | r_greekmyth | s_theory)*}}
     r_non_western=attribute r_non_western {text}
     r_islam=attribute r_islam {text}
     r_protestentism=attribute r_protestentism {text}
@@ -49,15 +49,16 @@ identity=element identity {mixed {race*, sexuality*, gender*, nationality*}}
     
 setting=element setting {text}
 
-f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_enlightenment_individualism | f_terf | f_liberal | f_praxis | f_antifeminist | f_political_lesbian*)*}}
+f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_terf | f_liberal | f_praxis | f_antifeminist | f_political_lesbian* | f_abolitionist | f_enlightenment_individualism)*}}
     f_marxist=attribute f_marxist {text}
     f_rad_fem=attribute f_rad_fem {text}
-    f_enlightenment_individualism=attribute f_enlightenment_individualism {text}
     f_terf=attribute f_terf {text}
     f_liberal=attribute f_liberal {text}
     f_praxis=attribute f_praxis {text}
     f_antifeminist=attribute f_antifeminist {text}
     f_political_lesbian=attribute f_politicallesbian {text}
+    f_abolitionist=attribute f_abolitionist {text}
+    f_enlightenment_individualism=attribute f_enlightenment_individualism {text}
     
 s_theory=element s_theory {mixed {(s_freud? | s_rights_of_man? | s_enlightenment_individualism? | s_natural_rights* | structure*), (religion*)}}
     s_freud=attribute s_freud {text}

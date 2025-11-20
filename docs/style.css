@@ -1,115 +1,81 @@
+html, body {
+ margin: 0;
+ padding: 0;
+ height: 100%;
+}
+
 body { 
-    font-family: serif; 
-    background-image: url("splashpagebg.png");
-    background-color: #e6dff0;
+ font-family: Garamond, serif;
+
+ /* background image behavior */
+ background-image: url('okeefe_bg.png');
+ background-size: cover;
+ background-position: center; 
+ background-repeat: no-repeat;
+ background-attachment: fixed; 
 }
 
-body {
-    background-image: url("digmethodsfem/docs/images/splashpagebg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+
+/* navbar */
+nav {
+ background-color: #e4e0d3;
+ padding: 0;
+ margin-bottom: 30px;
+ border-bottom: 2px solid #cdc7b4;
 }
 
-.navbar {
-  display: flex; /* Makes the navbar a flex container */
-  justify-content: center; /* Centers items horizontally within the navbar */
-  align-items: center; /* Centers items vertically within the navbar (if the navbar has a defined height) */
-  background-color: #333; /* Example background color */
-  padding: 10px;
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ background-color: #e4e0d3;
+ overflow: hidden;
 }
 
-.nav-links {
-  list-style: none; 
-  padding: 0;
-  margin: 0;
-  display: flex; 
-  gap: 15px;
+nav ul li {
+ float: left;  
+}  
+
+/* navbar buttons */
+nav ul li a {
+ display: block;
+ color: black;
+ padding: 14px 16px;
+ text-decoration: none;
+ text-align: center;
+ 
+
+ /* button styling */
+ background-color: #e4e0d3;
+ border: 1px solid #cdc7b4;
+ border-radius: 4px;
+ margin: 4px;
+ padding: 14px 20px;
+ width: auto;  
 }
 
- .flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+nav ul li a:hover {
+ background-color: #cdc7b4;
 }
 
-nav.link-column {
-  width: 240px;           /* adjust or use max-width */
-  padding: 0.5rem;
-  background: transparent;
+
+/* text, p, h, etc */
+p {
+ margin: 15px 0;
 }
 
-/* each link becomes a full-width row */
-nav.link-column a {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.6rem 0.75rem;
-  text-decoration: none;
-  border-radius: 4px;
+h2, h3 {
+ margin: 10px 0;
 }
 
-/* subtle separators between lines */
-nav.link-column a + a {
-  margin-top: 0.25rem;
+
+/* text boxes*/
+.box {
+ display: inline-block;
+ background-color: #DFD1D1;
+ border: 2px solid #383239;
+ padding: 20px;
+ margin: 15px 0;
+ max-width: 600px;
+ box-sizing: border-box;
 }
-
-/* hover and focus states */
-nav.link-column a:hover,
-nav.link-column a:focus {
-  background: rgba(75,59,43,0.06);
-  text-decoration: none;
-  outline: none;
-}
-
-    body {
-      margin: 10px;
-      padding: 0;
-      font-family: Garamond, serif;
-    }
-
-    
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #e4e0d3;
-      overflow: hidden; 
-    }
-
-    nav ul li {
-      float: left;
-    }
-
-    nav ul li a {
-      display: block;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    nav {
-  background-color: #e4e0d3;
-  padding: 0;
-  margin-bottom: 30px; 
-  border-bottom: 2px solid #cdc7b4; 
-  }
-
-
-    nav ul li a:hover {
-      background-color: #cdc7b4;
-    }
-
-  
-    header {
-      clear: both;
-      padding-top: 20px;
-    }
-
-    p {
-      margin: 10px;
-    }
-    
-    h2, h3 {
-      margin: 5px;
-    }

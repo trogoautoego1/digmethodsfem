@@ -12,8 +12,8 @@ CORNHILL.</source>
 <structure header="main"> LETTERS.</structure> 
 
 <structure le="1"> 
-<structure header="1" > LETTER I. </structure> 
-<structure subhead="1">THE ORIGINAL EQUALITY OF WOMAN. </structure>
+<structure p="head"><structure header="1" > LETTER I. </structure> 
+</structure><structure subhead="1">THE ORIGINAL EQUALITY OF WOMAN. </structure>
 <structure date="July 11th, 1837"> 
     <setting>Amesbury</setting>, 7th Mo. 11th, 1837. 
 </structure> 
@@ -79,7 +79,8 @@ harmony and love. </s_theory>
 recapitulation of the creation of man:</religion>—‘<structure q="bible">The Lord God formed man of the dust
 of the ground, and breathed into his nostrils the breath of life; and man
 became a living soul. And the Lord God said, it is not good that man should
-be alone, I will make him an help meet for him.’</structure> <s_theory s_natural_rights="Evolutionary creationism ">All creation swarmed with
+be alone, I will make him an help meet for him.’</structure> 
+<s_theory s_natural_rights="Evolutionary creationism ">All creation swarmed with
 animated beings capable of natural affection, as we know they still are; it
 was not, therefore, merely to give man a creature susceptible of loving,
 obeying, and looking up to him, for all that the animals could do and did
@@ -100,18 +101,18 @@ God shouted for joy.’
 <structure p="5">
 This blissful condition was not long enjoyed by our
 first parents. Eve, it would seem from the history, was wandering alone amid
-the bowers of Paradise, when the serpent met with her. From her reply
+the bowers of Paradise, when the serpent met with her. <religion r_christianity="Eve">From her reply
 to Satan, it is evident that the command not to eat ‘of the tree that is in
 the midst of the garden,’ was given to both, although the term man was used
-when the prohibition was issued by God. ‘And the woman said unto the
+when the prohibition was issued by God.</religion> ‘And the woman said unto the
 serpent, WE may eat of the fruit of the trees of the garden, but of the
-fruit of the tree which is in the midst of the garden, God hath said, YE
+fruit of the tree which is in the midst of the garden, <religion r_christianity="Eve's ignorance">God hath said, YE
 shall not eat of it, neither shall YE touch it, lest YE die.’ Here the woman
 was exposed to temptation from a being with whom she was unacquainted. She
 had been accustomed to associate with her beloved partner, and to hold
 communion with God and with angels; but of satanic intelligence, she was in
 all probability entirely ignorant. Through the subtlety of the serpent, she
-was beguiled. And ‘when she saw that the tree was good for food, and that it
+was beguiled.</religion> And ‘when she saw that the tree was good for food, and that it
 was pleasant to the eyes, and a tree to be desired to make one wise, she
 took of the fruit thereof and did eat.’
 </structure> 
@@ -122,24 +123,24 @@ same sin, not through the instrumentality of a supernatural agent, but
 through that of his equal, a being whom he must have known was liable to
 transgress the divine command, because he must have felt that he was himself
 a free agent, and that he was restrained from disobedience only by the
-exercise of faith and love towards his Creator. Had Adam tenderly reproved
+exercise of faith and love towards his Creator. <s_theory s_natural_rights="Religious justification; Adam not superior to Eve">Had Adam tenderly reproved
 his wife, and endeavored to lead her to repentance instead of sharing in her
 guilt, I should be much more ready to accord to man that superiority which
 he claims; but as the facts stand disclosed by the sacred historian, it
 appears to me that to say the least, there was as much weakness exhibited by
 Adam as by Eve. They both fell from innocence, and consequently from
-happiness, but not from equality. 
+happiness, but not from equality. </s_theory>
 </structure> 
 
 <structure p="7">
 Let us next examine the conduct of this
 fallen pair, when Jehovah interrogated them respecting their fault. They
-both frankly confessed their guilt. ‘The man said, the woman whom thou
+both frankly confessed their guilt. <structure q="Uncredited, likely Biblical">‘The man said, the woman whom thou
 gavest to be with me, she gave me of the tree and I did eat. And the woman
-said, the serpent beguiled me and I did eat.’ And the Lord God said unto the
-woman, ‘Thou wilt be subject unto thy husband, and he will rule over thee.’
-That this did not allude to the subjection of woman to man is manifest,
-because the same mode of expression is used in speaking to Cain of Abel. The
+said, the serpent beguiled me and I did eat.’ <power_system p_patriarchy="God ordained Adam to rule over Eve">And the Lord God said unto the
+woman, ‘Thou wilt be subject unto thy husband, and he will rule over thee.’</power_system></structure>
+<power_system p_social="Disagreeing with patrriarchical interpretation">That this did not allude to the subjection of woman to man is manifest,
+because the same mode of expression is used in speaking to Cain of Abel.</power_system> The
 truth is that the curse, as it is termed, which was pronounced by Jehovah
 upon woman, is a simple prophecy. The Hebrew, like the French language, uses
 the same word to express shall and will. Our translators having been
@@ -149,11 +150,11 @@ learnedly or very kindly, translated it shall instead of will, and thus
 converted a prediction to Eve into a command to Adam; for observe, it is
 addressed to the woman and not to the man. The consequence of the fall was
 an immediate struggle for dominion, and Jehovah foretold which would gain
-the ascendency; but as he created them in his image, as that image
+the ascendency; <religion r_quaker="Genesis 9:6, interpreted as sin makes no value distinction between people">but as he created them in his image, as that image
 manifestly was not lost by the fall, because it is urged in Gen. 9: 6, as an
 argument why the life of man should not be taken by his fellow man, there is
 no reason to suppose that sin produced any distinction between them as
-moral, intellectual and responsible beings. 
+moral, intellectual and responsible beings.</religion> 
 Man might just as well
 have endeavored by hard labor to fulfil the prophecy, thorns and thistles
 will the earth bring forth to thee, as to pretend to accomplish the other,
@@ -194,28 +195,29 @@ womanhood,</structure>
 My dear Sister,—In my last, I traced the
 creation and the fall of man and woman from that state of purity and happiness which
 their beneficent Creator designed them to enjoy. As they were one in transgression,
-their chastisement was the same. ‘So God drove out the man, and he placed at the
+their chastisement was the same. <structure q="Uncredited, likely Biblical">‘So God drove out the man, and he placed at the
 East of the garden of Eden a cherubim and a flaming sword, which turned every way to
-keep the way of the tree of life.’ We now behold them expelled from Paradise, fallen
+keep the way of the tree of life.’</structure> We now behold them expelled from Paradise, fallen
 from their original loveliness, but still bearing on their foreheads the image and
 superscription of Jehovah; still invested with high moral responsibilities,
-intellectual powers, and immortal souls. They had incurred the penalty of sin, they
+intellectual powers, and immortal souls. <s_theory s_natural_rights="Religious justification">They had incurred the penalty of sin, they
 were shorn of their innocence, but they stood on the same platform side by side,
-acknowledging no superior but their God. Notwithstanding what has been urged, woman
-I am aware stands charged to the present day with having brought sin into the world.
+acknowledging no superior but their God.</s_theory> <power_system p_patriarchy="Woman introduced sin">Notwithstanding what has been urged, woman
+I am aware stands charged to the present day with having brought sin into the world.</power_system>
 I shall not repel the charge by any counter assertions, although, as was before
 hinted, Adam’s ready acquiescence with his wife’s proposal, does not savor
-much of that superiority in strength of mind, which is arrogated by man. Even
+much of that superiority in strength of mind, which is arrogated by man. <power_system p_patriarchy="Men have benefit or are satisfied with undervaluing women">Even
 admitting that Eve was the greater sinner, it seems to me man might be satisfied
 with the dominion he has claimed and exercised for nearly six thousand years, and
 that more true nobility would be manifested by endeavoring to raise the fallen and
-invigorate the weak, than by keeping woman in subjection. But I ask no favors for my
-sex. I surrender not our claim to equality. All I ask of our brethren is, that they
+invigorate the weak, than by keeping woman in subjection.</power_system> But I ask no favors for my
+sex. I surrender not our claim to equality. <power_system p_patriarchy="If women are not freed from patriarchical rule, they will become weaker">
+All I ask of our brethren is, that they
 will take their feet from off our necks, and permit us to stand upright on that
 ground which God designed us to occupy. If he has not given us the rights which
 have, as I conceive, been wrested from us, we shall soon give evidence of our
 inferiority, and shrink back into that obscurity, which the high souled magnanimity
-of man has assigned us as our appropriate sphere.</structure> 
+of man has assigned us as our appropriate sphere.</power_system></structure> 
 
 <structure p="11">As I am unable to learn from
 sacred writ when woman was deprived by God of her equality with man, I shall touch
@@ -223,48 +225,50 @@ upon a few points in the Scriptures, which demonstrate that no supremacy was gra
 to man. When God had destroyed the world, except Noah and his family, by the deluge,
 he renewed the grant formerly made to man, and again gave him dominion over every
 beast of the earth, every fowl of the air, over all that moveth upon the earth, and
-over all the fishes of the sea; into his hands they were delivered. But was woman,
+over all the fishes of the sea; into his hands they were delivered. <s_theory s_natural_rights="Religious justificatoin">But was woman,
 bearing the image of her God, placed under the dominion of her fellow man? Never!
 Jehovah could not surrender his authority to govern his own immortal creatures into
 the hands of a being, whom he knew, and whom his whole history proved, to be
 unworthy of a trust so sacred and important. God could not do it, because it is a
-direct contravention of his law, ‘Thou shalt worship the Lord thy God, and him only
-shalt thou serve.’ If Jehovah had appointed man as the guardian, or teacher of
+direct contravention of his law, </s_theory> 
+<structure q="Uncredited, likely Biblical">‘Thou shalt worship the Lord thy God, and him only
+shalt thou serve.’</structure><religion r_christianity="General"> <s_theory s_natural_rights="Religious justification">If Jehovah had appointed man as the guardian, or teacher of
 woman, he would certainly have given some intimation of this surrender of his own
 prerogative. But so far from it, we find the commands of God invariably the same to
 man and woman; and not the slightest intimation is given in a single passage of the
-Bible, that God designed to point woman to man as her instructor. The tenor of his
+Bible, that God designed to point woman to man as her instructor.</s_theory></religion> The tenor of his
 language always is, ‘Look unto ME, and be ye saved, all the ends of the earth, for I
 am God, and there is none else.’ </structure>
 
-<structure p="12">The lust of dominion was probably the first effect
+<structure p="12"><religion r_christianity="Corruption and sin equally represented between sexes">The lust of dominion was probably the first effect
 of the fall; and as there was no other intelligent being over whom to exercise it,
 woman was the first victim of this unhallowed passion. We afterwards see it
 exhibited by Cain in the murder of his brother, by Nimrod in his becoming a mighty
 hunter of men, and setting up a kingdom over which to reign. Here we see the origin
 of that Upas of slavery, which sprang up immediately after the fall, and has spread
-its pestilential branches over the whole face of the known world. All history
+its pestilential branches over the whole face of the known world.</religion> <power_system p_patriarchy="Historical">All history
 attests that man has subjected woman to his will, used her as a means to promote his
 selfish gratification, to minister to his sensual pleasures, to be instrumental in
 promoting his comfort; but never has he desired to elevate her to that rank she was
 created to fill. He has done all he could to debase and enslave her mind; and now he
 looks triumphantly on the ruin he has wrought, and says, the being he has thus
-deeply injured is his inferior.</structure> 
+deeply injured is his inferior.</power_system></structure> 
 
-<structure p="13">Woman has been placed by John Quincy Adams,
+<structure p="13"><power_system p_patriarchy="Women oppressed in 'all ages and countries'">Woman has been placed by John Quincy Adams,
 side by side with the slave, whilst he was contending for the right side of
 petition. I thank him for ranking us with the oppressed; for I shall not find it
 difficult to show, that in all ages and countries, not even excepting enlightened
 republican America, woman has more or less been made a means to promote the welfare
 of man, without due regard to her own happiness, and the glory of God as the end of
-her creation. </structure>
+her creation.</power_system> </structure>
 
-<structure p="14">During the patriarchal ages, we find men and women engaged in the same
-employments. Abraham and Sarah both assisted in preparing the food which was to be
+<structure p="14"><power_system p_patriarchy="Defines patriarchy as former period">During the patriarchal ages, we find men and women engaged in the same
+employments.</power_system> Abraham and Sarah both assisted in preparing the food which was to be
 set before the three men, who visited them in the plains of Mamre; but although
-their occupations were similar, Sarah was not permitted to enjoy the society of the
+their occupations were similar, 
+<power_system p_patriarchy="Male family excerts control over female family">Sarah was not permitted to enjoy the society of the
 holy visitant; and as we learn from Peter, that she ‘obeyed Abraham, calling him
-Lord,’ we may presume he exercised dominion over her. We shall pass on now to
+Lord,’ we may presume he exercised dominion over her.</power_system> We shall pass on now to
 Rebecca. In her history, we find another striking illustration of the low estimation
 in which woman was held. Eleazur is sent to seek a wife for Isaac. He finds Rebecca
 going down to the well to fill her pitcher. He accosts her; and she replies with all
@@ -275,21 +279,21 @@ offered incense to her vanity, and ‘he took a golden ear-ring of half a shekel
 weight, and two bracelets for her hands of ten shekels weight of gold,’ and gave
 them to Rebecca.</structure> 
 
-<structure p="15">The cupidity of man soon led him to regard woman as
+<structure p="15"><religion r_christianity="Cupidity, sin of greed">The cupidity of man soon led him to regard woman as
 property, and hence we find them sold to those, who wished to marry them, as far as
 appears, without any regard to those sacred rights which belong to woman, as well as
-to man in the choice of a companion. That women were a profitable kind of property,
+to man in the choice of a companion.</religion> That women were a profitable kind of property,
 we may gather from the description of a virtuous woman in the last chapter of
 Proverbs. To work willingly with her hands, to open her hands to the poor, to clothe
 herself with silk and purple, to look well to her household, to make fine linen and
 sell it, to deliver girdles to the merchant, and not to eat the bread of idleness,
 seems to have constituted in the view of Solomon, the perfection of a woman’s
-character and achievements. ‘The spirit of that age was not favorable to
-intellectual improvement; but as there were wise men who formed exceptions to the
+character and achievements. <structure q="Abolitionist and women's rights activist Lydia Maria Child's 'Condition of Women, in Various Ages and Nations', 1835">‘The spirit of that age was not favorable to
+intellectual improvement; but <s_theory s_enlightenment_individualism=" Individual intelligent people create societal progress, regardless of gender">as there were wise men who formed exceptions to the
 general ignorance, and were destined to guide the world into more advanced states,
-so there was a corresponding proportion of wise women; and among the Jews, as well
+so there was a corresponding proportion of wise women</s_theory>; <religion r_judaism="Unlike English/American Christianity, Judaism views women as holier than men">and among the Jews, as well
 as other nations, we find a strong tendency to believe that women were in more
-immediate connection with heaven than men.’—L. M. Child’s Con. of Woman. If there be
+immediate connection with heaven than men.</religion>’</structure>—L. M. Child’s Con. of Woman. If there be
 any truth in this tradition, I am at a loss to imagine in what the superiority of
 man consists.</structure> 
 <structure p="sig2">Thine in the bonds of womanhood,</structure> 
@@ -308,34 +312,34 @@ MASSACHUSETTS.</structure>
 had not seen the Pastoral Letter of the General Association. It has since fallen
 into my hands, and I must digress from my intention of exhibiting the condition of
 women in different parts of the world, in order to make some remarks on this
-extraordinary document. I am persuaded that when the minds of men and women become
+extraordinary document. <f_theory f_liberal="Women will ultimately be seen as equal to men as baseline">I am persuaded that when the minds of men and women become
 emancipated from the thraldom of superstition and ‘traditions of men,’ the
 sentiments contained in the Pastoral Letter will be recurred to with as much
 astonishment as the opinions of Cotton Mather and other distinguished men of his
-day, on the subject of witchcraft; nor will it be deemed less wonderful, that a body
+day, on the subject of witchcraft</f_theory>; nor will it be deemed less wonderful, that a body
 of divines should gravely assemble and endeavor to prove that woman has no right to
 ‘open her mouth for the dumb,’ than it now is that judges should have sat on the
 trials of witches, and solemnly condemned nineteen persons and one dog to death for
 witchcraft. 
 </structure>
 
-<structure p="17">But to the letter. It says, ‘We invite your attention to the
+<structure p="17">But to the letter. It says, <structure q="Pastoral Letter of the General Association of Congregational Ministers of Massachusetts"><f_theory f_antifeminist="Church reaction to Grimke">‘We invite your attention to the
 dangers which at present seem to threaten the FEMALE CHARACTER with wide-spread and
-permanent injury.’ I rejoice that they have called the attention of my sex to this
+permanent injury.’</f_theory></structure> I rejoice that they have called the attention of my sex to this
 subject, because I believe if woman investigates it, she will soon discover that
 danger is impending, though from a totally different source from that which the
 Association apprehends,—danger from those who, having long held the reins of usurped
 authority, are unwilling to permit us to fill that sphere which God created us to
 move in, and who have entered into league to crush the immortal mind of woman. I
-rejoice, because I am persuaded that the rights of woman, like the rights of slaves,
+rejoice, because <f_theory f_abolitionist="Struggles for emancipation and suffrage interconnected">I am persuaded that the rights of woman, like the rights of slaves,
 need only be examined to be understood and asserted, even by some of those, who are
 now endeavoring to smother the irrepressible desire for mental and spiritual freedom
-which glows in the breast of many, who hardly dare to speak their sentiments. </structure>
+which glows in the breast of many, who hardly dare to speak their sentiments.</f_theory> </structure>
 
-<structure p="18">‘The appropriate duties and influence of women are clearly stated in the New Testament.
+<structure p="18"><power_system p_patriarchy="Hegemonic masculinity, woman's role as supportive and docile">‘The appropriate duties and influence of women are clearly stated in the New Testament.
 Those duties are unobtrusive and private, but the sources of mighty power. When the
 mild, dependent, softening influence of woman upon the sternness of man’s opinions
-is fully exercised, society feels the effects of it in a thousand ways.’ No one can
+is fully exercised, society feels the effects of it in a thousand ways.’</power_system> No one can
 desire more earnestly than I do, that woman may move exactly in the sphere which her
 Creator has assigned her; and I believe her having been displaced from that sphere
 has introduced confusion into the world. It is, therefore, of vast importance to
@@ -348,8 +352,8 @@ write commentaries thereon. I am inclined to think, when we are admitted to the
 honor of studying Greek and Hebrew, we shall produce some various readings of the
 Bible a little different from those we now have. </structure>
     
-<structure p="19">The Lord Jesus defines the duties
-of his followers in his Sermon on the Mount. He lays down grand principles by which
+<structure p="19"><religion r_christianity="Sermon on the Mount">The Lord Jesus defines the duties
+of his followers in his Sermon on the Mount.</religion> He lays down grand principles by which
 they should be governed, without any reference to sex or condition:—‘Ye are the
 light of the world. A city that is set on a hill cannot be hid. Neither do men light
 a candle and put it under a bushel, but on a candlestick, and it giveth light unto
