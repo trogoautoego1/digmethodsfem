@@ -92,7 +92,7 @@ h2, h3 {
 
 .tooltiptext {
   visibility: hidden;
-  background-color: pink;
+  background-color: #ffeaed;
   color: #ffffff;
   text-align: left;
   padding: 8px;
@@ -106,6 +106,14 @@ h2, h3 {
   overflow-wrap: break-word; /* Breaks long words */
   max-width: 300px; /* Allows expansion but limits width */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-50%) translateY(5px); /* Slight downward offset */
+}
+
+.tooltip:hover {
+  background-color: #EFCAD0; /* Slightly deeper pink */
+  transition: background-color 0.3s ease;
 }
 
 .tooltiptext:empty {
@@ -116,6 +124,14 @@ h2, h3 {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Slide into place */
+}
+
 
 .tooltiptext::after {
   content: " ";

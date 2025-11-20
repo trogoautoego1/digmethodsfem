@@ -37,18 +37,6 @@
         <p><xsl:apply-templates/></p>
     </xsl:template>
     <xsl:template match="power_system">
-        <span class="tooltip">
-            <xsl:apply-templates/>
-            <span class="tooltiptext" role="tooltip">
-                <xsl:for-each select="@*[starts-with(name(), 'p_')][string-length(normalize-space()) > 0]">
-                    <xsl:value-of select="."/>
-                    <xsl:if test="position() != last()">; </xsl:if>
-                </xsl:for-each>
-            </span>
-        </span>
-    </xsl:template>
-    
-    <!--<xsl:template match="power_system">
          <span class="tooltip">
             <xsl:apply-templates/>
             <span class="tooltiptext" role="tooltip">
@@ -66,5 +54,5 @@
              <span class="tooltiptext" role="tooltip">
                  <xsl:apply-templates select="@p_race"></xsl:apply-templates></span>
     </span> 
-    </xsl:template>-->
+    </xsl:template>
 </xsl:stylesheet>
