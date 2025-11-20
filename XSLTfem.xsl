@@ -38,5 +38,10 @@
             <xsl:apply-templates/>
             <span class="tooltiptext" role="tooltip">
                 <xsl:apply-templates select="@p_patriarchy"></xsl:apply-templates></span>
-    </span> </xsl:template>
+             <span class="tooltiptext" role="tooltip">
+                 <xsl:apply-templates select="@p_social"></xsl:apply-templates></span>
+             <span class="tooltiptext" role="tooltip">
+                 <xsl:apply-templates select="@p_religion"></xsl:apply-templates></span>
+    </span> 
+    </xsl:template>
 </xsl:stylesheet>
