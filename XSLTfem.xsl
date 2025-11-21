@@ -9,6 +9,8 @@
         <html>
             <head>
                 <link rel="stylesheet" type="text/css" href="../style.css"/>
+               
+                
                 <!-- first title element -->
                 <title>
                     <xsl:value-of select="(//title)[1]"/>
@@ -30,6 +32,7 @@
             </body>
         </html>
 
+
 <!-- Formatting material; paragraphs, headings, quotes, ect. -->
     </xsl:template>
     <xsl:template match="structure[@p]">
@@ -37,6 +40,12 @@
     </xsl:template>
     <xsl:template match="structure[@page]">
         <p><xsl:apply-templates/></p>
+    </xsl:template>
+    <xsl:template match="structure[@l]">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+    <xsl:template match="structure[@po]">
+        <section style="font-family: 'Georgia', 'Palatino Linotype', serif; font-style: italic; font-size: 1.2em; line-height: 1.6; color: #4b0082;"><xsl:apply-templates/></section>
     </xsl:template>
     <xsl:template match="structure[@header]">
     <span style="font-size: 1.5em; font-weight: bold; color: #4b0082;"><xsl:apply-templates/></span>
@@ -56,6 +65,11 @@
     <xsl:template match="structure[@sig]">
         <p style="font-family: 'Edwardian Script ITC', 'Lucida Calligraphy', 'Palace Script MT', cursive; font-size: 1.6em; color: #2a1f14;"><xsl:apply-templates/></p>
     </xsl:template>
+    <xsl:template match="structure[@fnote]">
+        <sup style="font-size: 0.8em; vertical-align: super; color: #4b0082;"><xsl:apply-templates/></sup>
+    </xsl:template>
+    
+    
 <!-- power system match and tag -->   
     <xsl:template match="power_system">
          <span class="tooltip">
