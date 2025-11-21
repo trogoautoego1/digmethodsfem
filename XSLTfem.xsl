@@ -72,7 +72,7 @@
     
 <!-- power system match and tag -->   
     <xsl:template match="power_system">
-         <span class="tooltip">
+        <span class="tooltip power-tooltip">
             <xsl:apply-templates/>
             <span class="tooltiptext" role="tooltip">
                 <xsl:apply-templates select="@p_patriarchy"></xsl:apply-templates></span>
@@ -89,5 +89,57 @@
              <span class="tooltiptext" role="tooltip">
                  <xsl:apply-templates select="@p_race"></xsl:apply-templates></span>
     </span> 
+    </xsl:template>
+    
+<!-- feminist theory match and tag -->     
+    <xsl:template match="f_theory">
+        <span class="tooltip fem-tooltip">
+            <xsl:apply-templates/>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_marxist"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_rad_fem"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_terf"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_liberal"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_praxis"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_political_lesbian"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_abolitionist"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_enlightenment_individualism"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@f_antifeminist"></xsl:apply-templates></span>
+        </span> 
+    </xsl:template>
+    
+    
+    <xsl:template match="religion">
+        <span class="tooltip religion-tooltip">
+            <xsl:apply-templates/>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_christianity"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_non_western"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_islam"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_protestentism"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_catholicism"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_judaism"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_indigenous"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_greekmyth"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_quaker"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@r_anglican"></xsl:apply-templates></span>
+        </span> 
     </xsl:template>
 </xsl:stylesheet>

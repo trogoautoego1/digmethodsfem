@@ -80,76 +80,282 @@ h2, h3 {
  box-sizing: border-box;
 }
 
-/* Tooltip container */
-.tooltip {
+/* Power Structure Tooltip Container */
+.power-tooltip {
   position: relative;
   display: inline-block;
-  background-color: #ffeaed;
-  border-bottom: 1px dotted black; /* Add dots under the hoverable text */
+  background-color: #ffeaed; /* Soft blush pink */
+  border-bottom: 1px dotted #4b0082; /* Indigo dotted underline */
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-      
 
-.tooltiptext {
+.power-tooltip:hover {
+  background-color: #EFCAD0; /* Slightly deeper pink on hover */
+}
+
+/* Tooltip Text for Power Structure */
+.power-tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #ffeaed;
-  color: #ffffff;
-  text-align: left;
-  padding: 8px;
-  border-radius: 6px;
+  opacity: 0;
   position: absolute;
   z-index: 1000;
   bottom: 125%;
   left: 50%;
-  transform: translateX(-50%);
-  white-space: normal; /* Allows wrapping */
-  overflow-wrap: break-word; /* Breaks long words */
-  max-width: 300px; /* Allows expansion but limits width */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
-  opacity: 0;
+  transform: translateX(-50%) translateY(5px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateX(-50%) translateY(5px); /* Slight downward offset */
+
+  background-color: #ffeaed;
+  color: #4b0082; /* Indigo text for contrast */
+  font-family: 'Georgia', 'Palatino Linotype', serif;
+  font-size: 0.95em;
+  font-style: italic;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 300px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #d8a7ca; /* Mauve accent */
 }
 
-.tooltip:hover {
-  background-color: #EFCAD0; /* Slightly deeper pink */
-  transition: background-color 0.3s ease;
-}
-
-.tooltiptext:empty {
-  display: none;
-}
-
-/* Show the tooltip text on hover */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-.tooltip:hover .tooltiptext,
-.tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0); /* Slide into place */
-}
-
-
-.tooltiptext::after {
+/* Tooltip Arrow */
+.power-tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
-  top: 100%; /* At the bottom of the tooltip */
+  top: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #ffeaed transparent transparent transparent;
+  transition: border-color 0.3s ease;
 }
 
-/* Highlight effect on hover */
-.tooltip:hover .tooltiptext {
-  background-color: #ffeaed;
-  color: #000; /* Dark text for contrast */
+/* Show Tooltip on Hover or Focus */
+.power-tooltip:hover .tooltiptext,
+.power-tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
-.tooltip:hover .tooltiptext::after {
-  border-color: #ffeaed transparent transparent transparent;
+/* Hide Empty Tooltips */
+.power-tooltip .tooltiptext:empty {
+  display: none;
 }
+
+/* Optional: Stack Multiple Tooltip Lines */
+.power-tooltip .tooltiptext + .tooltiptext {
+  margin-top: 6px;
+}
+
+
+/* Feminist Theory Tooltip Container 
+ * ================================================================================*/
+.fem-tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: #EAE1FF; /* Lavender blush */
+  border-bottom: 1px dotted #7969A1; /* Medium violet red */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fem-tooltip:hover {
+  background-color: #C5B4EC;
+}
+
+/* Tooltip Text for Feminist Theory */
+.fem-tooltip .tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  background-color: #EAE1FF;
+  color: #800040; /* Deep rose */
+  font-family: 'Georgia', 'Palatino Linotype', serif;
+  font-size: 0.95em;
+  font-style: italic;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 300px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #AE97E5; /* Feminist mauve */
+}
+
+/* Tooltip Arrow */
+.fem-tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #EAE1FF transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover or Focus */
+.fem-tooltip:hover .tooltiptext,
+.fem-tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Hide Empty Tooltips */
+.fem-tooltip .tooltiptext:empty {
+  display: none;
+}
+
+
+
+/* Religion Tooltip Container
+ * ============================================================================= */
+.religion-tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: #E3CCAF; /* blush */
+  border-bottom: 1px dotted #968775; /* dark underline */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.religion-tooltip:hover {
+  background-color: #C0AD97;
+}
+
+/* Tooltip Text for Feminist Theory */
+.religion-tooltip .tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  background-color: #E3CCAF;
+  color: #615B50; /* text */
+  font-family: 'Georgia', 'Palatino Linotype', serif;
+  font-size: 0.95em;
+  font-style: italic;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 300px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #C0AD97;
+}
+
+/* Tooltip Arrow */
+.religion-tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #E3CCAF transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover or Focus */
+.religion-tooltip:hover .tooltiptext,
+.religion-tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Hide Empty Tooltips */
+.religion-tooltip .tooltiptext:empty {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/*/\* Antifeminist Tooltip Container *\/
+.religion-tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: #E59E9D; /\* blush *\/
+  border-bottom: 1px dotted #955755; /\* dark underline *\/
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.religion-tooltip:hover {
+  background-color: #D0C2F1;
+}
+
+/\* Tooltip Text for Feminist Theory *\/
+.religion-tooltip .tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  background-color: #EAE1FF;
+  color: #800040; /\* Deep rose *\/
+  font-family: 'Georgia', 'Palatino Linotype', serif;
+  font-size: 0.95em;
+  font-style: italic;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 300px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #AE97E5; /\* Feminist mauve *\/
+}
+
+/\* Tooltip Arrow *\/
+.religion-tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #EAE1FF transparent transparent transparent;
+}
+
+/\* Show Tooltip on Hover or Focus *\/
+.religion-tooltip:hover .tooltiptext,
+.religion-tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/\* Hide Empty Tooltips *\/
+.religion-tooltip .tooltiptext:empty {
+  display: none;
+}
+*/
