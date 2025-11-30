@@ -1,226 +1,293 @@
-html, body {
- margin: 0;
- padding: 0;
- height: 100%;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-body { 
- font-family: Garamond, serif;
+body {
+    font-family: Garamond, serif;
 
- /* background image behavior */
- background-image: url('okeefe_bg.png');
- background-size: cover;
- background-position: center; 
- background-repeat: no-repeat;
- background-attachment: fixed; 
+    /* background image behavior */
+    background-image: url('okeefe_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
 /* navbar */
 nav {
- background-color: #e4e0d3;
- padding: 0;
- margin-bottom: 30px;
- border-bottom: 2px solid #cdc7b4;
+    background-color: #e4e0d3;
+    padding: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #cdc7b4;
 }
 
 nav ul {
- list-style-type: none;
- margin: 0;
- padding: 0;
- background-color: #e4e0d3;
- overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e0d3;
+    overflow: hidden;
 }
 
 nav ul li {
- float: left;  
-}  
+    float: left;
+}
 
 /* navbar buttons */
 nav ul li a {
- display: block;
- color: black;
- padding: 14px 16px;
- text-decoration: none;
- text-align: center;
- 
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
 
- /* button styling */
- background-color: #e4e0d3;
- border: 1px solid #cdc7b4;
- border-radius: 4px;
- margin: 4px;
- padding: 14px 20px;
- width: auto;  
+
+    /* button styling */
+    background-color: #e4e0d3;
+    border: 1px solid #cdc7b4;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 14px 20px;
+    width: auto;
 }
 
 nav ul li a:hover {
- background-color: #cdc7b4;
+    background-color: #cdc7b4;
 }
 
 
 /* text, p, h, etc */
 p {
- margin: 15px 200px;
+    margin: 15px 200px;
 }
 
-h2, h3 {
- margin: 10px 0;
+h2,
+h3 {
+    margin: 10px 0;
 }
 
-.textNav{
+.textNav {
     position: fixed;
-    margin: 170px 1000px 50px 15px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4e0d3;
+    padding: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #cdc7b4;
 }
+.textNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e0d3;
+    overflow: hidden;
+}
+
+.textNav ul li {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.textNav ul li a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #e4e0d3;
+    border: 1px solid #cdc7b4;
+    border-radius: 4px;
+}
+
+.textNav ul li a:hover {
+    background-color: #cdc7b4;
+}
+
+.checkboxList {
+    float: right;
+    margin-right: 15px;
+    margin-top: 0;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4e0d3;
+    padding: 15px 10px;
+    border-radius: 4px;
+}
+
+.link-column {
+    background-color: #e4e0d3;
+    margin: 15px 200px;
+    padding: 10px;
+}
+.link-column p {
+    margin: 0;
+}
+
 
 /* text boxes*/
 .box {
- display: inline-block;
- background-color: #DFD1D1;
- border: 2px solid #383239;
- padding: 20px;
- margin: 15px 0;
- max-width: 600px;
- box-sizing: border-box;
+    display: inline-block;
+    background-color: #DFD1D1;
+    border: 2px solid #383239;
+    padding: 20px;
+    margin: 15px 0;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
 /* Power Structure Tooltip Container */
 .power-tooltip {
-  position: relative;
-  display: inline-block;
-  background-color: #ffeaed; /* Soft blush pink */
-  border-bottom: 1px dotted #4b0082; /* Indigo dotted underline */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: #ffeaed; /* Soft blush pink */
+    border-bottom: 1px dotted #4b0082; /* Indigo dotted underline */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .power-tooltip:hover {
-  background-color: #EFCAD0; /* Slightly deeper pink on hover */
+    background-color: #EFCAD0; /* Slightly deeper pink on hover */
 }
 
 /* Tooltip Text for Power Structure */
 .power-tooltip .tooltiptext {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1000;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  background-color: #ffeaed;
-  color: #4b0082; /* Indigo text for contrast */
-  font-family: 'Georgia', 'Palatino Linotype', serif;
-  font-size: 0.95em;
-  font-style: italic;
-  text-align: left;
-  padding: 10px;
-  border-radius: 6px;
-  max-width: 300px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #d8a7ca; /* Mauve accent */
+    background-color: #ffeaed;
+    color: #4b0082; /* Indigo text for contrast */
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #d8a7ca; /* Mauve accent */
 }
 
 /* Tooltip Arrow */
 .power-tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #ffeaed transparent transparent transparent;
-  transition: border-color 0.3s ease;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffeaed transparent transparent transparent;
+    transition: border-color 0.3s ease;
 }
 
 /* Show Tooltip on Hover or Focus */
 .power-tooltip:hover .tooltiptext,
 .power-tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Hide Empty Tooltips */
 .power-tooltip .tooltiptext:empty {
-  display: none;
+    display: none;
 }
 
 /* Optional: Stack Multiple Tooltip Lines */
 .power-tooltip .tooltiptext + .tooltiptext {
-  margin-top: 6px;
+    margin-top: 6px;
 }
 
 
 /* Feminist Theory Tooltip Container 
  * ================================================================================*/
 .fem-tooltip {
-  position: relative;
-  display: inline-block;
-  background-color: #EAE1FF; /* Lavender blush */
-  border-bottom: 1px dotted #7969A1; /* Medium violet red */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: #EAE1FF; /* Lavender blush */
+    border-bottom: 1px dotted #7969A1; /* Medium violet red */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .fem-tooltip:hover {
-  background-color: #C5B4EC;
+    background-color: #C5B4EC;
 }
 
 /* Tooltip Text for Feminist Theory */
 .fem-tooltip .tooltiptext {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1000;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  background-color: #EAE1FF;
-  color: #800040; /* Deep rose */
-  font-family: 'Georgia', 'Palatino Linotype', serif;
-  font-size: 0.95em;
-  font-style: italic;
-  text-align: left;
-  padding: 10px;
-  border-radius: 6px;
-  max-width: 300px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #AE97E5; /* Feminist mauve */
+    background-color: #EAE1FF;
+    color: #800040; /* Deep rose */
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #AE97E5; /* Feminist mauve */
 }
 
 /* Tooltip Arrow */
 .fem-tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #EAE1FF transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #EAE1FF transparent transparent transparent;
 }
 
 /* Show Tooltip on Hover or Focus */
 .fem-tooltip:hover .tooltiptext,
 .fem-tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Hide Empty Tooltips */
 .fem-tooltip .tooltiptext:empty {
-  display: none;
+    display: none;
 }
 
 
@@ -228,67 +295,67 @@ h2, h3 {
 /* Religion Tooltip Container
  * ============================================================================= */
 .religion-tooltip {
-  position: relative;
-  display: inline-block;
-  background-color: #E3CCAF; /* blush */
-  border-bottom: 1px dotted #968775; /* dark underline */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: #E3CCAF; /* blush */
+    border-bottom: 1px dotted #968775; /* dark underline */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .religion-tooltip:hover {
-  background-color: #C0AD97;
+    background-color: #C0AD97;
 }
 
 /* Tooltip Text for Feminist Theory */
 .religion-tooltip .tooltiptext {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1000;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  background-color: #E3CCAF;
-  color: #615B50; /* text */
-  font-family: 'Georgia', 'Palatino Linotype', serif;
-  font-size: 0.95em;
-  font-style: italic;
-  text-align: left;
-  padding: 10px;
-  border-radius: 6px;
-  max-width: 300px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #C0AD97;
+    background-color: #E3CCAF;
+    color: #615B50; /* text */
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #C0AD97;
 }
 
 /* Tooltip Arrow */
 .religion-tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #E3CCAF transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #E3CCAF transparent transparent transparent;
 }
 
 /* Show Tooltip on Hover or Focus */
 .religion-tooltip:hover .tooltiptext,
 .religion-tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Hide Empty Tooltips */
 .religion-tooltip .tooltiptext:empty {
-  display: none;
+    display: none;
 }
 
 
