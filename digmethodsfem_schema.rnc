@@ -16,7 +16,6 @@ power_system=element power_system {mixed {p_patriarchy*, p_religion*, p_class*, 
     p_political=attribute p_political {text}
     p_social=attribute p_social {text}
     p_matriarchy=attribute p_matriarchy {text}
-    
 
 religion=element religion {mixed {(r_non_western | r_islam | r_protestentism | r_catholicism | r_judaism | r_indigenous | r_quaker | r_anglican |r_christianity | r_greekmyth | s_theory)*}}
     r_non_western=attribute r_non_western {text}
@@ -46,7 +45,7 @@ identity=element identity {mixed {race*, sexuality*, gender*, nationality*}}
     sexuality=attribute sexuality {text}
     gender=attribute gender {text}
     nationality=attribute nationality {text}
-    
+
 setting=element setting {text}
 
 f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_terf | f_liberal | f_praxis | f_antifeminist | f_political_lesbian* | f_abolitionist | f_enlightenment_individualism)*}}
@@ -59,13 +58,13 @@ f_theory=element f_theory {mixed {(f_marxist | f_rad_fem | f_terf | f_liberal | 
     f_political_lesbian=attribute f_politicallesbian {text}
     f_abolitionist=attribute f_abolitionist {text}
     f_enlightenment_individualism=attribute f_enlightenment_individualism {text}
-    
+
 s_theory=element s_theory {mixed {(s_freud? | s_rights_of_man? | s_enlightenment_individualism? | s_natural_rights* | structure*), (religion*)}}
     s_freud=attribute s_freud {text}
     s_rights_of_man=attribute s_rights_of_man {text}
     s_enlightenment_individualism=attribute s_enlightenment_individualism {text}
     s_natural_rights=attribute s_natural_rights {text}
-    
+
 structure=element structure {(q? | cap? | p? | c? | l? | s? | page? | po? | le? | date? | fnote? | header? | subhead?| sig?), (text | structure | setting | power_system | intersection | identity | religion | class | f_theory | s_theory)*}
     q=attribute q {text} #q=quote, cap=caption p=paragraph, l=line, s=stanza, page=page, po=poem, le=letter, date=date, fnote=footnote, header=header, sig=signature
     cap=attribute cap {text}
@@ -81,4 +80,3 @@ structure=element structure {(q? | cap? | p? | c? | l? | s? | page? | po? | le? 
     header=attribute header {text}
     subhead=attribute subhead {text}
     sig=attribute sig {text}
-    
