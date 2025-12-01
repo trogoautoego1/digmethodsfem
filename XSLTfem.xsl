@@ -116,7 +116,7 @@
         </span> 
     </xsl:template>
     
-<!-- religion theory match and tag -->     
+<!-- religion match and tag -->     
     <xsl:template match="religion">
         <span class="tooltip religion-tooltip">
             <xsl:apply-templates/>
@@ -169,19 +169,29 @@
         <span class="tooltip identity-tooltip">
             <xsl:apply-templates/>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@social"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@race"></xsl:apply-templates></span>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@political"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@sexuality"></xsl:apply-templates></span>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@economic"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@gender"></xsl:apply-templates></span>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@working_class"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@nationality"></xsl:apply-templates></span>
+        </span> 
+    </xsl:template>
+    
+    
+<!-- social theory match and tag -->      
+    <xsl:template match="s_theory">
+        <span class="tooltip social-tooltip">
+            <xsl:apply-templates/>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@wealthy"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@s_freud"></xsl:apply-templates></span>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@middle"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@s_rights_of_man"></xsl:apply-templates></span>
             <span class="tooltiptext" role="tooltip">
-                <xsl:apply-templates select="@lower"></xsl:apply-templates></span>
+                <xsl:apply-templates select="@s_enlightenment"></xsl:apply-templates></span>
+            <span class="tooltiptext" role="tooltip">
+                <xsl:apply-templates select="@s_natural_righta"></xsl:apply-templates></span>
         </span> 
     </xsl:template>
 </xsl:stylesheet>
