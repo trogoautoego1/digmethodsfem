@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <f_theory_counts>
+        <document id="Grimke Letters">
+            <attribute name="f_rad_fem">0</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">1</attribute>
+        </document>
+        <document id="The Feminine Mystique">
+            <attribute name="f_rad_fem">6</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">1</attribute>
+            <attribute name="f_antifeminist">10</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">3</attribute>
+        </document>
+        <document id="The Second Sex">
+            <attribute name="f_rad_fem">1</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">2</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="Miss America: Atlantic City">
+            <attribute name="f_rad_fem">0</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="Woman Hating">
+            <attribute name="f_rad_fem">0</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">2</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">1</attribute>
+        </document>
+        <document id="There was a young woman who swallowed a lie">
+            <attribute name="f_rad_fem">2</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
+            <attribute name="f_rad_fem">0</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">2</attribute>
+            <attribute name="f_political_lesbian">3</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="AFTER THE DEATH OF GOD THE FATHER">
+            <attribute name="f_rad_fem">6</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 29">
+            <attribute name="f_rad_fem">0</attribute>
+            <attribute name="f_terf">2</attribute>
+            <attribute name="f_liberal">0</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 52">
+            <attribute name="f_rad_fem">10</attribute>
+            <attribute name="f_terf">0</attribute>
+            <attribute name="f_liberal">1</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">0</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+        <document id="DIY SEX: EARLY TO BED">
+            <attribute name="f_rad_fem">1</attribute>
+            <attribute name="f_terf">1</attribute>
+            <attribute name="f_liberal">2</attribute>
+            <attribute name="f_antifeminist">0</attribute>
+            <attribute name="f_political_lesbian">1</attribute>
+            <attribute name="f_enlightenment_individualism">0</attribute>
+        </document>
+    </f_theory_counts>
+
+    <power_system_counts>
+        <document id="Grimke Letters">
+            <attribute name="p_patriarchy">10</attribute>
+            <attribute name="p_religion">2</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">1</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="The Feminine Mystique">
+            <attribute name="p_patriarchy">3</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="The Second Sex">
+            <attribute name="p_patriarchy">5</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">4</attribute>
+        </document>
+        <document id="Miss America: Atlantic City">
+            <attribute name="p_patriarchy">4</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">2</attribute>
+            <attribute name="p_political">3</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="Woman Hating">
+            <attribute name="p_patriarchy">7</attribute>
+            <attribute name="p_religion">1</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">1</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="There was a young woman who swallowed a lie">
+            <attribute name="p_patriarchy">5</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
+            <attribute name="p_patriarchy">1</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">3</attribute>
+            <attribute name="p_race">3</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="AFTER THE DEATH OF GOD THE FATHER">
+            <attribute name="p_patriarchy">5</attribute>
+            <attribute name="p_religion">4</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 29">
+            <attribute name="p_patriarchy">1</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">3</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 52">
+            <attribute name="p_patriarchy">0</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">4</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+        <document id="DIY SEX: EARLY TO BED">
+            <attribute name="p_patriarchy">6</attribute>
+            <attribute name="p_religion">0</attribute>
+            <attribute name="p_class">0</attribute>
+            <attribute name="p_race">0</attribute>
+            <attribute name="p_political">0</attribute>
+            <attribute name="p_social">0</attribute>
+            <attribute name="p_matriarchy">0</attribute>
+        </document>
+    </power_system_counts>
+    
+    <religion_counts>
+        <document id="Grimke Letters">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">1</attribute>
+            <attribute name="r_christianity">9</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">4</attribute>
+            <attribute name="r_anglican">1</attribute>
+        </document>
+        <document id="The Feminine Mystique">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">1</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="The Second Sex">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">1</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">1</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="Miss America: Atlantic City">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="Woman Hating">
+            <attribute name="r_non_western">1</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">3</attribute>
+            <attribute name="r_christianity">4</attribute>
+            <attribute name="r_greekmyth">2</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="There was a young woman who swallowed a lie">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">7</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="AFTER THE DEATH OF GOD THE FATHER">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">1</attribute>
+            <attribute name="r_christianity">12</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 29">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 52">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+        <document id="DIY SEX: EARLY TO BED">
+            <attribute name="r_non_western">0</attribute>
+            <attribute name="r_catholicism">0</attribute>
+            <attribute name="r_judaism">0</attribute>
+            <attribute name="r_christianity">0</attribute>
+            <attribute name="r_greekmyth">0</attribute>
+            <attribute name="r_quaker">0</attribute>
+            <attribute name="r_anglican">0</attribute>
+        </document>
+    </religion_counts>
+
+    <class_counts>
+        <document id="Grimke Letters">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="The Feminine Mystique">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="The Second Sex">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="Miss America: Atlantic City">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="Woman Hating">
+            <attribute name="social">1</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">1</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="There was a young woman who swallowed a lie">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">1</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">3</attribute>
+            <attribute name="lower">2</attribute>
+        </document>
+        <document id="AFTER THE DEATH OF GOD THE FATHER">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 29">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 52">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">3</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+        <document id="DIY SEX: EARLY TO BED">
+            <attribute name="social">0</attribute>
+            <attribute name="economic">0</attribute>
+            <attribute name="working_class">0</attribute>
+            <attribute name="middle">0</attribute>
+            <attribute name="lower">0</attribute>
+        </document>
+    </class_counts>
+
+    <identity_counts>
+        <document id="Grimke Letters">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">0</attribute>
+        </document>
+        <document id="The Feminine Mystique">
+            <attribute name="race">1</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">0</attribute>
+        </document>
+        <document id="The Second Sex">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">1</attribute>
+        </document>
+        <document id="Miss America: Atlantic City">
+            <attribute name="race">2</attribute>
+            <attribute name="sexuality">1</attribute>
+            <attribute name="gender">0</attribute>
+        </document>
+        <document id="Woman Hating">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">2</attribute>
+        </document>
+        <document id="There was a young woman who swallowed a lie">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">8</attribute>
+        </document>
+        <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
+            <attribute name="race">3</attribute>
+            <attribute name="sexuality">9</attribute>
+            <attribute name="gender">16</attribute>
+        </document>
+        <document id="AFTER THE DEATH OF GOD THE FATHER">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">2</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 29">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">0</attribute>
+            <attribute name="gender">3</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 52">
+            <attribute name="race">1</attribute>
+            <attribute name="sexuality">5</attribute>
+            <attribute name="gender">8</attribute>
+        </document>
+        <document id="DIY SEX: EARLY TO BED">
+            <attribute name="race">0</attribute>
+            <attribute name="sexuality">11</attribute>
+            <attribute name="gender">2</attribute>
+        </document>
+    </identity_counts>
+
+    <s_theory_counts>
+        <document id="Grimke Letters">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">1</attribute>
+            <attribute name="s_enlightenment_individualism">2</attribute>
+            <attribute name="s_natural_rights">8</attribute>
+        </document>
+        <document id="The Feminine Mystique">
+            <attribute name="s_freud">34</attribute>
+            <attribute name="s_rights_of_man">1</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="The Second Sex">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">2</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">6</attribute>
+        </document>
+        <document id="Miss America: Atlantic City">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="Woman Hating">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="There was a young woman who swallowed a lie">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="AFTER THE DEATH OF GOD THE FATHER">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">1</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 29">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="Excerpt from Punk Planet 52">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+        <document id="DIY SEX: EARLY TO BED">
+            <attribute name="s_freud">0</attribute>
+            <attribute name="s_rights_of_man">0</attribute>
+            <attribute name="s_enlightenment_individualism">0</attribute>
+            <attribute name="s_natural_rights">0</attribute>
+        </document>
+    </s_theory_counts>
+    
+</document>

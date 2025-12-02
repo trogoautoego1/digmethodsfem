@@ -1,5 +1,5 @@
 <corpus>
-<document id="1">
+<document id="Grimke Letters">
 <meta>
 <title>LETTERS ON THE EQUALITY OF THE SEXES, AND THE CONDITION OF WOMAN.</title>
 <author>SARAH GRIMKE</author> ADDRESSED TO MARY S. PARKER, PRESIDENT OF THE Boston
@@ -1439,7 +1439,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
 </document>
 
 <!--The Feminine Mystique Ch 5 Exerpt, Megan Barron-->
-<document id="2">
+    <document id="The Feminine Mystique">
     <meta>
         <title>The Feminine Mystique</title>
         <author>Betty Friedan</author>
@@ -2185,7 +2185,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
    </main>
 </document>
 <!--The Second Sex Ch 1 Excerpt, Megan Barron-->
-<document id="3">
+    <document id="The Second Sex">
     <meta>
         <title>The Second Sex</title>
         <author>Simone de Beauvoir</author>
@@ -2415,7 +2415,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
         </structure>
     </main>
 </document>
-<document id="4">
+    <document id="Miss America: Atlantic City">
     <meta>
         <title>no more Miss America: Atlantic City is a town with class, they raid your morals and
             judge your ass </title>
@@ -2520,7 +2520,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>
 </document>
 <!--Woman Hating Ch 3 Excerpt, Megan Barron-->
-<document id="5">    
+    <document id="Woman Hating">    
     <meta>
         <title>Woman Hating</title>
         <author>Andrea Dworkin</author>
@@ -2744,7 +2744,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>
 </document>
 <!--Polly, short poem about the struggles of women at the time -->
-<document id="6">
+    <document id="There was a young woman who swallowed a lie">
     <meta>
         <title>There was a young woman who swallowed a lie</title>
         <author>Meredith Tax</author>
@@ -2816,7 +2816,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>
 </document>
 <!--Polly, feminist magazine relating the greek myth of the furies to current feminist issues -->
-<document id="7">
+    <document id="The Furies: Lesbian/Feminist Monthly (v. 1)">
     <meta>
         <title>The Furies: Lesbian/Feminist Monthly (v. 1)</title>
         <author>Ginny Berson</author>
@@ -2924,16 +2924,16 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
         <structure p="paragraph"> The base of our ideological thought is: Sexism is the root of all
             other oppressions, and <identity sexuality="lesbian">Lesbian</identity> and <identity
                 gender="woman">woman</identity> oppression will not end by smashing capitalism,
-            <power_system p_race="racism">racism</power_system>, and imperialism.<f_theory f_politicallesbian="political lesbian">Lesbianism is not a matter of sexual
+            <power_system p_race="racism">racism</power_system>, and imperialism.<f_theory f_political_lesbian="political lesbian">Lesbianism is not a matter of sexual
                 preference, but rather one of political choice which every woman must make if she is
                 to become woman-identified and thereby end male supremacy.</f_theory>
             <identity sexuality="lesbian">Lesbians,</identity> as outcasts from every culture but
             their own have the most to gain by ending <power_system p_race = "race">race</power_system>, <power_system p_class = "class">class</power_system>, and national supremacy within
-            their own ranks. <f_theory f_politicallesbian="political lesbian">Lesbians must
+            their own ranks. <f_theory f_political_lesbian="political lesbian">Lesbians must
                 get out of the straight women's movement and form their own movement in order to be
                 taken seriously, to stop straight women from oppressing us, and to force straight
                 women to deal with their own Lesbianism.</f_theory>
-            <f_theory f_politicallesbian="political lesbian">Lesbians cannot develop a common
+            <f_theory f_political_lesbian="political lesbian">Lesbians cannot develop a common
                 politics with women who do not accept Lesbianism as a political issue.</f_theory>
         </structure>
         <structure p="paragraph"> In this (see page 8) and following issues of The FURIES we will
@@ -2948,11 +2948,12 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>
 </document>
     <!--AFTER THE DEATH OF GOD THE FATHER, Polly-->
-<document id="8">
+    <document id="AFTER THE DEATH OF GOD THE FATHER">
     <meta>
         <title>AFTER THE DEATH OF GOD THE FATHER Women's Liberation and the transformation of
             Christian consciousness</title>
         <author>Mary Daly</author>
+        <publication_date>1971</publication_date>
     </meta>
     <main>
         <structure p="paragraph">The women's liberation movement has produced a deluge of books and
@@ -3245,7 +3246,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>
 </document>
     <!-- Punk Planet 29, Eden -->
-<document id="9">
+    <document id="Excerpt from Punk Planet 29">
     <meta>
         <title>Excerpt from Punk Planet 29</title>
         <author>Interview by Dan Sinker
@@ -3295,7 +3296,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>
 </document>
     <!-- Punk Planet 52, Eden -->   
-<document id="10">
+    <document id="Excerpt from Punk Planet 52">
     <meta>
         <title>Excerpt from Punk Planet 52 </title>
         <author>Chris Ziegler</author>
@@ -3348,7 +3349,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
     </main>          
 </document>
     <!-- Punk Planet 62, Eden -->   
-<document id="11">
+    <document id="DIY SEX: EARLY TO BED">
     <meta>
         <title>DIY SEX: EARLY TO BED</title>
         <author>Sex Lady Searah</author>
@@ -3361,7 +3362,7 @@ bring forth fruit to the glory and honor of Emanuel’s name, is the fervent pra
             were <power_system p_patriarchy="nothing more than a sad excuse for guys to pressure girls into having sex">
                 nothing more than a sad excuse for guys to pressure girls into having sex</power_system>— ’’Gome on baby, you got me all turned on, 
             <power_system p_patriarchy="now you have to fuck me">now you have to fuck me</power_system> or I’ll get <power_system p_patriarchy="blue balls">blue balls</power_system>. ” 
-            I figured it was just some made-up term for sexual frustration.  <f_theory f_politicallesbian="Then I became a dyke and I never thought about them again">
+            I figured it was just some made-up term for sexual frustration.  <f_theory f_political_lesbian="Then I became a dyke and I never thought about them again">
                 Then I became a dyke and I never thought about them again</f_theory> until I got this letter. So I did a little research and, 
             with some help from the good people of scarleteen.com, I now know that it is indeed a real condition, albeit not a very serious one.</structure>
         

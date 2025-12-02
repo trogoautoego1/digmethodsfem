@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Analysis </title>
-        <link type="text/css" href="style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="methodology.html">Methodology</a></li>
-                <li><a href="texts.html">Texts</a></li>
-                <li><a href="analysis.html">Analysis</a></li>
-            </ul>
-        </nav>
-        <h3>This is where our final analysis will go</h3>
-        <div class="chart-container">
-            <h1>Feminist Theory Analysis by Document</h1>
-            <svg width="1400" height="1600" viewBox="0 0 1400 1600">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+  PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400" height="1600" viewBox="0 0 1400 1600">
    <defs>
       <style type="text/css">
                     
@@ -581,6 +566,3 @@
       <text id="tooltip-total" class="tooltip-text" x="10" y="55"/>
    </g>
 </svg>
-        </div>
-    </body>
-</html>
