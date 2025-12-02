@@ -12,24 +12,93 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>The Feminine Mystique</h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                </script><h1>The Feminine Mystique</h1>
       
       <p>
          IT would be half-wrong to say it started with Sigmund Freud. It did not really start,
          in America, 
          until the 1940s. And then again, it was less a start than the prevention of an end.
-         <span class="tooltip fem-tooltip">The old 
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">The old 
             prejudices – women are animals, less than human, unable to think like men, born merely
             to 
             breed and serve men – were not so easily dispelled by the crusading feminists, by
             science 
-            and education, and by the democratic spirit after all.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">women less than men</span></span> They merely reappeared in the forties, 
-         in Freudian disguise. <span class="tooltip social-tooltip">The feminine mystique derived its power from Freudian thought; for it 
+            and education, and by the democratic spirit after all.<span class="tooltiptext" role="tooltip">women less than men</span></span> They merely reappeared in the forties, 
+         in Freudian disguise. <span class="tooltip social-tooltip" data-subcategories="s_freud">The feminine mystique derived its power from Freudian thought; for it 
             was an idea born of Freud, which led women, and those who studied them, to misinterpret
             
             their mothers’ frustrations, and their fathers’ and brothers’ and husbands’ resentments
             and 
-            inadequacies, and their own emotions and possible choices in life.<span class="tooltiptext" role="tooltip">interpret resentment</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            inadequacies, and their own emotions and possible choices in life.<span class="tooltiptext" role="tooltip">interpret resentment</span></span>
          </p>
       
       <p>
@@ -39,7 +108,7 @@
          and 
          social science that are supposed to be the chief enemies of prejudice, partly because
          the 
-         very nature of Freudian thought makes it virtually invulnerable to question. <span class="tooltip social-tooltip">How can an 
+         very nature of Freudian thought makes it virtually invulnerable to question. <span class="tooltip social-tooltip" data-subcategories="s_freud">How can an 
             educated American woman, who is not herself an analyst, presume to question a Freudian
             
             truth? She knows that Freud’s discovery of the unconscious workings of the mind was
@@ -52,11 +121,11 @@
             
             truth. She may even know how the human mind unconsciously resists that truth. How
             can 
-            she presume to tread the sacred ground where only analysts are allowed?<span class="tooltiptext" role="tooltip">exlculsionary theories</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            she presume to tread the sacred ground where only analysts are allowed?<span class="tooltiptext" role="tooltip">exlculsionary theories</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">No one can question the basic genius of Freud’s discoveries, not the contribution
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">No one can question the basic genius of Freud’s discoveries, not the contribution
             he has 
             made to our culture. Nor do I question the effectiveness of psychoanalysis as it is
             practised 
@@ -64,17 +133,17 @@
             woman, 
             and my reporter’s knowledge of other women, the application of the Freudian theory
             of 
-            femininity to women today.<span class="tooltiptext" role="tooltip">freud and feminism</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip fem-tooltip">I question its use, not in therapy, but as it has filtered into the 
+            femininity to women today.<span class="tooltiptext" role="tooltip">freud and feminism</span></span> <span class="tooltip fem-tooltip" data-subcategories="f_enlightenment_individualism">I question its use, not in therapy, but as it has filtered into the 
             lives of American women through the popular magazines and the opinions and 
             interpretations of so-called experts. I think much of the Freudian theory about women
             is 
             obsolescent, an obstacle to truth for women in America today, and a major cause of
             the 
-            pervasive problem that has no name.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">freud and feminism</span><span class="tooltiptext" role="tooltip"></span></span>
+            pervasive problem that has no name.<span class="tooltiptext" role="tooltip">freud and feminism</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">There are many paradoxes here. Freud’s concept of the superego helped to free man
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">There are many paradoxes here. Freud’s concept of the superego helped to free man
             of the 
             tyranny of the ‘shoulds’, the tyranny of the past, which prevents the child from becoming
             an 
@@ -82,31 +151,31 @@
             modern 
             American women a new tyranny of the ‘shoulds’, which chains women to an old image,
             
-            prohibits choice and growth, and denies them individual identity.<span class="tooltiptext" role="tooltip">Freud's detriment to feminism</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            prohibits choice and growth, and denies them individual identity.<span class="tooltiptext" role="tooltip">Freud's detriment to feminism</span></span>
          </p>
       
       <p>
          Freudian psychology, with its emphasis on freedom from a repressive morality to achieve
          
-         sexual fulfilment, was part of the ideology of women’s emancipation. <span class="tooltip fem-tooltip">The lasting American 
+         sexual fulfilment, was part of the ideology of women’s emancipation. <span class="tooltip fem-tooltip" data-subcategories="f_liberal">The lasting American 
             image of the ‘emancipated woman’ is the flapper of the twenties: burdensome hair shingled
             
             off, knees bared, flaunting her new freedom to live in a studio in Greenwich Village
             or 
             Chicago’s near North Side, and drive a car, and drink, and smoke, and enjoy sexual
             
-            adventures – or talk about them.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the so-called emancipated woman</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> And yet today, for reasons far removed from the life of Freud 
+            adventures – or talk about them.<span class="tooltiptext" role="tooltip">the so-called emancipated woman</span></span> And yet today, for reasons far removed from the life of Freud 
          himself, Freudian thought has become the ideological bulwark of the sexual counter-
-         revolution in America.<span class="tooltip social-tooltip"> Without Freud’s definition of the sexual nature of woman to give the 
+         revolution in America.<span class="tooltip social-tooltip" data-subcategories="s_freud"> Without Freud’s definition of the sexual nature of woman to give the 
             conventional image of femininity new authority, I do not think several generations
             of 
             educated, spirited American women would have been so easily diverted from the dawning
             
-            realisation of who they were and what they could be.<span class="tooltiptext" role="tooltip">Freud and female sexuality</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            realisation of who they were and what they could be.<span class="tooltiptext" role="tooltip">Freud and female sexuality</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">The concept ‘penis envy’, which Freud coined to describe a phenomenon he observed
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">The concept ‘penis envy’, which Freud coined to describe a phenomenon he observed
             in 
             women – that is, in the middle-class women who were his patients in Vienna in the
             Victorian 
@@ -129,7 +198,7 @@
             
             that much of it is obsolescent contradicted by knowledge that is part of every social
             
-            scientist’s thinking today, but was not yet known in Freud’s time.<span class="tooltiptext" role="tooltip">penis envy and feminism</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            scientist’s thinking today, but was not yet known in Freud’s time.<span class="tooltiptext" role="tooltip">penis envy and feminism</span></span>
          </p>
       
       <p>
@@ -164,16 +233,16 @@
          </p>
       
       <p> 
-         <span class="tooltip social-tooltip">Much of what Freud believed to be biological, instinctual, and changeless has been
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">Much of what Freud believed to be biological, instinctual, and changeless has been
             shown 
             by modern research to be a result of specific cultural causes. Much of what Freud
             described 
             as characteristic of universal human nature was merely characteristic of certain middle-
-            class European men and women at the end of the nineteenth century.<span class="tooltiptext" role="tooltip">Freud's inaccuracies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            class European men and women at the end of the nineteenth century.<span class="tooltiptext" role="tooltip">Freud's inaccuracies</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">For instance, Freud’s theory of the sexual origin of neurosis stems from the fact
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">For instance, Freud’s theory of the sexual origin of neurosis stems from the fact
             that many of 
             the patients he first observed suffered from hysteria – and in those cases, he found
             sexual 
@@ -183,11 +252,11 @@
             and 
             translate what they hear into sexual symbols, they still manage to find what they
             are looking 
-            for.<span class="tooltiptext" role="tooltip">neurosis</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            for.<span class="tooltiptext" role="tooltip">neurosis</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">But the fact is, cases of hysteria as observed by Freud are much more rare today.
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">But the fact is, cases of hysteria as observed by Freud are much more rare today.
             In Freud’s 
             time, evidently, cultural hypocrisy forced the repression of sex. (Some social theorists
             even 
@@ -197,11 +266,11 @@
             sex 
             focused Freud’s interest on it. He then developed his theory by describing all the
             stages of 
-            growth as sexual, fitting all the phenomena he observed into sexual rubrics.<span class="tooltiptext" role="tooltip">sexual repression and rubrics</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            growth as sexual, fitting all the phenomena he observed into sexual rubrics.<span class="tooltiptext" role="tooltip">sexual repression and rubrics</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">His attempt to translate all psychological phenomena into sexual terms, and to see
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">His attempt to translate all psychological phenomena into sexual terms, and to see
             all 
             problems of adult personality as the effect of childhood sexual fixations also stemmed,
             in 
@@ -227,7 +296,7 @@
             Jones 
             said, were ‘as real and concrete to him as metals are to a metallurgist’. This ability
             became a 
-            source of great confusion as his concepts were passed down by lesser thinkers.<span class="tooltiptext" role="tooltip">theory based in physiological</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            source of great confusion as his concepts were passed down by lesser thinkers.<span class="tooltiptext" role="tooltip">theory based in physiological</span></span>
          </p>
       
       <p>
@@ -236,13 +305,13 @@
          
          today by a more complex view of cause and effect, in terms of physical processes and
          
-         phenomena as well as psychological. <span class="tooltip social-tooltip">In the new view, behavioural scientists do not need to 
+         phenomena as well as psychological. <span class="tooltip social-tooltip" data-subcategories="s_freud">In the new view, behavioural scientists do not need to 
             borrow language from physiology to explain psychological events, or give them pseudo-
             reality. Sexual phenomena are no more nor less real than, for instance, the phenomenon
             of 
             Shakespeare’s writing Hamlet, which cannot exactly be ‘explained’ by reducing it to
             sexual 
-            terms.<span class="tooltiptext" role="tooltip">sexual science post-freud</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Even Freud himself cannot be explained by his own deterministic, physiological 
+            terms.<span class="tooltiptext" role="tooltip">sexual science post-freud</span></span> Even Freud himself cannot be explained by his own deterministic, physiological 
          blueprint though his biographer traces his genius, his ‘divine passion for knowledge’,
          to an 
          insatiable sexual curiosity, before the age of three, as to what went on between his
@@ -251,7 +320,7 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">Today biologists, social scientists, and increasing numbers of psychoanalysts see
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">Today biologists, social scientists, and increasing numbers of psychoanalysts see
             the need 
             or impulse to human growth as a primary human need, as basic as sex. The ‘oral’ and
             ‘anal’ 
@@ -286,20 +355,20 @@
             own influence on our culture, educated parents are usually careful not to put conflict-
             producing pressures on toilet training. Such conflicts are more likely to occur today
             as the 
-            child learns to talk or read.<span class="tooltiptext" role="tooltip">freud and sexual development</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            child learns to talk or read.<span class="tooltiptext" role="tooltip">freud and sexual development</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">In the 1940s, American social scientists and psychoanalysts had already begun to 
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">In the 1940s, American social scientists and psychoanalysts had already begun to 
             reinterpret Freudian concepts in the light of their growing cultural awareness. But,
             curiously, 
             this did not prevent their literal application of Freud’s theory of femininity to
             American 
-            women.<span class="tooltiptext" role="tooltip">exclusion of women from theoretical rethinking</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            women.<span class="tooltiptext" role="tooltip">exclusion of women from theoretical rethinking</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">The fact is that to Freud, even more than to the magazine editor on Madison Avenue
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">The fact is that to Freud, even more than to the magazine editor on Madison Avenue
             today, 
             women were a strange, inferior, less-than-human species. He saw them as childlike
             dolls, 
@@ -307,12 +376,12 @@
             same 
             kind of unconscious solipsism that made man for many centuries see the sun only as
             a bright 
-            object that revolved around the earth. <span class="tooltiptext" role="tooltip">freud's view of women</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span><span class="tooltip religion-tooltip">Freud grew up with this attitude built in by his culture 
+            object that revolved around the earth. <span class="tooltiptext" role="tooltip">freud's view of women</span></span><span class="tooltip religion-tooltip" data-subcategories="r_judaism">Freud grew up with this attitude built in by his culture 
             – not only the culture of Victorian Europe, but that Jewish culture in which men said
             the daily 
             prayer: ‘I thank Thee, Lord, that Thou hast not created me a woman,’ and women prayed
             in 
-            submission: ‘I thank Thee, Lord, that Thou has created me according to Thy will.’<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">religous sexism</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            submission: ‘I thank Thee, Lord, that Thou has created me according to Thy will.’<span class="tooltiptext" role="tooltip">religous sexism</span></span>
          </p>
       
       <p>
@@ -328,16 +397,16 @@
          the sexual 
          jealousy he felt for his father, whose wishes she also gratified, were the basis of
          his theory of 
-         the Oedipus complex. <span class="tooltip social-tooltip">With his wife, as with his mother and sisters, his needs, his desires, 
+         the Oedipus complex. <span class="tooltip social-tooltip" data-subcategories="s_freud">With his wife, as with his mother and sisters, his needs, his desires, 
             his wishes, were the sun around which the household revolved. When the noise of his
             sisters’ 
             practising the piano interrupted his studies, ‘the piano disappeared,’ Anna Freud
             recalled 
-            years later, ‘and with it all opportunities for his sisters to become musicians.’<span class="tooltiptext" role="tooltip">prioritizing men</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            years later, ‘and with it all opportunities for his sisters to become musicians.’<span class="tooltiptext" role="tooltip">prioritizing men</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">Freud did not see this attitude as a problem, or cause for any problem, in women.
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">Freud did not see this attitude as a problem, or cause for any problem, in women.
             It was 
             woman’s nature to be ruled by man and her sickness to envy him. Freud’s letters to
             Martha, 
@@ -351,12 +420,12 @@
             until he 
             could come and fetch her. From these letters one can see that to him her identity
             was 
-            defined as child-housewife, even when she was no longer a child and not yet a housewife.<span class="tooltiptext" role="tooltip">freud's view of his wife</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            defined as child-housewife, even when she was no longer a child and not yet a housewife.<span class="tooltiptext" role="tooltip">freud's view of his wife</span></span>
          </p>       
       
       <p>
          
-         <span class="tooltip power-tooltip">Tables and chairs, beds, mirrors, a clock to remind the happy couple of the passage
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">Tables and chairs, beds, mirrors, a clock to remind the happy couple of the passage
             of time, 
             an armchair for an hour’s pleasant daydreaming, carpets to help the housewife keep
             the 
@@ -375,13 +444,13 @@
             to dear friends one likes to remember, to cities one has visited, to hours one wants
             to recall. 
             ... Are we to hang our hearts on such little things? Yes, and without hesitation.
-            ...<span class="tooltiptext" role="tooltip">women as homemakers</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            ...<span class="tooltiptext" role="tooltip">women as homemakers</span></span>
          
          </p>
       
       <p>
          
-         <span class="tooltip power-tooltip">I know, after all, how sweet you are, how you can turn a house into a paradise, how
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">I know, after all, how sweet you are, how you can turn a house into a paradise, how
             you will 
             share in my interests, how gay yet painstaking you will be. I will let you rule the
             house as 
@@ -391,7 +460,7 @@
             shall 
             read together what we want to learn, and I will initiate you into things which could
             not interest 
-            a girl as long as she is unfamiliar with her future companion and his occupation ...<span class="tooltiptext" role="tooltip">male/female roles in the home</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            a girl as long as she is unfamiliar with her future companion and his occupation ...<span class="tooltiptext" role="tooltip">male/female roles in the home</span></span>
          
          </p>
       
@@ -404,7 +473,7 @@
       
       <p>
          
-         <span class="tooltip power-tooltip">What is the good of your feeling that you are now so mature that this relationship
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">What is the good of your feeling that you are now so mature that this relationship
             can’t do 
             you any harm? . . . You are far too soft, and this is something I have got to correct,
             for what 
@@ -412,7 +481,7 @@
             woman 
             and even if you make a mistake, you are none the less so.... But you know all this,
             my sweet 
-            child ...<span class="tooltiptext" role="tooltip">husband as a father figure</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            child ...<span class="tooltiptext" role="tooltip">husband as a father figure</span></span>
          
          </p>
       
@@ -430,7 +499,7 @@
          not say 
          lesser, rather the opposite from men. He finds the suppression of women an analogy
          to that 
-         of <span class="tooltip identity-tooltip">Negroes.<span class="tooltiptext" role="tooltip">Black</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip social-tooltip">Any girl, even without a suffrage or legal competence, whose hand a man kisses 
+         of <span class="tooltip identity-tooltip" data-subcategories="race">Negroes.<span class="tooltiptext" role="tooltip">Black</span></span> <span class="tooltip social-tooltip" data-subcategories="s_freud">Any girl, even without a suffrage or legal competence, whose hand a man kisses 
             and for whose love he is prepared to dare all, could have set him right. It is really
             a stillborn
             thought to send women into the struggle for existence exactly as man. If, for instance,
@@ -443,7 +512,7 @@
             
             may suppress all a woman’s tender attributes, needful of protection and yet so victorious,
             
-            and that she can then earn a livelihood like men.<span class="tooltiptext" role="tooltip">freud's view on women and men</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip social-tooltip">It is also possible that in such an event one 
+            and that she can then earn a livelihood like men.<span class="tooltiptext" role="tooltip">freud's view on women and men</span></span> <span class="tooltip social-tooltip" data-subcategories="s_rights_of_man">It is also possible that in such an event one 
             would not be justified in mourning the passing away of the most delightful thing the
             world 
             can offer us – our ideal of womanhood. I believe that all reforming action in law
@@ -456,7 +525,7 @@
             
             them, but the position of women will surely be what it is: in youth an adored darling
             and in 
-            mature years a loved wife.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">entitlement to a wife</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            mature years a loved wife.<span class="tooltiptext" role="tooltip">entitlement to a wife</span></span>
          
          </p>
       
@@ -519,25 +588,25 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">One gets a glimpse of Freud’s ‘intention, never to be fulfilled, to mould her to his
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">One gets a glimpse of Freud’s ‘intention, never to be fulfilled, to mould her to his
             perfect 
             image’, when he wrote her that she must ‘become quite young, a sweetheart, only a
             week 
-            old, who will quickly lose every trace of tartness’. <span class="tooltiptext" role="tooltip">views on his wife</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>But he then reproaches himself:
+            old, who will quickly lose every trace of tartness’. <span class="tooltiptext" role="tooltip">views on his wife</span></span>But he then reproaches himself:
          </p>
       
       <p>
          
-         <span class="tooltip social-tooltip">The loved one is not to become a toy doll, but a good comrade who still has a sensible
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">The loved one is not to become a toy doll, but a good comrade who still has a sensible
             word 
             left when the strict master has come to the end of his wisdom. And I have been trying
             to 
-            smash her frankness so that she should reserve opinion until she is sure of mine.<span class="tooltiptext" role="tooltip">roles of husband and wife</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            smash her frankness so that she should reserve opinion until she is sure of mine.<span class="tooltiptext" role="tooltip">roles of husband and wife</span></span>
          
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">As Jones pointed out, Freud was pained when she did not meet his chief test – complete
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">As Jones pointed out, Freud was pained when she did not meet his chief test – complete
             
             identification with himself, his opinions, his feelings, and his intentions. She was
             not really 
@@ -547,7 +616,7 @@
             Freud’s 
             love could be set free and displayed only under very favourable conditions. ... Martha
             was 
-            probably afraid of her masterful lover and she would commonly take refuge in silence.<span class="tooltiptext" role="tooltip">wife as extension and property of man</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            probably afraid of her masterful lover and she would commonly take refuge in silence.<span class="tooltiptext" role="tooltip">wife as extension and property of man</span></span>
          </p>
       
       <p>
@@ -577,7 +646,7 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">She was as devoted to his physical needs as the most doting Jewish mother, organising
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">She was as devoted to his physical needs as the most doting Jewish mother, organising
             each 
             meal on a rigid schedule to fit the convenience of der Papa. But she never dreamed
             of 
@@ -587,7 +656,7 @@
             which he 
             forgets to call for her at the theatre. His associations ‘imply that forgetting may
             be 
-            permissible in unimportant matters’.<span class="tooltiptext" role="tooltip">equal partnership in marriage</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            permissible in unimportant matters’.<span class="tooltiptext" role="tooltip">equal partnership in marriage</span></span>
          </p>
       
       <p>
@@ -608,7 +677,7 @@
           
          Whatever his intellectual opinions may have been in the matter, there are many indications
          
-         in his writing and correspondence of his emotional attitude. <span class="tooltip social-tooltip">It would certainly be going too 
+         in his writing and correspondence of his emotional attitude. <span class="tooltip social-tooltip" data-subcategories="s_freud">It would certainly be going too 
             far to say that he regarded the male sex as the lords of creation, for there was no
             tinge of 
             arrogance or superiority in his nature, but it might perhaps be fair to describe his
@@ -617,19 +686,19 @@
             and 
             comforts of men. His letters and his love choice make it plain that he had only one
             type of 
-            sexual object in his mind, a gentle feminine one....<span class="tooltiptext" role="tooltip">view of women</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            sexual object in his mind, a gentle feminine one....<span class="tooltiptext" role="tooltip">view of women</span></span>
          
          </p>
       
       <p>
          
-         <span class="tooltip social-tooltip">There is little doubt that Freud found the psychology of women more enigmatic than
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">There is little doubt that Freud found the psychology of women more enigmatic than
             that of 
             men. He said once to Marie Bonaparte: ‘The great question that has never been answered
             
             and which I have not yet been able to answer, despite my thirty years of research
             into the 
-            feminine soul, is, what does a woman want?’<span class="tooltiptext" role="tooltip">women as an enigma</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            feminine soul, is, what does a woman want?’<span class="tooltiptext" role="tooltip">women as an enigma</span></span>
          
          </p>
       
@@ -666,7 +735,7 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">The motive force of woman’s personality, in Freud’s theory, was her envy of the penis,
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">The motive force of woman’s personality, in Freud’s theory, was her envy of the penis,
             which 
             causes her to feel as much depreciated in her own eyes ‘as in the eyes of the boy,
             and later 
@@ -674,14 +743,14 @@
             her husband, 
             a wish that is never really fulfilled until she possesses a penis through giving birth
             to a son. 
-            In short, she is merely an homme manque, a man with something missing.<span class="tooltiptext" role="tooltip">penis envy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> As the eminent 
+            In short, she is merely an homme manque, a man with something missing.<span class="tooltiptext" role="tooltip">penis envy</span></span> As the eminent 
          psychoanalyst Clara Thompson put it: ‘Freud never became free from the Victorian attitude 
          towards women. He accepted as an inevitable part of the fate of being a woman the
          
-         limitation of outlook and life of the Victorian era.... <span class="tooltip social-tooltip">The castration complex and penis envy 
+         limitation of outlook and life of the Victorian era.... <span class="tooltip social-tooltip" data-subcategories="s_freud">The castration complex and penis envy 
             concepts, two of the most basic ideas in his whole thinking, are postulated on the
             
-            assumption that women are biologically inferior to men.’<span class="tooltiptext" role="tooltip">women are biologically less than men</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            assumption that women are biologically inferior to men.’<span class="tooltiptext" role="tooltip">women are biologically less than men</span></span>
          </p>
       
       <p>
@@ -694,7 +763,7 @@
       
       <p>
          
-         <span class="tooltip social-tooltip">In the boy the castration-complex is formed after he has learned from the sight of
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">In the boy the castration-complex is formed after he has learned from the sight of
             the female 
             genitals that the sexual organ which he prizes so highly is not a necessary part of
             every 
@@ -722,7 +791,7 @@
             since led her to abandon the fulfilment of this desire as being quite unattainable,
             analysis 
             proves that it still persists in the unconscious, and retains a considerable charge
-            of energy.<span class="tooltiptext" role="tooltip">penis envy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> 
+            of energy.<span class="tooltiptext" role="tooltip">penis envy</span></span> 
          
          </p>
       
@@ -739,7 +808,7 @@
          ‘The discovery of her castration is a turning-point in the life of the girl,’ Freud went on to say. 
          ‘She is wounded in her self-love by the unfavourable comparison with the boy, who
          is so 
-         much better equipped.’ <span class="tooltip social-tooltip">Her mother, and all women, are depreciated in her own eyes, as they 
+         much better equipped.’ <span class="tooltip social-tooltip" data-subcategories="s_freud">Her mother, and all women, are depreciated in her own eyes, as they 
             are depreciated for the same reason in the eyes of man. This either leads to complete
             sexual 
             inhibition and neurosis, or to a ‘masculinity complex’ in which she refuses to give
@@ -762,11 +831,11 @@
             and she 
             can hope to get from him the satisfaction of all that has remained to her of her masculinity
             
-            complex.’<span class="tooltiptext" role="tooltip">theory behind penis envy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            complex.’<span class="tooltiptext" role="tooltip">theory behind penis envy</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">But her inherent deficiency, and the resultant penis envy, is so hard to overcome
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">But her inherent deficiency, and the resultant penis envy, is so hard to overcome
             that the 
             woman’s super-ego – her conscience, ideals – are never as completely formed as a man’s:
             
@@ -779,11 +848,11 @@
             one 
             receives over and over again in analytical work’ – that not even psychoanalysis can
             do much 
-            for women, because of the inherent deficiency of femininity.<span class="tooltiptext" role="tooltip">women's failiure in penis envy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            for women, because of the inherent deficiency of femininity.<span class="tooltiptext" role="tooltip">women's failiure in penis envy</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">A man of about thirty seems a youthful, and, in a sense, an incompletely developed
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">A man of about thirty seems a youthful, and, in a sense, an incompletely developed
             
             individual, of whom we expect that he will be able to make good use of the possibilities
             of 
@@ -798,11 +867,11 @@
             of the 
             individual ... even when we are successful in removing the sufferings by solving her
             neurotic 
-            conflict.<span class="tooltiptext" role="tooltip">male vs female development</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            conflict.<span class="tooltiptext" role="tooltip">male vs female development</span></span>
          </p>
       
       <p> 
-         <span class="tooltip fem-tooltip">What was he really reporting? If one interprets ‘penis envy’ as other Freudian concepts
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">What was he really reporting? If one interprets ‘penis envy’ as other Freudian concepts
             have 
             been reinterpreted, in the light of our new knowledge that what Freud believed to
             be 
@@ -829,7 +898,7 @@
             sexual
             deformity, unless you think that a woman, by nature, is a being inferior to man. Then,
             of  
-            course, her wish to be equal is neurotic.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">feminist look at penis envy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            course, her wish to be equal is neurotic.<span class="tooltiptext" role="tooltip">feminist look at penis envy</span></span>
          </p>
       
       <p>
@@ -843,7 +912,7 @@
          that this 
          is the basic human need, and that interference with it, in any dimension, is the source
          of 
-         psychic trouble. The sexual is only one dimension of the human potential. <span class="tooltip fem-tooltip">Freud saw women 
+         psychic trouble. The sexual is only one dimension of the human potential. <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Freud saw women 
             only in terms of their sexual relationship with men. But in all those women in whom
             he saw 
             sexual problems there must have been very severe problems of blocked growth, growth
@@ -862,7 +931,7 @@
             for 
             equality as ‘penis envy’, was he not merely stating his own view that women could
             never 
-            really be man’s equal, any more than she could wear his penis?<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">failiures of the penis envy theory</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            really be man’s equal, any more than she could wear his penis?<span class="tooltiptext" role="tooltip">failiures of the penis envy theory</span></span>
          </p>
       
       <p>
@@ -890,7 +959,7 @@
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">Today, when women’s equal intelligence has been proved by science, when their equal
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Today, when women’s equal intelligence has been proved by science, when their equal
             
             capacity in every sphere except sheer muscular strength has been demonstrated, a theory
             
@@ -898,11 +967,11 @@
             hypocritical. 
             But that remains the basis of Freud’s theory of women, despite the mask of timeless
             sexual 
-            truth which disguises its elaborations today.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">advocating for equality, failiures of Freud to do so</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            truth which disguises its elaborations today.<span class="tooltiptext" role="tooltip">advocating for equality, failiures of Freud to do so</span></span>
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">Because Freud’s followers could only see woman in the image defined by Freud – inferior,
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Because Freud’s followers could only see woman in the image defined by Freud – inferior,
             
             childish, helpless, with no possibility of happiness unless she adjusted to being
             man’s 
@@ -910,7 +979,7 @@
             neurotic 
             desire to be equal. They wanted to help women find sexual fulfilment as women, by
             affirming
-            their natural inferiority.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">claiming Freud promoted biological inferiority</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            their natural inferiority.<span class="tooltiptext" role="tooltip">claiming Freud promoted biological inferiority</span></span>
          </p>
       
       <p>
@@ -918,7 +987,7 @@
          
          followers transposed bodily to twentieth century America the causes as well as the
          cures of 
-         the condition Freud called penis envy. <span class="tooltip social-tooltip">In the light of our new knowledge of cultural processes 
+         the condition Freud called penis envy. <span class="tooltip social-tooltip" data-subcategories="s_freud">In the light of our new knowledge of cultural processes 
             and of human growth, one would assume that women who grew up with the rights and 
             freedom and education that Victorian women were denied would be different from the
             
@@ -934,7 +1003,7 @@
             real 
             opportunities life offered to women now, compared to women then, were forbidden in
             the 
-            name of penis envy.<span class="tooltiptext" role="tooltip">penis envy post-Freud</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            name of penis envy.<span class="tooltiptext" role="tooltip">penis envy post-Freud</span></span>
          </p>
       
       <p>
@@ -951,7 +1020,7 @@
       
       <p>
          
-         <span class="tooltip fem-tooltip">Feminism, despite the external validity of its political programme and most (not all)
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">Feminism, despite the external validity of its political programme and most (not all)
             of its 
             social programme, was at its core a deep illness. ... The dominant direction of feminine
             
@@ -961,23 +1030,23 @@
             without 
             fear or resentment, with a deep inwardness and readiness for the final goal of sexual
             life 
-            impregnation.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">feminism is an illness</span></span>
+            impregnation.<span class="tooltiptext" role="tooltip">feminism is an illness</span></span>
          
          </p>
       
       <p>
          
-         <span class="tooltip fem-tooltip">It is not in the capacity of the female organism to attain feelings of well-being
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">It is not in the capacity of the female organism to attain feelings of well-being
             by the route of 
             male achievement.... It was the error of the feminists that they attempted to put
             women on 
-            the essentially male road of exploit, off the female road of nurture....<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">male and female fullfillment is unequal</span></span>
+            the essentially male road of exploit, off the female road of nurture....<span class="tooltiptext" role="tooltip">male and female fullfillment is unequal</span></span>
          
          </p>
       
       <p>
          
-         <span class="tooltip fem-tooltip">The psychosocial rule that begins to take form, then, is this: the more educated the
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">The psychosocial rule that begins to take form, then, is this: the more educated the
             woman 
             is, the greater chance there is of sexual disorder, more or less severe. The greater
             the 
@@ -985,7 +1054,7 @@
             Fate has 
             granted them the boon importuned by Lady Macbeth; they have been unsexed, not only
             in 
-            the matter of giving birth, but in their feelings of pleasure.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">educated women lose their womanhood</span></span>
+            the matter of giving birth, but in their feelings of pleasure.<span class="tooltiptext" role="tooltip">educated women lose their womanhood</span></span>
          
          </p>
       
@@ -1013,7 +1082,7 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">But on the subject of women, Freud’s followers not only compounded his errors, but,
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">But on the subject of women, Freud’s followers not only compounded his errors, but,
             in their 
             tortuous attempt to fit their observations of real women into his theoretical framework,
             
@@ -1025,35 +1094,35 @@
             such. So she does what even Freud found unwise, and equates ‘femininity’ with ‘passivity’,
             
             and ‘masculinity’ with ‘activity’, not only in the sexual sphere, but in all spheres
-            of life.<span class="tooltiptext" role="tooltip">Freud's followers being antifeminist</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            of life.<span class="tooltiptext" role="tooltip">Freud's followers being antifeminist</span></span>
          </p>
       
       <p>
          
-         <span class="tooltip fem-tooltip">While fully recognising that woman’s position is subjected to external influence,
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">While fully recognising that woman’s position is subjected to external influence,
             I venture to 
             say that the fundamental identities ‘feminine-passive’ and ‘masculine-active’ assert
             
             themselves in all known cultures and races, in various forms and various quantitative
             
-            proportions.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">feminie passivity, masculine activity</span></span>
+            proportions.<span class="tooltiptext" role="tooltip">feminie passivity, masculine activity</span></span>
          
          </p>
       
       <p>
          
-         <span class="tooltip fem-tooltip">Very often a woman resists this characteristic given her by nature and in spite of
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">Very often a woman resists this characteristic given her by nature and in spite of
             certain 
             advantages she derives from it, displays many modes of behaviour that suggest that
             she is 
             not entirely content with her own constitution . . . the expression of this dissatisfaction,
             
-            combined with attempts to remedy it, result in woman’s ‘masculinity complex.’<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">idea of a masculinity complex</span></span>
+            combined with attempts to remedy it, result in woman’s ‘masculinity complex.’<span class="tooltiptext" role="tooltip">idea of a masculinity complex</span></span>
          
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">The ‘masculinity complex’, as Dr Deutsch refines it, stems directly from the ‘female
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">The ‘masculinity complex’, as Dr Deutsch refines it, stems directly from the ‘female
             
             castration complex’. Thus, anatomy is still destiny, woman is still an homme manque.
             Of 
@@ -1063,11 +1132,11 @@
             activity.’ 
             So, penis envy, deficient female anatomy, and society ‘all seem to work together to
             produce 
-            femininity’.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">female anatomy as deficient</span></span>
+            femininity’.<span class="tooltiptext" role="tooltip">female anatomy as deficient</span></span>
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">‘Normal’ femininity is achieved, however, only in so far as the woman finally renounces
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">‘Normal’ femininity is achieved, however, only in so far as the woman finally renounces
             all 
             active goals of her own, all her own ‘originality’, to identify and fulfil herself
             through the 
@@ -1077,14 +1146,14 @@
             
             discoveries. The daughter who devotes her life to her father is also making a satisfactory
             
-            feminine ‘ sublimation’.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">femininity in submission</span></span> <span class="tooltip fem-tooltip">Only activity of her own or originality, on a basis of equality, deserves 
+            feminine ‘ sublimation’.<span class="tooltiptext" role="tooltip">femininity in submission</span></span> <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">Only activity of her own or originality, on a basis of equality, deserves 
             the opprobrium of ‘masculinity complex’. This brilliant feminine follower of Freud
             states 
             categorically that the women who by 1944 in America had achieved eminence by activity
             of 
             their own in various fields had done so at the expense of their feminine fulfilment.
             She will 
-            mention no names, but they all suffer from the ‘masculinity complex’.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">indipendence equates to masculinity</span></span>
+            mention no names, but they all suffer from the ‘masculinity complex’.<span class="tooltiptext" role="tooltip">indipendence equates to masculinity</span></span>
          </p>
       
       <p>
@@ -1095,7 +1164,7 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">It would be ridiculous to suggest that the way Freudian theories were used to brainwash
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">It would be ridiculous to suggest that the way Freudian theories were used to brainwash
             two 
             generations of educated American women was part of a psychoanalytic conspiracy. It
             was 
@@ -1111,7 +1180,7 @@
             personal 
             struggle of many American psychoanalysts to reconcile what they saw in their women
             
-            patients with Freudian theory.<span class="tooltiptext" role="tooltip">harm caused by widespread Freudian theory</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            patients with Freudian theory.<span class="tooltiptext" role="tooltip">harm caused by widespread Freudian theory</span></span>
          </p>
       
       <p>
@@ -1122,7 +1191,7 @@
       
       <p>
          
-         <span class="tooltip fem-tooltip">
+         <span class="tooltip fem-tooltip" data-subcategories="f_enlightenment_individualism">
             For twenty years now in analysing American women, I have found myself again and again
             in 
             the position of having to superimpose Freud’s theory of femininity on the psychic
@@ -1141,17 +1210,17 @@
             the 
             expression of her own need for mature self-fulfilment. I told her: ‘I can’t analyse
             this dream 
-            away. You must do something about it.’<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">movement away from penis envy, individual rights for women</span><span class="tooltiptext" role="tooltip"></span></span>
+            away. You must do something about it.’<span class="tooltiptext" role="tooltip">movement away from penis envy, individual rights for women</span></span>
          
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">
+         <span class="tooltip fem-tooltip" data-subcategories="f_enlightenment_individualism">
             This same man teaches the young analysts in his postgraduate clinic at a leading Eastern
             
             university: ‘If the patient doesn’t fit the book, throw away the book, and listen
-            to the patient.’<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">listening to each woman as an individual</span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip fem-tooltip">But many analysts threw the book at their patients and Freudian theories became accepted
+            to the patient.’<span class="tooltiptext" role="tooltip">listening to each woman as an individual</span></span>
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">But many analysts threw the book at their patients and Freudian theories became accepted
             
             fact even among women who never lay down on an analyst’s couch, but only knew what
             they 
@@ -1166,11 +1235,11 @@
             were 
             asked so completely within the Freudian framework that only one answer was possible:
             
-            education, freedom, rights are wrong for women.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">harms of Freudian theory on women</span></span>
+            education, freedom, rights are wrong for women.<span class="tooltiptext" role="tooltip">harms of Freudian theory on women</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">The uncritical acceptance of Freudian doctrine in America was caused, at least in
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">The uncritical acceptance of Freudian doctrine in America was caused, at least in
             part, by 
             the very relief it provided from uncomfortable questions about objective realities.
             After the 
@@ -1187,11 +1256,11 @@
             of the mind 
             and spirit – had a more devastating personal effect on women than men, nobody planned
             it 
-            that way.<span class="tooltiptext" role="tooltip">the intents of Freudian theory</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            that way.<span class="tooltiptext" role="tooltip">the intents of Freudian theory</span></span>
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">But the practice of psychoanalysis as a therapy was not primarily responsible for
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">But the practice of psychoanalysis as a therapy was not primarily responsible for
             the 
             feminine mystique. It was the creation of writers and editors in the mass media, ad-agency
             
@@ -1219,23 +1288,23 @@
             
             Freudian super-ego worked for growing numbers of young and impressionable American
             
-            women as Freud said the super-ego works – to perpetuate the past.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">causes for feminist theory</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            women as Freud said the super-ego works – to perpetuate the past.<span class="tooltiptext" role="tooltip">causes for feminist theory</span></span>
          </p>
       
       <p>
          
-         <span class="tooltip social-tooltip">Mankind never lives completely in the present; the ideologies of the super-ego perpetuate
+         <span class="tooltip social-tooltip" data-subcategories="s_freud">Mankind never lives completely in the present; the ideologies of the super-ego perpetuate
             
             the past, the traditions of the race and the people, which yield but slowly to the
             influence of 
             the present and to new developments, and, so long as they work through the super-ego,
             play 
-            an important part in man’s life, quite independently of economic conditions.<span class="tooltiptext" role="tooltip">super-ego</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            an important part in man’s life, quite independently of economic conditions.<span class="tooltiptext" role="tooltip">super-ego</span></span>
          
          </p>
       
       <p>
-         <span class="tooltip fem-tooltip">The feminine mystique, elevated by Freudian theory into a scientific religion, sounded
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">The feminine mystique, elevated by Freudian theory into a scientific religion, sounded
             a 
             single, over-protective, life-restricting, future-deriving note for women. Girls who
             grew up 
@@ -1249,7 +1318,7 @@
             authority of 
             science – anthropology, sociology, psychology share that authority now – kept them
             from 
-            questioning the feminine mystique.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">challenging the social norms</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            questioning the feminine mystique.<span class="tooltiptext" role="tooltip">challenging the social norms</span></span>
          </p>
       </body>
 </html>

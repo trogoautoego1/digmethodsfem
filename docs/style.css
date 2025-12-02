@@ -290,7 +290,20 @@ h3 {
     display: none;
 }
 
+.tooltip-hidden {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    cursor: default !important;
+}
 
+/* Prevent tooltip popup from showing when hidden */
+.tooltip-hidden .tooltiptext {
+    display: none !important;
+}
+
+.tooltip-hidden:hover {
+    background-color: transparent !important;
+}
 
 /* Religion Tooltip Container
  * ============================================================================= */
@@ -365,67 +378,67 @@ h3 {
 /* Class Tooltip Container
  * ============================================================================= */
 .class-tooltip {
-  position: relative;
-  display: inline-block;
-  background-color: #C0EBED; /* blush */
-  border-bottom: 1px dotted #82A8CA; /* dark underline */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: #C0EBED; /* blush */
+    border-bottom: 1px dotted #82A8CA; /* dark underline */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .class-tooltip:hover {
-  background-color: #96D6DA; /* hover color */
+    background-color: #96D6DA; /* hover color */
 }
 
 /* Tooltip Text for Feminist Theory */
 .class-tooltip .tooltiptext {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1000;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  background-color: #C0EBED;
-  color: #3E5D77; /* text */
-  font-family: 'Georgia', 'Palatino Linotype', serif;
-  font-size: 0.95em;
-  font-style: italic;
-  text-align: left;
-  padding: 10px;
-  border-radius: 6px;
-  max-width: 300px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #96D6DA;
+    background-color: #C0EBED;
+    color: #3E5D77; /* text */
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #96D6DA;
 }
 
 /* Tooltip Arrow */
 .class-tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #C0EBED transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #C0EBED transparent transparent transparent;
 }
 
 /* Show Tooltip on Hover or Focus */
 .class-tooltip:hover .tooltiptext,
 .class-tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Hide Empty Tooltips */
 .class-tooltip .tooltiptext:empty {
-  display: none;
+    display: none;
 }
 
 
@@ -433,67 +446,67 @@ h3 {
 /* Identity Tooltip Container
  * ============================================================================= */
 .identity-tooltip {
-  position: relative;
-  display: inline-block;
-  background-color: #8DCA50; /* blush */
-  border-bottom: 1px dotted #66735A; /* dark underline */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: #8DCA50; /* blush */
+    border-bottom: 1px dotted #66735A; /* dark underline */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .identity-tooltip:hover {
-  background-color: #7BA84D; /* hover color */
+    background-color: #7BA84D; /* hover color */
 }
 
 /* Tooltip Text for Feminist Theory */
 .identity-tooltip .tooltiptext {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1000;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  background-color: #8DCA50;
-  color: #D8F8B8; /* text */
-  font-family: 'Georgia', 'Palatino Linotype', serif;
-  font-size: 0.95em;
-  font-style: italic;
-  text-align: left;
-  padding: 10px;
-  border-radius: 6px;
-  max-width: 300px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #7BA84D;
+    background-color: #8DCA50;
+    color: #D8F8B8; /* text */
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #7BA84D;
 }
 
 /* Tooltip Arrow */
 .identity-tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #8DCA50 transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #8DCA50 transparent transparent transparent;
 }
 
 /* Show Tooltip on Hover or Focus */
 .identity-tooltip:hover .tooltiptext,
 .identity-tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Hide Empty Tooltips */
 .identity-tooltip .tooltiptext:empty {
-  display: none;
+    display: none;
 }
 
 
@@ -501,65 +514,65 @@ h3 {
 /* social theory Tooltip Container
  * ============================================================================= */
 .social-tooltip {
-  position: relative;
-  display: inline-block;
-  background-color: #F79A21; /* blush */
-  border-bottom: 1px dotted #605D5A; /* dark underline */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: #F79A21; /* blush */
+    border-bottom: 1px dotted #605D5A; /* dark underline */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .social-tooltip:hover {
-  background-color: #C68126; /* hover color */
+    background-color: #C68126; /* hover color */
 }
 
 /* Tooltip Text for Feminist Theory */
 .social-tooltip .tooltiptext {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 1000;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  background-color: #F79A21;
-  color: #4A4134; /* text */
-  font-family: 'Georgia', 'Palatino Linotype', serif;
-  font-size: 0.95em;
-  font-style: italic;
-  text-align: left;
-  padding: 10px;
-  border-radius: 6px;
-  max-width: 300px;
-  white-space: normal;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #C68126;
+    background-color: #F79A21;
+    color: #4A4134; /* text */
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #C68126;
 }
 
 /* Tooltip Arrow */
 .social-tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #F79A21 transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #F79A21 transparent transparent transparent;
 }
 
 /* Show Tooltip on Hover or Focus */
 .social-tooltip:hover .tooltiptext,
 .social-tooltip:focus-within .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Hide Empty Tooltips */
 .social-tooltip .tooltiptext:empty {
-  display: none;
+    display: none;
 }
