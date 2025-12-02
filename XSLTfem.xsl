@@ -67,6 +67,7 @@
                     <label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label>
                 </div>
                 <script>
+                    <xsl:text>
                     // Function to get all checked subcategories for a given category
                     function getCheckedSubcategories(category) {
                     const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
@@ -134,6 +135,7 @@
                     // Hide all tooltips initially
                     updateTooltips();
                     });
+                    </xsl:text>
                 </script>
                 <h1>
                     <xsl:value-of select="(//title)[1]"/>

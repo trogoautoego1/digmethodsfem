@@ -91,13 +91,13 @@
             // Function to get all checked subcategories for a given category
             function getCheckedSubcategories(category) {
                 const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
-                return Array. from (checkboxes).map(cb = &amp;gt; cb.dataset.subcategory);
+                return Array.from (checkboxes).map(cb = &amp;gt; cb.dataset.subcategory);
             }
             
             // Function to check if any checkbox in a category is checked
             function isCategoryActive(category) {
                 const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
-                return Array. from (checkboxes).some(cb = &amp;gt; cb.checked);
+                return Array.from (checkboxes).some(cb = &amp;gt; cb.checked);
             }
             
             // Function to update tooltip visibility
