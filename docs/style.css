@@ -65,10 +65,14 @@ p {
     margin: 15px 0px;
 }
 
-body p {
+p.narrow {
+    margin: 15px 5px;
+}
+
+body > p {
     margin: 15px 200px;
 }
-div p {
+div > p {
     margin: 15px 200px;
 }
 h2,
