@@ -13,11 +13,80 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>AFTER THE DEATH OF GOD THE FATHER Women's Liberation and the transformation of
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>AFTER THE DEATH OF GOD THE FATHER Women's Liberation and the transformation of
          Christian consciousness</h1>
       
       <p>The women's liberation movement has produced a deluge of books and
-         articles. Their major task has been exposition and criticism of our <span class="tooltip power-tooltip">male-centered heritage<span class="tooltiptext" role="tooltip">male-centered</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. In order to
+         articles. Their major task has been exposition and criticism of our <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">male-centered heritage<span class="tooltiptext" role="tooltip">male-centered</span></span>. In order to
          reveal and drive home to readers the oppressive character of our cultural institutions,
          it was necessary to do careful research, to trot out passages from leading philosophers,
          psychologists, statesmen, poets, historians, saints and theologians which make the
@@ -34,8 +103,8 @@
          inspection. I do not mean to imply that there are not countless more of the same to
          be
          uncovered (just the other day I noticed for the first time that Berdyaev blandly affirms
-         <span class="tooltip power-tooltip">there is something base and
-            sinister in the female element<span class="tooltiptext" role="tooltip">women as worse and lesser</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> ." Etcetera). Nor do I mean that the
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">there is something base and
+            sinister in the female element<span class="tooltiptext" role="tooltip">women as worse and lesser</span></span> ." Etcetera). Nor do I mean that the
          task of communicating the message is over. Millions have yet to hear the news, let
          alone
          to grasp its import. Certainly it would be a mistake and a betrayal to trivialize
@@ -49,17 +118,17 @@
          in
          which it can influence Western religious thought. </p>
       
-      <p>The <span class="tooltip religion-tooltip">Judaic<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">judeochristian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>-<span class="tooltip religion-tooltip">Christian<span class="tooltiptext" role="tooltip">judeochristian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>tradition has served to legitimate sexually unbalanced patriarchal
+      <p>The <span class="tooltip religion-tooltip" data-subcategories="r_judaism">Judaic<span class="tooltiptext" role="tooltip">judeochristian</span></span>-<span class="tooltip religion-tooltip" data-subcategories="r_christianity">Christian<span class="tooltiptext" role="tooltip">judeochristian</span></span>tradition has served to legitimate sexually unbalanced patriarchal
          society. Thus, for example, the image of the Father God, spawned in the human
          imagination and sustained as plausible by patriarchy, has in turn rendered service
          to
          this type of society by making its mechanisms for the oppression of women appear right
-         and fitting. <span class="tooltip power-tooltip">If God in "his"
+         and fitting. <span class="tooltip power-tooltip" data-subcategories="p_religion">If God in "his"
             heaven is a father ruling "his" people, then it is in the "nature" of things and
             according to divine plan and the order of the universe that society be
-            male-dominated.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">god legitimizing patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Theologian Karl Barth found it appropriate to write
-         that <span class="tooltip power-tooltip">woman is "ontologically" subordinate
-            to man.<span class="tooltiptext" role="tooltip">women as lesser</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Within this context a mystification of roles takes place: the
+            male-dominated.<span class="tooltiptext" role="tooltip">god legitimizing patriarchy</span></span> Theologian Karl Barth found it appropriate to write
+         that <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">woman is "ontologically" subordinate
+            to man.<span class="tooltiptext" role="tooltip">women as lesser</span></span> Within this context a mystification of roles takes place: the
          husband dominating his wife represents God himself. What is happening, of course,
          is the
          familiar mechanism by which the images and values of a given society are projected
@@ -73,8 +142,8 @@
       <p>As the women's revolution begins to have its effect upon the fabric
          of society, transforming it from patriarchy into something that never existed
          before—into a diarchal situation that is radically new—it will, I believe, become
-         <span class="tooltip religion-tooltip">the greatest single potential
-            challenge to Christianity <span class="tooltiptext" role="tooltip">christianity under threat</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> to rid itself of its oppressive tendencies or
+         <span class="tooltip religion-tooltip" data-subcategories="r_christianity">the greatest single potential
+            challenge to Christianity <span class="tooltiptext" role="tooltip">christianity under threat</span></span> to rid itself of its oppressive tendencies or
          go out of business. Beliefs and values that have held sway for thousands of years
          will
          be questioned as never before. It is also very possibly the greatest single hope for
@@ -96,20 +165,20 @@
          mean uncritical acceptance of values formerly given priority by men. Rather, I suggest
          that it will be a catalyst for transformation of our culture. </p>
       
-      <p><span class="tooltip power-tooltip">The roles and structures of
+      <p><span class="tooltip power-tooltip" data-subcategories="p_patriarchy">The roles and structures of
             patriarchy have been developed and sustained in accordance with an artificial
             polarization of human qualities into the traditional sexual
-            stereotypes.<span class="tooltiptext" role="tooltip">artificial patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip identity-tooltip">The image of the person in authority and the accepted
+            stereotypes.<span class="tooltiptext" role="tooltip">artificial patriarchy</span></span> <span class="tooltip identity-tooltip" data-subcategories="gender">The image of the person in authority and the accepted
             understanding of "his" role have corresponded to the eternal masculine stereotype,
             which
             implies hyper- rationality, "objectivity," aggressivity, the possession of dominating
             and manipulative attitudes toward persons and environment and the tendency to construct
-            boundaries between the self (and those identified with the self) and "the other."<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">masculine stereotype</span><span class="tooltiptext" role="tooltip"></span></span> The
+            boundaries between the self (and those identified with the self) and "the other."<span class="tooltiptext" role="tooltip">masculine stereotype</span></span> The
          caricature of a human being which is represented by this stereotype depends for its
-         existence upon the opposite caricature —<span class="tooltip identity-tooltip">the eternal feminine (hyper-emotional, passive,
-            self-abasing, etc.).<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">feminine stereotype</span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip fem-tooltip">By becoming whole persons women can generate a counterforce to the
+         existence upon the opposite caricature —<span class="tooltip identity-tooltip" data-subcategories="gender">the eternal feminine (hyper-emotional, passive,
+            self-abasing, etc.).<span class="tooltiptext" role="tooltip">feminine stereotype</span></span> <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">By becoming whole persons women can generate a counterforce to the
             stereotype of the leader as they challenge the artificial polarization of human
-            characteristics.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">becoming whole persons</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> There is no reason to assume that women who have the support of their
+            characteristics.<span class="tooltiptext" role="tooltip">becoming whole persons</span></span> There is no reason to assume that women who have the support of their
          sisters to criticize the masculine stereotype will simply adopt it as a model for
          themselves. More likely they will develop a wider range of qualities and skills in
          themselves and thereby encourage men to engage in a comparably liberating procedure
@@ -120,10 +189,10 @@
       
       <p>Accordingly, it is reasonable to anticipate that this change will
          affect the symbols which reflect the values of our society, including religious symbols.
-         <span class="tooltip religion-tooltip">Since some of these have functioned to justify oppression, women and men would do
+         <span class="tooltip religion-tooltip" data-subcategories="r_christianity">Since some of these have functioned to justify oppression, women and men would do
             well
             to welcome this change. Religious symbols die when the cultural situation that supported
-            them ceases to give them plausibility.<span class="tooltiptext" role="tooltip">religious symbols as oppression</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> This should pose no problem to authentic faith,
+            them ceases to give them plausibility.<span class="tooltiptext" role="tooltip">religious symbols as oppression</span></span> This should pose no problem to authentic faith,
          which accepts the relativity of all symbols and recognizes that fixation upon any
          of
          them as absolute in itself is idolatrous. </p>
@@ -132,18 +201,18 @@
          decided around a conference table. Rather, they grow out of a changing communal
          situation and experience. This does not mean that theologically we are consigned to
          the
-         role of passive spectators.<span class="tooltip fem-tooltip">We are called upon to be attentive to what the new
+         role of passive spectators.<span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">We are called upon to be attentive to what the new
             experience of the becoming of women is revealing to us, and to foster the evolution
             of
             consciousness beyond the oppressiveness and imbalance reflected and justified by symbols
-            and doctrines throughout the millennia of patriarchy.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">consciousness evolution</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+            and doctrines throughout the millennia of patriarchy.<span class="tooltiptext" role="tooltip">consciousness evolution</span></span></p>
       
       <p>This imbalance is apparent first of all in the biblical and popular
          image of trie great patriarch in heaven who rewards and punishes according to his
-         mysterious and arbitrary will. <span class="tooltip religion-tooltip">The fact that the effects of this image have not always
+         mysterious and arbitrary will. <span class="tooltip religion-tooltip" data-subcategories="r_christianity">The fact that the effects of this image have not always
             been humanizing is evident to any perceptive reader of history. The often cruel behavior
             of Christians toward unbelievers and even toward dissenters among themselves is shocking
-            evidence of the function of that image in relation to values and behavior.<span class="tooltiptext" role="tooltip">cruelty of christians, god as patriarch in heaven</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> </p>
+            evidence of the function of that image in relation to values and behavior.<span class="tooltiptext" role="tooltip">cruelty of christians, god as patriarch in heaven</span></span> </p>
       
       
       <p>Sophisticated thinkers, of course, have never intellectually
@@ -153,9 +222,9 @@
          mind, images have a way of surviving in the imagination in such a way that a person
          can
          function on two different and even apparently contradictory levels at the same time.
-         <span class="tooltip religion-tooltip">Thus one can speak of God as spirit and at the same time imagine "him" as belonging
+         <span class="tooltip religion-tooltip" data-subcategories="r_christianity">Thus one can speak of God as spirit and at the same time imagine "him" as belonging
             to
-            the male sex.<span class="tooltiptext" role="tooltip">God as male</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Such primitive images can profoundly affect conceptualizations which
+            the male sex.<span class="tooltiptext" role="tooltip">God as male</span></span> Such primitive images can profoundly affect conceptualizations which
          appear to be very refined and abstract. Even the Yahweh of the future, so cherished
          by
          the theology of hope, comes through on an imaginative level as exclusively a He-God,
@@ -163,10 +232,10 @@
          it is perhaps consistent with this that theologians of hope have attempted to develop
          a
          political theology which takes no explicit cognizance of the devastation wrought by
-         sexual politics. <span class="tooltip power-tooltip">The widespread conception of the "Supreme Being" as an entity distinct
+         sexual politics. <span class="tooltip power-tooltip" data-subcategories="p_religion">The widespread conception of the "Supreme Being" as an entity distinct
             from this world but controlling it according to plan and keeping human beings in a
             state
-            of infantile subjection has been a not too subtle mask of the divine patriarch. <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Supreme Being as divine patriarch</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> The
+            of infantile subjection has been a not too subtle mask of the divine patriarch. <span class="tooltiptext" role="tooltip">Supreme Being as divine patriarch</span></span> The
          Supreme Being's plausibility, and that of the static worldview which accompanies this
          projection has, of course, declined. This was a projection grounded in specifically
          patriarchal infrastructures and sustained as subjectively real by the usual processes
@@ -175,11 +244,11 @@
          eroded by a number of developments in recent history, including the general trend
          toward
          democratization of society and the emergence of technology with the accompanying sense
-         of mastery over' the world and man's destiny. <span class="tooltip fem-tooltip">However, it is the women's movement which
+         of mastery over' the world and man's destiny. <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">However, it is the women's movement which
             appears destined to play the key-role in the overthrow of such oppressive elements
             in
             traditional theism, precisely because it strikes at the source of the imbalance
-            reflected in traditional beliefs.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">women's movement and theism</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> The women's movement will present a growing threat to
+            reflected in traditional beliefs.<span class="tooltiptext" role="tooltip">women's movement and theism</span></span> The women's movement will present a growing threat to
          patriarchal religion less by attacking it than by simply leaving it behind. Few of
          the
          leaders in the movement evince an interest in institutional religion, having recognized
@@ -199,9 +268,9 @@
          their implications, and those which encourage self-actualization and social commitment.
          </p>
       
-      <p> <span class="tooltip social-tooltip">The various theologies that hypostatize transcendence invariably
+      <p> <span class="tooltip social-tooltip" data-subcategories="s_enlightenment_individualism">The various theologies that hypostatize transcendence invariably
             use this "God" to legitimate oppression, particularly that of women. These are
-            irredeemably anti- feminine and therefore anti-human.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> In contrast to this, a more
+            irredeemably anti- feminine and therefore anti-human.</span> In contrast to this, a more
          authentic language of transcendence does not hypostatize or objectify God and
          consequently does not lend itself to such use. So for example, Tillich's way of speaking
          about God as ground and power of being would be very difficult to use for the
@@ -218,7 +287,7 @@
          possible an authenticity of religious consciousness is courage in the face of anxiety.
          </p>
       
-      <p><span class="tooltip fem-tooltip">Since the projections of patriarchal religion have been blocking
+      <p><span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Since the projections of patriarchal religion have been blocking
             the dynamics of existential courage by otlering the false security of alienation—that
             is, of self-reduction to stereotyped roles—there is reason to see hope for the emergence
             of genuine religious consciousness in the massive challenge to patriarchy which is
@@ -227,19 +296,19 @@
             from the omnipotent Father in all of his disguises—a deliverance which secular humanism
             has passionately fought for—but also a doorway to something, that is, the beginning
             for
-            many of a more authentic search for transcendence, that is, for God.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">deliverance from patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+            many of a more authentic search for transcendence, that is, for God.<span class="tooltiptext" role="tooltip">deliverance from patriarchy</span></span></p>
       
       <p> The imbalance in Christian ideology resulting from sexual
          hierarchy is manifested not only in the doctrine of God but also in the notion of
          Jesus
-         as the unique God-man. <span class="tooltip religion-tooltip">A great deal of Christian doctrine concerning Jesus has been
+         as the unique God-man. <span class="tooltip religion-tooltip" data-subcategories="r_christianity">A great deal of Christian doctrine concerning Jesus has been
             docetic, that is, it has not really seriously accepted the fact that Jesus was a human
-            being. <span class="tooltiptext" role="tooltip">docetic christianity, Jesus as human</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> An effect of the liberation of women will very likely be the loss of plausibility
+            being. <span class="tooltiptext" role="tooltip">docetic christianity, Jesus as human</span></span> An effect of the liberation of women will very likely be the loss of plausibility
          of Christological formulas which come close to reflecting a kind of idolatry in regard
          to the person of Jesus. As it becomes better understood that God is transcendent and
          unobjcctifiable—or else not at all— it will become less plausible to speak of Jesus
          as
-         the Second Person of the Trinity who "assumed" a human nature. <span class="tooltip power-tooltip">Indeed, the prevalent
+         the Second Person of the Trinity who "assumed" a human nature. <span class="tooltip power-tooltip" data-subcategories="p_religion">Indeed, the prevalent
             emphasis upon the total uniqueness and supereminence of Jesus will, I think, become
             less
             meaningful. To say this is not at all to deny his extraordinary character and mission.
@@ -255,17 +324,17 @@
             been that the divinity could not have deigned to become incarnate in the "inferior"
             sex,
             and the "fact" that "he" did not do so reinforces the belief in masculine superiority.
-            <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Jesus as male supremacy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            <span class="tooltiptext" role="tooltip">Jesus as male supremacy</span></span>
          The transformation of society by the erosion of male dominance will generate serious
          challenges to such assumptions of the Christological tradition. </p>
       
-      <p><span class="tooltip religion-tooltip">It will, I think, become increasingly evident that exclusively
+      <p><span class="tooltip religion-tooltip" data-subcategories="r_christianity">It will, I think, become increasingly evident that exclusively
             masculine symbols for the ideal of "incarnation" will not do. As a uniquely masculine
             divinity loses credibility, so also the idea of a unique divine incarnation in a human
             being of the male sex may give way in the religious consciousness to an increased
             awareness of the divine presence in all human beings, understood as expressing and
             in a
-            real sense incarnating—although always inadequately—the power of being.<span class="tooltiptext" role="tooltip">masculine incarnation symbolism</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> The seeds of
+            real sense incarnating—although always inadequately—the power of being.<span class="tooltiptext" role="tooltip">masculine incarnation symbolism</span></span> The seeds of
          this awareness are already present, of course, in the traditional doctrine that all
          human beings are made to the image of God and in a less than adequate way in the
          doctrine of grace. Now it should become possible to work out with increasing realism
@@ -284,15 +353,15 @@
          or
          men will continue to find plausible that symbolism which is epitomized in the image
          of
-         the Virgin kneeling in adoration before her own son. <span class="tooltip religion-tooltip">Perhaps this will be replaced by
+         the Virgin kneeling in adoration before her own son. <span class="tooltip religion-tooltip" data-subcategories="r_christianity">Perhaps this will be replaced by
             the emergence of bisexual imagery which is not hierarchical. The experience of the
             past brought forth a new Adam and a new Eve. Perhaps the future will bring a new Christ
-            and a new Mary. <span class="tooltiptext" role="tooltip">bisexual imagery</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> For the present, it would appear that we arc being called upon to
+            and a new Mary. <span class="tooltiptext" role="tooltip">bisexual imagery</span></span> For the present, it would appear that we arc being called upon to
          recognize the poverty of all symbols and the fact of our past idolatry regarding them,
          and to turn to our own resources for bringing about the radically new in our own lives.
          </p>
       
-      <p><span class="tooltip religion-tooltip">The manifestation of God in Jesus was an eschato- logical event
+      <p><span class="tooltip religion-tooltip" data-subcategories="r_christianity">The manifestation of God in Jesus was an eschato- logical event
             whose fulfilled reality lies in the future. The Jesus of the Gospels was a free person
             who challenged ossified beliefs and laws. Since he was remarkably free of prejudice
             against women and treated them as equals insofar as the limitations of his culture
@@ -301,17 +370,17 @@
             assume equal partnership with men in society can bring about a manifestation of God
             in
             themselves which will be the Second Coming of God incarnate, fulfilling the latent
-            promise in the original revelation that men and women are made to the image of God.<span class="tooltiptext" role="tooltip">Jesus and women's liberation</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> </p>
+            promise in the original revelation that men and women are made to the image of God.<span class="tooltiptext" role="tooltip">Jesus and women's liberation</span></span> </p>
       
       <h3>Behind the Mask </h3>
       
       <p>It should be evident, then, that women's liberation is an event
          that can challenge authoritarian, exclusive and non-existential notions of faith and
-         revelation. <span class="tooltip fem-tooltip">Since women have been extra-environmentals, to use a McLuhanish term, that
+         revelation. <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Since women have been extra-environmentals, to use a McLuhanish term, that
             is, since they have not been part of the authority structure which uses "faith" and
             "revelation" to reinforce the mechanisms of alienation, their emergence can effect
             a
-            more widespread critical- ness of idolatry which is often masked by these ideas.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">women as extra-environmentals</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> There
+            more widespread critical- ness of idolatry which is often masked by these ideas.<span class="tooltiptext" role="tooltip">women as extra-environmentals</span></span> There
          could result from this a more general understanding of faith as a state of ultimate
          concern and commitment and a heightened sense of relativity concerning the symbols
          it
@@ -320,19 +389,19 @@
          of a theological elite, but in the general con sciousness—that revelation is an ongoing
          experience. </p>
       
-      <p><span class="tooltip religion-tooltip">The becoming of women implies also a transvaluation of values in
+      <p><span class="tooltip religion-tooltip" data-subcategories="r_christianity">The becoming of women implies also a transvaluation of values in
             Christian morality. As the old order is challenged and as men and women become freed
             to
             experience a wholeness of personality which the old polarizations impeded, the
             potentiality will be awakened for a change in moral consciousness which will go far
-            beyond Nietzsche's merely reactionary rejection of Christian values. <span class="tooltiptext" role="tooltip">challenge old order and change morals</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> </p>
+            beyond Nietzsche's merely reactionary rejection of Christian values. <span class="tooltiptext" role="tooltip">challenge old order and change morals</span></span> </p>
       
-      <p> <span class="tooltip religion-tooltip">Much of the traditional theory of Christian virtue appears to be
+      <p> <span class="tooltip religion-tooltip" data-subcategories="r_christianity">Much of the traditional theory of Christian virtue appears to be
             the product of reactions on the part of men —perhaps guilty reactions—to the behavioral
             excesses of the stereotypic male. There has been theoretical emphasis upon charity,
             meekness, obedience, humility, self- abnegation, sacrifice, service. Part of the problem
             with this moral ideology is that it became generally accepted not by men but by women,
-            who have hardly been helped by an ethic which reinforced their abject situation.<span class="tooltiptext" role="tooltip">passive virtues</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> This
+            who have hardly been helped by an ethic which reinforced their abject situation.<span class="tooltiptext" role="tooltip">passive virtues</span></span> This
          emphasis upon the passive virtues, of course, has not challenged exploitativeness
          but
          supported it. Part of the syndrome is the prevailing notion of sin as an offense against
@@ -341,7 +410,7 @@
          such a privatized morality the structures themselves of oppression arc not seen as
          sinful.</p>
       
-      <p><span class="tooltip religion-tooltip">Consistent with all of this is the fact that the traditional
+      <p><span class="tooltip religion-tooltip" data-subcategories="r_christianity">Consistent with all of this is the fact that the traditional
             Christian moral consciousness has been fixated upon the problems of reproductive
             activity in a manner totally disproportionate to its feeble political concern. This
             was
@@ -353,22 +422,22 @@
             to
             the remotest Mass center in Asia." Pertinent also is Simone de Beauvoir's remark that
             the church has reserved its uncompromising humanitarian- ism for man in the fetal
-            condition.<span class="tooltiptext" role="tooltip">reproductive morality</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Although theologians today acknowledge that this privatized morality has
+            condition.<span class="tooltiptext" role="tooltip">reproductive morality</span></span> Although theologians today acknowledge that this privatized morality has
          failed to cope with the structures of oppression, few seriously face the possibility
          that the roots of this distortion are deeply buried in the fundamental and all-
          pervasive sexual alienation which the women's movement is seeking to
          overcome.</p>
       
-      <p> <span class="tooltip power-tooltip">It is well-known that Christians under the spell of the jealous
+      <p> <span class="tooltip power-tooltip" data-subcategories="p_religion">It is well-known that Christians under the spell of the jealous
             God who represents the coliective power of his chosen people can use religion to justify
-            that "us and them" attitude which is disastrous in its consequences for the powerless.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">projection of the other</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip power-tooltip">&gt; It is less widely understood that the projection of "the other"—easily adaptable
+            that "us and them" attitude which is disastrous in its consequences for the powerless.<span class="tooltiptext" role="tooltip">projection of the other</span></span>
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">&gt; It is less widely understood that the projection of "the other"—easily adaptable
             to
             national, racial and class differences—has basically and primordially been directed
-            against women. Even the rhetoric of racism finds its model in sexism.<span class="tooltiptext" role="tooltip">sexism as root of all bigotry</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+            against women. Even the rhetoric of racism finds its model in sexism.<span class="tooltiptext" role="tooltip">sexism as root of all bigotry</span></span></p>
       
       
-      <p> <span class="tooltip fem-tooltip">The consciousness-raising which is beginning among women is
+      <p> <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">The consciousness-raising which is beginning among women is
             evoking a qualitatively new understanding of the subtle mechanisms which produce and
             destroy "the other," and a consequent empathy with all of the oppressed. This gives
             grounds for the hope that their emergence can generate a counterforce to the
@@ -381,7 +450,7 @@
             am suggesting is that it might be the only chance for the turning of human beings
             from a
             course leading to the deterioration and perhaps the end of life on this
-            planet. <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">saving humanity from destruction</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> </p>
+            planet. <span class="tooltiptext" role="tooltip">saving humanity from destruction</span></span> </p>
       
       <p> Those who see their concern for women's liberation as consonant
          with an evolving Christianity would be unrealistic to expect much comprehension from

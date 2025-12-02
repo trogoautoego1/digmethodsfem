@@ -2,7 +2,7 @@
    <head>
       <link rel="stylesheet" type="text/css" href="../style.css"/>
       <title>no more Miss America: Atlantic City is a town with class, they raid your morals and
-            judge your ass </title>
+         judge your ass </title>
    </head>
    <body>
       <nav>
@@ -13,31 +13,100 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>no more Miss America: Atlantic City is a town with class, they raid your morals and
-         judge your ass </h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>no more Miss America: Atlantic City is a town with class, they raid your morals and
+                       judge your ass </h1>
       
       <p>"Women of the World Unite-We Have Nothing to Lose But Our Men!" Off
          hand, I'd say that's quite a lot. Not so, however, according to New York Women's
          Liberation, who last Saturday, September 7 staged a demonstration on Atlantic City's
-         boardwalk to protest the crowning of Miss America 1968, <span class="tooltip power-tooltip">"symbol of the American woman's built-in
-            obsolescence."<span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+         boardwalk to protest the crowning of Miss America 1968, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">"symbol of the American woman's built-in
+            obsolescence."<span class="tooltiptext" role="tooltip">patriarchy</span></span></p>
       
       <p>The demonstration began at 3:00 in the afternoon in front of the
          Atlantic City Convention Hall. Women's Liberation, its participants numbering around
-         200, began with a march, interrupted almost immediately by <span class="tooltip power-tooltip">police vigilance<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">police</span><span class="tooltiptext" role="tooltip"></span></span>, hecklers and Pageant
+         200, began with a march, interrupted almost immediately by <span class="tooltip power-tooltip" data-subcategories="p_political">police vigilance<span class="tooltiptext" role="tooltip">police</span></span>, hecklers and Pageant
          organizers. Placards read "Miss America is alive and angry in Harlem," "Welcome to
          the
-         <span class="tooltip power-tooltip">Miss America Cattle Auction<span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>,"
-         and "Everyone is beautiful," while demonstrators chanted, <span class="tooltip power-tooltip">"Atlantic City is a town with
-            class, they raise your morals and judge your ass."<span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> </p>
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">Miss America Cattle Auction<span class="tooltiptext" role="tooltip">patriarchy</span></span>,"
+         and "Everyone is beautiful," while demonstrators chanted, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">"Atlantic City is a town with
+            class, they raise your morals and judge your ass."<span class="tooltiptext" role="tooltip">patriarchy</span></span> </p>
       
       <p>Hecklers on the other side of the police barricades retorted with
          "Do you play around with monkeys or men?" and "You wouldn't even make it in a woman's
          world." Although the majority of the spectators were hostile, one middle-aged man
          commented, "I think there's some truth, some factuality in their arguments." Jeers
-         ranged from "<span class="tooltip identity-tooltip">lesbians&gt;<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>" and "screwy frustrated
-         women" to <span class="tooltip power-tooltip">"If they were to get married, they
-            wouldn't have time for all this," <span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> (many of Women's Liberation are
+         ranged from "<span class="tooltip identity-tooltip" data-subcategories="sexuality">lesbians&gt;<span class="tooltiptext" role="tooltip">lesbian</span></span>" and "screwy frustrated
+         women" to <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">"If they were to get married, they
+            wouldn't have time for all this," <span class="tooltiptext" role="tooltip">patriarchy</span></span> (many of Women's Liberation are
          married) and "If they want freedom, let them join the Service." A little group set
          up
          its own counter- demonstration, with posters of "Jealousy will get you nowhere." Terry
@@ -67,19 +136,19 @@
          looked like the female version of-' Uncle Sam, and had chained to it several girls
          who
          were "auctioned off by Peggy Dobbins, dressed in a grey oversized man's coat, big
-         rubbers, tie, trousers and a white <span class="tooltip power-tooltip">slave trader's
-            hat<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">black</span></span>, to represent an <span class="tooltip power-tooltip">"auctioneer
-            slave-trader."<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">slavery</span></span> She gave a dialogue on the rights of women in much the
+         rubbers, tie, trousers and a white <span class="tooltip power-tooltip" data-subcategories="p_race">slave trader's
+            hat<span class="tooltiptext" role="tooltip">black</span></span>, to represent an <span class="tooltip power-tooltip" data-subcategories="p_race">"auctioneer
+               slave-trader."<span class="tooltiptext" role="tooltip">slavery</span></span> She gave a dialogue on the rights of women in much the
          same manner as that of the original suffragettes, after whom Women's Liberation seems
          to
          model itself.</p>
       
       <p>The demonstration's ranks dwindled a little at suppertime when
-         girls went to eat at a <span class="tooltip identity-tooltip">Black Community open-house<span class="tooltiptext" role="tooltip">black</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+         girls went to eat at a <span class="tooltip identity-tooltip" data-subcategories="race">Black Community open-house<span class="tooltiptext" role="tooltip">black</span></span>
          arranged by Flo Kennedy.</p>
       
       <p>The Pageant itself began at 8:30 with contestants nervously
-         strutting along the platform and a diligent contingent of <span class="tooltip power-tooltip">policewomen<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">police</span><span class="tooltiptext" role="tooltip"></span></span>, troopers and plainclothesmen
+         strutting along the platform and a diligent contingent of <span class="tooltip power-tooltip" data-subcategories="p_political">policewomen<span class="tooltiptext" role="tooltip">police</span></span>, troopers and plainclothesmen
          following around the 16 or so members of the Women's Liberation who had tickets for
          the
          ceremony. Around 10:30 a very peculiar odor started to permeate the main room and
@@ -88,7 +157,7 @@
          arrested Peggy Dobbins as she . came down the Pageant room steps spraying a Toni
          hair-spray bottle filled with butric acid. The Pageant continued with the contestants
          doing their routines, reminiscent of a Saturday afternoon talent show for 12- year-olds.
-         </p>
+      </p>
       
       <p>Eighteen-year-old Judith Ann Ford, Miss Illinois, was crowned Miss
          America at 12:00 midnight. She hadn't uttered three words of her acceptance speech,
@@ -104,8 +173,8 @@
          mouth.</p>
       
       <p>"They're expressing freedom, I guess," remarked Saundra Williams,
-         19-year-old winner of the <span class="tooltip identity-tooltip">Miss Black America Beauty
-            Pageant<span class="tooltiptext" role="tooltip">black</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, the first of its kind, held the same day in Atlantic City on the
+         19-year-old winner of the <span class="tooltip identity-tooltip" data-subcategories="race">Miss Black America Beauty
+            Pageant<span class="tooltiptext" role="tooltip">black</span></span>, the first of its kind, held the same day in Atlantic City on the
          boardwalk. "To each his own."</p>
       
       <p>The demonstration outside the Convention Hall, which was continuing
@@ -130,8 +199,8 @@
       <p>Commented Paul Krassner of the Realist who despite his sex was very
          helpful in retrieving lost articles for the girls and who seemed very much the topic
          of
-         conversation for the new suffragettes on the way home, "<span class="tooltip power-tooltip">"Well, it won't help the Democratic
-            convention."<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">politics</span><span class="tooltiptext" role="tooltip"></span></span>"</p>
+         conversation for the new suffragettes on the way home, "<span class="tooltip power-tooltip" data-subcategories="p_political">"Well, it won't help the Democratic
+            convention."<span class="tooltiptext" role="tooltip">politics</span></span>"</p>
       
-      </body>
+   </body>
 </html>

@@ -12,15 +12,84 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>The Furies: Lesbian/Feminist Monthly (v. 1)</h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>The Furies: Lesbian/Feminist Monthly (v. 1)</h1>
       
       <p>
-         <span class="tooltip religion-tooltip">The story of the Furies is the story of strong,
-            powerful  and the primacy of mother right. <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the furies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         </p>
+         <span class="tooltip religion-tooltip" data-subcategories="r_greekmyth">The story of the Furies is the story of strong,
+            powerful  and the primacy of mother right. <span class="tooltiptext" role="tooltip">the furies</span></span>
+      </p>
       
       <p>
-         <span class="tooltip religion-tooltip">Their most famous exploit (famous because in it they
+         <span class="tooltip religion-tooltip" data-subcategories="r_greekmyth">Their most famous exploit (famous because in it they
             lost much of their power) involved Orestes in the last episode connected with the
             cycle of the Trojan War. Orestes, acting on the orders of the Sun God Apollo, killed
             his mother Clytemnestra, because she had killed his father. Clytemnestra had killed
@@ -30,53 +99,53 @@
             or wash his bloodstained hands. He bit off his finger to try to appease them, but
             to
             no avail. Finally, in desperation, Orestes went before the court of Athena to plead
-            his case.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the furies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         </p>
+            his case.<span class="tooltiptext" role="tooltip">the furies</span></span>
+      </p>
       
       <p>
          The point at issue was whether matricide was
-         justifiable to avenge your father's murder, or in other words, whether <span class="tooltip identity-tooltip">men<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span> or <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> were to
-         dominate. <span class="tooltip religion-tooltip">Apollo defended Orestes and totally denied the importance of motherhood,
-            <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the furies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span><span class="tooltip fem-tooltip">claiming that women were no more than passive sperm receptacles for men, and that
-            the father was the only parent worthy
-            of the name.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">antifeminist</span></span><span class="tooltip religion-tooltip"> One might have thought that Athena, Goddess of Wisdom,
-            would have condemned Orestes, but Athena was the creation of the male God, Zeus, sprung
-            full-grown from his head, the
-            first token woman. Athena decided for Orestes.
-            Some mythologists say that Zeus, Athena, and Apollo had conspired from the
-            beginning, ordering Orestes to kill his mother in order to put an end, once and for
-            all, to the religious belief that motherhood was more divine than fatherhood. In any
-            case, that was the result.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the furies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         </p>
+         justifiable to avenge your father's murder, or in other words, whether <span class="tooltip identity-tooltip" data-subcategories="gender">men<span class="tooltiptext" role="tooltip">man</span></span> or <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">woman</span></span> were to
+         dominate. <span class="tooltip religion-tooltip" data-subcategories="r_greekmyth">Apollo defended Orestes and totally denied the importance of motherhood,
+            <span class="tooltiptext" role="tooltip">the furies</span></span><span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">claiming that women were no more than passive sperm receptacles for men, and that
+               the father was the only parent worthy
+               of the name.<span class="tooltiptext" role="tooltip">antifeminist</span></span><span class="tooltip religion-tooltip" data-subcategories="r_greekmyth"> One might have thought that Athena, Goddess of Wisdom,
+                  would have condemned Orestes, but Athena was the creation of the male God, Zeus, sprung
+                  full-grown from his head, the
+                  first token woman. Athena decided for Orestes.
+                  Some mythologists say that Zeus, Athena, and Apollo had conspired from the
+                  beginning, ordering Orestes to kill his mother in order to put an end, once and for
+                  all, to the religious belief that motherhood was more divine than fatherhood. In any
+                  case, that was the result.<span class="tooltiptext" role="tooltip">the furies</span></span>
+      </p>
       
       <p>
-         <span class="tooltip religion-tooltip">The Furies were, of course, furious, and threatened
+         <span class="tooltip religion-tooltip" data-subcategories="r_greekmyth">The Furies were, of course, furious, and threatened
             to lay waste the city of Athens. But Athena had a direct line to Zeus, King of the
-            Gods; <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the furies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span><span class="tooltip fem-tooltip">she told the Furies to accept the new
-            male supremacist order or lose everything.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">antifeminist</span></span><span class="tooltip religion-tooltip"> Some of the Furies and
-            their followers relented, the fest pursued Orestes until his death. <span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the furies</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         </p>
+            Gods; <span class="tooltiptext" role="tooltip">the furies</span></span><span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">she told the Furies to accept the new
+               male supremacist order or lose everything.<span class="tooltiptext" role="tooltip">antifeminist</span></span><span class="tooltip religion-tooltip" data-subcategories="r_greekmyth"> Some of the Furies and
+                  their followers relented, the fest pursued Orestes until his death. <span class="tooltiptext" role="tooltip">the furies</span></span>
+      </p>
       
       <p> We call our paper The FURIES because we are also angry. We are
-         angry because we are oppressed by male supremacy. <span class="tooltip power-tooltip">We have been fucked over all our lives by a system which
+         angry because we are oppressed by male supremacy. <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">We have been fucked over all our lives by a system which
             is based on the domination of men over women, which defines male as good and female
             as only
-            as good as the man you are with.<span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         It is a system in which <span class="tooltip identity-tooltip">heterosexuality<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">straight</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> is rigidly
-         enforced and <span class="tooltip identity-tooltip">Lesbianism<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> rigidly suppressed. It is a system which has
-         further divided us by <span class="tooltip power-tooltip">class<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">class</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, <span class="tooltip power-tooltip">race<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">race</span></span>, and nationality. </p>
+            as good as the man you are with.<span class="tooltiptext" role="tooltip">patriarchy</span></span>
+         It is a system in which <span class="tooltip identity-tooltip" data-subcategories="sexuality">heterosexuality<span class="tooltiptext" role="tooltip">straight</span></span> is rigidly
+         enforced and <span class="tooltip identity-tooltip" data-subcategories="sexuality">Lesbianism<span class="tooltiptext" role="tooltip">lesbian</span></span> rigidly suppressed. It is a system which has
+         further divided us by <span class="tooltip power-tooltip" data-subcategories="p_class">class<span class="tooltiptext" role="tooltip">class</span></span>, <span class="tooltip power-tooltip" data-subcategories="p_race">race<span class="tooltiptext" role="tooltip">race</span></span>, and nationality. </p>
       
       <p> We are working to change this system which has kept us separate
-         and powerless for so long. We are a collective of twelve <span class="tooltip identity-tooltip">Lesbians<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> living and working in Washington, D.C. We are rural and urban;
+         and powerless for so long. We are a collective of twelve <span class="tooltip identity-tooltip" data-subcategories="sexuality">Lesbians<span class="tooltiptext" role="tooltip">lesbian</span></span> living and working in Washington, D.C. We are rural and urban;
          from the Southwest, Midwest, South and Northeast. Our ages range from 18 to 28. We
          are
-         high school dropouts and Ph.D. candidates. We are <span class="tooltip class-tooltip">lower
-            class,<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lower</span></span>
-         <span class="tooltip class-tooltip">middle<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">middle</span><span class="tooltiptext" role="tooltip"></span></span> and <span class="tooltip class-tooltip">upper-middle
-            class.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">upper middle</span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip identity-tooltip">We are white.<span class="tooltiptext" role="tooltip">white</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Some of us have been <span class="tooltip identity-tooltip">Lesbians<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> for twelve years, others for ten months. We
+         high school dropouts and Ph.D. candidates. We are <span class="tooltip class-tooltip" data-subcategories="lower">lower
+            class,<span class="tooltiptext" role="tooltip">lower</span></span>
+         <span class="tooltip class-tooltip" data-subcategories="middle">middle<span class="tooltiptext" role="tooltip">middle</span></span> and <span class="tooltip class-tooltip" data-subcategories="middle">upper-middle
+            class.<span class="tooltiptext" role="tooltip">upper middle</span></span>
+         <span class="tooltip identity-tooltip" data-subcategories="race">We are white.<span class="tooltiptext" role="tooltip">white</span></span> Some of us have been <span class="tooltip identity-tooltip" data-subcategories="sexuality">Lesbians<span class="tooltiptext" role="tooltip">lesbian</span></span> for twelve years, others for ten months. We
          are committed to ending all oppressions by attacking their roots--male supremacy.
-         </p>
+      </p>
       
       
       <p> We believe The FURIES will make important contributions to the
@@ -84,18 +153,18 @@
          we
          are spending much time building an ideology which is the basis for action. For too
          long,
-         <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> in the Movement have fallen prey to the
-         very <span class="tooltip identity-tooltip">male<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span> propaganda they seek to refute. They have
+         <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">woman</span></span> in the Movement have fallen prey to the
+         very <span class="tooltip identity-tooltip" data-subcategories="gender">male<span class="tooltiptext" role="tooltip">man</span></span> propaganda they seek to refute. They have
          rejected thought, building an ideology, and all intellectual activity as the realm
          of
-         <span class="tooltip identity-tooltip">men<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span>, and tried to build a politics based only on
-         feelings--the area traditionally left to <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span>. The
+         <span class="tooltip identity-tooltip" data-subcategories="gender">men<span class="tooltiptext" role="tooltip">man</span></span>, and tried to build a politics based only on
+         feelings--the area traditionally left to <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">woman</span></span>. The
          philosophy has been, "if it feels good, it's O.K. If not, forget it." But that is
          like
-         saying that strength. which is a <span class="tooltip identity-tooltip">"male"<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span>
-         characteristic, should-be left to <span class="tooltip identity-tooltip">men<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span>, and <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> should embrace weakness. Most <span class="tooltip identity-tooltip">straight<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">straight</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span>, to say nothing of <span class="tooltip identity-tooltip">men<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span>, feel afraid or contemptuous of <span class="tooltip identity-tooltip">Lesbians<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. That fear and contempt is similar to the feelings <span class="tooltip class-tooltip">middle class<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">middle</span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip identity-tooltip">whites<span class="tooltiptext" role="tooltip">white</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> have towards <span class="tooltip identity-tooltip">Blacks<span class="tooltiptext" role="tooltip">black</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> or <span class="tooltip class-tooltip">lower class people.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lower</span></span> These
+         saying that strength. which is a <span class="tooltip identity-tooltip" data-subcategories="gender">"male"<span class="tooltiptext" role="tooltip">man</span></span>
+         characteristic, should-be left to <span class="tooltip identity-tooltip" data-subcategories="gender">men<span class="tooltiptext" role="tooltip">man</span></span>, and <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">woman</span></span> should embrace weakness. Most <span class="tooltip identity-tooltip" data-subcategories="sexuality">straight<span class="tooltiptext" role="tooltip">straight</span></span>
+         <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">woman</span></span>, to say nothing of <span class="tooltip identity-tooltip" data-subcategories="gender">men<span class="tooltiptext" role="tooltip">man</span></span>, feel afraid or contemptuous of <span class="tooltip identity-tooltip" data-subcategories="sexuality">Lesbians<span class="tooltiptext" role="tooltip">lesbian</span></span>. That fear and contempt is similar to the feelings <span class="tooltip class-tooltip" data-subcategories="middle">middle class<span class="tooltiptext" role="tooltip">middle</span></span>
+         <span class="tooltip identity-tooltip" data-subcategories="race">whites<span class="tooltiptext" role="tooltip">white</span></span> have towards <span class="tooltip identity-tooltip" data-subcategories="race">Blacks<span class="tooltiptext" role="tooltip">black</span></span> or <span class="tooltip class-tooltip" data-subcategories="lower">lower class people.<span class="tooltiptext" role="tooltip">lower</span></span> These
          feelings are the result of our socialization and are hardly worth glorifying. This
          is
          not to say that feelings are irrelevant, only that they are derived from our experience
@@ -104,38 +173,38 @@
          excuse inaction and inability to change. </p>
       
       <p> A political movement cannot advance without systematic thought and
-         practical organization. The haphazard, non-strategic, zig-zag tactics of the <span class="tooltip identity-tooltip">straight<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">straight</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip identity-tooltip">women's<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> movement, the male left, and many other so-called revolutionary groups have led
+         practical organization. The haphazard, non-strategic, zig-zag tactics of the <span class="tooltip identity-tooltip" data-subcategories="sexuality">straight<span class="tooltiptext" role="tooltip">straight</span></span>
+         <span class="tooltip identity-tooltip" data-subcategories="gender">women's<span class="tooltiptext" role="tooltip">woman</span></span> movement, the male left, and many other so-called revolutionary groups have led
          only to frustration and dissolution. We do not want to make those same mistakes; our
          ideology forms the basis for developing long-range strategies and short-term tactics,
          projects, and actions. </p>
       
       <p> The base of our ideological thought is: Sexism is the root of all
-         other oppressions, and <span class="tooltip identity-tooltip">Lesbian<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> and <span class="tooltip identity-tooltip">woman<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> oppression will not end by smashing capitalism,
-         <span class="tooltip power-tooltip">racism<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">racism</span></span>, and imperialism.<span class="tooltip fem-tooltip">Lesbianism is not a matter of sexual
+         other oppressions, and <span class="tooltip identity-tooltip" data-subcategories="sexuality">Lesbian<span class="tooltiptext" role="tooltip">lesbian</span></span> and <span class="tooltip identity-tooltip" data-subcategories="gender">woman<span class="tooltiptext" role="tooltip">woman</span></span> oppression will not end by smashing capitalism,
+         <span class="tooltip power-tooltip" data-subcategories="p_race">racism<span class="tooltiptext" role="tooltip">racism</span></span>, and imperialism.<span class="tooltip fem-tooltip" data-subcategories="f_politicallesbian">Lesbianism is not a matter of sexual
             preference, but rather one of political choice which every woman must make if she
             is
-            to become woman-identified and thereby end male supremacy.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip identity-tooltip">Lesbians,<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">lesbian</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> as outcasts from every culture but
-         their own have the most to gain by ending <span class="tooltip power-tooltip">race<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">race</span></span>, <span class="tooltip power-tooltip">class<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">class</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, and national supremacy within
-         their own ranks. <span class="tooltip fem-tooltip">Lesbians must
+            to become woman-identified and thereby end male supremacy.</span>
+         <span class="tooltip identity-tooltip" data-subcategories="sexuality">Lesbians,<span class="tooltiptext" role="tooltip">lesbian</span></span> as outcasts from every culture but
+         their own have the most to gain by ending <span class="tooltip power-tooltip" data-subcategories="p_race">race<span class="tooltiptext" role="tooltip">race</span></span>, <span class="tooltip power-tooltip" data-subcategories="p_class">class<span class="tooltiptext" role="tooltip">class</span></span>, and national supremacy within
+         their own ranks. <span class="tooltip fem-tooltip" data-subcategories="f_politicallesbian">Lesbians must
             get out of the straight women's movement and form their own movement in order to be
             taken seriously, to stop straight women from oppressing us, and to force straight
-            women to deal with their own Lesbianism.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         <span class="tooltip fem-tooltip">Lesbians cannot develop a common
-            politics with women who do not accept Lesbianism as a political issue.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
-         </p>
+            women to deal with their own Lesbianism.</span>
+         <span class="tooltip fem-tooltip" data-subcategories="f_politicallesbian">Lesbians cannot develop a common
+            politics with women who do not accept Lesbianism as a political issue.</span>
+      </p>
       
       <p> In this (see page 8) and following issues of The FURIES we will
          share our thoughts with you. We welcome your comments, letters, articles, fiction,
          poetry, news, graphics, and support. We want to build a movement in this country and
          in
-         the world which can effectively stop the violent, sick, oppressive acts of <span class="tooltip identity-tooltip">male<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man</span><span class="tooltiptext" role="tooltip"></span></span>
+         the world which can effectively stop the violent, sick, oppressive acts of <span class="tooltip identity-tooltip" data-subcategories="gender">male<span class="tooltiptext" role="tooltip">man</span></span>
          supremacy. We want to build a movement which makes all people free. </p>
       
-      <p> For the Chinese <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> whose feet were bound and crippled; for the.
-         Ibibos of Africa whose clitori were mutilated; for every <span class="tooltip identity-tooltip">woman<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> who has ever been raped,
-         physically, <span class="tooltip power-tooltip">economically<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">economic</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, psychologically, we take the name of <span class="tooltip religion-tooltip">the FURIES, Goddesses of
-            Vengeance and protectors of women.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">greek myth</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Ginny Berson. </p>
-      </body>
+      <p> For the Chinese <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">woman</span></span> whose feet were bound and crippled; for the.
+         Ibibos of Africa whose clitori were mutilated; for every <span class="tooltip identity-tooltip" data-subcategories="gender">woman<span class="tooltiptext" role="tooltip">woman</span></span> who has ever been raped,
+         physically, <span class="tooltip power-tooltip" data-subcategories="p_class">economically<span class="tooltiptext" role="tooltip">economic</span></span>, psychologically, we take the name of <span class="tooltip religion-tooltip" data-subcategories="r_greekmyth">the FURIES, Goddesses of
+            Vengeance and protectors of women.<span class="tooltiptext" role="tooltip">greek myth</span></span> Ginny Berson. </p>
+   </body>
 </html>

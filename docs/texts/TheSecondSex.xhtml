@@ -12,45 +12,114 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>The Second Sex</h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>The Second Sex</h1>
       
       <p>
-         <span class="tooltip fem-tooltip">WOMAN? Very simple, say the fanciers of simple formulas: she is a womb, an ovary;
+         <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">WOMAN? Very simple, say the fanciers of simple formulas: she is a womb, an ovary;
             she is a
-            female – this word is sufficient to define her.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">bioessentialism</span></span> In the mouth of a man the epithet female has
+            female – this word is sufficient to define her.<span class="tooltiptext" role="tooltip">bioessentialism</span></span> In the mouth of a man the epithet female has
          the sound of an insult, yet he is not ashamed of his animal nature; on the contrary,
          he is
-         proud if someone says of him: ‘He is a male!’ <span class="tooltip fem-tooltip">The term ‘female’ is derogatory not because it
+         proud if someone says of him: ‘He is a male!’ <span class="tooltip fem-tooltip" data-subcategories="f_antifeminist">The term ‘female’ is derogatory not because it
             emphasises woman’s animality, but because it imprisons her in her sex; and if this
             sex 
             seems to man to be contemptible and inimical even in harmless dumb animals, it is
             
             evidently because of the uneasy hostility stirred up in him by woman. Nevertheless
             he 
-            wishes to find in biology a justification for this sentiment.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">bioessentialism</span></span> The word female brings up in his 
+            wishes to find in biology a justification for this sentiment.<span class="tooltiptext" role="tooltip">bioessentialism</span></span> The word female brings up in his 
          mind a saraband of imagery – a vast, round ovum engulfs and castrates the agile 
-         spermatozoan; <span class="tooltip power-tooltip">the monstrous and swollen termite queen rules over the enslaved males;<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">natural matriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> the
-         <span class="tooltip power-tooltip">female praying mantis and the spider, satiated with love, crush and devour their partners;<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">natural matriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> 
+         spermatozoan; <span class="tooltip power-tooltip" data-subcategories="p_matriarchy">the monstrous and swollen termite queen rules over the enslaved males;<span class="tooltiptext" role="tooltip">natural matriarchy</span></span> the
+         <span class="tooltip power-tooltip" data-subcategories="p_matriarchy">female praying mantis and the spider, satiated with love, crush and devour their partners;<span class="tooltiptext" role="tooltip">natural matriarchy</span></span> 
          the bitch in heat runs through the alleys, trailing behind her a wake of depraved
          odours; the 
          she-monkey presents posterior immodestly and then steals away with hypocritical 
-         coquetry; <span class="tooltip power-tooltip">and the most superb wild beasts – the tigress, the lioness, the panther – bed down
+         coquetry; <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">and the most superb wild beasts – the tigress, the lioness, the panther – bed down
             
-            slavishly under the imperial embrace of the male.<span class="tooltiptext" role="tooltip">natural patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Females sluggish, eager, artful, stupid, 
+            slavishly under the imperial embrace of the male.<span class="tooltiptext" role="tooltip">natural patriarchy</span></span> Females sluggish, eager, artful, stupid, 
          callous, lustful, ferocious, abased – man projects them all at once upon woman. And
          the 
          fact is that she is a female. But if we are willing to stop thinking in platitudes,
          two questions 
-         are immediately posed: <span class="tooltip fem-tooltip">what does the female denote in the animal kingdom? And what 
-            particular kind of female is manifest in woman?<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">natural vs societal</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+         are immediately posed: <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">what does the female denote in the animal kingdom? And what 
+            particular kind of female is manifest in woman?<span class="tooltiptext" role="tooltip">natural vs societal</span></span>
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">Males and females are two types of individuals which are differentiated within a species
+         <span class="tooltip social-tooltip" data-subcategories="s_natural_rights">Males and females are two types of individuals which are differentiated within a species
             for 
             the function of reproduction; they can be defined only correlatively. But first it
             must be noted 
-            that even the division of a species into two sexes is not always clear-cut.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            that even the division of a species into two sexes is not always clear-cut.<span class="tooltiptext" role="tooltip">natural sexes</span></span>
          </p>
       
       <p>
@@ -121,7 +190,7 @@
          </p>
       
       <p>
-         <span class="tooltip social-tooltip">The production of two types of gametes, the sperm and the egg, does not necessarily
+         <span class="tooltip social-tooltip" data-subcategories="s_natural_rights">The production of two types of gametes, the sperm and the egg, does not necessarily
             imply 
             the existence of two distinct sexes; as a matter of fact, egg and sperm – two highly
             
@@ -129,7 +198,7 @@
             
             This occurs in normally hermaphroditic species, which are common among plants and
             are 
-            also to be found among the lower animals, such as annelid worms and molluscs.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> In them 
+            also to be found among the lower animals, such as annelid worms and molluscs.<span class="tooltiptext" role="tooltip">scientific sexes</span></span> In them 
          reproduction may be accomplished through self-fertilisation or, more commonly, cross-
          fertilisation. Here again certain biologists have attempted to account for the existing
          state of 
@@ -157,7 +226,7 @@
       <p>
          In most philosophies this fact has been taken for granted without pretence of explanation.
          
-         <span class="tooltip religion-tooltip">According to the Platonic myth, there were at the beginning men, women, and 
+         <span class="tooltip religion-tooltip" data-subcategories="r_greekmyth">According to the Platonic myth, there were at the beginning men, women, and 
             hermaphrodites. Each individual had two faces, four arms, four legs, and two conjoined
             
             bodies. At a certain time they were split in two, and ever since each half seeks to
@@ -166,13 +235,13 @@
             
             through the coupling of dissimilar halves. But it is only love that this story is
             intended to 
-            explain; division into sexes is assumed at the outset.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Platonic myth</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Nor does Aristotle explain this division, 
+            explain; division into sexes is assumed at the outset.<span class="tooltiptext" role="tooltip">Platonic myth</span></span> Nor does Aristotle explain this division, 
          for if matter and form must cooperate in all action, there is no necessity for the
          active and 
-         passive principles to he separated in two different categories of individuals. <span class="tooltip religion-tooltip">Thus St Thomas 
+         passive principles to he separated in two different categories of individuals. <span class="tooltip religion-tooltip" data-subcategories="r_catholicism">Thus St Thomas 
             proclaims woman an ‘incidental’ being, which is a way of suggesting – from the male
             point 
-            of view – the accidental or contingent nature of sexuality.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">St Thomas theory</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip social-tooltip">Hegel, however, would have been 
+            of view – the accidental or contingent nature of sexuality.<span class="tooltiptext" role="tooltip">St Thomas theory</span></span> <span class="tooltip social-tooltip" data-subcategories="s_natural_rights">Hegel, however, would have been 
             untrue to his passion for rationalism had he failed to attempt a logical explanation.
             Sexuality 
             in his view represents the medium through which the subject attains a concrete sense
@@ -195,7 +264,7 @@
             be sexual 
             differentiation. But his exposition is not convincing: one feels in it all too distinctly
             the 
-            predetermination to find in every operation the three terms of the syllogism.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            predetermination to find in every operation the three terms of the syllogism.<span class="tooltiptext" role="tooltip">sexual belonging</span></span>
          </p>
       
       <p>
@@ -212,24 +281,24 @@
          Hegel’s discussion reveals a most important significance of sexuality, but his mistake
          is 
          always to argue from significance to necessity, to equate significance with necessity.
-         <span class="tooltip social-tooltip">Man 
+         <span class="tooltip social-tooltip" data-subcategories="s_rights_of_man">Man 
             gives significance to the sexes and their relations through sexual activity, just
             as he gives 
             sense and value to all the functions that he exercises; but sexual activity is not
             necessarily 
-            implied in the nature of the human being.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">sexual significance</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip social-tooltip">Merleau-Ponty notes in the Phénoménologie de la 
+            implied in the nature of the human being.<span class="tooltiptext" role="tooltip">sexual significance</span></span> <span class="tooltip social-tooltip" data-subcategories="s_natural_rights">Merleau-Ponty notes in the Phénoménologie de la 
             perception that human existence requires us to revise our ideas of necessity and 
             contingence. ‘Existence,’ he says, ‘has no casual, fortuitous qualities, no content
             that does 
             not contribute to the formation of its aspect; it does not admit the notion of sheer
             fact, for it 
-            is only through existence that the facts are manifested.’<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> True enough. But it is also true that 
+            is only through existence that the facts are manifested.’<span class="tooltiptext" role="tooltip">human existence</span></span> True enough. But it is also true that 
          there are conditions without which the very fact of existence itself would seem to
          be 
-         impossible. <span class="tooltip social-tooltip">To be present in the world implies strictly that there exists a body which is at 
+         impossible. <span class="tooltip social-tooltip" data-subcategories="s_natural_rights">To be present in the world implies strictly that there exists a body which is at 
             once a material thing in the world and a point of view towards this world; but nothing
             requires 
-            that this body have this or that particular structure.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip social-tooltip">Sartre discusses in L’Étre et le 
+            that this body have this or that particular structure.<span class="tooltiptext" role="tooltip">material body</span></span> <span class="tooltip social-tooltip" data-subcategories="s_rights_of_man">Sartre discusses in L’Étre et le 
             néant Heidegger’s dictum to the effect that the real nature of man is bound up with
             death 
             because of man’s finite state. He shows that an existence which is finite and yet
@@ -246,7 +315,7 @@
             time creates 
             behind him and before him the infinite past and future, and it would seem, then, that
             the 
-            perpetuation of the species is the correlative of his individual limitation.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">man as mortal</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip social-tooltip">Thus we can regard 
+            perpetuation of the species is the correlative of his individual limitation.<span class="tooltiptext" role="tooltip">man as mortal</span></span> <span class="tooltip social-tooltip" data-subcategories="s_natural_rights">Thus we can regard 
             the phenomenon of reproduction as founded in the very nature of being. But we must
             stop 
             there. The perpetuation of the species does not necessitate sexual differentiation.
@@ -256,21 +325,21 @@
             any realistic definition of existence. But it nevertheless remains true that both
             a mind without 
             a body and an immortal man are strictly inconceivable, whereas we can imagine a 
-            parthenogenetic or hermaphroditic society.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            parthenogenetic or hermaphroditic society.<span class="tooltiptext" role="tooltip">nature of being</span></span>
          </p>
       
       <p>
          On the respective functions of the two sexes man has entertained a great variety of
          beliefs. 
-         At first they had no scientific basis, simply reflecting social myths. <span class="tooltip power-tooltip">It was long thought – and 
+         At first they had no scientific basis, simply reflecting social myths. <span class="tooltip power-tooltip" data-subcategories="p_matriarchy">It was long thought – and 
             it still is believed in certain primitive matriarchal societies – that the father
             plays no part in 
             conception. Ancestral spirits in the form of living germs are supposed to find their
             way into 
-            the maternal body.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">natural matriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip power-tooltip">With the advent patriarchal institutions, the male laid eager claim to his 
+            the maternal body.<span class="tooltiptext" role="tooltip">natural matriarchy</span></span> <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">With the advent patriarchal institutions, the male laid eager claim to his 
             posterity. It was still necessary to grant the mother a part in procreation, but it
             was conceded 
-            only that she carried and nourished the living seed, created by the father alone.<span class="tooltiptext" role="tooltip">reproductive patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip power-tooltip">Aristotle 
+            only that she carried and nourished the living seed, created by the father alone.<span class="tooltiptext" role="tooltip">reproductive patriarchy</span></span> <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">Aristotle 
             fancied that the foetus arose from the union of sperm and menstrual blood, woman 
             furnishing only passive matter while the male principle contributed force, activity,
             
@@ -278,7 +347,7 @@
             the 
             weak or female and the strong or male. The theory of Aristotle survived through the
             Middle 
-            Ages and into modern times.<span class="tooltiptext" role="tooltip">sexual gender roles</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+            Ages and into modern times.<span class="tooltiptext" role="tooltip">sexual gender roles</span></span>
          </p>
       
       <p>
@@ -298,14 +367,14 @@
          into the 
          uterus of the female; but it was supposed that they were simply nourished therein
          and that 
-         the coming individual was preformed in them. <span class="tooltip power-tooltip">In 1694 a Dutchman, Hartsaker, drew a picture 
+         the coming individual was preformed in them. <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">In 1694 a Dutchman, Hartsaker, drew a picture 
             of the ‘homunculus’ hidden in the spermatozoan, and in 1699, another scientist said
             that he 
             had seen the spermatozoan cast off a kind of moult under which appeared a little man,
             
             which he also drew. Under these imaginative hypotheses, woman was restricted to the
             
-            nourishment of an active, living principle already preformed in perfection.<span class="tooltiptext" role="tooltip">women as passive</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> These notions 
+            nourishment of an active, living principle already preformed in perfection.<span class="tooltiptext" role="tooltip">women as passive</span></span> These notions 
          were not universally accepted, and they were argued into the nineteenth century. The
          use of 
          the microscope enabled von Baer in 1827 to discover the mammalian egg, contained inside
@@ -326,7 +395,7 @@
          </p>
       
       <p>
-         Aristotle’s ideas were not wholly discredited, however. <span class="tooltip power-tooltip">Hegel held that the two sexes were of 
+         Aristotle’s ideas were not wholly discredited, however. <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">Hegel held that the two sexes were of 
             necessity different, the one active and the other passive, and of course the female
             would be 
             the passive one. ‘Thus man, in consequence of that differentiation, is the active
@@ -336,11 +405,11 @@
             an active 
             principle, men still tried to make a point of its quiescence as contrasted with the
             lively 
-            movements of the sperm.<span class="tooltiptext" role="tooltip">women as passive</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Today one notes an opposite tendency on the part of some 
+            movements of the sperm.<span class="tooltiptext" role="tooltip">women as passive</span></span> Today one notes an opposite tendency on the part of some 
          scientists. The discoveries made in the course of experiments on parthenogenesis have
          led 
          them to reduce the function of the sperm to that of a simple physico-chemical reagent.
-         <span class="tooltip power-tooltip">It 
+         <span class="tooltip power-tooltip" data-subcategories="p_matriarchy">It 
             has been shown that in certain species the stimulus of an acid or even of a needle-prick
             is 
             enough to initiate the cleavage of the egg and the development of the embryo. On this
@@ -351,7 +420,7 @@
             of the male 
             will become unnecessary in procreation – the answer, it would seem, to many a woman’s
             
-            prayer.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">reproduction without men</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> But there is no warrant for so bold an expectation, for nothing warrants us in 
+            prayer.<span class="tooltiptext" role="tooltip">reproduction without men</span></span> But there is no warrant for so bold an expectation, for nothing warrants us in 
          universalising specific life processes. The phenomena of asexual propagation and of
          
          parthenogenesis appear to be neither more nor less fundamental than those of sexual
@@ -366,10 +435,10 @@
          for which 
          we can offer no basis in the nature of things nor any explanation through observed
          data, and 
-         the significance of which we cannot comprehend a priori. <span class="tooltip identity-tooltip">We can hope to grasp the 
+         the significance of which we cannot comprehend a priori. <span class="tooltip identity-tooltip" data-subcategories="gender">We can hope to grasp the 
             significance of sexuality only by studying it in its concrete manifestations; and
             then perhaps 
-            the meaning of the word female will stand revealed.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">sceintific definition of women</span><span class="tooltiptext" role="tooltip"></span></span>
+            the meaning of the word female will stand revealed.<span class="tooltiptext" role="tooltip">sceintific definition of women</span></span>
          </p>
       
       <p>

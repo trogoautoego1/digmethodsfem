@@ -12,20 +12,89 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>Excerpt from Punk Planet 29</h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>Excerpt from Punk Planet 29</h1>
       
-      <p>Carrie: <span class="tooltip fem-tooltip"><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">It’s like they think they’re paying you a compliment by taking you out of the 'girl
-               group ghetto' and saying that you’ve tran¬ scended gender.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+      <p>Carrie: <span class="tooltip fem-tooltip" data-subcategories="f_terf"><span class="tooltiptext" role="tooltip">It’s like they think they’re paying you a compliment by taking you out of the 'girl
+               group ghetto' and saying that you’ve tran¬ scended gender.</span></span>
          It’s like they think they’re paying you a compliment by taking you out of the "girl
          group ghetto” and 
-         saying that you’ve tran¬ scended gender. But that’s never been our goal. I mean, <span class="tooltip fem-tooltip">how could we possibly 
-            tran¬ scend something that’s so experiential and part of who we are?<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">how could we possibly                  tran¬ scend something that’s so experiential
-               and part of who we are?</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> And why would we ever want to be "<span class="tooltip identity-tooltip">Men In Rock<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Men in Rock</span><span class="tooltiptext" role="tooltip"></span></span>?” 
-         <span class="tooltip power-tooltip"> It’s not a history that we’re a part of nor would we 
-            like to emulate it.<span class="tooltiptext" role="tooltip">It’s not a history that we’re a part of nor would we like to emulate it.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+         saying that you’ve tran¬ scended gender. But that’s never been our goal. I mean, <span class="tooltip fem-tooltip" data-subcategories="f_terf">how could we possibly 
+            tran¬ scend something that’s so experiential and part of who we are?<span class="tooltiptext" role="tooltip">how could we possibly                  tran¬ scend something that’s so experiential
+               and part of who we are?</span></span> And why would we ever want to be "<span class="tooltip identity-tooltip" data-subcategories="gender">Men In Rock<span class="tooltiptext" role="tooltip">Men in Rock</span></span>?” 
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy"> It’s not a history that we’re a part of nor would we 
+            like to emulate it.<span class="tooltiptext" role="tooltip">It’s not a history that we’re a part of nor would we like to emulate it.</span></span></p>
       
       
-      <p>Janet: Maybe they’re trying to say that we’ve transcended <span class="tooltip identity-tooltip"><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the cliche of the girl keyboard player                  in a mini skirt.</span><span class="tooltiptext" role="tooltip"></span></span>the cliche of the girl keyboard player in a mini skirt.</p>
+      <p>Janet: Maybe they’re trying to say that we’ve transcended <span class="tooltip identity-tooltip" data-subcategories="gender"><span class="tooltiptext" role="tooltip">the cliche of the girl keyboard player                  in a mini skirt.</span></span>the cliche of the girl keyboard player in a mini skirt.</p>
       
       
       <p>Corin: But that would be a more intelligent thing to say and they’re not saying that.
@@ -34,9 +103,9 @@
          read the press kit and they write exactly what 
          someone else wrote, just in different words—sometimes in the same words [laughs].
          There’s no real con¬ text or basis for many of these 
-         people to write about us. They have very little to refer to when they describe <span class="tooltip identity-tooltip">women who play music<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">women who play music</span><span class="tooltiptext" role="tooltip"></span></span>. 
+         people to write about us. They have very little to refer to when they describe <span class="tooltip identity-tooltip" data-subcategories="gender">women who play music<span class="tooltiptext" role="tooltip">women who play music</span></span>. 
          You almost have to come up with a whole new vocabulary, really. Rock journalism has
-         existed for as long as <span class="tooltip power-tooltip">rock music<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">rock music</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, but when they 
+         existed for as long as <span class="tooltip power-tooltip" data-subcategories="p_social">rock music<span class="tooltiptext" role="tooltip">rock music</span></span>, but when they 
          try to describe some¬ thing that doesn’t fit easily into that same category with the
          same language, it’s impossible. </p>
       
@@ -54,7 +123,7 @@
          simple terms. </p>
       
       
-      <p>Corin: It’s just such a cop out. It’s the same thing with <span class="tooltip power-tooltip">mainstream music<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">mainstream music</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. They want it to be really simple and 
+      <p>Corin: It’s just such a cop out. It’s the same thing with <span class="tooltip power-tooltip" data-subcategories="p_social">mainstream music<span class="tooltiptext" role="tooltip">mainstream music</span></span>. They want it to be really simple and 
          easy to understand. </p>
       
       
@@ -66,7 +135,7 @@
          On its sur¬ face it seems simple, 
          but once you break it down it’s actually really intricate. You have these competing
          guitar lines and competing vocal lines. It’s such an 
-         anomaly that you would have found this relative success in the <span class="tooltip power-tooltip">main¬ stream<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">main¬ stream</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>and that you’d be playing venues this size and getting the 
+         anomaly that you would have found this relative success in the <span class="tooltip power-tooltip" data-subcategories="p_social">main¬ stream<span class="tooltiptext" role="tooltip">main¬ stream</span></span>and that you’d be playing venues this size and getting the 
          amount of press that you have. What do you attribute that to? </p>
       
       
@@ -77,5 +146,5 @@
          more and more people come.</p>
       
       
-      </body>
+   </body>
 </html>

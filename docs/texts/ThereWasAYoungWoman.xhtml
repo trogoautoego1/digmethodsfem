@@ -12,68 +12,137 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>There was a young woman who swallowed a lie</h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>There was a young woman who swallowed a lie</h1>
       
       <p>
-          THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED A LIE, We all know why she
+         THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED A LIE, We all know why she
          swallowed that lie, PERHAPS SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
-          THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED A RULE, <span class="tooltip power-tooltip">"Live to serve others"<span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, she learned it in
+         THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED A RULE, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">"Live to serve others"<span class="tooltiptext" role="tooltip">patriarchy</span></span>, she learned it in
          school. She swallowed the rule to go with the lie, We all know why she swallowed that
          lie, PERHAPS SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
-          THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED SOME FLUFF; <span class="tooltip class-tooltip">Lipstick &amp;
-            candy &amp; powder &amp; puff<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">beauty-industry</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> -- She swallowed the FLUFF to sweeten the rule, She
+         THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED SOME FLUFF; <span class="tooltip class-tooltip" data-subcategories="economic">Lipstick &amp;
+            candy &amp; powder &amp; puff<span class="tooltiptext" role="tooltip">beauty-industry</span></span> -- She swallowed the FLUFF to sweeten the rule, She
          swallowed the rule to go with the lie, We all know why she swallowed that lie, PERHAPS
          SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
-          THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED A LINE, <span class="tooltip power-tooltip"> "I like 'em dumb baby, you suit me fine." <span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+         THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED A LINE, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy"> "I like 'em dumb baby, you suit me fine." <span class="tooltiptext" role="tooltip">patriarchy</span></span>
          She swallowed the line to go with the FLUFF She swallowed the FLUFF to sweeten the
          rule,
          She swallowed the rule to go with the lie, We all know why she swallowed that lie,
          PERHAPS SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
          
-         <span class="tooltip power-tooltip"> THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED A PILL,
-            Might have said, "No," but she hadn't the will. <span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> She swallowed the
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy"> THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED A PILL,
+            Might have said, "No," but she hadn't the will. <span class="tooltiptext" role="tooltip">patriarchy</span></span> She swallowed the
          pill to go with the line, She swallowed the line to go with the FLUFF She swallowed
          the
          FLUFF to sweeten the rule, She swallowed the rule to go with the lie, We all know
          why
          she swallowed that lie, PERHAPS SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
-          THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED A RING, <span class="tooltip power-tooltip">Looked like a princess
-            but felt like a thing. <span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> She swallowed the ring to make up for the pill, She swallowed the
+         THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED A RING, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">Looked like a princess
+            but felt like a thing. <span class="tooltiptext" role="tooltip">patriarchy</span></span> She swallowed the ring to make up for the pill, She swallowed the
          pill to go with the line, She swallowed the line to go with the FLUFF She swallowed
          the
          FLUFF to sweeten the rule, She swallowed the rule to go with the lie, We all know
          why
          she swallowed that lie... PERHAPS SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
-          THERE WAS A YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WHO SWALLOWED SOME SPOCK, <span class="tooltip power-tooltip">"Stay at home,
-            Mother, take care of your flock."<span class="tooltiptext" role="tooltip">patriarchy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> She swalloed the Spock to go with the ring, She
+         THERE WAS A YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WHO SWALLOWED SOME SPOCK, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">"Stay at home,
+            Mother, take care of your flock."<span class="tooltiptext" role="tooltip">patriarchy</span></span> She swalloed the Spock to go with the ring, She
          swallowed the ring to make up for the pill, She swallowed the pill to go with the
          line,
          She swallowed the line to go with the FLUFF She swallowed the FLUFF to sweeten the
          rule,
          She swallowed the rule to go with the lie, We all know why she swallowed that lie
          PERHAPS SHE'LL DIE! 
-         </p>
+      </p>
       
       <p>
-          ONE DAY THIS YOUNG <span class="tooltip identity-tooltip">WOMAN<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">woman</span><span class="tooltiptext" role="tooltip"></span></span> WOKE UP &amp; SHE SAID, "I've swallowed so
+         ONE DAY THIS YOUNG <span class="tooltip identity-tooltip" data-subcategories="gender">WOMAN<span class="tooltiptext" role="tooltip">woman</span></span> WOKE UP &amp; SHE SAID, "I've swallowed so
          much, I wish I were dead. I swallowed it all to go with the Spock, I swallowed the
          Spock
          to go with the ring, I swallowed the ring to make up for the pill, I swallowed the
@@ -82,15 +151,15 @@
          to
          sweeten the rule, I swallowed the rule to go with the lie, Why in the world did I
          swallow that lie!? PERHAPS I'LL DIE!" 
-         </p>
+      </p>
       
       <p>
-          <span class="tooltip fem-tooltip">SHE RAN TO HER SISTERS, IT WASN'T TOO LATE TO BE LIBERATED,
-            REGURGITATE.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">?</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> She threw up the Spock &amp; threw up the ring, Looked like a princess, but
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">SHE RAN TO HER SISTERS, IT WASN'T TOO LATE TO BE LIBERATED,
+            REGURGITATE.<span class="tooltiptext" role="tooltip">?</span></span> She threw up the Spock &amp; threw up the ring, Looked like a princess, but
          felt like a thing; She threw up the pill &amp; threw up the line, "I like 'em dumb,
          baby, you suit me fine; She threw up the FLUFF and threw up the rule, "Live to serve
-         others," she learned it in school; <span class="tooltip fem-tooltip">And last but not least, she threw up that lie, - We
-            all know why she threw up that lie, SHE WILL NOT DIE!!<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">?</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> 
-         </p>
-      </body>
+         others," she learned it in school; <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">And last but not least, she threw up that lie, - We
+            all know why she threw up that lie, SHE WILL NOT DIE!!<span class="tooltiptext" role="tooltip">?</span></span> 
+      </p>
+   </body>
 </html>

@@ -12,27 +12,96 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>Excerpt from Punk Planet 52 </h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>Excerpt from Punk Planet 52 </h1>
       
       <p>Posing is easy, says Hannah. By the end of her first photo shoot, she was trashed
          on whiskey ("it kinda settled my 
          nerves,” she laughs) and hav¬ing a blast. And then she was naked. And then pretty
-         soon afterward, she was naked on the Internet at Friction USA, one of a wave of <span class="tooltip fem-tooltip">adult websites<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">adult websites</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> 
-         selling what’s basically—though no one wants to put it so <span class="tooltip fem-tooltip">bluntly—punk rock porn.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">bluntly—punk rock porn.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+         soon afterward, she was naked on the Internet at Friction USA, one of a wave of <span class="tooltip fem-tooltip" data-subcategories="f_liberal">adult websites<span class="tooltiptext" role="tooltip">adult websites</span></span> 
+         selling what’s basically—though no one wants to put it so <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">bluntly—punk rock porn.<span class="tooltiptext" role="tooltip">bluntly—punk rock porn.</span></span></p>
       
       
-      <p><span class="tooltip identity-tooltip">Women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Women</span><span class="tooltiptext" role="tooltip"></span></span> like Hannah—not her real name—are where the action is on sites like Friction USA,
+      <p><span class="tooltip identity-tooltip" data-subcategories="gender">Women<span class="tooltiptext" role="tooltip">Women</span></span> like Hannah—not her real name—are where the action is on sites like Friction USA,
          Burning Auigel, and leaderof-the-pack Suicide Girls. 
          The sites rack up a reported tens of thousands of visitors a day, charging members
          a few bucks a month to see thousands of crystal-clear color photos of what 
-         Suicide Girls call "<span class="tooltip identity-tooltip">the hottest, cutest, sexiest goth, punk, and emo girls we can find<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the hottest, cutest, sexiest goth, punk, and emo girls we can find</span><span class="tooltiptext" role="tooltip"></span></span>.” 
-         And after only one year, these <span class="tooltip identity-tooltip">girls with pretty good hair and not-always-so-good-but-hey-we-all-liked-the-Misfitsat-one-time-too-right<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">girls with pretty good hair and not-always-so-good-but-hey-we-all-liked-the-Misfitsat-one-time-too-right</span><span class="tooltiptext" role="tooltip"></span></span>? 
+         Suicide Girls call "<span class="tooltip identity-tooltip" data-subcategories="gender">the hottest, cutest, sexiest goth, punk, and emo girls we can find<span class="tooltiptext" role="tooltip">the hottest, cutest, sexiest goth, punk, and emo girls we can find</span></span>.” 
+         And after only one year, these <span class="tooltip identity-tooltip" data-subcategories="gender">girls with pretty good hair and not-always-so-good-but-hey-we-all-liked-the-Misfitsat-one-time-too-right<span class="tooltiptext" role="tooltip">girls with pretty good hair and not-always-so-good-but-hey-we-all-liked-the-Misfitsat-one-time-too-right</span></span>? 
          tattoos have won more of an audience than Punk Planet or pretty much any little dirtball
          
-         <span class="tooltip fem-tooltip">punk<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">punk</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> band (any dirtball little <span class="tooltip fem-tooltip">punk<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">punk</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> band not on one of those labels that has distro reaching into your local shopping
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">punk<span class="tooltiptext" role="tooltip">punk</span></span> band (any dirtball little <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">punk<span class="tooltiptext" role="tooltip">punk</span></span> band not on one of those labels that has distro reaching into your local shopping
          mall anyway) has ever even approached. 
-         <span class="tooltip fem-tooltip">Punk<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Punk</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> has a new face now: probably young, <span class="tooltip identity-tooltip">probably white<span class="tooltiptext" role="tooltip">probably white</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, and probably topless, and <span class="tooltip class-tooltip">if you wanna see more, you bet¬ ter get out your credit card.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">if you wanna see more, you bet¬ ter get out your credit card.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> And, says 
-         Hannah—<span class="tooltip identity-tooltip">a classy, stat¬ uesque woman who looks good in black<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">a classy, stat¬ uesque woman who looks good in black</span><span class="tooltiptext" role="tooltip"></span></span>, at least in her <span class="tooltip class-tooltip">free<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">free</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> sam¬ ple pictures—it was no trouble at all.</p>
+         <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Punk<span class="tooltiptext" role="tooltip">Punk</span></span> has a new face now: probably young, <span class="tooltip identity-tooltip" data-subcategories="race">probably white<span class="tooltiptext" role="tooltip">probably white</span></span>, and probably topless, and <span class="tooltip class-tooltip" data-subcategories="economic">if you wanna see more, you bet¬ ter get out your credit card.<span class="tooltiptext" role="tooltip">if you wanna see more, you bet¬ ter get out your credit card.</span></span> And, says 
+         Hannah—<span class="tooltip identity-tooltip" data-subcategories="gender">a classy, stat¬ uesque woman who looks good in black<span class="tooltiptext" role="tooltip">a classy, stat¬ uesque woman who looks good in black</span></span>, at least in her <span class="tooltip class-tooltip" data-subcategories="economic">free<span class="tooltiptext" role="tooltip">free</span></span> sam¬ ple pictures—it was no trouble at all.</p>
       
       
       <p>Nobody’s started stalking her; nobody’s sending her creepy emails. About the most
@@ -41,54 +110,54 @@
          she says, was no big deal.</p>
       
       
-      <p>"People think it’s totally like <span class="tooltip fem-tooltip">porno<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">porno</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, like <span class="tooltip identity-tooltip">guys on girls<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">guys on girls</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, and it’s not really like that,” Hannah says. "It’s not all about, 
-         'Oh, there are your <span class="tooltip identity-tooltip">tits<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">tits</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>!’ If you’re not comfortable with something, you don’t have to do it—and having it
-         out in public is no big deal. <span class="tooltip fem-tooltip">It’s more cre¬ ative than it is sexual<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">It’s more                  cre¬ ative than it is sexual</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>.”</p>
+      <p>"People think it’s totally like <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">porno<span class="tooltiptext" role="tooltip">porno</span></span>, like <span class="tooltip identity-tooltip" data-subcategories="sexuality">guys on girls<span class="tooltiptext" role="tooltip">guys on girls</span></span>, and it’s not really like that,” Hannah says. "It’s not all about, 
+         'Oh, there are your <span class="tooltip identity-tooltip" data-subcategories="sexuality">tits<span class="tooltiptext" role="tooltip">tits</span></span>!’ If you’re not comfortable with something, you don’t have to do it—and having it
+         out in public is no big deal. <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">It’s more cre¬ ative than it is sexual<span class="tooltiptext" role="tooltip">It’s more                  cre¬ ative than it is sexual</span></span>.”</p>
       
       
-      <p>And the part about <span class="tooltip identity-tooltip">skinny little punk rock boys<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">skinny little punk rock boys</span><span class="tooltiptext" role="tooltip"></span></span> point-andclicking up her pictures with one hand down their pants?</p>
+      <p>And the part about <span class="tooltip identity-tooltip" data-subcategories="gender">skinny little punk rock boys<span class="tooltiptext" role="tooltip">skinny little punk rock boys</span></span> point-andclicking up her pictures with one hand down their pants?</p>
       
       
       <p>"It’d be really funny,” she says. "Better than them cutting ads out of Victoria’s
          Secret catalogs.”</p>
       
       
-      <p>So welcome to <span class="tooltip fem-tooltip">punk porn<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">punk porn</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, the alternative to Hustler, Barely Legal and poor old obsolete Victoria’s Secret:
+      <p>So welcome to <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">punk porn<span class="tooltiptext" role="tooltip">punk porn</span></span>, the alternative to Hustler, Barely Legal and poor old obsolete Victoria’s Secret:
          whether they’re peddling 
          erotica, smut, or just old-fashioned pin-up-style T&amp;A, a wave of websites like Friction
          USA, Burning Angel, and Suicide Girls have carved out a cozy 
          little spot in the punk consciousness, playing upstart little sister to a swollen
-         adult-amateur industry and <span class="tooltip fem-tooltip">bring¬ ing punk style and— maybe —substance to one of the last unexplored forms of,
-            um, creative expression<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">bring¬ ing punk style and— maybe —substance to                  one of the last unexplored
-               forms of, um, creative expression</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>.</p>
+         adult-amateur industry and <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">bring¬ ing punk style and— maybe —substance to one of the last unexplored forms of,
+            um, creative expression<span class="tooltiptext" role="tooltip">bring¬ ing punk style and— maybe —substance to                  one of the last unexplored
+               forms of, um, creative expression</span></span>.</p>
       
       
-      <p> They run like <span class="tooltip power-tooltip">bedroom record labels<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">bedroom record labels</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, not like <span class="tooltip power-tooltip">big businesses<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">big businesses</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. The person behind the camera—and behind the cash register when you 
-         become a member—is more often than <span class="tooltip identity-tooltip">not a woman<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">not a woman</span><span class="tooltiptext" role="tooltip"></span></span>; at the shoots, <span class="tooltip identity-tooltip">the girls<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the girls</span><span class="tooltiptext" role="tooltip"></span></span> (the <span class="tooltip identity-tooltip">naked-punk-boys<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">naked-punk-boys</span><span class="tooltiptext" role="tooltip"></span></span> explosion has yet to hit, unless you wanna count the <span class="tooltip identity-tooltip">gay<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">gay</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>
+      <p> They run like <span class="tooltip power-tooltip" data-subcategories="p_class">bedroom record labels<span class="tooltiptext" role="tooltip">bedroom record labels</span></span>, not like <span class="tooltip power-tooltip" data-subcategories="p_class">big businesses<span class="tooltiptext" role="tooltip">big businesses</span></span>. The person behind the camera—and behind the cash register when you 
+         become a member—is more often than <span class="tooltip identity-tooltip" data-subcategories="gender">not a woman<span class="tooltiptext" role="tooltip">not a woman</span></span>; at the shoots, <span class="tooltip identity-tooltip" data-subcategories="gender">the girls<span class="tooltiptext" role="tooltip">the girls</span></span> (the <span class="tooltip identity-tooltip" data-subcategories="gender">naked-punk-boys<span class="tooltiptext" role="tooltip">naked-punk-boys</span></span> explosion has yet to hit, unless you wanna count the <span class="tooltip identity-tooltip" data-subcategories="sexuality">gay<span class="tooltiptext" role="tooltip">gay</span></span>
          skinhead thing) get to do whatever they feel comfortable doing, instead of playing
          to some producer’s idea of what’s sexy. And punks—possibly the same punks 
          who wouldn’t put a zine called Probe out on the record-store shelves IO years ago
-         because it had a series of <span class="tooltip identity-tooltip">black-and-white boob shots<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">black-and-white boob shots</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>— aren’t even getting 
+         because it had a series of <span class="tooltip identity-tooltip" data-subcategories="sexuality">black-and-white boob shots<span class="tooltiptext" role="tooltip">black-and-white boob shots</span></span>— aren’t even getting 
          uptight about it.</p>
       
       
-      <p>Right now, this <span class="tooltip fem-tooltip">punk porn<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">punk porn</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> thing feels pretty good—way better than stroking it to Belle and Sebastian record
+      <p>Right now, this <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">punk porn<span class="tooltiptext" role="tooltip">punk porn</span></span> thing feels pretty good—way better than stroking it to Belle and Sebastian record
          covers. Punk and porn 
-         have had a strangely uneasy relationship for years, but the chemistry—and <span class="tooltip power-tooltip">the money—is apparently finally there<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">the money—is apparently finally there</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. And as everyone’s websites strut toward 
+         have had a strangely uneasy relationship for years, but the chemistry—and <span class="tooltip power-tooltip" data-subcategories="p_class">the money—is apparently finally there<span class="tooltiptext" role="tooltip">the money—is apparently finally there</span></span>. And as everyone’s websites strut toward 
          their one-year anniversaries, there’s still an almost-idealistic sense of innocence:
-         it’s fun, it’s cute, it’s clean, <span class="tooltip identity-tooltip">it’s sexy<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">it's sexy</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, it’s <span class="tooltip class-tooltip">DIY<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">DIY</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, and it’s not 
+         it’s fun, it’s cute, it’s clean, <span class="tooltip identity-tooltip" data-subcategories="sexuality">it’s sexy<span class="tooltiptext" role="tooltip">it's sexy</span></span>, it’s <span class="tooltip class-tooltip" data-subcategories="economic">DIY<span class="tooltiptext" role="tooltip">DIY</span></span>, and it’s not 
          hurting anyone, right? Then why does it feel like no one’s thought about the hard
          parts—well, besides those hard parts—yet?</p>
       
       
-      <p> <span class="tooltip fem-tooltip">Punk porn looks great on paper.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Punk porn looks great on paper.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> But is it really possible to put punk into porn, fitting the adult industry to the
+      <p> <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">Punk porn looks great on paper.<span class="tooltiptext" role="tooltip">Punk porn looks great on paper.</span></span> But is it really possible to put punk into porn, fitting the adult industry to the
          standard-operat¬ 
          ing-procedure of the volunteer collectives that put on your shows and release your
-         benefit records? <span class="tooltip power-tooltip">Or are punk porn sites just a marketing scheme—and 
-            one that’s come up from within punk, not trickled down from some corporate boardroom?<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">Or are punk porn sites just a marketing scheme—and  one that’s come up from within
-               punk, not trickled down from some corporate boardroom?</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+         benefit records? <span class="tooltip power-tooltip" data-subcategories="p_class">Or are punk porn sites just a marketing scheme—and 
+            one that’s come up from within punk, not trickled down from some corporate boardroom?<span class="tooltiptext" role="tooltip">Or are punk porn sites just a marketing scheme—and  one that’s come up from within
+               punk, not trickled down from some corporate boardroom?</span></span></p>
       
       
       
-      </body>
+   </body>
 </html>

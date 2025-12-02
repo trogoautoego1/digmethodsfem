@@ -12,48 +12,117 @@
             <li><a href="../analysis.html">Analysis</a></li>
          </ul>
       </nav>
-      <h1>DIY SEX: EARLY TO BED</h1>
+      <div class="checkboxList">
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
+                    }
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
+                    const prefix = categories[category].prefix;
+                    const tooltips = document.querySelectorAll(`.${tooltipClass}`);
+                    const checkedSubcategories = getCheckedSubcategories(category);
+                    
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
+                    });
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
+                    checkbox.addEventListener('change', updateTooltips);
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>DIY SEX: EARLY TO BED</h1>
       
-      <p>Ah, <span class="tooltip power-tooltip">blue balls<span class="tooltiptext" role="tooltip">blue balls</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. As a <span class="tooltip identity-tooltip">girl<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">girl</span><span class="tooltiptext" role="tooltip"></span></span>, 
-         I grew up thinking that <span class="tooltip power-tooltip">blue balls<span class="tooltiptext" role="tooltip">blue balls</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> 
-         were <span class="tooltip power-tooltip">
-            nothing more than a sad excuse for guys to pressure girls into having sex<span class="tooltiptext" role="tooltip">nothing more than a sad excuse for guys to pressure girls into having sex</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>— ’’Gome on baby, you got me all turned on, 
-         <span class="tooltip power-tooltip">now you have to fuck me<span class="tooltiptext" role="tooltip">now you have to fuck me</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> or I’ll get <span class="tooltip power-tooltip">blue balls<span class="tooltiptext" role="tooltip">blue balls</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>. ” 
-         I figured it was just some made-up term for sexual frustration.  <span class="tooltip fem-tooltip">
-            Then I became a dyke and I never thought about them again<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> until I got this letter. So I did a little research and, 
+      <p>Ah, <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">blue balls<span class="tooltiptext" role="tooltip">blue balls</span></span>. As a <span class="tooltip identity-tooltip" data-subcategories="gender">girl<span class="tooltiptext" role="tooltip">girl</span></span>, 
+         I grew up thinking that <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">blue balls<span class="tooltiptext" role="tooltip">blue balls</span></span> 
+         were <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">
+            nothing more than a sad excuse for guys to pressure girls into having sex<span class="tooltiptext" role="tooltip">nothing more than a sad excuse for guys to pressure girls into having sex</span></span>— ’’Gome on baby, you got me all turned on, 
+         <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">now you have to fuck me<span class="tooltiptext" role="tooltip">now you have to fuck me</span></span> or I’ll get <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">blue balls<span class="tooltiptext" role="tooltip">blue balls</span></span>. ” 
+         I figured it was just some made-up term for sexual frustration.  <span class="tooltip fem-tooltip" data-subcategories="f_politicallesbian">
+            Then I became a dyke and I never thought about them again</span> until I got this letter. So I did a little research and, 
          with some help from the good people of scarleteen.com, I now know that it is indeed
          a real condition, albeit not a very serious one.</p>
       
       
-      <p>The technical term for <span class="tooltip power-tooltip">blue balls<span class="tooltiptext" role="tooltip">blue balls</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> is vasocongestion and it works 
-         like this: When a man becomes aroused, the arteries carrying blood to the <span class="tooltip identity-tooltip">genital<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">genital</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> area enlarge, while the veins carrying blood away from the 
+      <p>The technical term for <span class="tooltip power-tooltip" data-subcategories="p_patriarchy">blue balls<span class="tooltiptext" role="tooltip">blue balls</span></span> is vasocongestion and it works 
+         like this: When a man becomes aroused, the arteries carrying blood to the <span class="tooltip identity-tooltip" data-subcategories="sexuality">genital<span class="tooltiptext" role="tooltip">genital</span></span> area enlarge, while the veins carrying blood away from the 
          genital area become more constricted than they 
          are when you aren’t turned on. This causes an increase in the amount of blood trapped
-         in the <span class="tooltip identity-tooltip">penis and testicles<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">penis and testicles</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, which in turn helps 
-         you to get your nice, stiff <span class="tooltip identity-tooltip">erection and swollen balls.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">erection and swollen balls.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> When you have an <span class="tooltip identity-tooltip">orgasm<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">orgasm</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, 
+         in the <span class="tooltip identity-tooltip" data-subcategories="sexuality">penis and testicles<span class="tooltiptext" role="tooltip">penis and testicles</span></span>, which in turn helps 
+         you to get your nice, stiff <span class="tooltip identity-tooltip" data-subcategories="sexuality">erection and swollen balls.<span class="tooltiptext" role="tooltip">erection and swollen balls.</span></span> When you have an <span class="tooltip identity-tooltip" data-subcategories="sexuality">orgasm<span class="tooltiptext" role="tooltip">orgasm</span></span>, 
          the arteries and veins return to their normal size. 
-         If you don’t have an <span class="tooltip identity-tooltip">orgasm<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">orgasm</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, that blood can get trapped in there and can lead to an achy, sometimes painful feeling
+         If you don’t have an <span class="tooltip identity-tooltip" data-subcategories="sexuality">orgasm<span class="tooltiptext" role="tooltip">orgasm</span></span>, that blood can get trapped in there and can lead to an achy, sometimes painful feeling
          in the testicles. 
-         The term "blue balls” comes from the bluish tint that <span class="tooltip identity-tooltip">nuts<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">nuts</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> can take on when they are engorged. This pain, however, can usually be easily 
-         eradicated by <span class="tooltip identity-tooltip">masturbating<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">masturbating</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> (when’s the last time someone prescribed that for pain?) or, some say, by taking
+         The term "blue balls” comes from the bluish tint that <span class="tooltip identity-tooltip" data-subcategories="sexuality">nuts<span class="tooltiptext" role="tooltip">nuts</span></span> can take on when they are engorged. This pain, however, can usually be easily 
+         eradicated by <span class="tooltip identity-tooltip" data-subcategories="sexuality">masturbating<span class="tooltiptext" role="tooltip">masturbating</span></span> (when’s the last time someone prescribed that for pain?) or, some say, by taking
          a cold shower or exercising. 
-         Obviously, <span class="tooltip fem-tooltip">
+         Obviously, <span class="tooltip fem-tooltip" data-subcategories="f_liberal">
             this condition is never an excuse to try and talk anyone into touching your dick if
-            they don't want to.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">this condition is never an excuse to try and talk anyone into touching your dick if
-               they don't want to.</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> You are at absolutely 
-         no risk for any damage to your <span class="tooltip identity-tooltip">cock<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">cock</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> and, from what I gather, most guys can easily make themselves come in a matter of
-         minutes, <span class="tooltip fem-tooltip">so you shouldn’t have to suffer for too long.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">so you                  shouldn’t have to suffer for too long</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
+            they don't want to.<span class="tooltiptext" role="tooltip">this condition is never an excuse to try and talk anyone into touching your dick if
+               they don't want to.</span></span> You are at absolutely 
+         no risk for any damage to your <span class="tooltip identity-tooltip" data-subcategories="sexuality">cock<span class="tooltiptext" role="tooltip">cock</span></span> and, from what I gather, most guys can easily make themselves come in a matter of
+         minutes, <span class="tooltip fem-tooltip" data-subcategories="f_liberal">so you shouldn’t have to suffer for too long.<span class="tooltiptext" role="tooltip">so you                  shouldn’t have to suffer for too long</span></span></p>
       
       
-      <p>That said, pain in your <span class="tooltip identity-tooltip">cock, balls, pussy,<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">cock, balls, pussy,</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> or abdomen can be a sign of something more serious, so if you have 
+      <p>That said, pain in your <span class="tooltip identity-tooltip" data-subcategories="sexuality">cock, balls, pussy,<span class="tooltiptext" role="tooltip">cock, balls, pussy,</span></span> or abdomen can be a sign of something more serious, so if you have 
          these kinds of symptoms at times other than when you have been turned on and not had
-         an <span class="tooltip identity-tooltip">orgasm<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">orgasm</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span>, go see your doctor 
+         an <span class="tooltip identity-tooltip" data-subcategories="sexuality">orgasm<span class="tooltiptext" role="tooltip">orgasm</span></span>, go see your doctor 
          just to be sure.</p>
       
       
-      <p>FYI, <span class="tooltip identity-tooltip">women<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">women</span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip fem-tooltip">also experience increased blood flow to their genitals when they are turned on and
+      <p>FYI, <span class="tooltip identity-tooltip" data-subcategories="gender">women<span class="tooltiptext" role="tooltip">women</span></span> <span class="tooltip fem-tooltip" data-subcategories="f_terf">also experience increased blood flow to their genitals when they are turned on and
             can experience a 
-            similar sensation when they don’t have an<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">also experience increased blood flow to their genitals when they are turned on and
-               can experience a similar sensation when they don’t have an</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> <span class="tooltip identity-tooltip">orgasm.<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">orgasm</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span> Let’s call that <span class="tooltip fem-tooltip">purple pussy!<span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip">purple pussy!</span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span><span class="tooltiptext" role="tooltip"></span></span></p>
-      </body>
+            similar sensation when they don’t have an<span class="tooltiptext" role="tooltip">also experience increased blood flow to their genitals when they are turned on and
+               can experience a similar sensation when they don’t have an</span></span> <span class="tooltip identity-tooltip" data-subcategories="sexuality">orgasm.<span class="tooltiptext" role="tooltip">orgasm</span></span> Let’s call that <span class="tooltip fem-tooltip" data-subcategories="f_rad_fem">purple pussy!<span class="tooltiptext" role="tooltip">purple pussy!</span></span></p>
+   </body>
 </html>
