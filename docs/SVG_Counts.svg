@@ -60,7 +60,7 @@
                 </style>
    </defs>
    <rect width="1400" height="1600" fill="#e4e0d3"/>
-   <text x="700" y="30" class="chart-title">Feminist Theory Analysis by Document</text>
+   <text x="700" y="30" class="chart-title">Feminist Theory Analysis by Document(Hover for Details)</text>
    <g transform="translate(50, 60)">
       <text x="0" y="0" class="section-title">Feminist Theory Counts</text>
       <text x="0" y="30" class="doc-label">Grimke Letters</text>
@@ -68,7 +68,7 @@
             y="20"
             width="8"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>Grimke Letters - Feminist Theories: 1
                 enlightenment Individualism: 1
@@ -80,7 +80,7 @@
             y="35"
             width="160"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>The Feminine Mystique - Feminist Theories: 20
             radical feminism: 6
@@ -95,7 +95,7 @@
             y="50"
             width="24"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>The Second Sex - Feminist Theories: 3
             radical feminism: 1
@@ -109,7 +109,7 @@
             y="80"
             width="24"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>Woman Hating - Feminist Theories: 3
             radical feminism: 2
@@ -122,7 +122,7 @@
             y="95"
             width="16"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>There was a young woman who swallowed a lie - Feminist Theories: 2
             radical feminism: 2
@@ -134,7 +134,7 @@
             y="110"
             width="40"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>The Furies: Lesbian/Feminist Monthly (v. 1) - Feminist Theories: 5
             antifeminism: 2
@@ -147,7 +147,7 @@
             y="125"
             width="48"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>AFTER THE DEATH OF GOD THE FATHER - Feminist Theories: 6
             radical feminism: 6
@@ -159,7 +159,7 @@
             y="140"
             width="16"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>Excerpt from Punk Planet 29 - Feminist Theories: 2
             TERF: 2
@@ -171,7 +171,7 @@
             y="155"
             width="88"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>Excerpt from Punk Planet 52 - Feminist Theories: 11
             radical feminism: 10
@@ -184,7 +184,7 @@
             y="170"
             width="40"
             height="10"
-            fill="#EAE1FF"
+            fill="#C5B4EC"
             class="bar">
          <title>DIY SEX: EARLY TO BED - Feminist Theories: 5
             radical feminism: 1
@@ -202,7 +202,7 @@
             y="20"
             width="104"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>Grimke Letters - Power Systems: 13
             patriarchy: 10
@@ -216,7 +216,7 @@
             y="35"
             width="24"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>The Feminine Mystique - Power Systems: 3
             patriarchy: 3
@@ -228,7 +228,7 @@
             y="50"
             width="72"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>The Second Sex - Power Systems: 9
             patriarchy: 5
@@ -241,7 +241,7 @@
             y="65"
             width="72"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>Miss America: Atlantic City - Power Systems: 9
             patriarchy: 4
@@ -255,7 +255,7 @@
             y="80"
             width="72"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>Woman Hating - Power Systems: 9
             patriarchy: 7
@@ -269,7 +269,7 @@
             y="95"
             width="40"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>There was a young woman who swallowed a lie - Power Systems: 5
             patriarchy: 5
@@ -281,7 +281,7 @@
             y="110"
             width="56"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>The Furies: Lesbian/Feminist Monthly (v. 1) - Power Systems: 7
             patriarchy: 1
@@ -295,7 +295,7 @@
             y="125"
             width="72"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>AFTER THE DEATH OF GOD THE FATHER - Power Systems: 9
             patriarchy: 5
@@ -308,7 +308,7 @@
             y="140"
             width="32"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>Excerpt from Punk Planet 29 - Power Systems: 4
             patriarchy: 1
@@ -321,7 +321,7 @@
             y="155"
             width="32"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>Excerpt from Punk Planet 52 - Power Systems: 4
             class: 4
@@ -333,7 +333,7 @@
             y="170"
             width="48"
             height="10"
-            fill="#ffeaed"
+            fill="#EFCAD0"
             class="bar">
          <title>DIY SEX: EARLY TO BED - Power Systems: 6
             patriarchy: 6
@@ -348,7 +348,7 @@
             y="20"
             width="120"
             height="10"
-            fill="#E3CCAF"
+            fill="#C0AD97"
             class="bar">
          <title>Grimke Letters - Religion: 15
             judaism: 1
@@ -363,7 +363,7 @@
             y="35"
             width="8"
             height="10"
-            fill="#E3CCAF"
+            fill="#C0AD97"
             class="bar">
          <title>The Feminine Mystique - Religion: 1
             judaism: 1
@@ -375,7 +375,7 @@
             y="50"
             width="16"
             height="10"
-            fill="#E3CCAF"
+            fill="#C0AD97"
             class="bar">
          <title>The Second Sex - Religion: 2
             catholicism: 1
@@ -389,7 +389,7 @@
             y="80"
             width="80"
             height="10"
-            fill="#E3CCAF"
+            fill="#C0AD97"
             class="bar">
          <title>Woman Hating - Religion: 10
             non-western: 1
@@ -405,7 +405,7 @@
             y="110"
             width="56"
             height="10"
-            fill="#E3CCAF"
+            fill="#C0AD97"
             class="bar">
          <title>The Furies: Lesbian/Feminist Monthly (v. 1) - Religion: 7
          greek mythology: 7
@@ -417,7 +417,7 @@
             y="125"
             width="104"
             height="10"
-            fill="#E3CCAF"
+            fill="#C0AD97"
             class="bar">
          <title>AFTER THE DEATH OF GOD THE FATHER - Religion: 13
             judaism: 1
@@ -440,7 +440,7 @@
             y="80"
             width="16"
             height="10"
-            fill="#C0EBED"
+            fill="#96D6DA"
             class="bar">
          <title>Woman Hating - Class: 2
             social: 1
@@ -453,7 +453,7 @@
             y="95"
             width="8"
             height="10"
-            fill="#C0EBED"
+            fill="#96D6DA"
             class="bar">
          <title>There was a young woman who swallowed a lie - Class: 1
             economic: 1
@@ -465,7 +465,7 @@
             y="110"
             width="40"
             height="10"
-            fill="#C0EBED"
+            fill="#96D6DA"
             class="bar">
          <title>The Furies: Lesbian/Feminist Monthly (v. 1) - Class: 5
             middle: 3
@@ -480,7 +480,7 @@
             y="155"
             width="24"
             height="10"
-            fill="#C0EBED"
+            fill="#96D6DA"
             class="bar">
          <title>Excerpt from Punk Planet 52 - Class: 3
             economic: 3
@@ -497,7 +497,7 @@
             y="35"
             width="8"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>The Feminine Mystique - Identity: 1
             race: 1
@@ -509,7 +509,7 @@
             y="50"
             width="8"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>The Second Sex - Identity: 1
             gender: 1
@@ -521,7 +521,7 @@
             y="65"
             width="24"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>Miss America: Atlantic City - Identity: 3
             race: 2
@@ -534,7 +534,7 @@
             y="80"
             width="16"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>Woman Hating - Identity: 2
             gender: 2
@@ -546,7 +546,7 @@
             y="95"
             width="64"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>There was a young woman who swallowed a lie - Identity: 8
             gender: 8
@@ -558,7 +558,7 @@
             y="110"
             width="224"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>The Furies: Lesbian/Feminist Monthly (v. 1) - Identity: 28
             race: 3
@@ -572,7 +572,7 @@
             y="125"
             width="16"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>AFTER THE DEATH OF GOD THE FATHER - Identity: 2
             gender: 2
@@ -584,7 +584,7 @@
             y="140"
             width="24"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>Excerpt from Punk Planet 29 - Identity: 3
             gender: 3
@@ -596,7 +596,7 @@
             y="155"
             width="112"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>Excerpt from Punk Planet 52 - Identity: 14
             race: 1
@@ -610,7 +610,7 @@
             y="170"
             width="104"
             height="10"
-            fill="#8DCA50"
+            fill="#7BA84D"
             class="bar">
          <title>DIY SEX: EARLY TO BED - Identity: 13
             sexuality: 11
@@ -626,7 +626,7 @@
             y="20"
             width="88"
             height="10"
-            fill="#F79A21"
+            fill="#C68126"
             class="bar">
          <title>Grimke Letters - Social Theories: 11
             rights of man: 1
@@ -640,7 +640,7 @@
             y="35"
             width="280"
             height="10"
-            fill="#F79A21"
+            fill="#C68126"
             class="bar">
          <title>The Feminine Mystique - Social Theory: 35
             Freudian: 34
@@ -653,7 +653,7 @@
             y="50"
             width="64"
             height="10"
-            fill="#F79A21"
+            fill="#C68126"
             class="bar">
          <title>The Second Sex - Social Theory: 8
             rights of man: 2
@@ -670,7 +670,7 @@
             y="125"
             width="8"
             height="10"
-            fill="#F79A21"
+            fill="#C68126"
             class="bar">
          <title>AFTER THE DEATH OF GOD THE FATHER - Social Theory: 1
             enlightenment individualism: 1
