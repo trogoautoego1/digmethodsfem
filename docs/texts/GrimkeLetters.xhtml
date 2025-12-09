@@ -25,156 +25,75 @@
          </ul>
       </div>
       <div class="checkboxList">
-         <h3>Power Systems</h3>
-         <label class="container">Patriarchy<input type="checkbox" data-category="power"
-               data-subcategory="patriarchy" /></label>
-         <label class="container">Religion<input type="checkbox" data-category="power"
-               data-subcategory="religion" /></label>
-         <label class="container">Class<input type="checkbox" data-category="power"
-               data-subcategory="class" /></label>
-         <label class="container">Race<input type="checkbox" data-category="power"
-               data-subcategory="race" /></label>
-         <label class="container">Political<input type="checkbox" data-category="power"
-               data-subcategory="political" /></label>
-         <label class="container">Social<input type="checkbox" data-category="power"
-               data-subcategory="social" /></label>
-         <label class="container">Matriarchy<input type="checkbox" data-category="power"
-               data-subcategory="matriarchy" /></label>
-         <h3>Religion</h3>
-         <label class="container">Non-Western<input type="checkbox" data-category="religion"
-               data-subcategory="non_western" /></label>
-         <label class="container">Islam<input type="checkbox" data-category="religion"
-               data-subcategory="islam" /></label>
-         <label class="container">Protestantism<input type="checkbox" data-category="religion"
-               data-subcategory="protestantism" /></label>
-         <label class="container">Catholicism<input type="checkbox" data-category="religion"
-               data-subcategory="catholicism" /></label>
-         <label class="container">Judaism<input type="checkbox" data-category="religion"
-               data-subcategory="judaism" /></label>
-         <label class="container">Indigenous<input type="checkbox" data-category="religion"
-               data-subcategory="indigenous" /></label>
-         <label class="container">Christianity<input type="checkbox" data-category="religion"
-               data-subcategory="christianity" /></label>
-         <label class="container">Greek Mythology<input type="checkbox" data-category="religion"
-               data-subcategory="greekmyth" /></label>
-         <label class="container">Quaker<input type="checkbox" data-category="religion"
-               data-subcategory="quaker" /></label>
-         <label class="container">Anglican<input type="checkbox" data-category="religion"
-               data-subcategory="anglican" /></label>
-         <h3>Identity</h3>
-         <label class="container">Race<input type="checkbox" data-category="identity"
-               data-subcategory="race" /></label>
-         <label class="container">Sexuality<input type="checkbox" data-category="identity"
-               data-subcategory="sexuality" /></label>
-         <label class="container">Gender<input type="checkbox" data-category="identity"
-               data-subcategory="gender" /></label>
-         <label class="container">Nationality<input type="checkbox" data-category="identity"
-               data-subcategory="nationality" /></label>
-         <h3>Feminist Theory</h3>
-         <label class="container">Marxist<input type="checkbox" data-category="fem"
-               data-subcategory="marxist" /></label>
-         <label class="container">Radfem<input type="checkbox" data-category="fem"
-               data-subcategory="rad_fem" /></label>
-         <label class="container">Terf<input type="checkbox" data-category="fem"
-               data-subcategory="terf" /></label>
-         <label class="container">Liberal<input type="checkbox" data-category="fem"
-               data-subcategory="liberal" /></label>
-         <label class="container">Praxis<input type="checkbox" data-category="fem"
-               data-subcategory="praxis" /></label>
-         <label class="container">Antifeminist<input type="checkbox" data-category="fem"
-               data-subcategory="antifeminist" /></label>
-         <label class="container">Political Lesbian<input type="checkbox" data-category="fem"
-               data-subcategory="political_lesbian" /></label>
-         <label class="container">Abolitionist<input type="checkbox" data-category="fem"
-               data-subcategory="abolitionist" /></label>
-         <label class="container">Enlightenment Individualism<input type="checkbox"
-               data-category="fem" data-subcategory="enlightenment_individualism" /></label>
-         <h3>Social Theory</h3>
-         <label class="container">Freud<input type="checkbox" data-category="social"
-               data-subcategory="freud" /></label>
-         <label class="container">Rights of Man<input type="checkbox" data-category="social"
-               data-subcategory="rights_of_man" /></label>
-         <label class="container">Enlightenment Individualism<input type="checkbox"
-               data-category="social" data-subcategory="enlightenment" /></label>
-         <label class="container">Natural Rights<input type="checkbox" data-category="social"
-               data-subcategory="natural_rights" /></label>
-      </div><script>
-            // Function to get all checked subcategories for a given category
-            function getCheckedSubcategories(category) {
-                const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
-                return Array. from (checkboxes).map(cb = &amp;gt; cb.dataset.subcategory);
-            }
-            
-            // Function to check if any checkbox in a category is checked
-            function isCategoryActive(category) {
-                const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
-                return Array. from (checkboxes).some(cb = &amp;gt; cb.checked);
-            }
-            
-            // Function to update tooltip visibility
-            function updateTooltips() {
-                // Define mapping of categories to tooltip classes and their prefixes
-                const categories = {
-                    'fem': {
-                        class: 'fem-tooltip', prefix: 'f_'
-                    },
-                    'power': {
-                        class: 'power-tooltip', prefix: 'p_'
-                    },
-                    'social': {
-                        class: 'social-tooltip', prefix: 's_'
-                    },
-                    'religion': {
-                        class: 'religion-tooltip', prefix: 'r_'
-                    },
-                    'identity': {
-                        class: 'identity-tooltip', prefix: ''
-                    },
-                    'class': {
-                        class: 'class-tooltip', prefix: ''
+         <h3>Power Systems</h3><label class="container">Patriarchy<input type="checkbox" data-category="power" data-subcategory="patriarchy"/></label><label class="container">Religion<input type="checkbox" data-category="power" data-subcategory="religion"/></label><label class="container">Class<input type="checkbox" data-category="power" data-subcategory="class"/></label><label class="container">Race<input type="checkbox" data-category="power" data-subcategory="race"/></label><label class="container">Political<input type="checkbox" data-category="power" data-subcategory="political"/></label><label class="container">Social<input type="checkbox" data-category="power" data-subcategory="social"/></label><label class="container">Matriarchy<input type="checkbox" data-category="power" data-subcategory="matriarchy"/></label><h3>Religion</h3><label class="container">Non-Western<input type="checkbox" data-category="religion" data-subcategory="non_western"/></label><label class="container">Islam<input type="checkbox" data-category="religion" data-subcategory="islam"/></label><label class="container">Protestantism<input type="checkbox" data-category="religion" data-subcategory="protestantism"/></label><label class="container">Catholicism<input type="checkbox" data-category="religion" data-subcategory="catholicism"/></label><label class="container">Judaism<input type="checkbox" data-category="religion" data-subcategory="judaism"/></label><label class="container">Indigenous<input type="checkbox" data-category="religion" data-subcategory="indigenous"/></label><label class="container">Christianity<input type="checkbox" data-category="religion" data-subcategory="christianity"/></label><label class="container">Greek Mythology<input type="checkbox" data-category="religion" data-subcategory="greekmyth"/></label><label class="container">Quaker<input type="checkbox" data-category="religion" data-subcategory="quaker"/></label><label class="container">Anglican<input type="checkbox" data-category="religion" data-subcategory="anglican"/></label><h3>Identity</h3><label class="container">Race<input type="checkbox" data-category="identity" data-subcategory="race"/></label><label class="container">Sexuality<input type="checkbox" data-category="identity" data-subcategory="sexuality"/></label><label class="container">Gender<input type="checkbox" data-category="identity" data-subcategory="gender"/></label><label class="container">Nationality<input type="checkbox" data-category="identity" data-subcategory="nationality"/></label><h3>Feminist Theory</h3><label class="container">Marxist<input type="checkbox" data-category="fem" data-subcategory="marxist"/></label><label class="container">Radfem<input type="checkbox" data-category="fem" data-subcategory="rad_fem"/></label><label class="container">Terf<input type="checkbox" data-category="fem" data-subcategory="terf"/></label><label class="container">Liberal<input type="checkbox" data-category="fem" data-subcategory="liberal"/></label><label class="container">Praxis<input type="checkbox" data-category="fem" data-subcategory="praxis"/></label><label class="container">Antifeminist<input type="checkbox" data-category="fem" data-subcategory="antifeminist"/></label><label class="container">Political Lesbian<input type="checkbox" data-category="fem" data-subcategory="political_lesbian"/></label><label class="container">Abolitionist<input type="checkbox" data-category="fem" data-subcategory="abolitionist"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="fem" data-subcategory="enlightenment_individualism"/></label><h3>Social Theory</h3><label class="container">Freud<input type="checkbox" data-category="social" data-subcategory="freud"/></label><label class="container">Rights of Man<input type="checkbox" data-category="social" data-subcategory="rights_of_man"/></label><label class="container">Enlightenment Individualism<input type="checkbox" data-category="social" data-subcategory="enlightenment"/></label><label class="container">Natural Rights<input type="checkbox" data-category="social" data-subcategory="natural_rights"/></label></div><script>
+                    // Function to get all checked subcategories for a given category
+                    function getCheckedSubcategories(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]:checked`);
+                    return Array.from(checkboxes).map(cb =&gt; cb.dataset.subcategory);
                     }
-                };
-                
-                // For each category, show/hide corresponding tooltips
-                Object.keys(categories).forEach(category = &amp;gt; {
-                    const tooltipClass = categories[category]. class;
+                    
+                    // Function to check if any checkbox in a category is checked
+                    function isCategoryActive(category) {
+                    const checkboxes = document.querySelectorAll(`input[data-category="${category}"]`);
+                    return Array.from(checkboxes).some(cb =&gt; cb.checked);
+                    }
+                    
+                    // Function to update tooltip visibility
+                    function updateTooltips() {
+                    // Define mapping of categories to tooltip classes and their prefixes
+                    const categories = {
+                    'fem': { class: 'fem-tooltip', prefix: 'f_' },
+                    'power': { class: 'power-tooltip', prefix: 'p_' },
+                    'social': { class: 'social-tooltip', prefix: 's_' },
+                    'religion': { class: 'religion-tooltip', prefix: 'r_' },
+                    'identity': { class: 'identity-tooltip', prefix: '' },
+                    'class': { class: 'class-tooltip', prefix: '' }
+                    };
+                    
+                    // For each category, show/hide corresponding tooltips
+                    Object.keys(categories).forEach(category =&gt; {
+                    const tooltipClass = categories[category].class;
                     const prefix = categories[category].prefix;
                     const tooltips = document.querySelectorAll(`.${tooltipClass}`);
                     const checkedSubcategories = getCheckedSubcategories(category);
                     
-                    tooltips.forEach(tooltip = &amp;gt; {
-                        // If no checkboxes in this category are checked, hide the tooltip
-                        if (checkedSubcategories.length === 0) {
-                            tooltip.classList.add('tooltip-hidden');
-                        } else {
-                            // Check if tooltip has any of the checked subcategories
-                            const tooltipSubcategories = tooltip.dataset.subcategories ? tooltip.dataset.subcategories.split(','):[];
-                            
-                            // Show tooltip if it has any of the checked subcategories
-                            const hasMatch = checkedSubcategories.some(subcategory = &amp;gt;
-                            tooltipSubcategories.includes(prefix + subcategory));
-                            
-                            if (hasMatch) {
-                                tooltip.classList.remove('tooltip-hidden');
-                            } else {
-                                tooltip.classList.add('tooltip-hidden');
-                            }
-                        }
+                    tooltips.forEach(tooltip =&gt; {
+                    // If no checkboxes in this category are checked, hide the tooltip
+                    if (checkedSubcategories.length === 0) {
+                    tooltip.classList.add('tooltip-hidden');
+                    } else {
+                    // Check if tooltip has any of the checked subcategories
+                    const tooltipSubcategories = tooltip.dataset.subcategories 
+                    ? tooltip.dataset.subcategories.split(',') 
+                    : [];
+                    
+                    // Show tooltip if it has any of the checked subcategories
+                    const hasMatch = checkedSubcategories.some(subcategory =&gt; 
+                    tooltipSubcategories.includes(prefix + subcategory)
+                    );
+                    
+                    if (hasMatch) {
+                    tooltip.classList.remove('tooltip-hidden');
+                    } else {
+                    tooltip.classList.add('tooltip-hidden');
+                    }
+                    }
                     });
-                });
-            }
-            
-            // Initialize when page loads
-            document.addEventListener('DOMContentLoaded', function () {
-                // Add event listeners to all checkboxes
-                const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
-                allCheckboxes.forEach(checkbox = &amp;gt; {
+                    });
+                    }
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Add event listeners to all checkboxes
+                    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-category]');
+                    allCheckboxes.forEach(checkbox =&gt; {
                     checkbox.addEventListener('change', updateTooltips);
-                });
-                
-                // Hide all tooltips initially
-                updateTooltips();
-            });</script><h1>LETTERS ON THE EQUALITY OF THE SEXES, AND THE CONDITION OF
+                    });
+                    
+                    // Hide all tooltips initially
+                    updateTooltips();
+                    });
+                    </script><h1>LETTERS ON THE EQUALITY OF THE SEXES, AND THE CONDITION OF
          WOMAN.</h1><span style="font-style: italic; text-align: center; margin: 15px 200px;"> By
          SARAH GRIMKE (1838) <br />
       </span>
