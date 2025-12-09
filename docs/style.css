@@ -72,6 +72,9 @@ h1{
     margin: 15px 200px;
 }
 
+.main-content h2, .main-content h3{
+    margin: 15px 200px;
+}
 body > p {
     margin: 15px 200px;
     background-color: rgba(228, 224, 211, .8);
