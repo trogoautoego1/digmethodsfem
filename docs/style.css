@@ -71,14 +71,14 @@ p.narrow {
 
 body > p {
     margin: 15px 200px;
+    background-color: rgba(228, 224, 211, .5);
 }
 div > p {
     margin: 15px 200px;
+    background-color: rgba(228, 224, 211, .5);
 }
 h1 {
-    clear: both;
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 15px;
 }
 h2,
 h3 {
@@ -133,10 +133,11 @@ h3 {
     background-color: #cdc7b4;
 }
 
+
 .checkboxList {
     float: right;
     margin-right: 15px;
-    margin-top: 0;
+    margin-top: 15px;
     width: 125px;
     display: flex;
     flex-direction: column;
@@ -146,14 +147,8 @@ h3 {
     border-radius: 4px;
 }
 
-.link-column {
-    background-color: #e4e0d3;
-    margin: 15px 200px;
-    padding: 10px;
-}
-.link-column p {
-    margin: 0;
-}
+
+
 
 
 /* text boxes*/
