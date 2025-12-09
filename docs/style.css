@@ -68,6 +68,9 @@ p {
 p.narrow {
     margin: 15px 5px;
 }
+h1{
+    margin: 15px 200px;
+}
 
 body > p {
     margin: 15px 200px;
