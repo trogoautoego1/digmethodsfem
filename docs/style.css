@@ -71,11 +71,11 @@ p.narrow {
 
 body > p {
     margin: 15px 200px;
-    background-color: rgba(228, 224, 211, .5);
+    background-color: rgba(228, 224, 211, .8);
 }
 div > p {
     margin: 15px 200px;
-    background-color: rgba(228, 224, 211, .75);
+    background-color: rgba(228, 224, 211, .8);
 }
 h1 {
     margin-top: 15px;
