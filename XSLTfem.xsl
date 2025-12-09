@@ -140,6 +140,9 @@
                 <h1>
                     <xsl:value-of select="(//title)[1]"/>
                 </h1>
+                <span style="font-style: italic; text-align: center; margin: 15px 200px;">
+                    By <xsl:value-of select="//author"/> (<xsl:value-of select="//publication_date"/>)
+                </span>
                 <xsl:apply-templates select="//main"/>
             </body>
         </html>

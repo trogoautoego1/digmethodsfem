@@ -71,7 +71,12 @@ p.narrow {
 h1{
     margin: 15px 200px;
 }
-
+body h3{
+    margin: 15px 200px;
+}
+sup{
+    margin: 15px 200px;
+}
 .main-content h2, .main-content h3{
     margin: 15px 200px;
 }
