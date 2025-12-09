@@ -75,6 +75,11 @@ body > p {
 div > p {
     margin: 15px 200px;
 }
+h1 {
+    clear: both;
+    margin-top: 0;
+    padding-top: 0;
+}
 h2,
 h3 {
     margin: 10px 0;
@@ -129,9 +134,9 @@ h3 {
 }
 
 .checkboxList {
-    position: absolute;
-    right: 15px;
-    top: 80px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 0;
     width: 125px;
     display: flex;
     flex-direction: column;
