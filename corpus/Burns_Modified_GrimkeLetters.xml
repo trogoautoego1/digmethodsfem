@@ -538,31 +538,38 @@ subhead formatting applies to subheading of each letter eg "THE ORIGINAL EQUALIT
                     fatigue as the men. A wife sometimes drags the plough in rice fields with an
                     infant tied upon her back, while her husband performs the less arduous task of
                     holding the plough.’</structure>
-                <structure p="52">‘The <identity race="Central/Northeast Asia">Tartar</identity> <power_system p_patriarchy="women do majority of work">women in general perform a greater share of labor than
-                    the men; for it is a prevalent opinion that they were sent into the world for no
-                    other purpose, but to be useful and convenient SLAVES to the stronger sex.</power_system>’
-                    ‘Among some of the Tartar tribes of the present day, females manage a horse,
-                    hurl a javelin, hunt wild animals, and fight an enemy as well as the
-                    men.’</structure>
-                <structure p="53">‘In the island of <identity nationality="Indonesian">Sumatra</identity>, <power_system p_patriarchy="women do majority of work">the women do all the work, while their
-                    husbands lounge in idleness, playing on the flute, with wreaths of globe
-                    amaranth on their heads, or racing with each other, without saddle or stirrup,
-                    or hunting deer, or gambling away their wives, their children, or themselves.
-                    The Battas consider their wives and children as slaves, and sell them whenever
-                    they choose.</power_system>’</structure>
-                <structure p="54">‘The <identity race="North African Arabs">Moors</identity> are indolent to excess. <power_system p_patriarchy="women do majority of work">They lie whole days upon their
-                    mats, sleeping and smoking, while the women and slaves perform all the labor.</power_system>
-                    Owing to their uncleanly habits, they are much infested with vermin; and as they
-                    consider it beneath their dignity to remove this annoyance, the task is imposed
-                    on the women. <power_system p_social="Physical overpowering">They are very impatient and tyrannical, and for the slightest
-                    offence beat their wives most cruelly.</power_system>’</structure>
+                <structure p="52">‘The <identity race="Central/Northeast Asia">Tartar</identity>
+                    <power_system p_patriarchy="women do majority of work">women in general perform
+                        a greater share of labor than the men; for it is a prevalent opinion that
+                        they were sent into the world for no other purpose, but to be useful and
+                        convenient SLAVES to the stronger sex.</power_system>’ ‘Among some of the
+                    Tartar tribes of the present day, females manage a horse, hurl a javelin, hunt
+                    wild animals, and fight an enemy as well as the men.’</structure>
+                <structure p="53">‘In the island of <identity nationality="Indonesian"
+                        >Sumatra</identity>, <power_system p_patriarchy="women do majority of work"
+                        >the women do all the work, while their husbands lounge in idleness, playing
+                        on the flute, with wreaths of globe amaranth on their heads, or racing with
+                        each other, without saddle or stirrup, or hunting deer, or gambling away
+                        their wives, their children, or themselves. The Battas consider their wives
+                        and children as slaves, and sell them whenever they
+                    choose.</power_system>’</structure>
+                <structure p="54">‘The <identity race="North African Arabs">Moors</identity> are
+                    indolent to excess. <power_system p_patriarchy="women do majority of work">They
+                        lie whole days upon their mats, sleeping and smoking, while the women and
+                        slaves perform all the labor.</power_system> Owing to their uncleanly
+                    habits, they are much infested with vermin; and as they consider it beneath
+                    their dignity to remove this annoyance, the task is imposed on the women.
+                        <power_system p_social="Physical overpowering">They are very impatient and
+                        tyrannical, and for the slightest offence beat their wives most
+                        cruelly.</power_system>’</structure>
             </structure>
             <!-- end large quote section -->
-            <structure p="55"><religion r_christianity="Jehovah, Eve">In looking over the condition of woman as delineated in this letter,
-                how amply do we find the prophecy of Jehovah to Eve fulfilled, ‘Thy husband will
-                rule over thee.’</religion> And yet we perceive that where the physical strength of woman is
-                called into exercise, there is no inferiority even in this respect; she performs the
-                labor, while man enjoys what are termed the pleasures of life.</structure>
+            <structure p="55"><religion r_christianity="Jehovah, Eve">In looking over the condition
+                    of woman as delineated in this letter, how amply do we find the prophecy of
+                    Jehovah to Eve fulfilled, ‘Thy husband will rule over thee.’</religion> And yet
+                we perceive that where the physical strength of woman is called into exercise, there
+                is no inferiority even in this respect; she performs the labor, while man enjoys
+                what are termed the pleasures of life.</structure>
             <structure p="56">I have thought it necessary to adduce various proofs of my assertion,
                 that men have always in some way regarded women as mere instruments of selfish
                 gratification; and hope this sorrowful detail of the wrongs of woman will not be
@@ -1057,21 +1064,23 @@ subhead formatting applies to subheading of each letter eg "THE ORIGINAL EQUALIT
                     neglected by the magistrate.’</structure> In Christian America, the slave has no
                 refuge from unbridled cruelty and lust.</structure>
             <structure p="100">S. A. Forrall, speaking of the state of morals at the South, says,
-                ‘Negresses when young and likely, are often employed by the planter, or his friends,
-                to administer to their sensual desires. This frequently is a matter of speculation,
-                for if the offspring, a mulatto, be a handsome female, 800 or 1000 dollars may be
-                obtained for her in the New Orleans market. It is an occurrence of no uncommon
-                nature to see a Christian father sell his own daughter, and the brother his own
-                sister.’ The following is copied by the N. Y. Evening Star from the Picayune, a
-                paper published in New Orleans. ‘A very beautiful girl, belonging to the estate of
-                John French, a deceased gambler at New Orleans, was sold a few days since for the
-                round sum of $7,000. An ugly-looking bachelor named Gouch, a member of the Council
-                of one of the Principalities, was the purchaser. The girl is a brunette; remarkable
-                for her beauty and intelligence, and there was considerable contention, who should
-                be the purchaser. She was, however, persuaded to accept Gouch, he having made her
-                princely promises.’ I will add but one more from the numerous testimonies respecting
-                the degradation of female slaves, and the licentiousness of the South. It is from
-                the Circular of the Kentucky Union, for the moral and religious improvement of the
+                    ‘<identity race="black">Negresses</identity> when young and likely,
+                    <power_system p_race="Black women sold into sex slavery">are often employed by
+                    the planter, or his friends, to administer to their sensual desires. This
+                    frequently is a matter of speculation, for if the offspring, a mulatto, be a
+                    handsome female, 800 or 1000 dollars may be obtained for her in the New Orleans
+                    market. It is an occurrence of no uncommon nature to see a Christian father sell
+                    his own daughter, and the brother his own sister.</power_system>’ The following
+                is copied by the N. Y. Evening Star from the Picayune, a paper published in New
+                Orleans. ‘A very beautiful girl, belonging to the estate of John French, a deceased
+                gambler at New Orleans, was sold a few days since for the round sum of $7,000. An
+                ugly-looking bachelor named Gouch, a member of the Council of one of the
+                Principalities, was the purchaser. The girl is a brunette; remarkable for her beauty
+                and intelligence, and there was considerable contention, who should be the
+                purchaser. She was, however, persuaded to accept Gouch, he having made her princely
+                promises.’ I will add but one more from the numerous testimonies respecting the
+                degradation of female slaves, and the licentiousness of the South. It is from the
+                Circular of the Kentucky Union, for the moral and religious improvement of the
                 colored race. ‘To the female character among our black population, we cannot allude
                 but with feelings of the bitterest shame. A similar condition of moral pollution and
                 utter disregard of a pure and virtuous reputation, is to be found only without the
@@ -1098,9 +1107,10 @@ subhead formatting applies to subheading of each letter eg "THE ORIGINAL EQUALIT
                 <structure l="2">Our soil yet reddening with the stains</structure>
                 <structure l="3">Caught from her scourging warm and fresh.’</structure>
             </structure>
-            <structure p="101">Can any American woman look at these scenes of shocking
-                licentiousness and cruelty, and fold her hands in apathy, and say, ‘I have nothing
-                to do with slavery’? She cannot and be guiltless.</structure>
+            <structure p="101"><intersection>Can any American woman look at these scenes of shocking
+                    licentiousness and cruelty, and fold her hands in apathy, and say, ‘I have
+                    nothing to do with slavery’? She cannot and be
+                guiltless.</intersection></structure>
             <structure p="102">I cannot close this letter, without saying a few words on the
                 benefits to be derived by men, as well as women, from the opinions I advocate
                 relative to the equality of the sexes. Many women are now supported, in idleness and
