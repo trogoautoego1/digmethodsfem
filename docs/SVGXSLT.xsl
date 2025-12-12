@@ -5,7 +5,7 @@
         doctype-system="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"/>
     
     <!-- Main template -->
-    <xsl:template match="/counts">
+    <xsl:template match="/document">
         <svg width="1400" height="1600" viewBox="0 0 1400 1600">
             
             <!-- Embedded styles -->

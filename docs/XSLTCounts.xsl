@@ -5,7 +5,9 @@
     
     <xsl:output method="xml" indent="yes"/>
     
-    <xsl:template match="/corpus">
+    <!-- To get each count, toggle each section on/off from a comment one at a time. Counts will not work if more than one is not a comment -->
+    
+<!--    <xsl:template match="/corpus">
         <s_theory_counts>
             <xsl:for-each select="document">
                 <document id="{@id}">
@@ -25,7 +27,7 @@
             </xsl:for-each>
         </s_theory_counts>
     </xsl:template> 
-  
+  -->
     
     <!--
     <xsl:template match="/corpus">
@@ -53,8 +55,10 @@
                 </document>
             </xsl:for-each>
         </f_theory_counts>
-    </xsl:template>
-    <xsl:template match="/corpus">
+    </xsl:template>-->
+    
+    
+ <!--   <xsl:template match="/corpus">
         <power_system_counts>
             <xsl:for-each select="document">
                 <document id="{@id}">
@@ -83,6 +87,8 @@
             </xsl:for-each>
         </power_system_counts>
     </xsl:template>
+    -->
+    <!--
     <xsl:template match="/corpus">
         <religion_counts>
             <xsl:for-each select="document">
@@ -112,6 +118,8 @@
             </xsl:for-each>
         </religion_counts>
     </xsl:template>
+    -->
+    <!--
         <xsl:template match="/corpus">
         <class_counts>
             <xsl:for-each select="document">
@@ -135,6 +143,8 @@
             </xsl:for-each>
         </class_counts>
     </xsl:template>
+    -->
+    
     <xsl:template match="/corpus">
         <identity_counts>
             <xsl:for-each select="document">
@@ -152,5 +162,5 @@
             </xsl:for-each>
         </identity_counts>
     </xsl:template>
-    -->
+    
 </xsl:stylesheet>

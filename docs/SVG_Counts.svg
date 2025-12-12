@@ -70,18 +70,20 @@
             height="10"
             fill="#C5B4EC"
             class="bar">
-         <title>Grimke Letters - Feminist Theories: 1
-                enlightenment Individualism: 1
+         <title>Grimke Letters - Feminist Theories: 4
+                TERF: 1
+                antifeminist: 1
+                enlightenment Individualism: 2
          </title>
       </rect>
-      <text x="318" y="29" class="value-label">1</text>
+      <text x="320" y="29" class="value-label">4</text>
       <text x="0" y="45" class="doc-label">The Feminine Mystique</text>
       <rect x="300"
-            y="35"
-            width="160"
-            height="10"
-            fill="#C5B4EC"
-            class="bar">
+         y="35"
+         width="160"
+         height="10"
+         fill="#C5B4EC"
+         class="bar">
          <title>The Feminine Mystique - Feminist Theories: 20
             radical feminism: 6
             liberal feminism: 1
@@ -199,18 +201,22 @@
       <text x="0" y="0" class="section-title">Power System Counts</text>
       <text x="0" y="30" class="doc-label">Grimke Letters</text>
       <rect x="300"
-            y="20"
-            width="104"
-            height="10"
-            fill="#EFCAD0"
-            class="bar">
-         <title>Grimke Letters - Power Systems: 13
-            patriarchy: 10
-            religion: 2
-            social: 1
+         y="20"
+         width="416"
+         height="10"
+         fill="#EFCAD0"
+         class="bar">
+         <title>Grimke Letters - Power Systems: 52
+            patriarchy: 24
+            religion: 3
+            class: 6
+            race: 4
+            political: 1
+            social: 11
+            matriarchy: 3
          </title>
       </rect>
-      <text x="414" y="29" class="value-label">13</text>
+      <text x="726" y="29" class="value-label">52</text>
       <text x="0" y="45" class="doc-label">The Feminine Mystique</text>
       <rect x="300"
             y="35"
@@ -345,19 +351,19 @@
       <text x="0" y="0" class="section-title">Religion Counts</text>
       <text x="0" y="30" class="doc-label">Grimke Letters</text>
       <rect x="300"
-            y="20"
-            width="120"
-            height="10"
-            fill="#C0AD97"
-            class="bar">
-         <title>Grimke Letters - Religion: 15
+         y="20"
+         width="200"
+         height="10"
+         fill="#C0AD97"
+         class="bar">
+         <title>Grimke Letters - Religion: 25
             judaism: 1
-            christianity: 9
-            quaker: 4
+            christianity: 17
+            quaker: 6
             anglican: 1
          </title>
       </rect>
-      <text x="430" y="29" class="value-label">15</text>
+      <text x="510" y="29" class="value-label">25</text>
       <text x="0" y="45" class="doc-label">The Feminine Mystique</text>
       <rect x="300"
             y="35"
@@ -432,6 +438,20 @@
    <g transform="translate(50, 660)">
       <text x="0" y="0" class="section-title">Class Counts</text>
       <text x="0" y="30" class="doc-label">Grimke Letters</text>
+      <rect x="300"
+         y="20"
+         width="40"
+         height="10"
+         fill="#96D6DA"
+         class="bar">
+         <title>Grimke Letters - Class: 5
+            economic: 1
+            middle: 2
+            lower: 2
+         </title>
+      </rect>
+      <text x="350" y="29" class="value-label">5</text>
+      <text x="0" y="0" class="section-title">Class Counts</text>
       <text x="0" y="45" class="doc-label">The Feminine Mystique</text>
       <text x="0" y="60" class="doc-label">The Second Sex</text>
       <text x="0" y="75" class="doc-label">Miss America: Atlantic City</text>
@@ -444,7 +464,7 @@
             class="bar">
          <title>Woman Hating - Class: 2
             social: 1
-            working_class: 1
+            working class: 1
          </title>
       </rect>
       <text x="326" y="89" class="value-label">2</text>
@@ -492,6 +512,17 @@
    <g transform="translate(50, 860)">
       <text x="0" y="0" class="section-title">Identity Counts</text>
       <text x="0" y="30" class="doc-label">Grimke Letters</text>
+      <rect x="300"
+         y="20"
+         width="120"
+         height="10"
+         fill="#7BA84D"
+         class="bar">
+         <title>Grimke Letters - Identity: 15
+               race: 15
+         </title>
+      </rect>
+      <text x="430" y="29" class="value-label">15</text>
       <text x="0" y="45" class="doc-label">The Feminine Mystique</text>
       <rect x="300"
             y="35"
@@ -623,18 +654,18 @@
       <text x="0" y="0" class="section-title">Social Theory Counts</text>
       <text x="0" y="30" class="doc-label">Grimke Letters</text>
       <rect x="300"
-            y="20"
-            width="88"
-            height="10"
-            fill="#C68126"
-            class="bar">
-         <title>Grimke Letters - Social Theories: 11
+         y="20"
+         width="112"
+         height="10"
+         fill="#C68126"
+         class="bar">
+         <title>Grimke Letters - Social Theories: 14
             rights of man: 1
             enlightenment individualism: 2
-            natural rights: 8
+            natural rights: 11
          </title>
       </rect>
-      <text x="398" y="29" class="value-label">11</text>
+      <text x="422" y="29" class="value-label">14</text>
       <text x="0" y="45" class="doc-label">The Feminine Mystique</text>
       <rect x="300"
             y="35"
